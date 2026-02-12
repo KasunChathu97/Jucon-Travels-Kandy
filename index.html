@@ -1129,7 +1129,7 @@
 
         /* ===== ABOUT SRI LANKA SECTION ===== */
         .about-heading {
-            margin-bottom: 35px;
+            margin-bottom: 60px;
             /* before it was 40px, now reduced to 20px */
         }
 
@@ -1137,7 +1137,7 @@
             margin-top: 30px;
             display: flex;
             flex-wrap: wrap;
-            gap: 60px 35px;
+            gap: 60px 30px;
             justify-content: center;
         }
 
@@ -1158,7 +1158,7 @@
         .about-heading .title {
             font-size: 28px;
             font-weight: 700;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
 
         .discover-more {
@@ -1175,6 +1175,202 @@
             .image-item {
                 width: 80%;
             }
+        }
+
+        /* ===== WHY TRAVEL WITH US SECTION ===== */
+        .why-travel-section {
+            padding: 40px 60px;
+            background: url("images/why-travel-section.jpg") no-repeat center center;
+            background-size: cover;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            max-width: 1700px;
+            margin: 0 60px;
+            border-radius: 20px;
+            height: 780px;
+        }
+
+        .why-travel-heading {
+            margin-bottom: 30px;
+            /* before it was 40px, now reduced to 20px */
+        }
+
+        .why-travel-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+
+        .highlight2 {
+            color: #ffffff;
+            font-weight: 400;
+            font-size: 36px;
+            row-gap: 10px;
+        }
+
+        .sub-title2 {
+            position: relative;
+            display: inline-block;
+            color: #ffffff;
+            /* original text color */
+            font-size: 21px;
+        }
+
+        /* Features Grid */
+        .features-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            justify-content: center;
+            gap: 30px 10px;
+            /* horizontal gap 30px, vertical gap 40px */
+        }
+
+        .feature-item {
+            width: 300px;
+            /* exact 7cm width */
+            text-align: left;
+            transition: all 0.5s ease;
+            background-color: rgba(5, 5, 5, 0.7);
+            /* transparent black */
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        /* Hover effect - light black */
+        .feature-item:hover {
+            background-color: rgba(0, 0, 0, 0.55);
+            /* lighter black */
+            transform: translateY(-5px);
+            /* small lift effect */
+        }
+
+        .feature-item img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 15px;
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 65px;
+            margin-bottom: 10px;
+            margin-left: 15px;
+        }
+
+        .feature-item p {
+            font-size: 14.25px;
+            color: #ffffff;
+            line-height: 1.75;
+            margin-left: 15px;
+        }
+
+        /* Hover effect */
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .feature-item {
+                width: calc(50% - 30px);
+                /* 2 per row on tablet */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .feature-item {
+                width: 100%;
+                /* 1 per row on mobile */
+            }
+        }
+
+        /* ===== RECOMMENDED TOURS SECTION ===== */
+        .recommended-section {
+            padding: 50px 40px;
+            background: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .recommended-heading {
+            width: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px auto;
+        }
+
+        .recommended-heading .highlight {
+            color: #000000;
+            font-weight: 400;
+            font-size: 50px;
+        }
+
+        .recommended-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+
+        .slider-wrapper {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .slide {
+            min-width: 33.333%;
+            /* 3 images per view */
+            padding: 10px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 660px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Buttons */
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            cursor: pointer;
+            font-size: 20px;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .slide-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
         }
     </style>
 </head>
@@ -1380,6 +1576,98 @@
         <!-- Discover More Button -->
         <div class="discover-more">
             <a href="tours-retreats.html" class="btn-primary">DISCOVER MORE</a>
+        </div>
+    </section>
+
+    <!-- START: Why Travel With Us Section -->
+    <section class="why-travel-section">
+        <div class="why-travel-container">
+            <!-- Heading -->
+            <div class="why-travel-heading">
+                <span class="sub-title2">JOY PROJECT SPECIALS</span>
+                <h1 class="highlight2">
+                    WHY TRAVEL WITH US</span>
+                </h1>
+            </div>
+
+            <!-- Features / Icon Boxes -->
+            <div class="features-container">
+                <div class="feature-item">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/08/1.svg" alt="Tailor-made Journeys">
+                    <h3>100% TAILOR-MADE JOURNEYS</h3>
+                    <p>Experience unique adventures crafted specifically to align with your personal preferences,
+                        ensuring a journey tailored just for you.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/08/2.svg" alt="Personalised Support">
+                    <h3>1 : 1 PERSONALISED SUPPORT</h3>
+                    <p>Enjoy direct, individual communication with our team, providing seamless, friendly, and
+                        professional service customised to your needs.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/08/3.svg" alt="Trusted Experts">
+                    <h3>100% TRUSTED LOCAL EXPERTS</h3>
+                    <p>Rely on our fully licensed local ground tour operator with 16+ years of expertise, for
+                        exceptional knowledge and dependable service, ensuring a flawless journey</p>
+                </div>
+                <div class="feature-item">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/08/4.svg" alt="Years of Excellence">
+                    <h3>30+ YEARS OF EXCELLENCE</h3>
+                    <p>Leverage over 3 decades of experience in hospitality and wellness, guaranteeing top quality care
+                        and exceptional experiences throughout your journey.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- START: Recommended Section -->
+    <section class="recommended-section">
+        <div class="recommended-container">
+
+            <!-- Heading -->
+            <div class="recommended-heading">
+                <span class="sub-title">RECOMMENDED</span>
+
+                <h1 class="highlight">
+                    Discover the Best of Sri Lanka!</span>
+                </h1>
+
+            </div>
+
+
+
+            <!-- Image Grid -->
+            <div class="slider-wrapper">
+
+                <button class="slide-btn prev">&#10094;</button>
+
+                <div class="slider">
+                    <div class="slide"><img
+                            src="https://srilankajoytours.com/wp-content/uploads/2024/09/best_srilanka1.jpg"
+                            alt="Best of Sri Lanka - Scenic View"></div>
+                    <div class="slide"><img
+                            src="https://srilankajoytours.com/wp-content/uploads/2024/09/best_srilanka2.jpg"
+                            alt="Best of Sri Lanka - Scenic View"></div>
+                    <div class="slide"><img
+                            src="https://srilankajoytours.com/wp-content/uploads/2024/09/best_srilanka3.jpg"
+                            alt="Best of Sri Lanka - Scenic View"></div>
+                    <div class="slide"><img
+                            src="https://srilankajoytours.com/wp-content/uploads/2024/09/best_srilanka4.jpg"
+                            alt="Best of Sri Lanka - Scenic View"></div>
+                    <div class="slide"><img
+                            src="https://srilankajoytours.com/wp-content/uploads/2024/09/best_srilanka5.jpg"
+                            alt="Best of Sri Lanka - Scenic View"></div>
+                    <div class="slide"><img
+                            src="https://srilankajoytours.com/wp-content/uploads/2024/09/best_srilanka8.jpg"
+                            alt="Best of Sri Lanka - Scenic View"></div>
+                    <div class="slide"><img
+                            src="https://srilankajoytours.com/wp-content/uploads/2024/09/best_srilanka9.jpg"
+                            alt="Best of Sri Lanka - Scenic View"></div>
+                </div>
+
+                <button class="slide-btn next">&#10095;</button>
+
+            </div>
         </div>
     </section>
 
@@ -1943,6 +2231,31 @@
             });
         })();
     </script>
+
+    <script>
+        const slider = document.querySelector('.slider');
+        const slides = document.querySelectorAll('.slide');
+        const prev = document.querySelector('.prev');
+        const next = document.querySelector('.next');
+
+        let index = 0;
+        const visibleSlides = 3;
+
+        next.addEventListener('click', () => {
+            if (index < slides.length - visibleSlides) {
+                index++;
+                slider.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
+            }
+        });
+
+        prev.addEventListener('click', () => {
+            if (index > 0) {
+                index--;
+                slider.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
+            }
+        });
+    </script>
+
 </body>
 
 </html>
