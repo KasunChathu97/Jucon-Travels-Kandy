@@ -1,0 +1,1948 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JUCON TRAVELS | Home</title>
+    <meta name="description"
+        content="Tailor-made tours and wellness retreats in Sri Lanka. Authentic experiences crafted with trusted local experts." />
+    <!-- Removed theme-color meta tag for full cross-browser compatibility; this feature is not supported in Firefox or Opera. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <style>
+        :root {
+            --bg: #fff;
+            --surface: #f7f7f7;
+            --surface2: #ededed;
+            --text: #111;
+            --muted: #222;
+            --muted2: #444;
+            --brand: #22c55e;
+            --brand2: #10b981;
+            --accent: #fbbf24;
+            --danger: #ef4444;
+            --border: #e0e0e0;
+            --shadow: 0 2px 8px rgba(0, 0, 0, .06);
+            --radius: 18px;
+            --radius2: 26px;
+            --max: 1180px;
+            --brand-blue: #0077b6;
+            /* deep ocean blue */
+            --light-blue: #90e0ef;
+            /* light sky glow */
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            color: #111 !important;
+            background: #fff !important;
+            min-height: 100vh;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .container-header {
+            width: min(var(--max), calc(100% - 40px));
+            margin: 0 auto;
+            height: 78px;
+        }
+
+        .container {
+            width: min(var(--max), calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .skip-link:focus {
+            left: 18px;
+            top: 18px;
+            width: auto;
+            height: auto;
+            padding: 10px 12px;
+            background: #0b2f26;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            z-index: 2000;
+        }
+
+        /* Header */
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 32px;
+            padding: 14px 0;
+            margin-top: 15px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            min-width: 220px;
+            margin-right: 56px;
+        }
+
+        .logo {
+            width: 75px;
+            height: 75px;
+            border-radius: 16px;
+            background:
+                radial-gradient(32px 32px at 30% 25%, rgba(255, 255, 255, .55), transparent 60%),
+                linear-gradient(135deg, #10b981, #22c55e);
+            box-shadow: 0 12px 36px rgba(16, 185, 129, .35);
+            border: 1px solid rgba(255, 255, 255, .18);
+            flex: 0 0 auto;
+        }
+
+        .brand-title {
+            line-height: 1.05;
+        }
+
+        .brand-title strong {
+            display: block;
+            font-weight: 600;
+            letter-spacing: .2px;
+            font-size: 18px;
+        }
+
+        .brand-title span {
+            display: block;
+            color: var(--muted2);
+            font-size: 12.5px;
+            margin-top: 2px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            justify-content: center;
+            flex: 1 1 0%;
+        }
+
+        .nav a {
+            position: relative;
+            text-decoration: none;
+            color: #555;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 12px 18px;
+            transition: color 0.3s ease;
+        }
+
+        /* Hover + Active text color */
+        .nav a:hover,
+        .nav a.active {
+            color: var(--brand-blue);
+        }
+
+        .nav a::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%) scale(0.8);
+            width: 10px;
+            height: 10px;
+            background: var(--brand-blue);
+            /* solid center */
+            border-radius: 50%;
+            opacity: 0;
+        }
+
+        /* Hover + Active show & animate */
+        .nav a:hover::before,
+        .nav a.active::before {
+            opacity: 1;
+            animation: tourismPulse 1.4s steps(4, end) infinite;
+        }
+
+        @keyframes tourismPulse {
+
+            0% {
+                transform: translateX(-50%) scale(0.8);
+                box-shadow: 0 0 0 0 rgba(0, 119, 182, 0.8);
+            }
+
+            25% {
+                transform: translateX(-50%) scale(1);
+                box-shadow: 0 0 10px 5px rgba(0, 180, 216, 0.6);
+            }
+
+            50% {
+                transform: translateX(-50%) scale(1.15);
+                box-shadow: 0 0 20px 10px rgba(144, 224, 239, 0.6);
+            }
+
+            75% {
+                transform: translateX(-50%) scale(1);
+                box-shadow: 0 0 10px 5px rgba(0, 180, 216, 0.6);
+            }
+
+            100% {
+                transform: translateX(-50%) scale(0.8);
+                box-shadow: 0 0 0 0 rgba(0, 119, 182, 0.8);
+            }
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid rgba(255, 255, 255, .16);
+            border-radius: 999px;
+            padding: 10px 14px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--text);
+            background: rgba(255, 255, 255, .08);
+            transition: transform .15s ease, background .15s ease, border-color .15s ease;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-1px);
+            background: rgba(255, 255, 255, .12);
+            border-color: rgba(255, 255, 255, .22);
+        }
+
+        .btn.primary {
+            background: linear-gradient(135deg, rgba(34, 197, 94, .95), rgba(16, 185, 129, .92));
+            border-color: rgba(255, 255, 255, .20);
+            color: #052016;
+            box-shadow: 0 18px 48px rgba(34, 197, 94, .22);
+        }
+
+        .btn.primary:hover {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 1), rgba(16, 185, 129, 1));
+        }
+
+        .btn.small {
+            padding: 9px 12px;
+            font-size: 13px;
+        }
+
+        .menu-btn {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, .16);
+            background: rgba(255, 255, 255, .08);
+            color: var(--text);
+            cursor: pointer;
+        }
+
+        /* Mobile nav */
+        .mobile-panel {
+            display: none;
+            padding-bottom: 14px;
+        }
+
+        .mobile-panel.open {
+            display: block;
+        }
+
+        .mobile-panel .nav {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .mobile-panel .nav a {
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .10);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 56px 0 30px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 26px;
+            align-items: start;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(255, 255, 255, .06);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px rgba(251, 191, 36, .12);
+        }
+
+        h1 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(34px, 4.2vw, 56px);
+            line-height: 1.03;
+            letter-spacing: .2px;
+            margin: 16px 0 12px;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 16.5px;
+            line-height: 1.7;
+            margin: 0 0 18px;
+            max-width: 62ch;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .hero-card {
+            border-radius: var(--radius2);
+            border: 1px solid rgba(255, 255, 255, .12);
+            background:
+                radial-gradient(600px 260px at 30% 0%, rgba(34, 197, 94, .18), transparent 60%),
+                radial-gradient(420px 240px at 85% 30%, rgba(251, 191, 36, .14), transparent 55%),
+                rgba(255, 255, 255, .06);
+            box-shadow: var(--shadow);
+            padding: 18px;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+        }
+
+        .hero-card:before {
+            content: "";
+            position: absolute;
+            inset: -2px;
+            background: radial-gradient(500px 300px at 30% 0%, rgba(255, 255, 255, .12), transparent 60%);
+            opacity: .9;
+            pointer-events: none;
+        }
+
+        .hero-card-inner {
+            position: relative;
+        }
+
+        .hero-card h3 {
+            margin: 0 0 8px;
+            font-size: 16px;
+            letter-spacing: .2px;
+        }
+
+        .hero-card p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+
+        .hero-card-actions {
+            margin-top: 14px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .stat {
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(0, 0, 0, .12);
+            padding: 12px;
+        }
+
+        .stat b {
+            display: block;
+            font-size: 16px;
+        }
+
+        .stat span {
+            color: var(--muted2);
+            font-size: 12.5px;
+        }
+
+        /* Sections */
+        section {
+            padding: 44px 0;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 18px;
+            margin-bottom: 18px;
+        }
+
+        .section-head h2 {
+            font-family: "Playfair Display", Georgia, serif;
+            font-size: clamp(24px, 2.6vw, 34px);
+            margin: 0;
+            line-height: 1.1;
+        }
+
+        .section-head p {
+            margin: 0;
+            color: var(--muted2);
+            line-height: 1.6;
+            max-width: 62ch;
+            font-size: 14px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+        }
+
+        .card {
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .06);
+            border-radius: var(--radius);
+            padding: 18px;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, .22);
+        }
+
+        .card h3 {
+            margin: 0 0 8px;
+            font-size: 16px;
+        }
+
+        .card-title {
+            margin: 0 0 8px;
+        }
+
+        .card-title-margin {
+            margin: 0 0 8px;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 10px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .06);
+            color: var(--muted);
+            font-size: 12.5px;
+            margin-bottom: 10px;
+        }
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 10px;
+            background: rgba(34, 197, 94, .16);
+            border: 1px solid rgba(34, 197, 94, .22);
+            box-shadow: 0 10px 25px rgba(34, 197, 94, .10);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 auto;
+        }
+
+        .list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .list-item {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+            align-items: start;
+        }
+
+        .cta-banner {
+            border-radius: var(--radius2);
+            border: 1px solid rgba(255, 255, 255, .12);
+            background:
+                radial-gradient(650px 300px at 20% 0%, rgba(34, 197, 94, .18), transparent 58%),
+                radial-gradient(500px 300px at 90% 20%, rgba(251, 191, 36, .14), transparent 55%),
+                rgba(255, 255, 255, .06);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 18px;
+        }
+
+        .cta-banner h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .cta-banner p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            line-height: 1.55;
+            font-size: 14px;
+        }
+
+        .divider {
+            height: 1px;
+            background: rgba(255, 255, 255, .10);
+            margin: 0;
+            border: 0;
+        }
+
+        /* Blog */
+        .post {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Utility margin top */
+        .mt-18 {
+            margin-top: 18px;
+        }
+
+        .post .meta {
+            color: var(--muted2);
+            font-size: 12.5px;
+        }
+
+        .post .title {
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 1.35;
+        }
+
+        /* Footer */
+        footer {
+            padding: 36px 0 26px;
+            border-top: 1px solid rgba(255, 255, 255, .10);
+            background: rgba(0, 0, 0, .16);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 14px;
+            align-items: start;
+        }
+
+        .footer h4 {
+            margin: 0 0 10px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, .9);
+        }
+
+        .footer a {
+            color: var(--muted);
+        }
+
+        .footer a:hover {
+            color: var(--text);
+        }
+
+        .footer p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.65;
+            font-size: 14px;
+        }
+
+        .footer .fine {
+            color: var(--muted2);
+            font-size: 12.5px;
+            margin-top: 14px;
+        }
+
+        /* FAQ */
+        details {
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .05);
+            border-radius: 16px;
+            padding: 12px 14px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: 600;
+            outline: none;
+        }
+
+        details p {
+            margin: 10px 0 0;
+            color: var(--muted);
+        }
+
+        /* ===== VIDEO HERO ===== */
+        .video-hero {
+            position: relative;
+            width: 100%;
+            height: 75vh;
+            min-height: 420px;
+            overflow: hidden;
+        }
+
+        .video-hero iframe {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 177.77vh;
+            /* 16:9 ratio */
+            height: 100vh;
+            min-width: 100%;
+            min-height: 100%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+        }
+
+        .video-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom,
+                    rgba(0, 0, 0, 0.55),
+                    rgba(0, 0, 0, 0.35),
+                    rgba(0, 0, 0, 0.65));
+        }
+
+        .video-content {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            row-gap: 1px;
+        }
+
+        .video-content h1 {
+            color: #fff;
+            font-size: clamp(32px, 4vw, 56px);
+            font-family: "Playfair Display", Georgia, serif;
+            margin: 0;
+        }
+
+        .video-content p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .video-container {
+            max-width: 1400px;
+            height: 790px;
+            background: rgb(255, 255, 255);
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 0;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .video-wrapper-full {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .video-wrapper-full iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .site-logo {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        /* about section */
+        .hero-section {
+            height: 45vh;
+            background: #ffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        .sub-title {
+            position: relative;
+            display: inline-block;
+            color: #0d1b2a;
+            /* original text color */
+            font-size: 21px;
+        }
+
+        /* Left side blinking circle */
+        .sub-title::before {
+            content: "";
+            position: absolute;
+            left: -18px;
+            /* circle eka text ekata wamata */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: #0077b6;
+            border-radius: 50%;
+            animation: leftBlink 1.5s infinite ease-in-out;
+        }
+
+        /* Smooth blink animation */
+        @keyframes leftBlink {
+            0% {
+                opacity: 0.4;
+                box-shadow: 0 0 0px rgba(0, 119, 182, 0.4);
+            }
+
+            50% {
+                opacity: 1;
+                box-shadow: 0 0 12px rgba(0, 180, 216, 0.9);
+            }
+
+            100% {
+                opacity: 0.4;
+                box-shadow: 0 0 0px rgba(0, 119, 182, 0.4);
+            }
+        }
+
+
+
+        .hero-section h1 {
+            font-weight: 400;
+            font-size: 36px;
+        }
+
+        .highlight {
+            color: #000000;
+            font-weight: 400;
+            font-size: 36px;
+        }
+
+
+        .tagline {
+            margin-top: 25px;
+            font-weight: 400;
+            color: #000000;
+            font-size: 30px;
+        }
+
+        /* DISCOVER NOW button */
+        .btn-primary {
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 14px 32px;
+            background: #0077b6;
+            color: #fff;
+            height: 40%;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+            /* smooth grow */
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Expanding white circle from center */
+        .btn-primary::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+        }
+
+        /* Button hover: slightly bigger smoothly */
+        .btn-primary:hover {
+            background: #000000;
+            transform: scale(1.1);
+            /* slightly bigger */
+        }
+
+        /* Circle animation on hover: blink & move down continuously */
+        .btn-primary:hover::after {
+            animation: blinkSpread 1.8s ease-out infinite;
+        }
+
+        @keyframes blinkSpread {
+
+            0% {
+                transform: translate(-50%, -50%) scale(0.2);
+                opacity: 0.7;
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.9;
+                box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.6);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.8);
+                opacity: 0;
+                box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
+            }
+        }
+
+        .about-section {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(-80px);
+            /* uda idala patan gannawa */
+            animation: slideFromTop 1.5s ease-out forwards;
+            animation-delay: 0.3s;
+        }
+
+        @keyframes slideFromTop {
+            0% {
+                transform: translateY(-80px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .about-section h2 {
+            color: #ffffff;
+        }
+
+        .about-section p {
+            color: #000000;
+            font-size: 18.2px;
+            line-height: 1.8;
+        }
+
+        /* Image sliding in from the right */
+        .elementor-element-339b4ed {
+            position: absolute;
+            right: 0;
+            top: 200%;
+            transform: translateY(-50%);
+            opacity: 0;
+            animation: slideImageFromRight 1.5s ease-out forwards;
+        }
+
+        @keyframes slideImageFromRight {
+            0% {
+                right: -200px;
+                opacity: 0;
+            }
+
+            100% {
+                right: 0;
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .elementor-element-339b4ed {
+                display: none;
+            }
+        }
+
+        /* Make the plane image float above text, like it's flying over */
+        .elementor-element-b663ccc {
+            position: absolute;
+            left: 0;
+            top: 260%;
+            transform: translateY(-50%);
+            opacity: 0;
+            animation: slideImageFromLeft 1.5s ease-out forwards;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        /* Reduce plane opacity (make it more transparent) */
+        .elementor-element-b663ccc img {
+            opacity: 0.15;
+            transition: opacity 0.5s ease;
+        }
+
+        @keyframes slideImageFromLeft {
+            0% {
+                left: -200px;
+                opacity: 0;
+            }
+
+            100% {
+                left: 0;
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .elementor-element-339b4ed {
+                display: none;
+            }
+        }
+
+        .btn-outline {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 28px;
+            border: 2px solid #0077b6;
+            border-radius: 30px;
+            color: #0077b6;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: #0077b6;
+            color: #fff;
+        }
+
+        /* Journey Section */
+        .journey-section {
+            padding: 40px 20px;
+            background-color: #fdfdfd;
+            text-align: center;
+        }
+
+        .journey-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .journey-item {
+            width: 30%;
+            text-align: center;
+            overflow: hidden;
+            transition: transform 0.5s ease;
+            /* container smooth movement */
+        }
+
+        .journey-item figcaption strong {
+            margin-top: 12px;
+            font-size: 21px;
+            color: #000000;
+        }
+
+        .journey-item figcaption {
+            margin-top: 5px;
+            margin-top: 12px;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .journey-item img {
+            width: 100%;
+            border-radius: 10px;
+            /* no zoom */
+        }
+
+        .journey-item:hover {
+            transform: translateY(-20px);
+            /* whole journey-item lifts up */
+        }
+
+
+        @keyframes blink {
+
+            0%,
+            50%,
+            100% {
+                opacity: 1;
+            }
+
+            25%,
+            75% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 960px) {
+            .journey-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .journey-item {
+                width: 80%;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 980px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .nav {
+                display: none;
+            }
+
+            .menu-btn {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .brand {
+                min-width: auto;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .btn {
+                transition: none;
+            }
+        }
+
+        /* ===== ABOUT SRI LANKA SECTION ===== */
+        .about-heading {
+            margin-bottom: 35px;
+            /* before it was 40px, now reduced to 20px */
+        }
+
+        .about-container {
+            margin-top: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 60px 35px;
+            justify-content: center;
+        }
+
+        .about-heading .sub-heading {
+            display: block;
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .highlight1 {
+            color: #000000;
+            font-weight: 400;
+            font-size: 36px;
+            row-gap: 10px;
+        }
+
+        .about-heading .title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+
+        .discover-more {
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-images {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-item {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
+                <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                <div class="brand-title">
+                    <strong>JUCON TRAVELS</strong>
+                    <span>Travel Agency • Sri Lanka</span>
+                </div>
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <a href="about-us.html">About</a>
+                <a href="#tours">Tours & Retreats</a>
+                <a href="#best-of">Best Of</a>
+                <a href="#group-leader">Group Leader</a>
+                <a href="#promoters">Promoters</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+
+        <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
+            <nav class="nav" aria-label="Mobile">
+                <a href="about-us.html">About</a>
+                <a href="#tours">Tours &amp; Retreats</a>
+                <a href="#best-of">Best Of</a>
+                <a href="#group-leader">Group Leader</a>
+                <a href="#promoters">Promoters</a>
+                <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Responsive YouTube Video Embed -->
+    <div class="video-container">
+        <div class="video-wrapper-full">
+            <iframe
+                src="https://www.youtube.com/embed/4GXv3lDzPf0?autoplay=1&controls=1&loop=1&playlist=4GXv3lDzPf0&rel=0&modestbranding=1"
+                title="SriLanka Joy Tours" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="sub-title">THERE IS SO MUCH TO DISCOVER!</span>
+
+            <h1 class="highlight">
+                SRI LANKA <br>
+                <span class="highlight">THE PEARL OF THE INDIAN OCEAN</span>
+            </h1>
+
+            <h3 class="tagline">Tailored Experiences Just For You</h3>
+
+            <a href="tours-retreats.html" class="btn-primary">DISCOVER NOW</a>
+        </div>
+    </section>
+
+
+    <!-- ABOUT JOY PROJECT SECTION -->
+    <section class="about-section">
+        <div class="container">
+            <span class="sub-title">ABOUT JOY PROJECT</span>
+
+            <h1 class="highlight">
+                Unlock the Authentic Magic of Sri Lanka <br>
+                <span class="highlight">with JOY project</span>
+            </h1>
+
+            <p>Immerse yourself in a once-in-a-lifetime, authentic
+                journey, expertly crafted by<br />JOY project, your
+                trusted Global Tour and Retreat Coordinator.<br />We
+                specialise in authentic, life-changing tours and
+                wellness retreats in<br />partnership with a
+                licensed local ground operator in Sri Lanka. Every
+                experience<br />is tailored to your desires,
+                ensuring you explore the heart of Sri Lanka’s
+                breathtaking<br />landscapes, ancient wisdom, and
+                vibrant culture with complete peace of
+                mind.<br />Whether you&#8217;re seeking serenity,
+                adventure, or a deeper connection with
+                nature,<br />our expertise guarantees a journey that
+                rejuvenates and inspires.<br />Let us take you
+                beyond ordinary travel to discover the true essence
+                of Sri Lanka.
+            </p>
+
+            <a href="tours-retreats.html" class="btn-primary">DISCOVER MORE</a>
+        </div>
+    </section>
+    <!-- World Map -->
+    <div class="elementor-element elementor-element-339b4ed elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+        data-id="339b4ed" data-element_type="widget" data-e-type="widget"
+        data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInRight&quot;}"
+        data-widget_type="image.default">
+        <div class="elementor-widget-container">
+            <img decoding="async" width="677" height="334"
+                src="https://srilankajoytours.com/wp-content/uploads/2024/03/World-map.png"
+                class="attachment-full size-full wp-image-18669" alt=""
+                srcset="https://srilankajoytours.com/wp-content/uploads/2024/03/World-map.png 677w, https://srilankajoytours.com/wp-content/uploads/2024/03/World-map-600x296.png 600w, https://srilankajoytours.com/wp-content/uploads/2024/03/World-map-300x148.png 300w"
+                sizes="(max-width: 677px) 100vw, 677px" />
+        </div>
+    </div>
+    <!-- Plane -->
+    <div class="elementor-element elementor-element-b663ccc elementor-absolute elementor-invisible elementor-widget elementor-widget-image"
+        data-id="b663ccc" data-element_type="widget" data-e-type="widget"
+        data-settings="{&quot;_position&quot;:&quot;absolute&quot;,&quot;_animation&quot;:&quot;fadeInUp&quot;}"
+        data-widget_type="image.default">
+        <div class="elementor-widget-container">
+            <img decoding="async" width="336" height="404"
+                src="https://srilankajoytours.com/wp-content/uploads/2024/03/Plane.svg"
+                class="attachment-full size-full wp-image-18940" alt="" />
+        </div>
+    </div>
+
+    <!-- START: Tours / Leaders / Promoters Section -->
+    <section class="journey-section">
+        <div class="journey-container">
+            <div class="journey-item">
+                <a href="tours-retreats.html">
+                    <img src="images/Tours_retreats.jpg" alt="Tours and Retreats">
+                </a>
+                <figcaption>
+                    <strong>TOURS AND RETREATS</strong><br>
+                    Create Your Dream Journey
+                </figcaption>
+            </div>
+
+            <div class="journey-item">
+                <a href="group-leader.html">
+                    <img src="images/Tours_retreats.jpg" alt="Group Leader">
+                </a>
+                <figcaption>
+                    <strong>BECOME A GROUP LEADER</strong><br>
+                    Inspire - Lead - Benefit
+                </figcaption>
+            </div>
+
+            <div class="journey-item">
+                <a href="promoters.html">
+                    <img src="images/promoter.jpg" alt="Promoter">
+                </a>
+                <figcaption>
+                    <strong>BECOME A PROMOTER</strong><br>
+                    Spread The JOY - Earn Rewards
+                </figcaption>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- START: Tailored Experiences Section -->
+    <section class="journey-section">
+        <div class="about-heading">
+            <span class="sub-title">ABOUT SRI LANKA</span>
+
+            <h1 class="highlight1">
+                Tailored Experiences Just For You</span>
+            </h1>
+        </div>
+        <div class="about-container">
+            <!-- Item 1 -->
+            <div class="journey-item">
+                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/1-3.png" alt="Wellness Retreats">
+                <figcaption>Wellness Retreats</figcaption>
+            </div>
+            <!-- Item 2 -->
+            <div class="journey-item">
+                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/2-3.png" alt="Corporate Teams">
+                <figcaption>Corporate Teams</figcaption>
+            </div>
+            <!-- Item 3 -->
+            <div class="journey-item">
+                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/sri.png"
+                    alt="History & Culture Lovers">
+                <figcaption>History & Culture Lovers</figcaption>
+            </div>
+            <!-- Item 4 -->
+            <div class="journey-item">
+                <img src="https://srilankajoytours.com/wp-content/uploads/2024/09/spiritual.jpg"
+                    alt="Spiritual Seekers & Pilgrims">
+                <figcaption>Spiritual Seekers & Pilgrims</figcaption>
+            </div>
+            <!-- Item 5 -->
+            <div class="journey-item">
+                <img src="https://srilankajoytours.com/wp-content/uploads/2024/09/friends1.jpg" alt="Friends & Family">
+                <figcaption>Friends & Family</figcaption>
+            </div>
+            <!-- Item 6 -->
+            <div class="journey-item">
+                <img src="https://srilankajoytours.com/wp-content/uploads/2024/09/couples2.jpg" alt="Couples">
+                <figcaption>Couples</figcaption>
+            </div>
+        </div>
+
+        <!-- Discover More Button -->
+        <div class="discover-more">
+            <a href="tours-retreats.html" class="btn-primary">DISCOVER MORE</a>
+        </div>
+    </section>
+
+
+
+    <div class="video-content">
+        <div>
+            <div class="kicker">
+                <span class="dot"></span>
+                THERE IS SO MUCH TO DISCOVER!
+            </div>
+            <h1>SRI LANKA<br>THE PEARL OF THE INDIAN OCEAN</h1>
+            <p>Tailored Experiences Just For You</p>
+        </div>
+    </div>
+
+
+
+
+    <main id="main">
+        <div id="top"></div>
+
+        <!-- HERO -->
+        <section class="hero" aria-label="Hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div>
+                        <div class="kicker"><span class="dot" aria-hidden="true"></span>THERE IS SO MUCH TO DISCOVER!
+                        </div>
+                        <h1>SRI LANKA<br />THE PEARL OF THE INDIAN OCEAN</h1>
+                        <p><b>Tailored Experiences Just For You</b><br />
+                            Discover Sri Lanka through authentic, expertly coordinated journeys that blend wellness,
+                            adventure, and cultural immersion.</p>
+
+                        <div class="hero-actions">
+                            <a class="btn primary" href="#tours">DISCOVER NOW</a>
+                            <a class="btn" href="#about">About JOY project</a>
+                        </div>
+                    </div>
+
+                    <aside class="hero-card" aria-label="Highlights">
+                        <div class="hero-card-inner">
+                            <h3>ABOUT JOY PROJECT</h3>
+                            <p>Unlock the Authentic Magic of Sri Lanka with JOY project</p>
+
+                            <div class="stat-grid" role="list">
+                                <div class="stat" role="listitem">
+                                    <b>100%</b>
+                                    <span>Tailor-made journeys</span>
+                                </div>
+                                <div class="stat" role="listitem">
+                                    <b>1 : 1</b>
+                                    <span>Personalised support</span>
+                                </div>
+                                <div class="stat" role="listitem">
+                                    <b>16+ yrs</b>
+                                    <span>Trusted local experts</span>
+                                </div>
+                                <div class="stat" role="listitem">
+                                    <b>30+ yrs</b>
+                                    <span>Excellence in wellness &amp; hospitality</span>
+                                </div>
+                            </div>
+
+                            <div class="hero-card-actions">
+                                <a class="btn small" href="#why">Why travel with us</a>
+                                <a class="btn small" href="#contact">Contact</a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <hr class="divider" />
+
+        <!-- ABOUT -->
+        <section id="about" aria-label="About">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>About JOY project</h2>
+                        <p>Unlock the Authentic Magic of Sri Lanka with JOY project.</p>
+                    </div>
+                    <a class="btn small" href="#contact">Discover More</a>
+                </div>
+
+                <div class="two-col">
+                    <div class="card">
+                        <div class="pill">Global Tour &amp; Retreat Coordinator</div>
+                        <p>
+                            Immerse yourself in a once-in-a-lifetime, authentic journey, expertly crafted by JOY
+                            project, your trusted Global Tour and Retreat Coordinator.
+                            We specialise in authentic, life-changing tours and wellness retreats in partnership with a
+                            licensed local ground operator in Sri Lanka.
+                            Every experience is tailored to your desires, ensuring you explore the heart of Sri Lanka’s
+                            breathtaking landscapes, ancient wisdom, and vibrant culture with complete peace of mind.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">Serenity • Adventure • Connection</div>
+                        <p>
+                            Whether you’re seeking serenity, adventure, or a deeper connection with nature, our
+                            expertise guarantees a journey that rejuvenates and inspires.
+                            Let us take you beyond ordinary travel to discover the true essence of Sri Lanka.
+                        </p>
+                        <div class="btn-group">
+                            <a class="btn primary" href="#tours">Discover More</a>
+                            <a class="btn" href="#best-of">Best of Sri Lanka</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TOURS & RETREATS + PROGRAMS -->
+        <section id="tours" aria-label="Tours and retreats">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>TOURS AND RETREATS</h2>
+                        <p>Create Your Dream Journey</p>
+                    </div>
+                    <a class="btn small" href="#contact">Discover More</a>
+                </div>
+
+                <div class="grid-3" role="list">
+                    <div class="card" role="listitem">
+                        <div class="pill">Create Your Dream Journey</div>
+                        <h3>Tailored Experiences Just For You</h3>
+                        <p>Tell us what you love, and we’ll craft a journey that fits your pace, preferences, and
+                            purpose.</p>
+                    </div>
+                    <div class="card" role="listitem">
+                        <div class="pill">BECOME A GROUP LEADER</div>
+                        <h3>Inspire - Lead - Benefit</h3>
+                        <p>Host a meaningful journey for your community while enjoying curated benefits and support from
+                            our team.</p>
+                    </div>
+                    <div class="card" role="listitem">
+                        <div class="pill">BECOME A PROMOTER</div>
+                        <h3>Spread The JOY - Earn Rewards</h3>
+                        <p>Share JOY project with your network and earn rewards while inspiring others to discover Sri
+                            Lanka.</p>
+                    </div>
+                </div>
+
+                <div class="cta-banner mt-18">
+                    <div>
+                        <h3>ABOUT Sri Lanka</h3>
+                        <p>Tailored Experiences Just For You</p>
+                    </div>
+                    <a class="btn primary" href="#best-of">Discover More</a>
+                </div>
+
+                <div class="grid-3 mt-18" aria-label="Audience types">
+                    <div class="card">
+                        <div class="pill">Wellness Retreats</div>
+                        <p>Restore, reconnect, and recharge with curated retreats and mindful experiences.</p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">Corporate Teams</div>
+                        <p>Purposeful offsites designed to energise teams through nature, culture, and wellness.</p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">History &amp; Culture Lovers</div>
+                        <p>Explore ancient cities, timeless traditions, and Sri Lanka’s rich heritage.</p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">Spiritual Seekers &amp; Pilgrims</div>
+                        <p>Meaningful journeys to sacred sites and deeply grounding experiences.</p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">Friends &amp; Family</div>
+                        <p>Memory-making adventures tailored to all ages and travel styles.</p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">Couples</div>
+                        <p>Romantic escapes blending comfort, discovery, and authentic moments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY TRAVEL WITH US -->
+        <section id="why" aria-label="Why travel with us">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>JOY PROJECT SPECIALS</h2>
+                        <p>WHY TRAVEL WITH US</p>
+                    </div>
+                </div>
+
+                <div class="grid-2" role="list">
+                    <div class="card" role="listitem">
+                        <div class="list-item">
+                            <div class="icon" aria-hidden="true">✓</div>
+                            <div>
+                                <h3 class="card-title">100% TAILOR-MADE JOURNEYS</h3>
+                                <p>Experience unique adventures crafted specifically to align with your personal
+                                    preferences, ensuring a journey tailored just for you.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" role="listitem">
+                        <div class="list-item">
+                            <div class="icon" aria-hidden="true">✓</div>
+                            <div>
+                                <h3 class="card-title">1 : 1 PERSONALISED SUPPORT</h3>
+                                <p>Enjoy direct, individual communication with our team, providing seamless, friendly,
+                                    and professional service customised to you needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" role="listitem">
+                        <div class="list-item">
+                            <div class="icon" aria-hidden="true">✓</div>
+                            <div>
+                                <h3 class="card-title">100% TRUSTED LOCAL EXPERTS</h3>
+                                <p>Rely on our fully licensed local ground tour operator with 16+ years of expertise,
+                                    for exceptional knowledge and dependable service, ensuring a flawless journey</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" role="listitem">
+                        <div class="list-item">
+                            <div class="icon" aria-hidden="true">✓</div>
+                            <div>
+                                <h3 class="card-title card-title-margin">30+ YEARS OF EXCELLENCE</h3>
+                                <p>Leverage over 3 decades of experience in hospitality and wellness, guaranteeing top
+                                    quality care and exceptional experiences throughout your journey.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BEST OF -->
+        <section id="best-of" aria-label="Best of Sri Lanka">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>RECOMMENDED</h2>
+                        <p>Discover the Best of Sri Lanka!</p>
+                    </div>
+                    <a class="btn small" href="#contact">Discover More</a>
+                </div>
+
+                <div class="card card-padding-22">
+                    <div class="card special">
+                        <div class="pill">BEST OF SRI LANKA</div>
+                        <h3 class="title">Inspirational Journeys, Authentic Experiences</h3>
+                        <p>
+                            At JOY Project, we craft transformative tours and retreats that blend wellness, adventure,
+                            and cultural immersion. With over 30 years of expertise in hospitality and wellness, we are
+                            passionate about creating unforgettable journeys that showcase Sri Lanka’s rich heritage,
+                            stunning landscapes, and vibrant traditions.
+                        </p>
+                        <p class="blog-title">
+                            Our mission is to bring people together, offering a deep connection to the wonders of Sri
+                            Lanka while embracing wellness, diverse cultures, and unique culinary delights. Every tour
+                            and retreat is designed with care, ensuring moments of discovery, relaxation, and personal
+                            growth.
+                        </p>
+                        <p class="blog-title">
+                            Whether you seek peace, adventure, or both, JOY Project curates life-changing experiences in
+                            one of the world’s most incredible destinations. Thank you for choosing us as your trusted
+                            partner in exploring the magic of Sri Lanka!
+                        </p>
+                        <div class="btn-group">
+                            <a class="btn primary" href="#contact">Discover More</a>
+                            <a class="btn" href="#tours">Tailor-Made Holidays</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid-2 mt-14" aria-label="Tailor-made holidays">
+                    <div class="card">
+                        <div class="pill">Your Journey, Our Passion</div>
+                        <h3>Explore Sri Lanka’s Best</h3>
+                        <p>Discover Sri Lanka’s iconic landscapes, rich culture, and serene retreats with our
+                            thoughtfully crafted tours.</p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">Authentic, Tailored Experiences</div>
+                        <h3>Designed Around You</h3>
+                        <p>Each journey is customised to match your interests, offering an enriching blend of wellness,
+                            adventure, and cultural immersion.</p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">Stress-Free Travel</div>
+                        <h3>We Handle The Details</h3>
+                        <p>We handle all the details, ensuring a seamless and worry-free experience from start to
+                            finish.</p>
+                    </div>
+                    <div class="card">
+                        <div class="pill">Create Lasting Connections</div>
+                        <h3>Travel With Purpose</h3>
+                        <p>Travel with purpose, forming lasting connections and unforgettable memories along the way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GROUP LEADER -->
+        <section id="group-leader" aria-label="Group leader">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Group Leader</h2>
+                        <p>BECOME A GROUP LEADER — Inspire - Lead - Benefit</p>
+                    </div>
+                    <a class="btn small" href="#contact">Get Details</a>
+                </div>
+
+                <div class="card">
+                    <p>
+                        Bring your group to Sri Lanka with a journey designed around your theme—wellness, culture,
+                        spirituality, community, or adventure.
+                        JOY project supports you with planning, coordination, and trusted local expertise so you can
+                        focus on inspiring and leading.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMOTERS -->
+        <section id="promoters" aria-label="Promoters">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Promoters</h2>
+                        <p>BECOME A PROMOTER — Spread The JOY - Earn Rewards</p>
+                    </div>
+                    <a class="btn small" href="#contact">Join</a>
+                </div>
+
+                <div class="card">
+                    <p>
+                        Share JOY project with friends, clients, and your network. Help others experience Sri Lanka—and
+                        earn rewards for successful referrals.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog" aria-label="Blog">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Our Blog</h2>
+                        <p>Sri Lanka Travel Stories</p>
+                    </div>
+                    <a class="btn small" href="#contact">Read more</a>
+                </div>
+
+                <div class="grid-3">
+                    <div class="card post">
+                        <div class="meta">Sri Lanka Travel Stories</div>
+                        <div class="title">First Time in Sri Lanka: Love, Laughter, and a Feast</div>
+                        <a class="btn small" href="#contact">Read more</a>
+                    </div>
+                    <div class="card post">
+                        <div class="meta">Sri Lanka Travel Stories</div>
+                        <div class="title">Sri Lankan Hospitality: A Warm Welcome at Every Hotel</div>
+                        <a class="btn small" href="#contact">Read more</a>
+                    </div>
+                    <div class="card post">
+                        <div class="meta">Sri Lanka Travel Stories</div>
+                        <div class="title">Out and About with Jack: A Joyful Reunion in Sri Lanka</div>
+                        <a class="btn small" href="#contact">Read more</a>
+                    </div>
+                    <div class="card post">
+                        <div class="meta">Sri Lanka Travel Stories</div>
+                        <div class="title">Anure and the Magic Car: A Journey Through Sri Lanka</div>
+                        <a class="btn small" href="#contact">Read more</a>
+                    </div>
+                    <div class="card post">
+                        <div class="meta">Sri Lanka Travel Stories</div>
+                        <div class="title">Tea Plantations and Smiling Faces</div>
+                        <a class="btn small" href="#contact">Read more</a>
+                    </div>
+                    <div class="card post">
+                        <div class="meta">Updates</div>
+                        <div class="title">Want these to link to real blog pages?</div>
+                        <a class="btn primary small" href="#contact">Tell me your blog URLs</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" aria-label="FAQ">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>FAQ</h2>
+                        <p>Quick answers to common questions.</p>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <details>
+                        <summary>Are journeys fully tailor-made?</summary>
+                        <p>Yes—every tour or retreat is crafted around your interests, pace, and goals.</p>
+                    </details>
+                    <details>
+                        <summary>Do you work with licensed operators?</summary>
+                        <p>Yes—we partner with a fully licensed local ground tour operator in Sri Lanka (16+ years of
+                            expertise).</p>
+                    </details>
+                    <details>
+                        <summary>Can I host my own group?</summary>
+                        <p>Absolutely—become a group leader and we’ll help coordinate the full journey end-to-end.</p>
+                    </details>
+                    <details>
+                        <summary>How do I enquire?</summary>
+                        <p>Use the contact section below (email/phone) and tell us your dates, interests, and group
+                            size.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" aria-label="Contact">
+            <div class="container">
+                <div class="section-head">
+                    <div>
+                        <h2>Contact</h2>
+                        <p>We’d love to help you plan a journey that fits you perfectly.</p>
+                    </div>
+                </div>
+
+                <div class="grid-2">
+                    <div class="card">
+                        <div class="pill">JOY project • Cyprus</div>
+                        <div class="list" aria-label="Contact details">
+                            <div class="list-item">
+                                <div class="icon" aria-hidden="true">⌂</div>
+                                <div>
+                                    <h3 class="contact-heading">Address</h3>
+                                    <p>Chytron 7 Nicosia, Cyprus</p>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="icon" aria-hidden="true">☎</div>
+                                <div>
+                                    <h3 class="contact-heading">Phone</h3>
+                                    <p><a href="tel:+35797413727">+357 97 413727</a></p>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="icon" aria-hidden="true">✉</div>
+                                <div>
+                                    <h3 class="contact-heading">Email</h3>
+                                    <p><a href="mailto:hello@elinapapa.com">hello@elinapapa.com</a></p>
+                                </div>
+                            </div>
+                            <div class="list-item">
+                                <div class="icon" aria-hidden="true">⏰</div>
+                                <div>
+                                    <h3 class="contact-heading">Working Hours</h3>
+                                    <p>Monday to Friday 9:00 AM - 5:00 PM EEST (UTC+3)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="pill">Quick Enquiry</div>
+                        <p class="enquiry">Send a message (this opens your email client):</p>
+                        <a class="btn primary"
+                            href="mailto:hello@elinapapa.com?subject=Sri%20Lanka%20JOY%20Project%20Enquiry&body=Hello%20JOY%20project%2C%0A%0AI%E2%80%99m%20interested%20in%20a%20tailor-made%20journey%20in%20Sri%20Lanka.%0A%0A- Preferred%20dates%3A%0A- Number%20of%20travelers%3A%0A- Interests%20(wellness%2Fculture%2Fadventure%2Fspiritual)%3A%0A- Budget%20range%20(optional)%3A%0A%0AThank%20you!">Email
+                            Us</a>
+                        <div class="call"></div>
+                        <a class="btn" href="tel:+35797413727">Call Now</a>
+
+                        <p class="note">
+                            If you already have a design system (colors, logo, hero image), tell me where the files are
+                            and I’ll wire them in.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" aria-label="Footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="brand brand-no-padding">
+                        <div class="logo" aria-hidden="true"></div>
+                        <div class="brand-title">
+                            <strong>Logo</strong>
+                            <span>SriLanka Joy Tours</span>
+                        </div>
+                    </div>
+                    <p class="footer-description">Tailor-made tours and wellness retreats in partnership with trusted
+                        local experts in Sri Lanka.</p>
+                    <div class="fine">Copyright © 2026 JOY project. All Rights Reserved</div>
+                </div>
+
+                <div>
+                    <h4>Navigate</h4>
+                    <div class="list">
+                        <a href="#tours">Tours &amp; Retreats</a>
+                        <a href="#group-leader">Group Leader</a>
+                        <a href="#promoters">Promoters</a>
+                        <a href="#best-of">Best of Sri Lanka</a>
+                        <a href="#faq">FAQ</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Contact</h4>
+                    <div class="list">
+                        <a href="#contact">Chytron 7 Nicosia, Cyprus</a>
+                        <a href="tel:+35797413727">+357 97 413727</a>
+                        <a href="mailto:hello@elinapapa.com">hello@elinapapa.com</a>
+                        <span class="footer-working-hours">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST
+                            (UTC+3)</span>
+                        <span class="address">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST (UTC+3)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            const menuBtn = document.getElementById('menuBtn');
+            const mobilePanel = document.getElementById('mobilePanel');
+            if (!menuBtn || !mobilePanel) return;
+
+            function setOpen(open) {
+                mobilePanel.classList.toggle('open', open);
+                menuBtn.setAttribute('aria-expanded', String(open));
+            }
+
+            menuBtn.addEventListener('click', function () {
+                const isOpen = mobilePanel.classList.contains('open');
+                setOpen(!isOpen);
+            });
+
+            // Close on navigation
+            mobilePanel.addEventListener('click', function (e) {
+                const target = e.target;
+                if (target && target.tagName === 'A') setOpen(false);
+            });
+
+            // Close on resize to desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 980) setOpen(false);
+            });
+        })();
+    </script>
+</body>
+
+</html>
