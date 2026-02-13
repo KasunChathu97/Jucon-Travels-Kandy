@@ -10,7 +10,8 @@
     <!-- Removed theme-color meta tag for full cross-browser compatibility; this feature is not supported in Firefox or Opera. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
 
     <style>
@@ -46,7 +47,7 @@
 
         body {
             margin: 0;
-            font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            font-family: 'Playfair Display', serif;
             color: #111 !important;
             background: #fff !important;
             min-height: 100vh;
@@ -1489,17 +1490,122 @@
         }
 
         .inspirational-content h3 {
-            font-size: 48px;
+            font-size: 50px;
             margin-bottom: 20px;
             font-weight: 400;
         }
 
         .inspirational-content p {
             margin-bottom: 30px;
-            line-height: 1.8;
-            font-family: 'Courier New', Courier, monospace;
+            font-size: 18px;
+            line-height: 2;
             font-weight: 500;
             color: #000000;
+        }
+
+
+        /* ===== TAILORED EXPERIENCES SECTION ===== */
+        .tailor-section {
+            padding: 100px 40px;
+            background: #ffffff;
+        }
+
+        .tailor-container {
+            max-width: 1300px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        /* LEFT SIDE */
+        .tailor-content {
+            flex: 1;
+        }
+
+        .tailor-subtitle {
+            font-size: 14px;
+            letter-spacing: 2px;
+            color: #888;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .tailor-title {
+            font-size: 45px;
+            margin-bottom: 10px;
+            margin-top: 7px;
+        }
+
+        .tailor-box {
+            margin-bottom: 25px;
+        }
+
+        .tailor-box h4 {
+            font-size: 24px;
+            margin-bottom: 8px;
+            margin-top: 25px;
+        }
+
+        .tailor-box p {
+            font-size: 18px;
+            line-height: 1.6;
+            font-weight: 300;
+            color: #333333;
+        }
+
+        /* RIGHT IMAGE */
+        .tailor-image {
+            flex: 1;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .tailor-image img {
+            width: 100%;
+            transition: transform 0.6s ease;
+        }
+
+        .tailor-image:hover img {
+            transform: scale(1.08);
+        }
+
+        .resub-title {
+            position: relative;
+            display: inline-block;
+            color: #0d1b2a;
+            /* original text color */
+            font-size: 21px;
+            margin-left: 20px;
+        }
+
+        /* Left side blinking circle */
+        .resub-title::before {
+            content: "";
+            position: absolute;
+            left: -18px;
+            /* circle eka text ekata wamata */
+            top: 50%;
+            transform: translateY(-50%);
+            width: 10px;
+            height: 10px;
+            background: #0077b6;
+            border-radius: 50%;
+            animation: leftBlink 1.5s infinite ease-in-out;
+        }
+
+        /* MOBILE */
+        @media (max-width: 992px) {
+            .tailor-container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .tailor-image {
+                margin-top: 40px;
+            }
         }
     </style>
 </head>
@@ -1840,6 +1946,60 @@
         </div>
 
     </section>
+
+    <section class="tailor-section">
+
+        <div class="tailor-container">
+
+            <!-- LEFT SIDE CONTENT -->
+            <div class="tailor-content">
+
+                <span class="resub-title">Tailor-Made Holidays</span>
+
+                <h2 class="tailor-title">
+                    Your Journey,<br>Our Passion
+                </h2>
+
+                <div class="tailor-box">
+                    <h4>Explore Sri Lanka’s Best</h4>
+                    <p>Discover Sri Lanka’s iconic landscapes, rich culture,
+                        and <br>serene retreats with our thoughtfully crafted tours.</p>
+                </div>
+
+                <div class="tailor-box">
+                    <h4>Authentic, Tailored Experiences</h4>
+                    <p>Each journey is customised to match your interests,
+                        offering <br> an enriching blend of wellness, adventure,
+                        and cultural immersion.</p>
+                </div>
+
+                <div class="tailor-box">
+                    <h4>Stress-Free Travel</h4>
+                    <p>We handle all the details, ensuring a seamless and
+                        worry-free <br>experience from start to finish.</p>
+                </div>
+
+                <div class="tailor-box">
+                    <h4>Create Lasting Connections</h4>
+                    <p>Travel with purpose, forming lasting connections
+                        and <br>unforgettable memories along the way.</p>
+                </div>
+
+                <a href="tours-retreats.html" class="btn-primary">DISCOVER MORE</a>
+
+            </div>
+
+            <!-- Image Side -->
+            <div class="inspirational-image">
+                <img src="https://srilankajoytours.com/wp-content/uploads/2024/09/journey_passion.jpg"
+                    alt="Journey Passion">
+            </div>
+
+        </div>
+
+    </section>
+
+
 
 
 
