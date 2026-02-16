@@ -9,6 +9,9 @@
         content="Tailor-made tours and wellness retreats in Sri Lanka. Authentic experiences crafted with trusted local experts." />
     <!-- Removed theme-color meta tag for full cross-browser compatibility; this feature is not supported in Firefox or Opera. -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap"
         rel="stylesheet">
@@ -589,46 +592,7 @@
             line-height: 1.35;
         }
 
-        /* Footer */
-        footer {
-            padding: 36px 0 26px;
-            border-top: 1px solid rgba(255, 255, 255, .10);
-            background: rgba(0, 0, 0, .16);
-        }
 
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr 1fr;
-            gap: 14px;
-            align-items: start;
-        }
-
-        .footer h4 {
-            margin: 0 0 10px;
-            font-size: 14px;
-            color: rgba(255, 255, 255, .9);
-        }
-
-        .footer a {
-            color: var(--muted);
-        }
-
-        .footer a:hover {
-            color: var(--text);
-        }
-
-        .footer p {
-            margin: 0;
-            color: var(--muted);
-            line-height: 1.65;
-            font-size: 14px;
-        }
-
-        .footer .fine {
-            color: var(--muted2);
-            font-size: 12.5px;
-            margin-top: 14px;
-        }
 
         /* FAQ */
         details {
@@ -1385,26 +1349,53 @@
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.6);
-            color: #fff;
+            background: rgba(255, 255, 255, 0.942);
+            color: #000000;
             border: none;
-            padding: 12px 18px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 32px;
             border-radius: 50%;
+            margin-left: 45px;
+            margin-right: 45px;
             z-index: 10;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
         }
 
-        .prev {
-            left: 10px;
+        .slide-btn.prev {
+            left: -30px;
         }
 
-        .next {
-            right: 10px;
+        .slide-btn.next {
+            right: -30px;
         }
 
         .slide-btn:hover {
-            background: rgba(0, 0, 0, 0.9);
+            background: #000000;
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+            transform: scale(1.08) translateY(-50%);
+        }
+
+        @media (max-width: 900px) {
+            .slide-btn.prev {
+                left: 0;
+            }
+
+            .slide-btn.next {
+                right: 0;
+            }
+
+            .slide-btn {
+                width: 44px;
+                height: 44px;
+                font-size: 22px;
+            }
         }
 
         /* inspirational section */
@@ -1444,7 +1435,7 @@
 
         /* Hover ekedi zoom in */
         .inspirational-image:hover img {
-            transform: scale(1.1);
+            transform: scale(1.2);
         }
 
         /* Ripple circle */
@@ -1607,10 +1598,348 @@
                 margin-top: 40px;
             }
         }
+
+        /* Blog Section */
+        .blog-section {
+            padding: 50px 40px;
+            background: #ffffff;
+            text-align: center;
+        }
+
+        .blog-header {
+            margin-bottom: 60px;
+            margin-top: -10px;
+            text-align: left;
+            margin-left: 80px;
+        }
+
+        .blog-title {
+            font-size: 45px;
+            margin-bottom: 8px;
+            margin-top: 7px;
+        }
+
+        .blog-slider {
+            position: relative;
+            max-width: 1750px;
+            margin: 50px auto 0;
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .blog-track-wrapper {
+            overflow: hidden;
+            width: 100%;
+        }
+
+        .blog-track {
+            display: flex;
+            gap: 28px;
+            transition: transform 0.5s ease;
+            will-change: transform;
+        }
+
+        .blog-card {
+            flex: 0 0 calc(33.333% - 20px);
+            padding: 0 20px;
+            border-radius: 20px;
+            position: relative;
+
+        }
+
+        .blog-content h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .blog-content h3:hover {
+            color: #1493d7c7;
+        }
+
+        .blog-content a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .blog-content a:hover {
+            color: #1493d7c7;
+        }
+
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+            /* 🔥 meka very important */
+            border-radius: 20px;
+        }
+
+        .image-wrapper img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            will-change: transform;
+            transition: transform 12.5s ease;
+        }
+
+        .image-wrapper::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+        }
+
+        /* Arrow Buttons */
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.942);
+            color: #000000;
+            border: none;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 32px;
+            border-radius: 50%;
+            margin-left: 18px;
+            margin-right: 22px;
+            z-index: 10;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+            transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+        }
+
+        .blog-slider .arrow.prev {
+            left: -30px;
+        }
+
+        .blog-slider .arrow.next {
+            right: -30px;
+        }
+
+        .arrow:hover {
+            background: #000000;
+            color: #fff;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+            transform: scale(1.08) translateY(-50%);
+        }
+
+        @media (max-width: 900px) {
+            .blog-slider .arrow.prev {
+                left: 0;
+            }
+
+            .blog-slider .arrow.next {
+                right: 0;
+            }
+
+            .arrow {
+                width: 44px;
+                height: 44px;
+                font-size: 22px;
+            }
+        }
+
+        /* Hover ekedi zoom in */
+        .blog-card:hover img {
+            transform: scale(1.15);
+        }
+
+        .blog-card:hover .image-wrapper::after {
+            animation: rippleEffect 1.5s ease-out infinite;
+        }
+
+        @keyframes rippleEffect {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0.8;
+            }
+
+            70% {
+                transform: translate(-50%, -50%) scale(4);
+                opacity: 0.3;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(6);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+
+        @media (max-width: 992px) {
+            .blog-card {
+                flex: 0 0 100%;
+            }
+        }
+
+        .footer {
+            background-color: #F5F5F5;
+            padding: 40px 20px 20px;
+            font-family: sans-serif;
+            margin-bottom: 60px;
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 50px;
+            border-radius: 30px;
+            height: 550px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            align-items: start;
+            margin-top: 28px;
+        }
+
+        .footer-column .site-logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            margin-left: -60px;
+            margin-top: 26px;
+        }
+
+        .brand-title1 {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            margin-left: -15px;
+            margin-top: 45px;
+        }
+
+        .brand-title1 strong {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .brand-title1 span {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 10px;
+            font-size: 26px;
+            font-weight: 500;
+        }
+
+        .footer-column .list {
+            margin-top: 35px;
+        }
+
+        .footer-column .list a,
+        .footer-column span {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-column .list a:hover {
+            color: #1ea9f4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 175px;
+            margin-left: -945px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .footer-bottom a {
+            color: #1ea9f4;
+        }
+
+        .footer-bottom a:hover {
+            color: #000000;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Social Icons Style */
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .social-links li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            /* default circle color */
+            color: #000000;
+            /* icon color */
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid #8A8A8A;
+        }
+
+        .social-links li a:hover {
+            color: #1ea9f4;
+            /* icon color on hover */
+        }
+
+        /* Optional: add pointer cursor */
+        .social-links li a {
+            cursor: pointer;
+        }
+
+        /* Make icons centered if they have sr-only span */
+        .social-links li a .fab {
+            vertical-align: middle;
+        }
     </style>
 </head>
 
 <body>
+    <!-- HEADER -->
     <div class="container-header">
         <div class="header-inner">
             <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
@@ -1947,6 +2276,7 @@
 
     </section>
 
+    <!-- Tailor Section -->
     <section class="tailor-section">
 
         <div class="tailor-container">
@@ -1999,540 +2329,206 @@
 
     </section>
 
+    <!--Blog Section -->
+    <section class="blog-section">
 
-
-
-
-
-    <div class="video-content">
-        <div>
-            <div class="kicker">
-                <span class="dot"></span>
-                THERE IS SO MUCH TO DISCOVER!
-            </div>
-            <h1>SRI LANKA<br>THE PEARL OF THE INDIAN OCEAN</h1>
-            <p>Tailored Experiences Just For You</p>
+        <div class="blog-header">
+            <span class="resub-title">Our Blog</span>
+            <h2 class="blog-title">Sri Lanka Travel Stories</h2>
         </div>
-    </div>
 
+        <div class="blog-slider">
 
+            <button class="arrow prev">&#10094;</button>
 
+            <div class="blog-track-wrapper">
+                <div class="blog-track" id="blogTrack">
 
-    <main id="main">
-        <div id="top"></div>
+                    <!-- CARD 1 -->
+                    <div class="blog-card">
 
-        <!-- HERO -->
-        <section class="hero" aria-label="Hero">
-            <div class="container">
-                <div class="hero-grid">
-                    <div>
-                        <div class="kicker"><span class="dot" aria-hidden="true"></span>THERE IS SO MUCH TO DISCOVER!
+                        <div class="image-wrapper">
+                            <a href="https://your-link-here.com">
+                                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/First-Time-in-Srilanka.png"
+                                    alt="First Time in Sri Lanka: Love, Laughter, and a Feast">
+                            </a>
                         </div>
-                        <h1>SRI LANKA<br />THE PEARL OF THE INDIAN OCEAN</h1>
-                        <p><b>Tailored Experiences Just For You</b><br />
-                            Discover Sri Lanka through authentic, expertly coordinated journeys that blend wellness,
-                            adventure, and cultural immersion.</p>
 
-                        <div class="hero-actions">
-                            <a class="btn primary" href="#tours">DISCOVER NOW</a>
-                            <a class="btn" href="#about">About JOY project</a>
+                        <div class="blog-content">
+                            <h3>First Time in Sri Lanka: Love, Laughter, and a Feast</h3>
+                            <a href="#">Read More</a>
                         </div>
+
                     </div>
 
-                    <aside class="hero-card" aria-label="Highlights">
-                        <div class="hero-card-inner">
-                            <h3>ABOUT JOY PROJECT</h3>
-                            <p>Unlock the Authentic Magic of Sri Lanka with JOY project</p>
+                    <!-- CARD 2 -->
+                    <div class="blog-card">
 
-                            <div class="stat-grid" role="list">
-                                <div class="stat" role="listitem">
-                                    <b>100%</b>
-                                    <span>Tailor-made journeys</span>
-                                </div>
-                                <div class="stat" role="listitem">
-                                    <b>1 : 1</b>
-                                    <span>Personalised support</span>
-                                </div>
-                                <div class="stat" role="listitem">
-                                    <b>16+ yrs</b>
-                                    <span>Trusted local experts</span>
-                                </div>
-                                <div class="stat" role="listitem">
-                                    <b>30+ yrs</b>
-                                    <span>Excellence in wellness &amp; hospitality</span>
-                                </div>
-                            </div>
+                        <div class="image-wrapper">
+                            <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/Hotels-.png"
+                                alt="Sri Lankan Hospitality: A Warm Welcome at Every Hotel">
 
-                            <div class="hero-card-actions">
-                                <a class="btn small" href="#why">Why travel with us</a>
-                                <a class="btn small" href="#contact">Contact</a>
-                            </div>
+
                         </div>
-                    </aside>
+
+                        <div class="blog-content">
+                            <h3>Sri Lankan Hospitality: A Warm Welcome at Every Hotel</h3>
+                            <a href="#">Read More</a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 3 -->
+                    <div class="blog-card">
+
+                        <div class="image-wrapper">
+                            <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/Out-with-jact-3.png"
+                                alt="Out and About with Jack: A Joyful Reunion">
+
+                        </div>
+
+                        <div class="blog-content">
+                            <h3>Out and About with Jack: A Joyful Reunion</h3>
+                            <a href="#">Read More</a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 4 -->
+                    <div class="blog-card">
+
+                        <div class="image-wrapper">
+                            <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/Anure.png"
+                                alt="Anure and the Magic Car">
+
+
+                        </div>
+
+                        <div class="blog-content">
+                            <h3>Anure and the Magic Car</h3>
+                            <a href="#">Read More</a>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CARD 5 -->
+                    <div class="blog-card">
+
+                        <div class="image-wrapper">
+                            <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/Tea-.png"
+                                alt="Tea Plantations and Smiling Faces">
+
+
+                        </div>
+
+                        <div class="blog-content">
+                            <h3>Tea Plantations and Smiling Faces</h3>
+                            <a href="#">Read More</a>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-        </section>
 
-        <hr class="divider" />
+            <button class="arrow next">&#10095;</button>
 
-        <!-- ABOUT -->
-        <section id="about" aria-label="About">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>About JOY project</h2>
-                        <p>Unlock the Authentic Magic of Sri Lanka with JOY project.</p>
-                    </div>
-                    <a class="btn small" href="#contact">Discover More</a>
-                </div>
+        </div>
 
-                <div class="two-col">
-                    <div class="card">
-                        <div class="pill">Global Tour &amp; Retreat Coordinator</div>
-                        <p>
-                            Immerse yourself in a once-in-a-lifetime, authentic journey, expertly crafted by JOY
-                            project, your trusted Global Tour and Retreat Coordinator.
-                            We specialise in authentic, life-changing tours and wellness retreats in partnership with a
-                            licensed local ground operator in Sri Lanka.
-                            Every experience is tailored to your desires, ensuring you explore the heart of Sri Lanka’s
-                            breathtaking landscapes, ancient wisdom, and vibrant culture with complete peace of mind.
-                        </p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">Serenity • Adventure • Connection</div>
-                        <p>
-                            Whether you’re seeking serenity, adventure, or a deeper connection with nature, our
-                            expertise guarantees a journey that rejuvenates and inspires.
-                            Let us take you beyond ordinary travel to discover the true essence of Sri Lanka.
-                        </p>
-                        <div class="btn-group">
-                            <a class="btn primary" href="#tours">Discover More</a>
-                            <a class="btn" href="#best-of">Best of Sri Lanka</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    </section>
 
-        <!-- TOURS & RETREATS + PROGRAMS -->
-        <section id="tours" aria-label="Tours and retreats">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>TOURS AND RETREATS</h2>
-                        <p>Create Your Dream Journey</p>
-                    </div>
-                    <a class="btn small" href="#contact">Discover More</a>
-                </div>
-
-                <div class="grid-3" role="list">
-                    <div class="card" role="listitem">
-                        <div class="pill">Create Your Dream Journey</div>
-                        <h3>Tailored Experiences Just For You</h3>
-                        <p>Tell us what you love, and we’ll craft a journey that fits your pace, preferences, and
-                            purpose.</p>
-                    </div>
-                    <div class="card" role="listitem">
-                        <div class="pill">BECOME A GROUP LEADER</div>
-                        <h3>Inspire - Lead - Benefit</h3>
-                        <p>Host a meaningful journey for your community while enjoying curated benefits and support from
-                            our team.</p>
-                    </div>
-                    <div class="card" role="listitem">
-                        <div class="pill">BECOME A PROMOTER</div>
-                        <h3>Spread The JOY - Earn Rewards</h3>
-                        <p>Share JOY project with your network and earn rewards while inspiring others to discover Sri
-                            Lanka.</p>
-                    </div>
-                </div>
-
-                <div class="cta-banner mt-18">
-                    <div>
-                        <h3>ABOUT Sri Lanka</h3>
-                        <p>Tailored Experiences Just For You</p>
-                    </div>
-                    <a class="btn primary" href="#best-of">Discover More</a>
-                </div>
-
-                <div class="grid-3 mt-18" aria-label="Audience types">
-                    <div class="card">
-                        <div class="pill">Wellness Retreats</div>
-                        <p>Restore, reconnect, and recharge with curated retreats and mindful experiences.</p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">Corporate Teams</div>
-                        <p>Purposeful offsites designed to energise teams through nature, culture, and wellness.</p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">History &amp; Culture Lovers</div>
-                        <p>Explore ancient cities, timeless traditions, and Sri Lanka’s rich heritage.</p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">Spiritual Seekers &amp; Pilgrims</div>
-                        <p>Meaningful journeys to sacred sites and deeply grounding experiences.</p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">Friends &amp; Family</div>
-                        <p>Memory-making adventures tailored to all ages and travel styles.</p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">Couples</div>
-                        <p>Romantic escapes blending comfort, discovery, and authentic moments.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- WHY TRAVEL WITH US -->
-        <section id="why" aria-label="Why travel with us">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>JOY PROJECT SPECIALS</h2>
-                        <p>WHY TRAVEL WITH US</p>
-                    </div>
-                </div>
-
-                <div class="grid-2" role="list">
-                    <div class="card" role="listitem">
-                        <div class="list-item">
-                            <div class="icon" aria-hidden="true">✓</div>
-                            <div>
-                                <h3 class="card-title">100% TAILOR-MADE JOURNEYS</h3>
-                                <p>Experience unique adventures crafted specifically to align with your personal
-                                    preferences, ensuring a journey tailored just for you.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" role="listitem">
-                        <div class="list-item">
-                            <div class="icon" aria-hidden="true">✓</div>
-                            <div>
-                                <h3 class="card-title">1 : 1 PERSONALISED SUPPORT</h3>
-                                <p>Enjoy direct, individual communication with our team, providing seamless, friendly,
-                                    and professional service customised to you needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" role="listitem">
-                        <div class="list-item">
-                            <div class="icon" aria-hidden="true">✓</div>
-                            <div>
-                                <h3 class="card-title">100% TRUSTED LOCAL EXPERTS</h3>
-                                <p>Rely on our fully licensed local ground tour operator with 16+ years of expertise,
-                                    for exceptional knowledge and dependable service, ensuring a flawless journey</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card" role="listitem">
-                        <div class="list-item">
-                            <div class="icon" aria-hidden="true">✓</div>
-                            <div>
-                                <h3 class="card-title card-title-margin">30+ YEARS OF EXCELLENCE</h3>
-                                <p>Leverage over 3 decades of experience in hospitality and wellness, guaranteeing top
-                                    quality care and exceptional experiences throughout your journey.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- BEST OF -->
-        <section id="best-of" aria-label="Best of Sri Lanka">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>RECOMMENDED</h2>
-                        <p>Discover the Best of Sri Lanka!</p>
-                    </div>
-                    <a class="btn small" href="#contact">Discover More</a>
-                </div>
-
-                <div class="card card-padding-22">
-                    <div class="card special">
-                        <div class="pill">BEST OF SRI LANKA</div>
-                        <h3 class="title">Inspirational Journeys, Authentic Experiences</h3>
-                        <p>
-                            At JOY Project, we craft transformative tours and retreats that blend wellness, adventure,
-                            and cultural immersion. With over 30 years of expertise in hospitality and wellness, we are
-                            passionate about creating unforgettable journeys that showcase Sri Lanka’s rich heritage,
-                            stunning landscapes, and vibrant traditions.
-                        </p>
-                        <p class="blog-title">
-                            Our mission is to bring people together, offering a deep connection to the wonders of Sri
-                            Lanka while embracing wellness, diverse cultures, and unique culinary delights. Every tour
-                            and retreat is designed with care, ensuring moments of discovery, relaxation, and personal
-                            growth.
-                        </p>
-                        <p class="blog-title">
-                            Whether you seek peace, adventure, or both, JOY Project curates life-changing experiences in
-                            one of the world’s most incredible destinations. Thank you for choosing us as your trusted
-                            partner in exploring the magic of Sri Lanka!
-                        </p>
-                        <div class="btn-group">
-                            <a class="btn primary" href="#contact">Discover More</a>
-                            <a class="btn" href="#tours">Tailor-Made Holidays</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="grid-2 mt-14" aria-label="Tailor-made holidays">
-                    <div class="card">
-                        <div class="pill">Your Journey, Our Passion</div>
-                        <h3>Explore Sri Lanka’s Best</h3>
-                        <p>Discover Sri Lanka’s iconic landscapes, rich culture, and serene retreats with our
-                            thoughtfully crafted tours.</p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">Authentic, Tailored Experiences</div>
-                        <h3>Designed Around You</h3>
-                        <p>Each journey is customised to match your interests, offering an enriching blend of wellness,
-                            adventure, and cultural immersion.</p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">Stress-Free Travel</div>
-                        <h3>We Handle The Details</h3>
-                        <p>We handle all the details, ensuring a seamless and worry-free experience from start to
-                            finish.</p>
-                    </div>
-                    <div class="card">
-                        <div class="pill">Create Lasting Connections</div>
-                        <h3>Travel With Purpose</h3>
-                        <p>Travel with purpose, forming lasting connections and unforgettable memories along the way.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- GROUP LEADER -->
-        <section id="group-leader" aria-label="Group leader">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>Group Leader</h2>
-                        <p>BECOME A GROUP LEADER — Inspire - Lead - Benefit</p>
-                    </div>
-                    <a class="btn small" href="#contact">Get Details</a>
-                </div>
-
-                <div class="card">
-                    <p>
-                        Bring your group to Sri Lanka with a journey designed around your theme—wellness, culture,
-                        spirituality, community, or adventure.
-                        JOY project supports you with planning, coordination, and trusted local expertise so you can
-                        focus on inspiring and leading.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROMOTERS -->
-        <section id="promoters" aria-label="Promoters">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>Promoters</h2>
-                        <p>BECOME A PROMOTER — Spread The JOY - Earn Rewards</p>
-                    </div>
-                    <a class="btn small" href="#contact">Join</a>
-                </div>
-
-                <div class="card">
-                    <p>
-                        Share JOY project with friends, clients, and your network. Help others experience Sri Lanka—and
-                        earn rewards for successful referrals.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- BLOG -->
-        <section id="blog" aria-label="Blog">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>Our Blog</h2>
-                        <p>Sri Lanka Travel Stories</p>
-                    </div>
-                    <a class="btn small" href="#contact">Read more</a>
-                </div>
-
-                <div class="grid-3">
-                    <div class="card post">
-                        <div class="meta">Sri Lanka Travel Stories</div>
-                        <div class="title">First Time in Sri Lanka: Love, Laughter, and a Feast</div>
-                        <a class="btn small" href="#contact">Read more</a>
-                    </div>
-                    <div class="card post">
-                        <div class="meta">Sri Lanka Travel Stories</div>
-                        <div class="title">Sri Lankan Hospitality: A Warm Welcome at Every Hotel</div>
-                        <a class="btn small" href="#contact">Read more</a>
-                    </div>
-                    <div class="card post">
-                        <div class="meta">Sri Lanka Travel Stories</div>
-                        <div class="title">Out and About with Jack: A Joyful Reunion in Sri Lanka</div>
-                        <a class="btn small" href="#contact">Read more</a>
-                    </div>
-                    <div class="card post">
-                        <div class="meta">Sri Lanka Travel Stories</div>
-                        <div class="title">Anure and the Magic Car: A Journey Through Sri Lanka</div>
-                        <a class="btn small" href="#contact">Read more</a>
-                    </div>
-                    <div class="card post">
-                        <div class="meta">Sri Lanka Travel Stories</div>
-                        <div class="title">Tea Plantations and Smiling Faces</div>
-                        <a class="btn small" href="#contact">Read more</a>
-                    </div>
-                    <div class="card post">
-                        <div class="meta">Updates</div>
-                        <div class="title">Want these to link to real blog pages?</div>
-                        <a class="btn primary small" href="#contact">Tell me your blog URLs</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ -->
-        <section id="faq" aria-label="FAQ">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>FAQ</h2>
-                        <p>Quick answers to common questions.</p>
-                    </div>
-                </div>
-
-                <div class="grid-2">
-                    <details>
-                        <summary>Are journeys fully tailor-made?</summary>
-                        <p>Yes—every tour or retreat is crafted around your interests, pace, and goals.</p>
-                    </details>
-                    <details>
-                        <summary>Do you work with licensed operators?</summary>
-                        <p>Yes—we partner with a fully licensed local ground tour operator in Sri Lanka (16+ years of
-                            expertise).</p>
-                    </details>
-                    <details>
-                        <summary>Can I host my own group?</summary>
-                        <p>Absolutely—become a group leader and we’ll help coordinate the full journey end-to-end.</p>
-                    </details>
-                    <details>
-                        <summary>How do I enquire?</summary>
-                        <p>Use the contact section below (email/phone) and tell us your dates, interests, and group
-                            size.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" aria-label="Contact">
-            <div class="container">
-                <div class="section-head">
-                    <div>
-                        <h2>Contact</h2>
-                        <p>We’d love to help you plan a journey that fits you perfectly.</p>
-                    </div>
-                </div>
-
-                <div class="grid-2">
-                    <div class="card">
-                        <div class="pill">JOY project • Cyprus</div>
-                        <div class="list" aria-label="Contact details">
-                            <div class="list-item">
-                                <div class="icon" aria-hidden="true">⌂</div>
-                                <div>
-                                    <h3 class="contact-heading">Address</h3>
-                                    <p>Chytron 7 Nicosia, Cyprus</p>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="icon" aria-hidden="true">☎</div>
-                                <div>
-                                    <h3 class="contact-heading">Phone</h3>
-                                    <p><a href="tel:+35797413727">+357 97 413727</a></p>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="icon" aria-hidden="true">✉</div>
-                                <div>
-                                    <h3 class="contact-heading">Email</h3>
-                                    <p><a href="mailto:hello@elinapapa.com">hello@elinapapa.com</a></p>
-                                </div>
-                            </div>
-                            <div class="list-item">
-                                <div class="icon" aria-hidden="true">⏰</div>
-                                <div>
-                                    <h3 class="contact-heading">Working Hours</h3>
-                                    <p>Monday to Friday 9:00 AM - 5:00 PM EEST (UTC+3)</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="pill">Quick Enquiry</div>
-                        <p class="enquiry">Send a message (this opens your email client):</p>
-                        <a class="btn primary"
-                            href="mailto:hello@elinapapa.com?subject=Sri%20Lanka%20JOY%20Project%20Enquiry&body=Hello%20JOY%20project%2C%0A%0AI%E2%80%99m%20interested%20in%20a%20tailor-made%20journey%20in%20Sri%20Lanka.%0A%0A- Preferred%20dates%3A%0A- Number%20of%20travelers%3A%0A- Interests%20(wellness%2Fculture%2Fadventure%2Fspiritual)%3A%0A- Budget%20range%20(optional)%3A%0A%0AThank%20you!">Email
-                            Us</a>
-                        <div class="call"></div>
-                        <a class="btn" href="tel:+35797413727">Call Now</a>
-
-                        <p class="note">
-                            If you already have a design system (colors, logo, hero image), tell me where the files are
-                            and I’ll wire them in.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
+    <!-- Footer Section -->
     <footer class="footer" aria-label="Footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <div class="brand brand-no-padding">
-                        <div class="logo" aria-hidden="true"></div>
-                        <div class="brand-title">
-                            <strong>Logo</strong>
-                            <span>SriLanka Joy Tours</span>
-                        </div>
+        <div class="container footer-grid">
+            <!-- Column 1: Logo + Social -->
+            <div class="footer-column">
+                <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
+                    <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                    <div class="brand-title1">
+                        <strong>JUCON TRAVELS</strong>
+                        <span>Travel Agency • Sri Lanka</span>
                     </div>
-                    <p class="footer-description">Tailor-made tours and wellness retreats in partnership with trusted
-                        local experts in Sri Lanka.</p>
-                    <div class="fine">Copyright © 2026 JOY project. All Rights Reserved</div>
-                </div>
+                </a>
+                <!-- Social Icons -->
+                <ul class="social-links">
+                    <li>
+                        <a href="https://www.instagram.com/srilanka.joytours/profilecard/?igsh=bGQxbnVsZjUwanln"
+                            target="_blank" rel="noopener" title="Instagram">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/elinapapa/" target="_blank" rel="noopener"
+                            title="LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/people/Sri-Lanka-Tours-Retreats/61566786821662/"
+                            target="_blank" rel="noopener" title="Facebook">
+                            <span class="sr-only">Facebook</span>
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@joyprojectsrilanka" target="_blank" rel="noopener"
+                            title="YouTube">
+                            <span class="sr-only">YouTube</span>
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
 
-                <div>
-                    <h4>Navigate</h4>
-                    <div class="list">
-                        <a href="#tours">Tours &amp; Retreats</a>
-                        <a href="#group-leader">Group Leader</a>
-                        <a href="#promoters">Promoters</a>
-                        <a href="#best-of">Best of Sri Lanka</a>
-                        <a href="#faq">FAQ</a>
-                        <a href="#contact">Contact</a>
-                    </div>
-                </div>
+            </div>
 
-                <div>
-                    <h4>Contact</h4>
-                    <div class="list">
-                        <a href="#contact">Chytron 7 Nicosia, Cyprus</a>
-                        <a href="tel:+35797413727">+357 97 413727</a>
-                        <a href="mailto:hello@elinapapa.com">hello@elinapapa.com</a>
-                        <span class="footer-working-hours">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST
-                            (UTC+3)</span>
-                        <span class="address">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST (UTC+3)</span>
-                    </div>
+            <!-- Column 2: About -->
+            <div class="footer-column">
+                <h4>About</h4>
+                <div class="list">
+                    <a href="#tours">Home</a>
+                    <a href="#group-leader">About Us</a>
+                    <a href="#promoters">Blog</a>
+                    <a href="#contact">Contact</a>
                 </div>
             </div>
+
+            <!-- Column 3: Navigate -->
+            <div class="footer-column">
+                <h4>Navigate</h4>
+                <div class="list">
+                    <a href="#tours">Tours &amp; Retreats</a>
+                    <a href="#group-leader">Group Leader</a>
+                    <a href="#promoters">Promoters</a>
+                    <a href="#best-of">Best of Sri Lanka</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <div class="list">
+                    <a href="#contact">Chytron 7 Nicosia, Cyprus</a>
+                    <a href="tel:+35797413727">+357 97 413727</a>
+                    <a href="mailto:hello@elinapapa.com">hello@elinapapa.com</a>
+                    <span class="footer-working-hours">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST
+                        (UTC+3)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
         </div>
     </footer>
+
+
 
     <script>
         (function () {
@@ -2564,28 +2560,94 @@
     </script>
 
     <script>
-        const slider = document.querySelector('.slider');
-        const slides = document.querySelectorAll('.slide');
-        const prev = document.querySelector('.prev');
-        const next = document.querySelector('.next');
-
-        let index = 0;
-        const visibleSlides = 3;
-
-        next.addEventListener('click', () => {
-            if (index < slides.length - visibleSlides) {
-                index++;
-                slider.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
+        // Recommended Section Infinite Slider
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector('.recommended-section .slider');
+            const prevBtn = document.querySelector('.recommended-section .slide-btn.prev');
+            const nextBtn = document.querySelector('.recommended-section .slide-btn.next');
+            let isTransitioning = false;
+            function moveNext() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                const slideWidth = slider.children[0].offsetWidth;
+                slider.style.transition = 'transform 0.5s ease';
+                slider.style.transform = `translateX(-${slideWidth}px)`;
+                setTimeout(() => {
+                    slider.appendChild(slider.firstElementChild);
+                    slider.style.transition = 'none';
+                    slider.style.transform = 'translateX(0)';
+                    setTimeout(() => {
+                        slider.style.transition = '';
+                        isTransitioning = false;
+                    }, 20);
+                }, 500);
             }
+            function movePrev() {
+                if (isTransitioning) return;
+                isTransitioning = true;
+                const slideWidth = slider.children[0].offsetWidth;
+                slider.insertBefore(slider.lastElementChild, slider.firstElementChild);
+                slider.style.transition = 'none';
+                slider.style.transform = `translateX(-${slideWidth}px)`;
+                setTimeout(() => {
+                    slider.style.transition = 'transform 0.5s ease';
+                    slider.style.transform = 'translateX(0)';
+                    setTimeout(() => {
+                        slider.style.transition = '';
+                        isTransitioning = false;
+                    }, 500);
+                }, 20);
+            }
+            nextBtn.addEventListener('click', moveNext);
+            prevBtn.addEventListener('click', movePrev);
         });
 
-        prev.addEventListener('click', () => {
-            if (index > 0) {
-                index--;
-                slider.style.transform = `translateX(-${index * (100 / visibleSlides)}%)`;
+        // Blog Section Slider
+        document.addEventListener("DOMContentLoaded", function () {
+            const track = document.getElementById("blogTrack");
+            const nextBtn = document.querySelector(".blog-slider .arrow.next");
+            const prevBtn = document.querySelector(".blog-slider .arrow.prev");
+
+            const visibleCards = 3;
+            let isBlogTransitioning = false;
+            function moveBlogNext() {
+                if (isBlogTransitioning) return;
+                isBlogTransitioning = true;
+                const cardWidth = track.children[0].offsetWidth;
+                track.style.transition = 'transform 0.5s ease';
+                track.style.transform = `translateX(-${cardWidth}px)`;
+                setTimeout(() => {
+                    track.appendChild(track.firstElementChild);
+                    track.style.transition = 'none';
+                    track.style.transform = 'translateX(0)';
+                    setTimeout(() => {
+                        track.style.transition = '';
+                        isBlogTransitioning = false;
+                    }, 20);
+                }, 500);
             }
+            function moveBlogPrev() {
+                if (isBlogTransitioning) return;
+                isBlogTransitioning = true;
+                const cardWidth = track.children[0].offsetWidth;
+                track.insertBefore(track.lastElementChild, track.firstElementChild);
+                track.style.transition = 'none';
+                track.style.transform = `translateX(-${cardWidth}px)`;
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease';
+                    track.style.transform = 'translateX(0)';
+                    setTimeout(() => {
+                        track.style.transition = '';
+                        isBlogTransitioning = false;
+                    }, 500);
+                }, 20);
+            }
+            nextBtn.addEventListener('click', moveBlogNext);
+            prevBtn.addEventListener('click', moveBlogPrev);
         });
     </script>
+
+
 
 </body>
 
