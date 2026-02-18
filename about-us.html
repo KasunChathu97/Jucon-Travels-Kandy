@@ -815,7 +815,7 @@
             max-width: 1340px;
             height: auto;
             margin-top: -55px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             border-radius: 20px;
         }
 
@@ -889,9 +889,9 @@
         /* WHY SRI LANKA */
         .why-sl h2 {
             text-align: left;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-size: 44px;
-            margin-left: 97px;
+
         }
 
         .why-text p {
@@ -995,6 +995,194 @@
                 transform: translate(-50%, -50%) scale(1.8);
                 opacity: 0;
                 box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
+            }
+        }
+
+        /* VISION & MISSION */
+        .vision-section {
+            padding: 80px 20px;
+            background: #ffffff;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+            margin-top: -100px;
+        }
+
+        .section-header h5 {
+            color: #000000;
+            letter-spacing: 2px;
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            color: #1c1c1c;
+        }
+
+        .vision-mission {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .vision-card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            width: 550px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: 0.4s ease;
+        }
+
+        .vision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            border: #000000 1px solid;
+        }
+
+        .vision-card .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .vision-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #0d6e63;
+        }
+
+        .vision-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+
+        /* Strengths */
+        .strengths-section {
+            padding: 80px 10%;
+            background: #ffffff;
+            text-align: center;
+            margin-top: -80px;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 50px;
+        }
+
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .strength-card {
+            background: #f9f9f9;
+            padding: 35px 20px;
+            border-radius: 12px;
+            transition: 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .strength-card i {
+            font-size: 28px;
+            color: #0a7d3b;
+            margin-bottom: 15px;
+        }
+
+        .strength-card h4 {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        .strength-card:hover {
+            transform: translateY(-8px);
+            background: #0a7d3b;
+            color: #fff;
+        }
+
+        .strength-card:hover i {
+            color: #ffffff;
+        }
+
+
+        /* Why Sri Lanka */
+        .why-section {
+            padding: 90px 10%;
+            background: #ffffff;
+            margin-top: -80px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 60px;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .why-card {
+            background: #ffffff;
+            padding: 35px 30px;
+            border-radius: 14px;
+            transition: 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .why-icon {
+            width: 60px;
+            height: 60px;
+            background: #0a7d3b;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .why-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+
+        .why-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* Hover Effect */
+        .why-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-card:hover .why-icon {
+            background: #000;
+        }
+
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .vision-mission {
+                grid-template-columns: 1fr;
+            }
+
+            .strengths ul {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1197,18 +1385,20 @@
 
     <section class="about-text container">
         <p>
-            JOY project ltd is an international wellness-focused company based in Nicosia, Cyprus, founded by Elina
-            Papa. Specialising in the coordination of tailored tours and wellness retreats, Joy Project serves as the
-            Global Tour and Retreat Coordinator for Sri Lanka, collaborating with a licensed local Ground Tour Operator
-            to deliver authentic and enriching experiences. Our mission is to seamlessly blend wellness, culture, and
-            adventure, ensuring each journey is both transformative and memorable.
+            A division of Jucon (Pvt.) Ltd, Jucon Travels specializes in inbound tourism and is your go-to travel
+            partner for exploring the allure of Sri Lanka, an island rich in culture, adventure, and natural beauty.
+            Whether you are organizing a family vacation, a quick escape, or a custom tour, Jucon Travels is ready to
+            provide experiences that surpass standard travel.
         </p>
 
         <p>
-            With 30+ years of experience in both the holistic wellness and hospitality industries, Joy project ensures a
-            high level of expertise in both retreat management and travel coordination. Whether it’s for work, play, or
-            a balance of both, we create journeys that inspire and rejuvenate, guided by our commitment to personal
-            well-being and cultural immersion.
+            Jucon Travels takes pleasure in offering you well-considered tour packages that allow you to tailor your
+            trip to your preferred vacation spots, allowing you to experience the true essence of this tropical paradise
+            and excited journey into a memorable tale. We manage every stage of your trip, beginning and concluding at
+            Colombo Air Port, thanks to our experience, meticulous attention to detail, and reliable partnerships.
+        </p>
+        <p>
+            Jucon Travels is ready to take you safely, smoothly, and with a touch of Sri Lankan warmth.
         </p>
 
         <!-- Discover More Button -->
@@ -1254,22 +1444,25 @@
     </section>
 
     <section class="why-sl container">
-        <h2>Why Sri Lanka?</h2>
+        <h2>Why you need to choose us?</h2>
 
         <div class="why-grid">
             <div class="why-text">
                 <p>
-                    Sri Lanka is a hidden gem that offers a truly unique experience. From its stunning landscapes to its
-                    rich cultural heritage, it’s a place that feels like a warm embrace.
+                    A full-service Sri Lankan tour company, Jucon Travels caters to tourists looking for more than
+                    simply a holiday; we build trips that take you to the island's heart and soul. We provide customized
+                    experiences that encapsulate Sri Lanka's genuine essence for both first-time and recurring
+                    travelers.
                 </p>
                 <p>
-                    We’ve handpicked this beautiful island because it’s a perfect setting for relaxation and adventure.
-                    Our local partners bring the best of Sri Lanka’s charm to life, creating personalised experiences
-                    just for you. Whether you’re looking to unwind with a wellness retreat or dive into the vibrant
-                    culture, Sri Lanka offers something special for everyone.
+                    Our extensive selection of carefully chosen trip packages that are tailored to a traveler's
+                    interests, mood, and lifestyle is what makes Jucon Travels unique. Every travel narrative has a
+                    different theme, whether your fantasy is a peaceful beach vacation, a wildlife adventure, a cultural
+                    getaway, or a romantic honeymoon.
                 </p>
                 <p>
-                    We’re excited to share this wonderful destination with you and help you make unforgettable memories.
+                    Your stay with us is more than just a vacation; it's an unforgettable experience full of memories
+                    you'll treasure forever.
                 </p>
             </div>
 
@@ -1278,6 +1471,159 @@
             </div>
         </div>
     </section>
+
+    <section class="about-section">
+
+        <div class="container">
+
+            <!-- Vision & Mission Section -->
+            <section class="vision-section">
+
+                <div class="section-header">
+                    <h5>Our Vision & Mission</h5>
+                    <h2>Guided by Purpose, Driven by Excellence</h2>
+                </div>
+
+                <div class="vision-mission">
+
+                    <div class="vision-card">
+                        <div class="icon">🌍</div>
+                        <h3>Vision</h3>
+                        <p>
+                            To be a leading eco-conscious inbound tour operator in Sri Lanka,
+                            creating meaningful travel experiences that connect people,
+                            nature, and culture.
+                        </p>
+                    </div>
+
+                    <div class="vision-card">
+                        <div class="icon">✨</div>
+                        <h3>Mission</h3>
+                        <p>
+                            Jucon Travels is committed to delivering high-quality,
+                            personalized travel experiences for worldwide visitors by offering
+                            eco-friendly, wildlife, cultural, honeymoon, and family tour packages.
+                            We promote responsible tourism, support local communities,
+                            and preserve Sri Lanka’s environment and heritage for future generations.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Strengths -->
+            <section class="strengths-section">
+                <div class="container">
+
+                    <h2 class="section-title">Our Strengths</h2>
+
+                    <div class="strengths-grid">
+
+                        <div class="strength-card">
+                            <i class="fas fa-star"></i>
+                            <h4>High Customer Satisfaction</h4>
+                        </div>
+
+                        <div class="strength-card">
+                            <i class="fas fa-bus"></i>
+                            <h4>End-to-End Transport</h4>
+                        </div>
+
+                        <div class="strength-card">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <h4>Customized Tour Packages</h4>
+                        </div>
+
+                        <div class="strength-card">
+                            <i class="fas fa-headset"></i>
+                            <h4>24/7 Communication</h4>
+                        </div>
+
+                        <div class="strength-card">
+                            <i class="fas fa-user-tie"></i>
+                            <h4>Professionalism</h4>
+                        </div>
+
+                        <div class="strength-card">
+                            <i class="fas fa-language"></i>
+                            <h4>Native Language Speaking Guides</h4>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <!-- Why Sri Lanka -->
+            <section class="why-section">
+                <div class="container">
+
+                    <h2 class="section-title">
+                        Why Select Sri Lanka as Your Travel Destination?
+                    </h2>
+
+                    <div class="why-grid">
+
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fas fa-mountain"></i></div>
+                            <h3>01. Diverse Natural Attractions</h3>
+                            <p>
+                                Golden beaches, misty mountains, waterfalls, rainforests,
+                                and wildlife parks. Explore tea plantations in the highlands
+                                or enjoy safaris in Yala National Park.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fas fa-landmark"></i></div>
+                            <h3>02. Rich Cultural Heritage</h3>
+                            <p>
+                                Over 2,500 years of history with ancient cities, temples,
+                                and UNESCO World Heritage sites like Sigiriya and
+                                the Temple of the Tooth.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fas fa-paw"></i></div>
+                            <h3>03. Unique Wildlife Experiences</h3>
+                            <p>
+                                See elephants, leopards, and blue whales.
+                                Enjoy both jungle safaris and marine excursions in one trip.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fas fa-hands-helping"></i></div>
+                            <h3>04. Warm Hospitality & Culture</h3>
+                            <p>
+                                Experience friendly locals, traditional dance,
+                                Ayurveda treatments, and flavorful Sri Lankan cuisine.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <div class="why-icon"><i class="fas fa-route"></i></div>
+                            <h3>05. Compact & Convenient Travel</h3>
+                            <p>
+                                Travel from beaches to mountains to cultural cities
+                                within short distances — perfect for short or long holidays.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+        </div>
+
+    </section>
+
 
     <!-- Footer Section -->
     <footer class="footer" aria-label="Footer">
@@ -1294,29 +1640,25 @@
                 <!-- Social Icons -->
                 <ul class="social-links">
                     <li>
-                        <a href="https://www.instagram.com/"
-                            target="_blank" rel="noopener" title="Instagram">
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram">
                             <span class="sr-only">Instagram</span>
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener"
-                            title="LinkedIn">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">
                             <span class="sr-only">LinkedIn</span>
                             <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/"
-                            target="_blank" rel="noopener" title="Facebook">
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
                             <span class="sr-only">Facebook</span>
                             <i class="fab fa-facebook-f" aria-hidden="true"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/" target="_blank" rel="noopener"
-                            title="YouTube">
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="YouTube">
                             <span class="sr-only">YouTube</span>
                             <i class="fab fa-youtube" aria-hidden="true"></i>
                         </a>
