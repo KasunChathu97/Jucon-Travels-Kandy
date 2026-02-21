@@ -821,7 +821,7 @@
 
         .tours-hero h1 {
             font-size: 48px;
-            color: #fff;
+            color: #000000;
             margin-top: -220px;
         }
 
@@ -916,6 +916,369 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .benefits-section {
+            padding: 60px -2%;
+            margin-left: -90px;
+
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .benefit-card {
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            background: #ffffff;
+            width: 650px;
+        }
+
+        .benefit-card.gray {
+            background: #F3F3F3;
+        }
+
+        .benefit-card h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .benefit-card p {
+            line-height: 1.7;
+            color: #444;
+            font-size: 18px;
+        }
+
+        .benefit-card ul {
+            padding-left: 18px;
+            align-items: center;
+        }
+
+        .benefit-card li {
+            margin-bottom: 10px;
+            align-items: center;
+            font-size: 22px;
+            color: #000000bb;
+        }
+
+        .benefit-card:hover {
+            background: #92f347cb;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media(max-width:768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* DISCOVER NOW button */
+        .contact-btn-wrap {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 14px 32px;
+            background: #5ab4f4;
+            color: #fff;
+            height: 16%;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+            /* smooth grow */
+            position: relative;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        /* Expanding white circle from center */
+        .btn-primary::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+        }
+
+        /* Button hover: slightly bigger smoothly */
+        .btn-primary:hover {
+            background: #000000;
+            transform: scale(1.1);
+            /* slightly bigger */
+        }
+
+        /* Circle animation on hover: blink & move down continuously */
+        .btn-primary:hover::after {
+            animation: blinkSpread 1.8s ease-out infinite;
+        }
+
+        @keyframes blinkSpread {
+
+            0% {
+                transform: translate(-50%, -50%) scale(0.2);
+                opacity: 0.7;
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.9;
+                box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.6);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.8);
+                opacity: 0;
+                box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
+            }
+        }
+
+        .serve-section {
+            background: #ffffff;
+            padding: 5px 20px;
+        }
+
+        .serve-title {
+            text-align: center;
+            font-size: 38px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .serve-sub {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            font-size: 18px;
+            color: #555;
+        }
+
+        .serve-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 80px;
+            max-width: 1700px;
+            /* grid eka poddak loku karanawa */
+
+        }
+
+        .serve-card {
+            background: #f9f6f6;
+            padding: 35px 50px;
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+            width: 420px;
+            margin-left: -50px;
+
+        }
+
+        .serve-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .serve-card img {
+            width: 110px;
+            margin-bottom: 20px;
+        }
+
+        .serve-card h3 {
+            margin-bottom: 12px;
+            font-size: 25px;
+        }
+
+        .serve-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .serve-card p span {
+            color: #000000;
+            font-size: 14px;
+        }
+
+        /* Tablet */
+        @media(max-width:992px) {
+            .serve-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media(max-width:576px) {
+            .serve-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+                /* ===== FOOTER ===== */
+        .footer {
+            background-color: #F5F5F5;
+            padding: 40px 20px 20px;
+            font-family: sans-serif;
+            margin-bottom: 60px;
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 50px;
+            border-radius: 30px;
+            height: 528px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            align-items: start;
+            margin-top: 60px;
+        }
+
+        .footer-column .site-logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            margin-left: -60px;
+            margin-top: -5px;
+        }
+
+        .brand-title1 {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            margin-left: -15px;
+            margin-top: 15px;
+        }
+
+        .brand-title1 strong {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .brand-title1 span {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 10px;
+            font-size: 26px;
+            font-weight: 500;
+            color: #00000B;
+        }
+
+        .footer-column .list {
+            margin-top: 35px;
+        }
+
+        .footer-column .list a,
+        .footer-column span {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-column .list a:hover {
+            color: #1ea9f4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 150px;
+            margin-left: -945px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .footer-bottom a {
+            color: #1ea9f4;
+        }
+
+        .footer-bottom a:hover {
+            color: #000000;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Social Icons Style */
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .social-links li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            /* default circle color */
+            color: #000000;
+            /* icon color */
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid #8A8A8A;
+        }
+
+        .social-links li a:hover {
+            color: #1ea9f4;
+            /* icon color on hover */
+        }
+
+        /* Optional: add pointer cursor */
+        .social-links li a {
+            cursor: pointer;
+        }
+
+        /* Make icons centered if they have sr-only span */
+        .social-links li a .fab {
+            vertical-align: middle;
+        }
     </style>
 </head>
 
@@ -956,7 +1319,7 @@
         </div>
     </div>
 
-
+<!-- Main Content -->
     <section class="tours-hero">
         <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="JOY Project">
         <h1>Tour & Retreat Packages</h1>
@@ -975,7 +1338,7 @@
             Let’s create a memorable adventure!
         </p>
     </section>
-<!-- WHY SRI LANKA -->
+    <!-- WHY SRI LANKA -->
     <section class="why-sl container">
         <div class="why-grid">
             <div class="why-text">
@@ -994,74 +1357,237 @@
             </div>
 
             <div class="why-image">
-                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/IMG_4683-1-1.png" alt="Sri Lanka">
+                <img src="images/img1.jpeg" alt="Sri Lanka">
             </div>
         </div>
     </section>
 
+    <!-- BENEFITS SECTION -->
+    <section class="benefits-section">
 
-    <!-- BENEFITS -->
-    <section class="container grid-2">
-        <div class="card">
-            <h2>All-Inclusive Package</h2>
-            <p>
-                From arrival to departure, we manage accommodation, transport, meals, and activities,
-                allowing you to relax and fully enjoy your trip.
-            </p>
+        <div class="container">
+
+            <div class="benefits-grid">
+
+                <!-- All Inclusive -->
+                <div class="benefit-card">
+                    <h2>All-Inclusive Package Benefits</h2>
+                    <p>
+                        Enjoy a hassle-free travel journey with our all-inclusive package. From your arrival in Sri
+                        Lanka to your departure, our local Ground Tour Operator team is dedicated to serving you. We
+                        handle accommodations, transportation, meals, activities, and all experiences, ensuring every
+                        detail is meticulously managed. Relax and fully enjoy your trip while we take care of
+                        everything.
+                    </p>
+                </div>
+
+                <!-- Not Included -->
+                <div class="benefit-card gray">
+                    <h2>What’s not included</h2>
+                    <ul>
+                        <li>Airfare and travel insurance are not included, as we do not issue tickets. We’re happy to
+                            guide you and recommend options for your group.</li>
+                        <li>Tourist or Business Entry Visa: Please see our FAQ</li>
+                    </ul>
+                </div>
+
+                <!-- CTA -->
+                <div class="benefit-card">
+                    <h2>Begin Your Sri Lanka Adventure</h2>
+                    <p>
+                        Fill out the form on our contact page, and we’ll set up a fun online consultation! As the Group
+                        Leader, you’ll share your group’s interests, and we’ll create a personalised itinerary just for
+                        you. From start to finish, your experience will be stress-free, and unforgettable.
+                    </p>
+
+                    <div class="contact-btn-wrap">
+                        <a href="contact.html" class="btn-primary">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Group Leader -->
+                <div class="benefit-card">
+                    <h2>Group Leader Benefits</h2>
+                    <p>
+                        As a thank you for leading your group, enjoy exclusive perks like complimentary accommodations,
+                        meals, and activities. You could even receive up to 100% coverage of your package—making your
+                        adventure even more rewarding!
+                    </p>
+                    <div class="contact-btn-wrap">
+                        <a href="group-leader.html" class="btn-primary">Learn More</a>
+                    </div>
+                </div>
+
+            </div>
+
         </div>
-
-        <div class="card">
-            <h2>Not Included</h2>
-            <p>Airfare & Travel Insurance</p>
-            <p>Tourist or Business Visa</p>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="container text-center">
-        <h2>Begin Your Sri Lanka Adventure</h2>
-        <p>Fill out our contact form and we’ll create your personalized itinerary.</p>
-        <a href="contact.html" class="btn">Contact Us</a>
     </section>
 
     <!-- WHO WE SERVE -->
-    <section class="container">
-        <h2 class="text-center">Who We Serve</h2>
+    <section class="serve-section">
 
-        <div class="serve-grid">
+        <div class="container">
+            <h2 class="serve-title">WHO WE SERVE</h2>
+            <p class="serve-sub">
+                Our tours and retreats attract a diverse range of clients, each seeking unique
+                experiences in Sri Lanka’s stunning landscapes
+            </p>
 
-            <div class="serve-card">
-                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/wellness-group-1.png">
-                <h3>Wellness Groups</h3>
+            <div class="serve-grid">
+
+                <div class="serve-card">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/wellness-group-1.png"
+                        alt="Wellness group enjoying Sri Lanka retreat">
+                    <h3>Wellness Groups</h3>
+                    <p>
+                        Sri Lanka is a top destination for wellness, offering Ayurveda, yoga, meditation, and more. We
+                        tailor retreats to meet your group's needs, ensuring a peaceful and rejuvenating experience.
+                    </p>
+                    <p>
+                        <span>For Wellness Instructors:</span> Lead your own retreat or collaborate with local experts
+                        to enhance your program
+                    </p>
+                    <p>
+                        <span>For Wellness Enthusiasts:</span> Whether a student or practitioner, we connect you with
+                        expert facilitators for transformative experiences.
+                    </p>
+                </div>
+
+                <div class="serve-card">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/Teams-1.png"
+                        alt="Friends and Family enjoying Sri Lanka tour">
+                    <h3>Friends & Family</h3>
+                    <p>Create unforgettable memories with your loved ones in Sri Lanka. From adventurous excursions to
+                        relaxing beachside escapes, we ensure a seamless, enjoyable experience for all.</p>
+                </div>
+
+                <div class="serve-card">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/2-1.png"
+                        alt="Spiritual Seekers group in Sri Lanka">
+                    <h3>Spiritual Seekers & Pilgrims</h3>
+                    <p>Embark on a spiritual journey through Sri Lanka’s sacred sites, from Anuradhapura to the Temple
+                        of the Sacred Tooth Relic. These tours offer enlightenment and deeper connection to the island’s
+                        spiritual heritage.</p>
+                </div>
+
+                <div class="serve-card">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/3-1.png"
+                        alt="Culture Lovers group in Sri Lanka">
+                    <h3>History Enthusiasts & Culture Lovers</h3>
+                    <p>Explore Sri Lanka’s rich history and culture, from ancient ruins to vibrant festivals. Perfect
+                        for curious travellers and scholars, our tours bring the island’s past to life with authenticity
+                        and depth. *Student & Education packages available!</p>
+                </div>
+
+                <div class="serve-card">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/teams-new-1.png"
+                        alt="Corporate Teams group in Sri Lanka">
+                    <h3>Corporate Teams</h3>
+                    <p>Elevate your corporate retreats with immersive experiences in Sri Lanka. We design programs that
+                        blend strategic goals with dynamic tours, team-building activities, and wellness retreats to
+                        inspire and energize your team.</p>
+                </div>
+
+                <div class="serve-card">
+                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/couples-1.png"
+                        alt="Couples and Honeymoons group in Sri Lanka">
+                    <h3>Couples: Romantic Getaways, Weddings, & Honeymoons</h3>
+                    <p>Celebrate love in Sri Lanka’s most romantic settings. From secluded beaches to luxurious resorts,
+                        we create unforgettable experiences for honeymoons, weddings, and romantic getaways.</p>
+                </div>
+
             </div>
 
-            <div class="serve-card">
-                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/Teams-1.png">
-                <h3>Friends & Family</h3>
+            <!-- CENTER CONTACT BUTTON -->
+            <div class="contact-btn-wrap">
+                <a href="contact.html" class="btn-primary">Contact Us</a>
             </div>
-
-            <div class="serve-card">
-                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/2-1.png">
-                <h3>Spiritual Seekers</h3>
-            </div>
-
-            <div class="serve-card">
-                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/3-1.png">
-                <h3>Culture Lovers</h3>
-            </div>
-
-            <div class="serve-card">
-                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/teams-new-1.png">
-                <h3>Corporate Teams</h3>
-            </div>
-
-            <div class="serve-card">
-                <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/couples-1.png">
-                <h3>Couples & Honeymoons</h3>
-            </div>
-
         </div>
     </section>
+
+        <!-- Footer Section -->
+    <footer class="footer" aria-label="Footer">
+        <div class="container footer-grid">
+            <!-- Column 1: Logo + Social -->
+            <div class="footer-column">
+                <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
+                    <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                    <div class="brand-title1">
+                        <strong>JUCON TRAVELS</strong>
+                        <span>Travel Agency • Sri Lanka</span>
+                    </div>
+                </a>
+                <!-- Social Icons -->
+                <ul class="social-links">
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                            <span class="sr-only">Facebook</span>
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="YouTube">
+                            <span class="sr-only">YouTube</span>
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Column 2: About -->
+            <div class="footer-column">
+                <h4>About</h4>
+                <div class="list">
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Navigate -->
+            <div class="footer-column">
+                <h4>Navigate</h4>
+                <div class="list">
+                    <a href="tours-retreats.html">Tours &amp; Retreats</a>
+                    <a href="#group-leader">Group Leader</a>
+                    <a href="#promoters">Promoters</a>
+                    <a href="#best-of">Best of Sri Lanka</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <div class="list">
+                    <a href="#contact">68B, Wariyapola Sri Sumangala Mw, Asgiriya, Kandy</a>
+                    <a href="tel:+94703568306">+94 70 356 8306</a>
+                    <a href="mailto:nkdharmasena@gmail.com">nkdharmasena@gmail.com</a>
+                    <span class="footer-working-hours">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST
+                        (UTC+3)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
+        </div>
+    </footer>
 
 </body>
 
