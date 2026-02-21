@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JUCON TRAVELS | About Us</title>
+    <title>JUCON TRAVELS | Tours & Retreats</title>
     <meta name="description"
         content="Tailor-made tours and wellness retreats in Sri Lanka. Authentic experiences crafted with trusted local experts." />
     <!-- Removed theme-color meta tag for full cross-browser compatibility; this feature is not supported in Firefox or Opera. -->
@@ -805,383 +805,263 @@
             }
         }
 
-        /* About  */
-        .about-hero {
+        /* Main Content  */
+        .tours-hero {
             text-align: center;
             padding: 80px 20px 40px;
         }
 
-        .about-hero img {
-            max-width: 1340px;
-            height: auto;
+        .tours-hero img {
+            width: 1340px;
+            height: 300px;
             margin-top: -55px;
             margin-bottom: 10px;
             border-radius: 20px;
         }
 
-        .about-hero h1 {
+        .tours-hero h1 {
             font-size: 48px;
-            color: #fff;
-            margin-top: -220px;
+            color: #ffffff;
+            margin-top: -160px;
         }
 
-        /* TEXT */
-        .about-text {
-            text-align: left;
-            margin-top: 130px;
-        }
-
-        .about-text p {
-            max-width: 1160px;
-            margin: 0 auto 20px;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #000000ba;
-        }
-
-        /* FOUNDER */
-        .founder-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            margin-top: -100px;
-        }
-
-        .founder-image img {
-            width: 75%;
-            border-radius: 20px;
-        }
-
-        .founder-image h2 {
-            font-size: 44px;
-        }
-
-        .founder-image h4 {
-            margin-top: -20px;
-            margin-bottom: 20px;
-            font-size: 23px;
-            color: #00000B;
-        }
-
-        .founder-content {
-            max-width: 700px;
-            margin-left: -100px;
-            margin-top: 35px;
-        }
-
-        .founder-content p {
-            line-height: 1.75;
-            font-size: 17.5px;
-            color: #1a000bb4;
-        }
-
-        .founder-content span {
-            font-weight: 600;
-            color: #000000;
-        }
-
-        .founder-content h3 {
-            margin-top: 2px;
-            font-size: 30px;
-        }
-
-        /* WHY SRI LANKA */
-        .why-sl h2 {
-            text-align: left;
-            margin-bottom: 20px;
-            font-size: 44px;
-
-        }
-
-        .why-text p {
-            line-height: 1.75;
-            font-size: 17.5px;
-            color: #1a000bb4;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            width: 110%;
-            align-items: center;
-        }
-
-        .why-image img {
-            width: 78%;
-            border-radius: 20px;
-            margin-left: 35px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-
-            .founder-section,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-hero h1 {
-                font-size: 28px;
-            }
-        }
-
-        /* DISCOVER NOW button */
-        .discover-more {
-            align-items: center;
-            margin: 25px 450px;
-        }
-
-        .btn-primary {
-            display: inline-block;
-            margin-top: 15px;
-            margin-bottom: 15px;
-            padding: 14px 32px;
-            background: #5ab4f4;
-            color: #fff;
-            height: 60px;
-            border-radius: 20px;
-            text-decoration: none;
-            text-align: center;
-            font-size: 20px;
-            transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
-            /* smooth grow */
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Expanding white circle from center */
-        .btn-primary::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 20px;
-            height: 20px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            opacity: 0;
-        }
-
-        /* Button hover: slightly bigger smoothly */
-        .btn-primary:hover {
-            background: #000000;
-            transform: scale(1.1);
-            /* slightly bigger */
-        }
-
-        /* Circle animation on hover: blink & move down continuously */
-        .btn-primary:hover::after {
-            animation: blinkSpread 1.8s ease-out infinite;
-        }
-
-        @keyframes blinkSpread {
-
-            0% {
-                transform: translate(-50%, -50%) scale(0.2);
-                opacity: 0.7;
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
-            }
-
-            50% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.9;
-                box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.6);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) scale(1.8);
-                opacity: 0;
-                box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
-            }
-        }
-
-        /* VISION & MISSION */
-        .vision-section {
+        /* Group Leader Section */
+        .group-leader {
             padding: 80px 20px;
-            background: #ffffff;
-            text-align: center;
-            font-family: 'Inter', sans-serif;
-            margin-top: -100px;
+            max-width: 1100px;
+            margin: auto;
         }
 
-        .section-header h5 {
-            color: #000000;
-            letter-spacing: 2px;
-            font-size: 32px;
-            text-transform: uppercase;
+        .group-header {
+            text-align: center;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .group-header h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .group-header p {
+            color: #555;
+            line-height: 1.7;
+            font-size: 20px;
+        }
+
+        .sub-title {
+            text-align: center;
+            margin: 60px 0 30px;
+            font-size: 28px;
+        }
+
+        .leader-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .leader-card {
+            background: #d2d2d2d3;
+            padding: 35px 30px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            transition: 0.3s;
+        }
+
+        .leader-card:hover {
+            transform: translateY(-6px);
+            background: #888888bd;
+        }
+
+        .leader-icon {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .leader-card h3 {
             margin-bottom: 10px;
         }
 
-        .section-header h2 {
-            font-size: 22px;
-            font-weight: 700;
-            margin-bottom: 50px;
-            color: #1c1c1c;
-        }
-
-        .vision-mission {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-
-        .vision-card {
-            background: #ffffff;
-            padding: 40px 30px;
-            border-radius: 15px;
-            width: 550px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            transition: 0.4s ease;
-        }
-
-        .vision-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            border: #000000 1px solid;
-        }
-
-        .vision-card .icon {
-            font-size: 40px;
-            margin-bottom: 20px;
-        }
-
-        .vision-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #0d6e63;
-        }
-
-        .vision-card p {
-            font-size: 15px;
-            line-height: 1.7;
+        .leader-card p {
             color: #555;
+            line-height: 1.6;
         }
 
-
-        /* Strengths */
-        .strengths-section {
-            padding: 80px 10%;
+        /* Benefits Section */
+        .leader-benefits {
+            margin-top: -100px;
+            padding: 120px 20px;
             background: #ffffff;
-            text-align: center;
-            margin-top: -80px;
         }
 
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 50px;
-        }
-
-        .strengths-grid {
+        .benefits-container {
+            max-width: 1300px;
+            margin: auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 30px;
-        }
-
-        .strength-card {
-            background: #f9f9f9;
-            padding: 35px 20px;
-            border-radius: 12px;
-            transition: 0.3s ease;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .strength-card i {
-            font-size: 28px;
-            color: #0a7d3b;
-            margin-bottom: 15px;
-        }
-
-        .strength-card h4 {
-            font-size: 16px;
-            font-weight: 500;
-        }
-
-        .strength-card:hover {
-            transform: translateY(-8px);
-            background: #0a7d3b;
-            color: #fff;
-        }
-
-        .strength-card:hover i {
-            color: #ffffff;
-        }
-
-
-        /* Why Sri Lanka */
-        .why-section {
-            padding: 90px 10%;
-            background: #ffffff;
-            margin-top: -80px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 34px;
-            margin-bottom: 60px;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-        }
-
-        .why-card {
-            background: #ffffff;
-            padding: 35px 30px;
-            border-radius: 14px;
-            transition: 0.4s ease;
-            position: relative;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-        }
-
-        .why-icon {
-            width: 60px;
-            height: 60px;
-            background: #0a7d3b;
-            color: #fff;
-            display: flex;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
             align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            font-size: 22px;
-            margin-bottom: 20px;
         }
 
-        .why-card h3 {
-            font-size: 18px;
+        .benefits-left h2 {
+            font-size: 34px;
+            margin-top: -130px;
             margin-bottom: 15px;
+            letter-spacing: 2px;
         }
 
-        .why-card p {
-            font-size: 15px;
-            line-height: 1.7;
+        .benefits-left p {
             color: #555;
+            line-height: 1.6;
+            font-size: 18px;
         }
 
-        /* Hover Effect */
-        .why-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        .benefits-right {
+            background: #E8E4DA;
+            padding: 40px;
+            height: 400px;
+            border-radius: 18px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
         }
 
-        .why-card:hover .why-icon {
-            background: #000;
+        .benefits-right h3 {
+            margin-bottom: 20px;
+            font-size: 34px;
+            margin-top: -5px;
+        }
+
+        .benefit-list {
+            list-style: none;
+            padding: 0;
+            line-height: 0.9;
+            font-size: 18px;
+        }
+
+        .benefit-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .benefit-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #2bb673;
+            font-weight: bold;
+        }
+
+        @media(max-width:992px) {
+            .leader-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            .leader-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .vision-mission {
+        /* Group Types Section */
+        .group-types {
+            padding: 80px 20px;
+            background: #fff;
+        }
+
+        .group-types-container {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.3fr 1fr;
+            gap: 50px;
+            margin-top: -150px;
+        }
+
+        /* LEFT */
+        .group-left h2 {
+            margin-bottom: 25px;
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .group-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .group-card {
+            background: #f7f7f7;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+        }
+
+        .group-card:hover {
+            transform: translateY(-5px);
+            background: #5ab9fcb2;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.805);
+        }
+
+        .group-card h3 {
+            margin-bottom: 5px;
+            font-size: 22px;
+        }
+
+        .group-card p {
+            color: #242424;
+            font-size: 16px;
+        }
+
+        /* RIGHT */
+        .group-right {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 18px;
+        }
+
+        .group-right h2 {
+            margin-bottom: 50px;
+            font-size: 36px;
+            margin-top: -2px;
+        }
+
+        .info-list {
+            list-style: none;
+            padding: 0;
+            line-height: 1.9;
+            font-size: 18px;
+        }
+
+        .info-list li {
+            margin-bottom: 15px;
+            padding-left: 22px;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .info-list li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #2bb673;
+            font-weight: bold;
+        }
+
+        @media(max-width:768px) {
+
+            .group-types-container {
                 grid-template-columns: 1fr;
             }
 
-            .strengths ul {
+            .group-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -1354,276 +1234,167 @@
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="about-us.html" class="active">About</a>
+                <a href="about-us.html">About</a>
                 <a href="tours-retreats.html">Tours & Retreats</a>
-                <a href="best-of-sri-lanka.html">Best Of</a>
-                <a href="group-leader.html">Group Leader</a>
-                <a href="promoters.html">Promoters</a>
-                <a href="faq.html">FAQ</a>
+                <a href="#best-of">Best Of</a>
+                <a href="group-leader.html"  class="active">Group Leader</a>
+                <a href="#promoters">Promoters</a>
+                <a href="#faq">FAQ</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
             <nav class="nav" aria-label="Mobile">
-                <a href="about-us.html" class="active">About</a>
+                <a href="about-us.html">About</a>
                 <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                <a href="best-of-sri-lanka.html">Best Of</a>
-                <a href="group-leader.html">Group Leader</a>
-                <a href="promoters.html">Promoters</a>
-                <a href="faq.html">FAQ</a>
+                <a href="#best-of">Best Of</a>
+                <a href="group-leader.html"  class="active">Group Leader</a>
+                <a href="#promoters">Promoters</a>
+                <a href="#faq">FAQ</a>
                 <a href="contact.html">Contact</a>
             </nav>
         </div>
     </div>
 
-
-    <section class="about-hero">
-        <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/cgngvfm-1.png" alt="JOY Project">
-        <h1>Who We Are</h1>
+    <!-- Main Content -->
+    <section class="tours-hero">
+        <img src="images/group.jpg" alt="JOY Project">
+        <h1>Group Leader</h1>
     </section>
 
-    <section class="about-text container">
-        <p>
-            A division of Jucon (Pvt.) Ltd, Jucon Travels specializes in inbound tourism and is your go-to travel
-            partner for exploring the allure of Sri Lanka, an island rich in culture, adventure, and natural beauty.
-            Whether you are organizing a family vacation, a quick escape, or a custom tour, Jucon Travels is ready to
-            provide experiences that surpass standard travel.
-        </p>
-
-        <p>
-            Jucon Travels takes pleasure in offering you well-considered tour packages that allow you to tailor your
-            trip to your preferred vacation spots, allowing you to experience the true essence of this tropical paradise
-            and excited journey into a memorable tale. We manage every stage of your trip, beginning and concluding at
-            Colombo Air Port, thanks to our experience, meticulous attention to detail, and reliable partnerships.
-        </p>
-        <p>
-            Jucon Travels is ready to take you safely, smoothly, and with a touch of Sri Lankan warmth.
-        </p>
-
-        <!-- Discover More Button -->
-        <div class="discover-more">
-            <a href="tours-retreats.html" class="btn-primary">Connect with us</a>
-        </div>
-    </section>
-
-    <section class="founder-section container">
-        <div class="founder-image">
-            <h2>Mahesh Dharmasena</h2>
-            <h4>Managing Director</h4>
-            <img src="images/about.png" alt="Mahesh Dharmasena">
-        </div>
-
-        <div class="founder-content">
-
+    <!-- Group Leader Section -->
+    <section class="group-leader container">
+        <div class="group-header">
+            <h2>What is a Group Leader</h2>
             <p>
-                <span>Elina Papa</span> is a globally recognised holistic therapist, certified trainer, and speaker with
-                over 30 years of experience in wellness and hospitality. As the visionary behind the JOY Project, she
-                blends her expertise to create wellness-focused retreats and tailored travel experiences.
-            </p>
-
-            <h3>Trusted Expert in Wellness</h3>
-            <p>
-                Elina is highly regarded for her trustworthiness and dedication, offering personalised therapy and
-                counselling that lead to profound personal transformation. Her holistic practice integrates creative
-                psychology and intuitive healing, benefiting clients worldwide.
-            </p>
-
-            <h3>Certified & Experienced Leader</h3>
-            <p>
-                Elina is an internationally certified teacher in Laughter Yoga and Rebirthing Breathwork, trained by
-                their founders. She is also an HRDA-certified professional trainer from the Human Resources Development
-                Authority of Cyprus and a certified facilitator in various healing modalities. With a degree in Hotel
-                and Restaurant Management, Elina’s extensive background in hospitality and wellness enables her to lead
-                international retreats, corporate workshops, and wellness festivals, all designed to foster growth,
-                healing, and cultural exploration. Her journey began in Montreal, Canada, and has evolved into a
-                platform that combines wellness and travel, enriching lives through unique and transformative
-                experiences.
+                The Group Leader is the key liaison between your group and our team, ensuring that every detail of your
+                tour or retreat package is perfectly planned and executed.
             </p>
         </div>
-    </section>
 
-    <section class="why-sl container">
-        <h2>Why you need to choose us?</h2>
+        <h2 class="sub-title">Primary Responsibilities</h2>
 
-        <div class="why-grid">
-            <div class="why-text">
+        <div class="leader-grid">
+
+            <!-- item 1 -->
+            <div class="leader-card">
+                <div class="leader-icon">💬</div>
+                <h3>Communication</h3>
                 <p>
-                    A full-service Sri Lankan tour company, Jucon Travels caters to tourists looking for more than
-                    simply a holiday; we build trips that take you to the island's heart and soul. We provide customized
-                    experiences that encapsulate Sri Lanka's genuine essence for both first-time and recurring
-                    travelers.
-                </p>
-                <p>
-                    Our extensive selection of carefully chosen trip packages that are tailored to a traveler's
-                    interests, mood, and lifestyle is what makes Jucon Travels unique. Every travel narrative has a
-                    different theme, whether your fantasy is a peaceful beach vacation, a wildlife adventure, a cultural
-                    getaway, or a romantic honeymoon.
-                </p>
-                <p>
-                    Your stay with us is more than just a vacation; it's an unforgettable experience full of memories
-                    you'll treasure forever.
+                    The Group Leader is the main point of contact with our team,
+                    working closely to create a tailor-made tour or retreat package
+                    that aligns with your group’s preferences and needs.
                 </p>
             </div>
 
-            <div class="why-image">
-                <img src="images/img7.jpeg" alt="Sri Lanka">
+            <!-- item 2 -->
+            <div class="leader-card">
+                <div class="leader-icon">🤝</div>
+                <h3>Coordination</h3>
+                <p>
+                    Acts as the intermediary between our team and the group,
+                    relaying important information, updates, and decisions so everyone
+                    stays informed and aligned.
+                </p>
             </div>
-        </div>
-    </section>
 
-    <section class="about-section">
-
-        <div class="container">
-
-            <!-- Vision & Mission Section -->
-            <section class="vision-section">
-
-                <div class="section-header">
-                    <h5>Our Vision & Mission</h5>
-                    <h2>Guided by Purpose, Driven by Excellence</h2>
-                </div>
-
-                <div class="vision-mission">
-
-                    <div class="vision-card">
-                        <div class="icon">🌍</div>
-                        <h3>Vision</h3>
-                        <p>
-                            To be a leading eco-conscious inbound tour operator in Sri Lanka,
-                            creating meaningful travel experiences that connect people,
-                            nature, and culture.
-                        </p>
-                    </div>
-
-                    <div class="vision-card">
-                        <div class="icon">✨</div>
-                        <h3>Mission</h3>
-                        <p>
-                            Jucon Travels is committed to delivering high-quality,
-                            personalized travel experiences for worldwide visitors by offering
-                            eco-friendly, wildlife, cultural, honeymoon, and family tour packages.
-                            We promote responsible tourism, support local communities,
-                            and preserve Sri Lanka’s environment and heritage for future generations.
-                        </p>
-                    </div>
-
-                </div>
-
-            </section>
-
-
-            <!-- Strengths -->
-            <section class="strengths-section">
-                <div class="container">
-
-                    <h2 class="section-title">Our Strengths</h2>
-
-                    <div class="strengths-grid">
-
-                        <div class="strength-card">
-                            <i class="fas fa-star"></i>
-                            <h4>High Customer Satisfaction</h4>
-                        </div>
-
-                        <div class="strength-card">
-                            <i class="fas fa-bus"></i>
-                            <h4>End-to-End Transport</h4>
-                        </div>
-
-                        <div class="strength-card">
-                            <i class="fas fa-map-marked-alt"></i>
-                            <h4>Customized Tour Packages</h4>
-                        </div>
-
-                        <div class="strength-card">
-                            <i class="fas fa-headset"></i>
-                            <h4>24/7 Communication</h4>
-                        </div>
-
-                        <div class="strength-card">
-                            <i class="fas fa-user-tie"></i>
-                            <h4>Professionalism</h4>
-                        </div>
-
-                        <div class="strength-card">
-                            <i class="fas fa-language"></i>
-                            <h4>Native Language Speaking Guides</h4>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
-
-            <!-- Why Sri Lanka -->
-            <section class="why-section">
-                <div class="container">
-
-                    <h2 class="section-title">
-                        Why Select Sri Lanka as Your Travel Destination?
-                    </h2>
-
-                    <div class="why-grid">
-
-                        <div class="why-card">
-                            <div class="why-icon"><i class="fas fa-mountain"></i></div>
-                            <h3>01. Diverse Natural Attractions</h3>
-                            <p>
-                                Golden beaches, misty mountains, waterfalls, rainforests,
-                                and wildlife parks. Explore tea plantations in the highlands
-                                or enjoy safaris in Yala National Park.
-                            </p>
-                        </div>
-
-                        <div class="why-card">
-                            <div class="why-icon"><i class="fas fa-landmark"></i></div>
-                            <h3>02. Rich Cultural Heritage</h3>
-                            <p>
-                                Over 2,500 years of history with ancient cities, temples,
-                                and UNESCO World Heritage sites like Sigiriya and
-                                the Temple of the Tooth.
-                            </p>
-                        </div>
-
-                        <div class="why-card">
-                            <div class="why-icon"><i class="fas fa-paw"></i></div>
-                            <h3>03. Unique Wildlife Experiences</h3>
-                            <p>
-                                See elephants, leopards, and blue whales.
-                                Enjoy both jungle safaris and marine excursions in one trip.
-                            </p>
-                        </div>
-
-                        <div class="why-card">
-                            <div class="why-icon"><i class="fas fa-hands-helping"></i></div>
-                            <h3>04. Warm Hospitality & Culture</h3>
-                            <p>
-                                Experience friendly locals, traditional dance,
-                                Ayurveda treatments, and flavorful Sri Lankan cuisine.
-                            </p>
-                        </div>
-
-                        <div class="why-card">
-                            <div class="why-icon"><i class="fas fa-route"></i></div>
-                            <h3>05. Compact & Convenient Travel</h3>
-                            <p>
-                                Travel from beaches to mountains to cultural cities
-                                within short distances — perfect for short or long holidays.
-                            </p>
-                        </div>
-
-                    </div>
-
-                </div>
-            </section>
-
+            <!-- item 3 -->
+            <div class="leader-card">
+                <div class="leader-icon">🌍</div>
+                <h3>On-the-Ground Support</h3>
+                <p>
+                    The Group Leader supports members during the trip, liaising with the
+                    local tour operator and ensuring all members stay organised and informed.
+                </p>
+            </div>
 
         </div>
 
     </section>
 
+    <!-- Benefits Section -->
+    <section class="leader-benefits">
+
+        <div class="benefits-container">
+
+            <!-- LEFT TEXT -->
+            <div class="benefits-left">
+                <h2>What are the Group Leader Benefits</h2>
+                <p>
+                    We value Group Leaders as part of our team, helping us ensure a joyful
+                    experience for all.
+                </p>
+                <p>
+                    Group Leaders have great incentives for their time and efforts.
+                </p>
+            </div>
+
+            <!-- RIGHT CARD -->
+            <div class="benefits-right">
+                <h3>Benefits include up to a 100% complimentary</h3>
+
+                <ul class="benefit-list">
+                    <li>Accommodation</li>
+                    <li>Transportation</li>
+                    <li>Meals</li>
+                    <li>Activities</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Group Types Section -->
+    <section class="group-types">
+
+        <div class="group-types-container">
+
+            <!-- LEFT SIDE -->
+            <div class="group-left">
+                <h2>Group types eligible for leader benefits</h2>
+
+                <div class="group-grid">
+
+                    <div class="group-card">
+                        <h3>Small Groups</h3>
+                        <p>5–9 persons</p>
+                    </div>
+
+                    <div class="group-card">
+                        <h3>Medium Groups</h3>
+                        <p>10–19 persons</p>
+                    </div>
+
+                    <div class="group-card">
+                        <h3>Large Groups</h3>
+                        <p>20–30 persons</p>
+                    </div>
+
+                    <div class="group-card">
+                        <h3>Extra Large Groups</h3>
+                        <p>31 persons and above</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="group-right">
+                <h2>Additional Information</h2>
+
+                <ul class="info-list">
+                    <li>Complimentary benefits based on participant count and venue/accommodation policies.</li><br>
+                    <li>Group size calculated excluding Group Leaders.</li><br>
+                    <li>Multiple Group Leaders allowed for larger groups, with benefits based on package details.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </section>
 
     <!-- Footer Section -->
     <footer class="footer" aria-label="Footer">
@@ -1683,9 +1454,9 @@
                 <h4>Navigate</h4>
                 <div class="list">
                     <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                    <a href="group-leader.html">Group Leader</a>
+                    <a href="group-leader.html" class="active">Group Leader</a>
                     <a href="promoters.html">Promoters</a>
-                    <a href="best-of-sri-lanka.html">Best of Sri Lanka</a>
+                    <a href="best-of.html">Best of Sri Lanka</a>
                     <a href="faq.html">FAQ</a>
                 </div>
             </div>
@@ -1710,34 +1481,8 @@
     </footer>
 
 
-    <script>
-        (function () {
-            const menuBtn = document.getElementById('menuBtn');
-            const mobilePanel = document.getElementById('mobilePanel');
-            if (!menuBtn || !mobilePanel) return;
 
-            function setOpen(open) {
-                mobilePanel.classList.toggle('open', open);
-                menuBtn.setAttribute('aria-expanded', String(open));
-            }
 
-            menuBtn.addEventListener('click', function () {
-                const isOpen = mobilePanel.classList.contains('open');
-                setOpen(!isOpen);
-            });
-
-            // Close on navigation
-            mobilePanel.addEventListener('click', function (e) {
-                const target = e.target;
-                if (target && target.tagName === 'A') setOpen(false);
-            });
-
-            // Close on resize to desktop
-            window.addEventListener('resize', function () {
-                if (window.innerWidth > 980) setOpen(false);
-            });
-        })();
-    </script>
 </body>
 
 </html>
