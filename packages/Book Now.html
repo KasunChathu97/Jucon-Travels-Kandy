@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Now | Sri Lanka Tours</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f5f7fb;
+    margin:0;
+    padding:0;
+}
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    background:#fff;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 0 15px rgba(0,0,0,0.08);
+}
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+.full{grid-column:1/3;}
+label{font-weight:600;}
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+.checkbox-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+.checkbox-group label{
+    background:#eef3ff;
+    padding:6px 10px;
+    border-radius:6px;
+    cursor:pointer;
+}
+button{
+    background:#0077ff;
+    color:#fff;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+button:hover{background:#005ce0;}
+.short-form{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:2px dashed #ddd;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Tour Inquiry Form</h2>
+
+<form>
+<div class="form-grid">
+
+<div>
+<label>Name</label>
+<input type="text" required>
+</div>
+
+<div>
+<label>Country *</label>
+<select required>
+<option value="">Select Country</option>
+<option>Sri Lanka</option>
+<option>India</option>
+<option>UK</option>
+<option>Australia</option>
+<option>Germany</option>
+</select>
+</div>
+
+<div>
+<label>WhatsApp Number</label>
+<input type="tel">
+</div>
+
+<div>
+<label>Email *</label>
+<input type="email" required>
+</div>
+
+<div>
+<label>Adults (12+)</label>
+<input type="number" min="1">
+</div>
+
+<div>
+<label>Children</label>
+<input type="number" min="0">
+</div>
+
+<div>
+<label>No of Rooms</label>
+<input type="number" min="1">
+</div>
+
+<div>
+<label>Arrival Date</label>
+<input type="date">
+</div>
+
+<div>
+<label>Departure Date</label>
+<input type="date">
+</div>
+
+<div class="full">
+<label>Hotel Category</label>
+<div class="checkbox-group">
+<label><input type="checkbox"> Boutiques</label>
+<label><input type="checkbox"> 5 Star</label>
+<label><input type="checkbox"> 4 Star</label>
+<label><input type="checkbox"> 3 Star</label>
+<label><input type="checkbox"> Budget</label>
+</div>
+</div>
+
+<div class="full">
+<label>Meal Plan</label>
+<div class="checkbox-group">
+<label><input type="checkbox"> BB</label>
+<label><input type="checkbox"> HB</label>
+<label><input type="checkbox"> FB</label>
+</div>
+</div>
+
+<div class="full">
+<label>Places of Interest</label>
+<div class="checkbox-group">
+<label><input type="checkbox"> Heritage & Culture</label>
+<label><input type="checkbox"> Wild Life</label>
+<label><input type="checkbox"> Beach</label>
+<label><input type="checkbox"> Nature</label>
+<label><input type="checkbox"> Archeology</label>
+<label><input type="checkbox"> Shopping</label>
+<label><input type="checkbox"> Adventure</label>
+</div>
+</div>
+
+<div class="full">
+<label>Budget Range (PP)</label>
+<select>
+<option>$1-300</option>
+<option>$300-800</option>
+<option>$800-1500</option>
+<option>$1500-2500</option>
+<option>$2500-3500</option>
+<option>$3500-5000</option>
+<option>Above $5000</option>
+</select>
+</div>
+
+<div class="full">
+<label>Other Requirements</label>
+<textarea rows="4"></textarea>
+</div>
+
+<div class="full">
+<button type="submit">Submit Inquiry</button>
+</div>
+
+</div>
+</form>
+
+<!-- SHORT FORM -->
+<div class="short-form">
+<h2>Quick Inquiry</h2>
+
+<form>
+<div class="form-grid">
+
+<div>
+<label>Name</label>
+<input type="text">
+</div>
+
+<div>
+<label>Country</label>
+<input type="text">
+</div>
+
+<div>
+<label>Email</label>
+<input type="email">
+</div>
+
+<div>
+<label>Arrival Date</label>
+<input type="date">
+</div>
+
+<div>
+<label>Departure Date</label>
+<input type="date">
+</div>
+
+<div>
+<label>Adults</label>
+<input type="number">
+</div>
+
+<div>
+<label>Children</label>
+<input type="number">
+</div>
+
+<div class="full">
+<label>Queries</label>
+<textarea rows="3"></textarea>
+</div>
+
+<div class="full">
+<button type="submit">Send Quick Inquiry</button>
+</div>
+
+</div>
+</form>
+</div>
+
+</div>
+
+</body>
+</html>
