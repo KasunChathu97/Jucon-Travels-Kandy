@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -842,42 +843,44 @@
             color: #000000ba;
         }
 
-/* GRID */
-.container{
-    padding:120px 8%;
-}
+        /* GRID */
+        .container {
+            padding: 120px 8%;
+        }
 
-.interest-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:30px;
-}
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
 
-.card{
-    background:white;
-    border-radius:16px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.06);
-    transition:.3s;
-}
-.card:hover{
-    transform:translateY(-8px);
-}
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            transition: .3s;
+        }
 
-.card img{
-    width:100%;
-    height:200px;
-    object-fit:cover;
-}
+        .card:hover {
+            transform: translateY(-8px);
+        }
 
-.card-content{
-    padding:20px;
-}
-.card-content h3{
-    margin-top:0;
-    color:#1c73e8;
-}
-</style>
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            margin-top: 0;
+            color: #1c73e8;
+        }
+    </style>
 </head>
 
 <body>
@@ -923,119 +926,121 @@
         <h1>Places of Interest in Sri Lanka</h1>
     </section>
 
-<div class="container">
-<div class="interest-grid">
+    <div class="container">
+        <div class="interest-grid">
 
-<!-- COLOMBO -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07">
-<div class="card-content">
-<h3>Colombo</h3>
-<p>The vibrant commercial capital blending colonial heritage, shopping, temples, and modern city life.</p>
-</div>
-</div>
+            <!-- COLOMBO -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07">
+                <div class="card-content">
+                    <h3>Colombo</h3>
+                    <p>The vibrant commercial capital blending colonial heritage, shopping, temples, and modern city
+                        life.</p>
+                </div>
+            </div>
 
-<!-- NEGOMBO -->
-<div class="card">
-<img src="images/Pearl/negombo.jpg">
-<div class="card-content">
-<h3>Negombo</h3>
-<p>Coastal fishing town famous for lagoons, beaches, and lively fish markets.</p>
-</div>
-</div>
+            <!-- NEGOMBO -->
+            <div class="card">
+                <img src="images/Pearl/negombo.jpg">
+                <div class="card-content">
+                    <h3>Negombo</h3>
+                    <p>Coastal fishing town famous for lagoons, beaches, and lively fish markets.</p>
+                </div>
+            </div>
 
-<!-- CHILAW -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
-<div class="card-content">
-<h3>Chilaw</h3>
-<p>Peaceful seaside town known for Munneswaram Temple and coconut plantations.</p>
-</div>
-</div>
+            <!-- CHILAW -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+                <div class="card-content">
+                    <h3>Chilaw</h3>
+                    <p>Peaceful seaside town known for Munneswaram Temple and coconut plantations.</p>
+                </div>
+            </div>
 
-<!-- WILPATTU -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1552083375-1447ce886485">
-<div class="card-content">
-<h3>Wilpattu Safari</h3>
-<p>Sri Lanka’s largest national park known for leopards, lakes, and untouched wilderness.</p>
-</div>
-</div>
+            <!-- WILPATTU -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552083375-1447ce886485">
+                <div class="card-content">
+                    <h3>Wilpattu Safari</h3>
+                    <p>Sri Lanka’s largest national park known for leopards, lakes, and untouched wilderness.</p>
+                </div>
+            </div>
 
-<!-- PINNAWALA -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1552410260-0fd9b577afa6">
-<div class="card-content">
-<h3>Pinnawala</h3>
-<p>Famous elephant orphanage where herds bathe in the Ma Oya river.</p>
-</div>
-</div>
+            <!-- PINNAWALA -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1552410260-0fd9b577afa6">
+                <div class="card-content">
+                    <h3>Pinnawala</h3>
+                    <p>Famous elephant orphanage where herds bathe in the Ma Oya river.</p>
+                </div>
+            </div>
 
-<!-- SIGIRIYA -->
-<div class="card">
-<img src="images/sigiriya.jpg">
-<div class="card-content">
-<h3>Sigiriya</h3>
-<p>UNESCO rock fortress featuring frescoes, mirror wall, and panoramic views.</p>
-</div>
-</div>
+            <!-- SIGIRIYA -->
+            <div class="card">
+                <img src="images/sigiriya.jpg">
+                <div class="card-content">
+                    <h3>Sigiriya</h3>
+                    <p>UNESCO rock fortress featuring frescoes, mirror wall, and panoramic views.</p>
+                </div>
+            </div>
 
-<!-- KANDY -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b">
-<div class="card-content">
-<h3>Kandy</h3>
-<p>Hill capital home to the Temple of the Tooth Relic and scenic lake.</p>
-</div>
-</div>
+            <!-- KANDY -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b">
+                <div class="card-content">
+                    <h3>Kandy</h3>
+                    <p>Hill capital home to the Temple of the Tooth Relic and scenic lake.</p>
+                </div>
+            </div>
 
-<!-- NUWARA ELIYA -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97">
-<div class="card-content">
-<h3>Nuwara Eliya</h3>
-<p>Tea country known as Little England with cool climate and waterfalls.</p>
-</div>
-</div>
+            <!-- NUWARA ELIYA -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97">
+                <div class="card-content">
+                    <h3>Nuwara Eliya</h3>
+                    <p>Tea country known as Little England with cool climate and waterfalls.</p>
+                </div>
+            </div>
 
-<!-- ELLA -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1586375300773-8384e3e4916f">
-<div class="card-content">
-<h3>Ella</h3>
-<p>Mountain village with Nine Arch Bridge, hikes, and breathtaking views.</p>
-</div>
-</div>
+            <!-- ELLA -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1586375300773-8384e3e4916f">
+                <div class="card-content">
+                    <h3>Ella</h3>
+                    <p>Mountain village with Nine Arch Bridge, hikes, and breathtaking views.</p>
+                </div>
+            </div>
 
-<!-- YALA -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1549366021-9f761d450615">
-<div class="card-content">
-<h3>Yala Safari</h3>
-<p>Wildlife hotspot with the highest leopard density in the world.</p>
-</div>
-</div>
+            <!-- YALA -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1549366021-9f761d450615">
+                <div class="card-content">
+                    <h3>Yala Safari</h3>
+                    <p>Wildlife hotspot with the highest leopard density in the world.</p>
+                </div>
+            </div>
 
-<!-- MIRISSA -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
-<div class="card-content">
-<h3>Mirissa</h3>
-<p>Golden beaches famous for whale watching and coastal relaxation.</p>
-</div>
-</div>
+            <!-- MIRISSA -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+                <div class="card-content">
+                    <h3>Mirissa</h3>
+                    <p>Golden beaches famous for whale watching and coastal relaxation.</p>
+                </div>
+            </div>
 
-<!-- GALLE -->
-<div class="card">
-<img src="https://images.unsplash.com/photo-1586182987320-4f376d39d787">
-<div class="card-content">
-<h3>Galle</h3>
-<p>Historic Dutch fort city with charming streets and ocean views.</p>
-</div>
-</div>
+            <!-- GALLE -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1586182987320-4f376d39d787">
+                <div class="card-content">
+                    <h3>Galle</h3>
+                    <p>Historic Dutch fort city with charming streets and ocean views.</p>
+                </div>
+            </div>
 
-</div>
-</div>
+        </div>
+    </div>
 
 </body>
+
 </html>

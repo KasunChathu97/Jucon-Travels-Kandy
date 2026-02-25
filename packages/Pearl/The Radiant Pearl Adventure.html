@@ -889,13 +889,9 @@
         }
 
         /* DISCOVER NOW button */
-        .discover-more {
-            display: flex;
-            justify-content: center;
-            /* horizontal center */
-            align-items: center;
-            margin: 25px 0;
-            margin-top: -30px;
+        .contact-btn-wrap {
+            text-align: center;
+            margin-top: 20px;
         }
 
         .btn-primary {
@@ -905,15 +901,14 @@
             padding: 14px 32px;
             background: #5ab4f4;
             color: #fff;
-            height: 50px;
-            border-radius: 20px;
+            height: 16%;
+            border-radius: 10px;
             text-decoration: none;
-            text-align: center;
-            font-size: 18px;
             transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
             /* smooth grow */
             position: relative;
             overflow: hidden;
+            align-items: center;
         }
 
         /* Expanding white circle from center */
@@ -933,9 +928,36 @@
         /* Button hover: slightly bigger smoothly */
         .btn-primary:hover {
             background: #000000;
-            transform: translateY(-10px);
+            transform: scale(1.1);
             /* slightly bigger */
         }
+
+        /* Circle animation on hover: blink & move down continuously */
+        .btn-primary:hover::after {
+            animation: blinkSpread 1.8s ease-out infinite;
+        }
+
+        @keyframes blinkSpread {
+
+            0% {
+                transform: translate(-50%, -50%) scale(0.2);
+                opacity: 0.7;
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.9;
+                box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.6);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.8);
+                opacity: 0;
+                box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
+            }
+        }
+
 
         /* TIMELINE */
         .timeline {
@@ -999,6 +1021,11 @@
             border-radius: 12px;
         }
 
+        .day-img img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
         .day-card {
             background: #e8e4daca;
             padding: 30px;
@@ -1026,7 +1053,7 @@
         .cta {
             margin: 100px 10%;
             padding: 70px;
-            background: linear-gradient(135deg, #1c73e8, #4fa3ff);
+margin-top: -20px;
             color: white;
             border-radius: 20px;
             text-align: center;
@@ -1036,21 +1063,13 @@
             margin-top: 0;
         }
 
-        .cta a {
-            display: inline-block;
-            margin-top: 18px;
-            background: white;
-            color: #1c73e8;
-            padding: 14px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: .3s;
+        .cta p {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #000000;
         }
 
-        .cta a:hover {
-            background: #e9f1ff;
-        }
 
         /* MOBILE */
         @media(max-width:768px) {
@@ -1066,6 +1085,221 @@
                 margin: 60px 6%;
                 padding: 50px;
             }
+        }
+
+        /* BENEFITS */
+                .benefits-section {
+            padding: 60px -2%;
+            margin-left: -90px;
+            margin-top: -180px;
+
+        }
+
+        .benefits-section h2 {
+            font-size: 32px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .benefit-card {
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            background: #ffffff;
+            width: 650px;
+        }
+
+        .benefit-card.gray {
+            background: #F3F3F3;
+        }
+
+        .benefit-card h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .benefit-card ul {
+            padding-left: 18px;
+            align-items: center;
+        }
+
+        .benefit-card li {
+            margin-bottom: 10px;
+            align-items: center;
+            font-size: 15px;
+            color: #000000bb;
+        }
+
+        .benefit-card:hover {
+            background: #5ab4f4ac;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media(max-width:768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: #F5F5F5;
+            padding: 40px 20px 20px;
+            font-family: sans-serif;
+            margin-bottom: 60px;
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 50px;
+            border-radius: 30px;
+            height: 528px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            align-items: start;
+            margin-top: 60px;
+        }
+
+        .footer-column .site-logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            margin-left: -60px;
+            margin-top: -5px;
+        }
+
+        .brand-title1 {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            margin-left: -15px;
+            margin-top: 15px;
+        }
+
+        .brand-title1 strong {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .brand-title1 span {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 10px;
+            font-size: 26px;
+            font-weight: 500;
+            color: #00000B;
+        }
+
+        .footer-column .list {
+            margin-top: 35px;
+        }
+
+        .footer-column .list a,
+        .footer-column span {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-column .list a:hover {
+            color: #1ea9f4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 150px;
+            margin-left: -945px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .footer-bottom a {
+            color: #1ea9f4;
+        }
+
+        .footer-bottom a:hover {
+            color: #000000;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Social Icons Style */
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .social-links li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            /* default circle color */
+            color: #000000;
+            /* icon color */
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid #8A8A8A;
+        }
+
+        .social-links li a:hover {
+            color: #1ea9f4;
+            /* icon color on hover */
+        }
+
+        /* Optional: add pointer cursor */
+        .social-links li a {
+            cursor: pointer;
+        }
+
+        /* Make icons centered if they have sr-only span */
+        .social-links li a .fab {
+            vertical-align: middle;
         }
     </style>
 </head>
@@ -1108,17 +1342,21 @@
     </div>
 
     <section class="about-hero">
-        <img src="../../images/Pearl/banner.jpg" alt="JOY Project">
+        <img src="../../images/Pearl/Adventure12.png" alt="JOY Project">
         <h1>The Radiant Pearl Adventure</h1>
     </section>
 
     <section class="about-text container">
         <h2>Introduction</h2>
         <p>
-            Experience Sri Lanka’s most iconic highlights on this immersive journey from Negombo to Colombo.
-            Meet elephants in Pinnawala, conquer Sigiriya, explore Kandy’s sacred heritage, travel through tea
-            country, trek Horton Plains, discover Ella’s scenic bridges, enjoy Yala safari adventures, relax
-            on Mirissa’s golden shores, and explore Galle Fort before ending in vibrant Colombo.
+            Experience the quintessential charm of the island on this 9-day journey, starting from the sun-kissed shores
+            of Negombo. Encounter majestic giants at Pinnawala and the wild herds of Minneriya before diving into
+            history at the Sigiriya rock fortress and Dambulla Cave Temple. Discover the scents of a Spice Garden and
+            the spiritual grace of Kandy’s Tooth Relic and traditional dancing. Your path leads through the Gem Museum
+            and Peradeniya Gardens to the misty tea estates of Nuwara Eliya and Ramboda Falls. Hike the heights of
+            Horton Plains, Hakkgala, and Ella’s iconic Nine Arch Bridge, Mini World’s End, and Ravana Falls. Finally,
+            find soul in Kataragama, adventure in Yala’s wild jungles, and relaxation on Mirissa’s golden sands,
+            concluding with the history of Galle Fort, Kosgoda’s turtles, and a vibrant Colombo finale.
         </p>
 
 
@@ -1173,8 +1411,21 @@
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 2 – Pinnawala & Minneriya</h3>
-                            <p>Elephant river bath and Minneriya safari witnessing wild elephant gatherings.</p>
+                            <h3>Day 2: Negombo to Dambulla – The Elephant Trails</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Visit the <span>Pinnawala Elephant
+                                        Orphanage</span>. The highlight is the <span>River Bath at 10:00 AM</span>,
+                                    where the entire herd crosses the road to socialize in the Ma Oya river. Later,
+                                    embark on a <span>Minneriya Wild Safari</span> to witness "The Gathering" of wild
+                                    elephants.</li>
+                                <li><span class="highlight">Heritage & Nature:</span> Pinnawala represents one of the
+                                    world's oldest conservation efforts for Asian elephants. Minneriya showcases the
+                                    sheer scale of Sri Lankan biodiversity.</li>
+                                <li><span class="highlight">Value Addition:</span> At Minneriya, your guide will take
+                                    you to the best vantage points for sunset photography over the reservoir, where the
+                                    elephants are most active.</li>
+                            </ul>
+                            <p><span>Stay overnight in Dambulla</span></p>
                         </div>
                     </div>
                 </div>
@@ -1185,9 +1436,22 @@
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 3 – Sigiriya & Kandy</h3>
-                            <p>Sigiriya climb, Dambulla Temple, Spice Garden massage, Kandy dance show & Temple visit.
-                            </p>
+                            <h3>Day 3: Sigiriya & Kandy – The Majestic Heartland</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Conquer the <span>Sigiriya Rock
+                                        Fortress</span>, an 8th-wonder architectural feat. Later, explore the
+                                    <span>Dambulla Cave Temple</span>, followed by a walk through a <span>Spice
+                                        Garden</span>. Arrive in Kandy for a <span>Traditional Dance Performance</span>
+                                    and a visit to the <span>Temple of the Tooth</span>.
+                                </li>
+                                <li><span class="highlight">Culture & Heritage:</span> Sigiriya’s frescoes and
+                                    Dambulla’s 150+ Buddha statues offer a deep dive into ancient Buddhist art. The
+                                    Temple of the Tooth is the spiritual heart of the nation.</li>
+                                <li><span class="highlight">Value Addition:</span> We include a private 15-minute
+                                    Ayurvedic head and shoulder massage at the Spice Garden to rejuvenate you after the
+                                    Sigiriya climb.</li>
+                            </ul>
+                            <p><span>Stay overnight in Kandy</span></p>
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
@@ -1206,8 +1470,22 @@
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 4 – Nuwara Eliya</h3>
-                            <p>Peradeniya Gardens, Tea Factory tour, Ramboda Falls, Little England exploration.</p>
+                            <h3>Day 4: Kandy to Nuwara Eliya – Into the Clouds</h3>
+                            <ul>
+                                <li><span class="highlight">Morning Breakfast:</span> Enjoy a colonial-style breakfast
+                                    in the hill capital.</li>
+                                <li><span class="highlight">The Experience:</span> Visit the <span>Peradeniya Botanical
+                                        Garden</span>, once reserved for Kandyan royalty. Ascend to Nuwara Eliya,
+                                    stopping at the <span>Labukale Tea Factory</span> and the roaring <span>Ramboda
+                                        Waterfall</span>. End with a <span>City Tour</span> of "Little England."</li>
+                                <li><span class="highlight">Nature & Heritage:</span> The tea factory offers a heritage
+                                    journey through 150 years of tea-making history. The Botanical Gardens feature an
+                                    iconic orchid house and a massive Javan fig tree.</li>
+                                <li><span class="highlight">Value Addition:</span> A guided tea-tasting session where
+                                    you’ll learn to distinguish between the "Golden" and "Silver" tips of high-grown
+                                    Ceylon tea.</li>
+                            </ul>
+                            <p><span>Stay overnight in Nuwara Eliya</span></p>
                         </div>
                     </div>
                 </div>
@@ -1218,8 +1496,21 @@
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 5 – Horton Plains & Ella</h3>
-                            <p>World’s End trek, Hakgala Garden, Ella Gap sunset.</p>
+                            <h3>Day 5: Nuwara Eliya to Ella – The Mini World’s End</h3>
+                            <ul>
+                                <li><span class="highlight">Morning Breakfast:</span> An early packed breakfast to enjoy
+                                    amidst the mist of the highlands.</li>
+                                <li><span class="highlight">The Experience:</span> Start with a trek at <span>Horton
+                                        Plains</span> to stand at <span>World’s End</span>, a 4,000-foot precipice.
+                                    Visit the lush <span>Hakgala Botanical Garden</span> before settling into the
+                                    bohemian atmosphere of <span>Ella City</span>.</li>
+                                <li><span class="highlight">Nature:</span> Experience the unique "cloud forest"
+                                    ecosystem of Horton Plains, home to endemic Sambar deer.</li>
+                                <li><span class="highlight">Value Addition:</span> We’ve timed your arrival in Ella so
+                                    you can catch the sunset at a viewpoint overlooking the Ella Gap, often described as
+                                    the most beautiful view in the country.</li>
+                            </ul>
+                            <p><span>Stay overnight in Ella</span></p>
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
@@ -1238,8 +1529,20 @@
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 6 – Tissamaharama</h3>
-                            <p>Nine Arch Bridge, Ravana Falls, Kataragama Puja ceremony.</p>
+                            <h3>Day 6: Ella to Tissamaharama – The Southern Transition</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Visit the <span>Nine Arch
+                                        Bridge</span> (timed for a passing train) and hike <span>Mini World’s
+                                        End</span>. Stop at <span>Ravana Falls</span>, steeped in Hindu mythology,
+                                    before arriving at the <span>Kataragama Ancient City</span>.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Kataragama is a unique
+                                    multi-religious site where Buddhists, Hindus, and Muslims worship side-by-side—a
+                                    powerful symbol of Sri Lankan harmony.</li>
+                                <li><span class="highlight">Value Addition:</span> Experience the evening "Puja"
+                                    ceremony in Kataragama, filled with the aroma of incense and the sound of ritual
+                                    drums.</li>
+                            </ul>
+                            <p><span>Stay overnight in Thissamaharamaya</span></p>
                         </div>
                     </div>
                 </div>
@@ -1250,8 +1553,20 @@
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 7 – Yala & Mirissa</h3>
-                            <p>Leopard safari, stilt fishermen stop, Mirissa beach relaxation.</p>
+                            <h3>Day 7: Tissamaharama to Mirissa – Wild Safari to Blue Waters</h3>
+                            <ul>
+                                <li><span class="highlight">Morning Breakfast:</span> A sunrise breakfast inside a 4x4
+                                    Jeep during your <span>Yala Safari</span>.</li>
+                                <li><span class="highlight">The Experience:</span> Search for the elusive leopard and
+                                    sloth bear in <span>Yala National Park</span>. Afterward, drive down to the southern
+                                    coast to relax on the golden sands of <span>Mirissa Beach</span>.</li>
+                                <li><span class="highlight">Nature:</span> Yala has one of the highest leopard densities
+                                    in the world. Mirissa offers a perfect contrast of tranquil coastal bliss.</li>
+                                <li><span class="highlight">Value Addition:</span> Your driver will stop at a secret
+                                    spot on the way to Mirissa to see the famous "Stilt Fishermen"—a traditional method
+                                    of fishing unique to this coastline.</li>
+                            </ul>
+                            <p><span>Stay overnight in Mirissa</span></p>
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
@@ -1270,8 +1585,22 @@
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 8 – Galle & Colombo</h3>
-                            <p>Galle Fort walk, Kosgoda turtles, Colombo city highlights.</p>
+                            <h3>Day 8: Mirissa to Colombo – Colonial Charms & City Lights</h3>
+                            <ul>
+                                <li><span class="highlight">Morning Breakfast:</span> Relaxed breakfast by the beach.
+                                </li>
+                                <li><span class="highlight">The Experience:</span> Explore the <span>Galle Fort (UNESCO
+                                        World Heritage)</span>, a living colonial city. Visit the <span>Kosgoda Turtle
+                                        Hatchery</span> to learn about marine conservation, followed by a <span>Colombo
+                                        City Tour</span> taking in the Independence Square and Gangaramaya Temple.</li>
+                                <li><span class="highlight">Heritage:</span> Galle Fort is the best-preserved Dutch
+                                    fortification in Asia. Colombo offers a blend of colonial architecture and modern
+                                    skyscrapers.</li>
+                                <li><span class="highlight">Value Addition:</span> In Galle, we recommend a walk along
+                                    the ramparts at sunset, where you can watch local "cliff jumpers" and enjoy the sea
+                                    breeze.</li>
+                            </ul>
+                            <p><span>Stay overnight in Colombo</span></p>
                         </div>
                     </div>
                 </div>
@@ -1282,8 +1611,17 @@
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 9 – Departure</h3>
-                            <p>Souvenir shopping and airport transfer with Ayubowan farewell.</p>
+                            <h3>Day 9: Colombo to Airport – Departure</h3>
+                            <ul>
+                                <li><span class="highlight">Morning Breakfast:</span> A final lavish Sri Lankan buffet.
+                                </li>
+                                <li><span class="highlight">The Experience:</span> Depending on your flight time,
+                                    squeeze in some last-minute souvenir shopping at "Laksala" for authentic handicrafts
+                                    or "Barefoot" for handloom fabrics before your transfer.</li>
+                                <li><span class="highlight">Value Addition:</span> We provide a comfortable airport
+                                    drop-off with a final traditional Sri Lankan "Goodbye" (Ayubowan), wishing you a
+                                    long and healthy life.</li>
+                            </ul>
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
@@ -1299,9 +1637,134 @@
     <!-- CTA -->
     <section class="cta">
         <h2>Book Your Radiant Pearl Adventure</h2>
-        <p>Customize your dream Sri Lanka journey with our travel experts.</p>
-        <a href="#">Book Now</a>
+        <p>Need to mention that we are ready to customize the package based on the client request such as days, places to visit, hotel accommodations, mode of transport etc.</p>
+                    <div class="contact-btn-wrap">
+                        <a href="contact.html" class="btn-primary">Book Now</a>
+                    </div>
     </section>
+
+        <!-- BENEFITS SECTION -->
+    <section class="benefits-section">
+
+        <div class="container">
+<h2>Inclusions & Exclusions</h2>
+            <div class="benefits-grid">
+
+                <!-- All Inclusive -->
+                <div class="benefit-card">
+                    <h2>The above cost includes:</h2>
+                                        <ul>
+                        <li>Package Price Per Person with Minimum Two pax.</li>
+                        <li>Accommodation on bed and breakfast will be offered on the basis hotel's options.</li>
+                                                <li>Private semi-luxury car/van (air-conditioned)</li>
+                        <li>Private English Speaking driver for the entire Journey</li>
+                                                <li>Fuel & local insurance for the vehicle</li>
+                        <li>All government taxes</li>
+                    </ul>
+                </div>
+
+                <!-- Not Included -->
+                <div class="benefit-card gray">
+                    <h2>The above cost does not include:</h2>
+                    <ul>
+                        <li>This package excludes the sightseeing entrance charges (Unless Specified)</li>
+                        <li>Meals not mentioned in the itinerary</li>
+                                                <li>Personal expenses are excluded.</li>
+                        <li>Early check-in & Late check-out.</li>
+                                                <li>Camera & Video Permits</li>
+                        <li>Guide/Driver tips</li>
+                                                <li>Travel insurance is excluded</li>
+                        <li>There are no Air-tickets included in the tour package</li>
+                    </ul>	
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer" aria-label="Footer">
+        <div class="container footer-grid">
+            <!-- Column 1: Logo + Social -->
+            <div class="footer-column">
+                <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                    <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                    <div class="brand-title1">
+                        <strong>JUCON TRAVELS</strong>
+                        <span>Travel Agency • Sri Lanka</span>
+                    </div>
+                </a>
+                <!-- Social Icons -->
+                <ul class="social-links">
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                            <span class="sr-only">Facebook</span>
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="YouTube">
+                            <span class="sr-only">YouTube</span>
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Column 2: About -->
+            <div class="footer-column">
+                <h4>About</h4>
+                <div class="list">
+                    <a href="../../index.html">Home</a>
+                    <a href="../../about-us.html">About Us</a>
+                    <a href="../../blog.html">Blog</a>
+                    <a href="../../contact.html">Contact</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Navigate -->
+            <div class="footer-column">
+                <h4>Navigate</h4>
+                <div class="list">
+                    <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                    <a href="../../group-leader.html">Group Leader</a>
+                    <a href="../../packages.html">Packages</a>
+                    <a href="../../interest.html">Interest</a>
+                    <a href="../../faq.html">FAQ</a>
+                </div>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <div class="list">
+                    <a href="#contact">68B, Wariyapola Sri Sumangala Mw, Asgiriya, Kandy</a>
+                    <a href="tel:+94703568306">+94 70 356 8306</a>
+                    <a href="mailto:nkdharmasena@gmail.com">nkdharmasena@gmail.com</a>
+                    <span class="footer-working-hours">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST
+                        (UTC+3)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
+        </div>
+    </footer>
 
 </body>
 
