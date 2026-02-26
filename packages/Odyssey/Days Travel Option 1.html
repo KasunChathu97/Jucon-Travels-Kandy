@@ -921,7 +921,7 @@
             align-items: center;
         }
 
-                        .btn-primary.active{
+                .btn-primary.active{
             display: inline-block;
             margin-top: 15px;
             margin-bottom: 15px;
@@ -1151,102 +1151,6 @@
             }
         }
 
-        /* MODAL BACKGROUND */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-
-        /* MODAL BOX */
-        .modal-content {
-            background: #fff;
-            width: 80%;
-            max-width: 750px;
-            margin: 8% auto;
-            padding: 35px;
-            border-radius: 16px;
-            text-align: center;
-            animation: popup .4s ease;
-        }
-
-        /* POPUP ANIMATION */
-        @keyframes popup {
-            from {
-                transform: scale(.7);
-                opacity: 0;
-            }
-
-            to {
-                transform: scale(1);
-                opacity: 1;
-            }
-        }
-
-        /* CLOSE BTN */
-        .close {
-            float: right;
-            font-size: 40px;
-            cursor: pointer;
-            color: #da0000;
-        }
-
-        .close h2 {
-            margin-top: 0;
-            color: #000000;
-        }
-
-        .close h4 {
-            margin-top: -20px;
-            color: #000000;
-            font-size: 22px;
-        }
-
-        /* CARDS */
-        .modal-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .option-card {
-            background: #dcdcdc;
-            padding: 25px;
-            border-radius: 14px;
-            transition: .3s;
-            cursor: pointer;
-        }
-
-        .option-card p {
-            text-decoration: none;
-            color: #000000;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        .option-card:hover {
-            background: #1ea9f4;
-            color: #fff;
-            transform: translateY(-6px);
-        }
-
-        .option-card h3 {
-            margin-top: 0;
-        }
-
-        /* MOBILE */
-        @media(max-width:768px) {
-            .modal-cards {
-                grid-template-columns: 1fr;
-            }
-        }
-
 
         /* ===== FOOTER ===== */
         .footer {
@@ -1428,7 +1332,7 @@
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
             <nav class="nav" aria-label="Mobile">
-                <a href="../../about-us.html" class="active">About</a>
+                <a href="../../about-us.html">About</a>
                 <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
                 <a href="../../packages.html">Packages</a>
                 <a href="../../group-leader.html">Group Leader</a>
@@ -1458,35 +1362,14 @@
 
     <!-- Discover More Button -->
     <div class="discover-more">
-        <a href="#day1" class="btn-primary active">10 Nights / 11 Days</a>
-        <a href="#" class="btn-primary" id="openModal">12 Nights / 13 Days</a>
+        <a href="The Grand Ceylon Odyssey.html" class="btn-primary">10 Nights / 11 Days</a>
+        <a href="#day1" class="btn-primary active">Days Travel Option 1</a>
+        <a href="Days Travel Option 2.html" class="btn-primary">Days Travel Option 2</a>
     </div>
 
-    <!-- MODAL -->
-    <div class="modal" id="travelModal">
-        <div class="modal-content">
-
-            <span class="close">&times;</span>
-            <h2>Select Travel Option</h2>
-            <h4>12 Nights / 13 Days</h4>
-
-            <div class="modal-cards">
-
-                <!-- OPTION 1 -->
-                <a href="Days Travel Option 1.html" class="option-card">
-                    <h3>Days Travel Option 1</h3>
-                    <p>Negambo- Dambulla – Polonnaruwa- Anuradhapura - Sigiriya -Kandy –
+    <div class="">
+                    <p><span class="highlight">Route:</span> Negambo- Dambulla – Polonnaruwa- Anuradhapura - Sigiriya -Kandy –
                         Nuwara Eliya – Ella – Yala – Mirissa – Galle – Colombo</p>
-                </a>
-                <!-- OPTION 2 -->
-                <a href="option2.html" class="option-card">
-                    <h3>Days Travel Option 2</h3>
-                    <p>Negambo- Dambulla- Polonnaruwa- Trincomalee -Sigiriya -Kandy –
-                        Nuwara Eliya – Ella – Yala – Mirissa – Galle – Colombo</p>
-                </a>
-
-            </div>
-        </div>
     </div>
 
     <div class="container">
@@ -1867,21 +1750,6 @@
             <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
         </div>
     </footer>
-
-    <script>
-        const modal = document.getElementById("travelModal");
-        const openBtn = document.getElementById("openModal");
-        const closeBtn = document.querySelector(".close");
-
-        openBtn.onclick = () => modal.style.display = "block";
-        closeBtn.onclick = () => modal.style.display = "none";
-
-        window.onclick = (e) => {
-            if (e.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
 
 </body>
 
