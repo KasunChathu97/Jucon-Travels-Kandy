@@ -941,33 +941,6 @@
             /* slightly bigger */
         }
 
-        /* Circle animation on hover: blink & move down continuously */
-        .btn-primary:hover::after {
-            animation: blinkSpread 1.8s ease-out infinite;
-        }
-
-        @keyframes blinkSpread {
-
-            0% {
-                transform: translate(-50%, -50%) scale(0.2);
-                opacity: 0.7;
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
-            }
-
-            50% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.9;
-                box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.6);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) scale(1.8);
-                opacity: 0;
-                box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
-            }
-        }
-
-
         /* TIMELINE */
         .timeline {
             position: relative;
