@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JUCON TRAVELS | Tours & Retreats</title>
+    <title>JUCON TRAVELS | About Us</title>
     <meta name="description"
         content="Tailor-made tours and wellness retreats in Sri Lanka. Authentic experiences crafted with trusted local experts." />
     <!-- Removed theme-color meta tag for full cross-browser compatibility; this feature is not supported in Firefox or Opera. -->
@@ -72,6 +72,15 @@
         .container {
             width: min(var(--max), calc(100% - 40px));
             margin: 0 auto;
+        }
+
+        .container h1 {
+            font-size: 18px;
+            text-align: center;
+            margin-top: -45px;
+            margin-bottom: 25px;
+            color: #444;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         .skip-link {
@@ -806,178 +815,90 @@
         }
 
         /* About  */
-        .tours-hero {
+        .about-hero {
             text-align: center;
             padding: 80px 20px 40px;
         }
 
-        .tours-hero img {
+        .about-hero img {
             width: 1340px;
-            height: 300px;
+            height: 350px;
             margin-top: -55px;
             margin-bottom: 10px;
             border-radius: 20px;
         }
 
-        .tours-hero h1 {
+        .about-hero h1 {
             font-size: 48px;
-            color: #000000;
+            color: #ffffff;
             margin-top: -220px;
         }
 
         /* TEXT */
-        .tours-text {
-            text-align: center;
-            margin-top: 110px;
+        .about-text {
+            text-align: left;
+            margin-top: 130px;
         }
 
-        .tours-text p {
+        .about-text h2 {
+            font-size: 32px;
+            color: #333;
+            text-align: center;
+            margin-top: -40px;
+        }
+
+        .about-text p {
             max-width: 1160px;
             margin: 0 auto 20px;
             line-height: 1.6;
-            font-size: 20px;
-            color: #000000;
-        }
-
-        /* Why Sri Lanka */
-        .why-sl {
-            margin-top: -50px;
-        }
-
-        .why-section {
-            padding: 90px 10%;
-            background: #ffffff;
-            margin-top: -150px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 34px;
-            margin-bottom: 60px;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-        }
-
-        .why-sl h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 40px;
-            color: #000000a2;
-
-        }
-
-        .why-text p {
-            line-height: 1.75;
-            font-size: 19.5px;
-            color: #1a000bd1;
-            margin-left: -70px;
-        }
-
-        .why-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 65px;
-            width: 110%;
-            align-items: center;
-        }
-
-        .why-image img {
-            width: 64%;
-            height: 500px;
-            border-radius: 20px;
-            margin-left: 390px;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
-
-            .founder-section,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-hero h1 {
-                font-size: 28px;
-            }
-        }
-
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .vision-mission {
-                grid-template-columns: 1fr;
-            }
-
-            .strengths ul {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .benefits-section {
-            padding: 60px -2%;
-            margin-left: -90px;
-
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-
-        .benefit-card {
-            padding: 35px;
-            border-radius: 14px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-            background: #ffffff;
-            width: 650px;
-        }
-
-        .benefit-card.gray {
-            background: #F3F3F3;
-        }
-
-        .benefit-card h2 {
-            font-size: 35px;
-            margin-bottom: 15px;
-            text-align: center;
-        }
-
-        .benefit-card p {
-            line-height: 1.7;
-            color: #444;
             font-size: 18px;
+            text-align: center;
+            color: #000000ba;
         }
 
-        .benefit-card ul {
-            padding-left: 18px;
-            align-items: center;
+        /* CONTAINER */
+
+
+        /* INTRO */
+        .intro {
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
+            margin: 0 auto 50px;
+            /* center + bottom gap */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+            max-width: 900px;
+            /* box width control */
+            text-align: center;
         }
 
-        .benefit-card li {
-            margin-bottom: 10px;
-            align-items: center;
-            font-size: 22px;
-            color: #000000bb;
+        .intro h2 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #000000;
+            text-align: center;
         }
 
-        .benefit-card:hover {
-            background: #92f347cb;
-            color: #fff;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        @media(max-width:768px) {
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
+        .intro p {
+            color: #000000ba;
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         /* DISCOVER NOW button */
+        .discover-more {
+            display: flex;
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+            margin: 25px 0;
+            margin-top: -30px;
+            gap: 35px;
+        }
+
         .contact-btn-wrap {
             text-align: center;
             margin-top: 20px;
@@ -989,6 +910,23 @@
             margin-bottom: 15px;
             padding: 14px 32px;
             background: #5ab4f4;
+            color: #fff;
+            height: 16%;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+            /* smooth grow */
+            position: relative;
+            overflow: hidden;
+            align-items: center;
+        }
+
+                .btn-primary.active{
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 14px 32px;
+            background: #000000;
             color: #fff;
             height: 16%;
             border-radius: 10px;
@@ -1021,114 +959,225 @@
             /* slightly bigger */
         }
 
-        /* Circle animation on hover: blink & move down continuously */
-        .btn-primary:hover::after {
-            animation: blinkSpread 1.8s ease-out infinite;
-        }
-
-        @keyframes blinkSpread {
-
-            0% {
-                transform: translate(-50%, -50%) scale(0.2);
-                opacity: 0.7;
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
-            }
-
-            50% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.9;
-                box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.6);
-            }
-
-            100% {
-                transform: translate(-50%, -50%) scale(1.8);
-                opacity: 0;
-                box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
-            }
-        }
-
-        .serve-section {
-            background: #ffffff;
-            padding: 5px 20px;
-        }
-
-        .serve-title {
-            text-align: center;
-            font-size: 38px;
-            letter-spacing: 2px;
-            margin-bottom: 15px;
-        }
-
-        .serve-sub {
-            text-align: center;
-            max-width: 700px;
+        .TravelOption {
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
             margin: 0 auto 50px;
-            font-size: 18px;
-            color: #555;
-        }
-
-        .serve-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 80px;
-            max-width: 1700px;
-            /* grid eka poddak loku karanawa */
-
-        }
-
-        .serve-card {
-            background: #f9f6f6;
-            padding: 35px 50px;
+            margin-top: -50px;
+            margin-bottom: -10px;
             text-align: center;
-            border-radius: 18px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-            transition: 0.3s;
-            width: 420px;
-            margin-left: -50px;
-
         }
 
-        .serve-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 18px 35px rgba(0, 0, 0, 0.1);
+        .TravelOption p {
+            color: #000000ba;
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
         }
 
-        .serve-card img {
-            width: 110px;
-            margin-bottom: 20px;
+        .TravelOption span {
+            color: #000000;
+            font-weight: 800;
+            font-size: 20px;
+            ;
         }
 
-        .serve-card h3 {
-            margin-bottom: 12px;
-            font-size: 25px;
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin-left: 20px;
         }
 
-        .serve-card p {
-            color: #666;
-            font-size: 14px;
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: #1c73e8;
+        }
+
+        .day {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 40px;
+        }
+
+        .day::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background: #1c73e8;
+            border-radius: 50%;
+        }
+
+        .day-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .day-text {
+            flex: 2;
+            color: #000000b4;
             line-height: 1.6;
         }
 
-        .serve-card p span {
+        .day-text span {
             color: #000000;
-            font-size: 14px;
+            font-weight: 800;
+            ;
         }
 
-        /* Tablet */
-        @media(max-width:992px) {
-            .serve-grid {
-                grid-template-columns: repeat(2, 1fr);
+        .day-img {
+            flex: 1;
+        }
+
+        .day-img img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .day-img img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .day-card {
+            background: #e8e4daca;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.164);
+            transition: .3s;
+        }
+
+        .day-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.432);
+            transform: translateY(-6px);
+        }
+
+        .day-card h3 {
+            margin-top: 0;
+            color: #000000;
+        }
+
+        .day-card h3:hover {
+            margin-top: 0;
+            color: #1c73e8;
+        }
+
+        /* CTA */
+        .cta {
+            margin: 100px 10%;
+            padding: 70px;
+            margin-top: -20px;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-top: 0;
+        }
+
+        .cta p {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #000000;
+        }
+
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .container {
+                padding: 50px 6%;
+            }
+
+            .cta {
+                margin: 60px 6%;
+                padding: 50px;
             }
         }
 
-        /* Mobile */
-        @media(max-width:576px) {
-            .serve-grid {
+        /* BENEFITS */
+        .benefits-section {
+            padding: 60px -2%;
+            margin-left: -90px;
+            margin-top: -180px;
+
+        }
+
+        .benefits-section h2 {
+            font-size: 32px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 40px;
+            margin-left: 100px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .benefit-card {
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            background: #ffffff;
+            width: 650px;
+        }
+
+        .benefit-card.gray {
+            background: #F3F3F3;
+        }
+
+        .benefit-card h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .benefit-card ul {
+            padding-left: 18px;
+            align-items: center;
+        }
+
+        .benefit-card li {
+            margin-bottom: 10px;
+            align-items: center;
+            font-size: 15px;
+            color: #000000bb;
+        }
+
+        .benefit-card:hover {
+            background: #5ab4f4ac;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media(max-width:768px) {
+            .benefits-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-                /* ===== FOOTER ===== */
+
+        /* ===== FOOTER ===== */
         .footer {
             background-color: #F5F5F5;
             padding: 40px 20px 20px;
@@ -1287,8 +1336,8 @@
     <!-- Header -->
     <div class="container-header">
         <div class="header-inner">
-            <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+            <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                 <div class="brand-title">
                     <strong>JUCON TRAVELS</strong>
                     <span>Travel Agency • Sri Lanka</span>
@@ -1296,69 +1345,305 @@
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html" class="active">Tours & Retreats</a>
-                <a href="packages.html">Packages</a>
-                <a href="group-leader.html">Group Leader</a>
-                <a href="Interest.html">Interest</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours & Retreats</a>
+                <a href="../../packages.html">Packages</a>
+                <a href="../../group-leader.html">Group Leader</a>
+                <a href="../../Interest.html">Interest</a>
+                <a href="../../faq.html">FAQ</a>
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
             <nav class="nav" aria-label="Mobile">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html" class="active">Tours &amp; Retreats</a>
-                <a href="packages.html">Packages</a>
-                <a href="group-leader.html">Group Leader</a>
-                <a href="Interest.html">Interest</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                <a href="../../packages.html">Packages</a>
+                <a href="../../group-leader.html">Group Leader</a>
+                <a href="../../Interest.html">Interest</a>
+                <a href="../../faq.html">FAQ</a>
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
     </div>
 
-<!-- Main Content -->
-    <section class="tours-hero">
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="JOY Project">
-        <h1>Tour & Retreat Packages</h1>
+    <section class="about-hero">
+        <img src="../../images/Odyssey/banner.jpg" alt="JOY Project">
+        <h1>The Grand Ceylon Odyssey</h1>
     </section>
 
-    <section class="tours-text container">
+    <section class="about-text container">
+        <h2>Introduction</h2>
         <p>
-            At JOY Project, we bring 30+ years of hospitality expertise to craft exceptional Sri Lankan experiences.
+            This 11-day immersive journey is the ultimate Sri Lankan experience. It meticulously weaves together the
+            "Cultural Triangle," the mist-shrouded "Tea Country," and the sun-drenched "Southern Riviera." It is
+            designed for the traveler who seeks to understand the soul of the island through its 2,500-year history,
+            vibrant spiritual traditions, and breathtaking biodiversity.
         </p>
 
-        <p>
-            Our tailor-made tour and retreat packages are designed to meet your unique needs, ensuring an authentic and
-            unforgettable journey through the beauty of Sri Lanka.
-        </p>
-        <p>
-            Let’s create a memorable adventure!
-        </p>
+
     </section>
-    <!-- WHY SRI LANKA -->
-    <section class="why-sl container">
-        <div class="why-grid">
-            <!--<div class="why-text">
-                <h2>Why Choose Us?</h2>
-                <p>
-                    Stress-free travel is our priority, supported by professionalism and meticulous attention to detail.
-                    Partnering with our registered Local Sri Lankan Ground Tour Operator, we uphold high European
-                    standards in customer service and hospitality to ensure your journey is enjoyable.
-                </p>
-                <h2>Our USP</h2>
-                <p>
-                    Our unique selling point is our commitment to individual needs. We recognise that every traveler is
-                    distinct, so our packages and retreats are tailored specifically to your preferences. Our mission is
-                    to create a journey that truly reflects the authentic YOU.
-                </p>
-            </div>-->
 
-            <div class="why-image">
-                <img src="images/aukana.jpg" alt="Sri Lanka">
+    <!-- Discover More Button -->
+    <div class="discover-more">
+        <a href="The Grand Ceylon Odyssey.html" class="btn-primary">10 Nights / 11 Days</a>
+        <a href="Days Travel Option 1.html" class="btn-primary">Days Travel Option 1</a>
+        <a href="#day1" class="btn-primary active">Days Travel Option 2</a>
+    </div>
+
+    <div class="TravelOption">
+                    <p><span class="highlight">Route:</span> Negambo - Dambulla - Polonnaruwa - Trincomalee - Sigiriya - Kandy –
+                        Nuwara Eliya – Ella – Yala – Mirissa – Galle – Colombo</p>
+    </div>
+
+    <div class="container">
+        <!-- TIMELINE -->
+        <div class="timeline">
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3 id="day1">Day 1: Negambo</h3>
+                            <ul>
+                                <li>Negambo Beach</li>
+                                <li>Negambo City Tour (Stay overnight in Negambo)</li>
+                            </ul>
+                        </div>
+
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/negombo.jpg" alt="Negombo">
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Pinnawala & Minneriya.jpg" alt="Pinnawala">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 2: Negambo – Dambulla</h3>
+                            <ul>
+                                <li>Pinnawala Elephant Orphanage</li>
+                                <li>Minneriya Wild Safari (Stay overnight in Dambulla)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3>Day 3: Dambulla to Anuradhapura – The Sacred Beginnings</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> A full immersion into the <span>Anuradhapura Ancient City</span>, the island's first capital. Later, climb the sacred peaks of <span>Mihintale</span>.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Visit the <span>Jaya Sri Maha Bodhi</span>, the oldest human-planted tree in the world, and the massive <span>Jetavanaramaya Stupa</span>, once the third-tallest structure on earth.</li>
+                                <li><span class="highlight">Nature:</span> Explore the serene <span>Twin Ponds</span> and the ancient stone carvings of the <span>Isurumuniya Rock Temple</span>.</li>
+                                <li><span class="highlight">Value Addition:</span> Experience a sunset "Puja" (offering) at Mihintale, the cradle of Buddhism in Sri Lanka, offering 360-degree views of the surrounding jungle.</li>
+                            </ul>
+                            <p><span>Stay overnight in Anuradhapura</span></p>
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Sigiriya & Kandy.jpg" alt="Sigiriya">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Nuwara Eliya.png" alt="Nuwara Eliya">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 4: Sigiriya to Kandy – The Grand Cultural Marathon</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Conquer the <span>Sigiriya Rock Fortress</span>, explore the <span>Dambulla Cave Temple</span>, walk through a <span>Spice Garden</span>, and end the day in Kandy with <span>Traditional Dancing</span> and the <span>Temple of the Tooth</span>.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> From 5th-century frescoes at Sigiriya to the living rituals of the Tooth Relic temple, this day covers 2,000 years of history.</li>
+                                <li><span class="highlight">Nature:</span> A sensory walk through the Spice Garden to see how cinnamon, cardamom, and cocoa are grown.</li>
+                                <li><span class="highlight">Value Addition:</span> A 15-minute Ayurvedic head and shoulder massage at the Spice Garden—much needed after climbing 1,200 steps at Sigiriya!</li>
+                            </ul>
+                            <p><span>Stay overnight in Kandy</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3>Day 5: Kandy to Nuwara Eliya – The Emerald Highlands</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Visit the <span>Peradeniya Botanical Garden</span>, the <span>Gem Museum</span>, and the <span>Ramboda Waterfall</span> before touring a <span>Tea Factory</span> in "Little England."</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Learn about the "Ratna-Dweepa" (Island of Gems) legacy and the 150-year-old orthodox tea-making process.</li>
+                                <li><span class="highlight">Nature:</span> Walk under the giant Javan fig tree in Peradeniya and feel the mist of the 109-meter-high Ramboda falls.</li>
+                                <li><span class="highlight">Value Addition:</span> A curated "Tea Tasting" session at the factory, teaching you how to distinguish between OP, BOP, and Dust tea grades.</li>
+                            </ul>
+                            <p><span>Stay overnight in Nuwara Eliya</span></p>
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Horton Plains & Ella.jpg" alt="Horton Plains & Ella">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Tissamaharama.jpg" alt="Tissamaharama">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 6: Nuwara Eliya to Ella – Into the Clouds</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Trek through <span>Horton Plains</span> to stand at <span>World’s End</span>. Visit the <span>Hakgala Botanical Garden</span> and soak in the laid-back vibe of <span>Ella.</span></li>
+                                <li><span class="highlight">Culture & Heritage:</span> Discover the legends of the Ramayana at Hakgala, believed to be the pleasure garden of King Ravana.</li>
+                                <li><span class="highlight">Nature:</span> High-altitude cloud forests and the rare Sambar deer of the Horton Plains plateau.</li>
+                                <li><span class="highlight">Value Addition:</span> A scenic train ride (subject to availability) from Nanu Oya to Ella, often called the most beautiful rail journey in the world.</li>
+                            </ul>
+                            <p><span>Stay overnight in Ella</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3>Day 7: Ella to Tissamaharama – Valleys & Veneration</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Visit the <span>Nine Arch Bridge</span>, hike <span>Mini World’s End</span>, and see the <span>Ravana Waterfall</span>. End the day at the <span>Kataragama Ancient City</span>.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Experience the evening rituals at Kataragama, a sacred site where three religions converge in harmony.</li>
+                                <li><span class="highlight">Nature:</span> Spectacular views of the "Ella Gap" and the plunging waters of Ravana Falls.</li>
+                                <li><span class="highlight">Value Addition:</span> A walk along the rail tracks to the Nine Arch Bridge, timed perfectly to see the local blue train pass over the arches.</li>
+                            </ul>
+                            <p><span>Stay overnight in Thissamaharamaya</span></p>
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Yala & Mirissa.png" alt="Yala & Mirissa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Galle & Colombo.jpg" alt="Galle & Colombo">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 8: Tissamaharama to Mirissa – Wild Safari to Waves</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> A thrilling <span>Yala Safari</span> in search of leopards and bears, followed by a scenic drive to the turquoise waters of <span>Mirissa Beach</span>.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Observe the southern lifestyle and the unique architectural transition from the dry zone to the coastal belt.</li>
+                                <li><span class="highlight">Nature:</span> Yala offers the best chance in Asia to see leopards in their natural habitat.</li>
+                                <li><span class="highlight">Value Addition:</span> A late afternoon visit to "Coconut Tree Hill" in Mirissa for the perfect Instagram-worthy sunset shot.</li>
+                            </ul>
+                            <p><span>Stay overnight in Mirissa</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3>Day 9: Mirissa to Galle – Mangroves & Fortresses</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Relax in Mirissa, then take a <span>Maduganga Boat Tour</span> through mangrove tunnels before exploring the historic <span>Galle Fort</span>.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Walk the ramparts of the 16th-century Galle Fort, a UNESCO World Heritage site that feels like a piece of Europe in the tropics.</li>
+                                <li><span class="highlight">Nature:</span> Explore the 64 islands of the Madu River and witness "Fish Therapy" in the wild.</li>
+                                <li><span class="highlight">Value Addition:</span> A "Cinnamon Peeling" demonstration on one of the Madu River islands, where you’ll see how the world's finest cinnamon is prepared.</li>
+                            </ul>
+                            <p><span>Stay overnight in Galle</span></p>
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Galle & Colombo.jpg" alt="Galle & Colombo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Galle & Colombo.jpg" alt="Galle & Colombo">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 10: Galle to Colombo – The Coastal Evolution</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Visit the <span>Kosgoda Turtle Hatchery</span> and end with a comprehensive <span>Colombo City Tour</span> taking in Independence Square and the Lotus Tower.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Learn about marine conservation and see the evolution of Colombo from a colonial port to a modern metropolis.</li>
+                                <li><span class="highlight">Nature:</span> The turtle sanctuary offers a close-up look at five species of endangered sea turtles.</li>
+                                <li><span class="highlight">Value Addition:</span> A farewell dinner at the "Dutch Hospital" precinct, the oldest building in the Colombo Fort area, now a vibrant dining hub.</li>
+                            </ul>
+                            <p><span>Stay overnight in Colombo</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                        <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3>Day 11: Colombo to Airport – The Farewell</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Last-minute souvenir shopping at <span>Laksala</span> (the state gift shop) before your transfer to the airport.</li>
+                                <li><span class="highlight">Value Addition:</span> A complimentary "Ceylon Tea Sampler" pack for each guest as a parting gift to remember the flavors of the island.</li>
+                            </ul>
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/airport.jpg" alt="Galle & Colombo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Book Your Radiant Pearl Adventure</h2>
+        <p>Need to mention that we are ready to customize the package based on the client request such as days, places
+            to visit, hotel accommodations, mode of transport etc.</p>
+        <div class="contact-btn-wrap">
+            <a href="../Book Now.html" class="btn-primary">Book Now</a>
         </div>
     </section>
 
@@ -1366,157 +1651,48 @@
     <section class="benefits-section">
 
         <div class="container">
-
+            <h2>Inclusions & Exclusions</h2>
             <div class="benefits-grid">
 
                 <!-- All Inclusive -->
                 <div class="benefit-card">
-                    <h2>All-Inclusive Package Benefits</h2>
-                    <p>
-                        Enjoy a hassle-free travel journey with our all-inclusive package. From your arrival in Sri
-                        Lanka to your departure, our local Ground Tour Operator team is dedicated to serving you. We
-                        handle accommodations, transportation, meals, activities, and all experiences, ensuring every
-                        detail is meticulously managed. Relax and fully enjoy your trip while we take care of
-                        everything.
-                    </p>
-                                        <div class="contact-btn-wrap">
-                        <a href="packages.html" class="btn-primary">Go to Packages</a>
-                    </div>
+                    <h2>The above cost includes:</h2>
+                    <ul>
+                        <li>Package Price Per Person with Minimum Two pax.</li>
+                        <li>Accommodation on bed and breakfast will be offered on the basis hotel's options.</li>
+                        <li>Private semi-luxury car/van (air-conditioned)</li>
+                        <li>Private English Speaking driver for the entire Journey</li>
+                        <li>Fuel & local insurance for the vehicle</li>
+                        <li>All government taxes</li>
+                    </ul>
                 </div>
 
                 <!-- Not Included -->
-                 <!--  
                 <div class="benefit-card gray">
-                    <h2>What’s not included</h2>
+                    <h2>The above cost does not include:</h2>
                     <ul>
-                        <li>Airfare and travel insurance are not included, as we do not issue tickets. We’re happy to
-                            guide you and recommend options for your group.</li>
-                        <li>Tourist or Business Entry Visa: Please see our FAQ</li>
+                        <li>This package excludes the sightseeing entrance charges (Unless Specified)</li>
+                        <li>Meals not mentioned in the itinerary</li>
+                        <li>Personal expenses are excluded.</li>
+                        <li>Early check-in & Late check-out.</li>
+                        <li>Camera & Video Permits</li>
+                        <li>Guide/Driver tips</li>
+                        <li>Travel insurance is excluded</li>
+                        <li>There are no Air-tickets included in the tour package</li>
                     </ul>
-                </div>-->
-
-                <!-- CTA -->
-                <div class="benefit-card">
-                    <h2>Begin Your Sri Lanka Adventure</h2>
-                    <p>
-                        Fill out the form on our contact page, and we’ll set up a fun online consultation! As the Group
-                        Leader, you’ll share your group’s interests, and we’ll create a personalised itinerary just for
-                        you. From start to finish, your experience will be stress-free, and unforgettable.
-                    </p>
-
-                    <div class="contact-btn-wrap">
-                        <a href="contact.html" class="btn-primary">Contact Us</a>
-                    </div>
                 </div>
-
-                <!-- Group Leader -->
-                 <!--  
-                <div class="benefit-card">
-                    <h2>Group Leader Benefits</h2>
-                    <p>
-                        As a thank you for leading your group, enjoy exclusive perks like complimentary accommodations,
-                        meals, and activities. You could even receive up to 100% coverage of your package—making your
-                        adventure even more rewarding!
-                    </p>
-                    <div class="contact-btn-wrap">
-                        <a href="group-leader.html" class="btn-primary">Learn More</a>
-                    </div>
-                </div>-->
-
             </div>
 
         </div>
     </section>
 
-    <!-- WHO WE SERVE -->
-    <section class="serve-section">
-
-        <div class="container">
-            <h2 class="serve-title">WHO WE SERVE</h2>
-            <p class="serve-sub">
-                Our tours and retreats attract a diverse range of clients, each seeking unique
-                experiences in Sri Lanka’s stunning landscapes
-            </p>
-
-            <div class="serve-grid">
-
-                <a href="category/History Enthusiasts.html" class="serve-card">
-                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/wellness-group-1.png"
-                        alt="Wellness group enjoying Sri Lanka retreat">
-                    <h3>Wellness Groups</h3>
-                    <p>
-                        Sri Lanka is a top destination for wellness, offering Ayurveda, yoga, meditation, and more. We
-                        tailor retreats to meet your group's needs, ensuring a peaceful and rejuvenating experience.
-                    </p>
-                    <p>
-                        <span>For Wellness Instructors:</span> Lead your own retreat or collaborate with local experts
-                        to enhance your program
-                    </p>
-                    <p>
-                        <span>For Wellness Enthusiasts:</span> Whether a student or practitioner, we connect you with
-                        expert facilitators for transformative experiences.
-                    </p>
-                </a>
-
-                <div class="serve-card">
-                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/Teams-1.png"
-                        alt="Friends and Family enjoying Sri Lanka tour">
-                    <h3>Friends & Family</h3>
-                    <p>Create unforgettable memories with your loved ones in Sri Lanka. From adventurous excursions to
-                        relaxing beachside escapes, we ensure a seamless, enjoyable experience for all.</p>
-                </div>
-
-                <div class="serve-card">
-                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/2-1.png"
-                        alt="Spiritual Seekers group in Sri Lanka">
-                    <h3>Spiritual Seekers & Pilgrims</h3>
-                    <p>Embark on a spiritual journey through Sri Lanka’s sacred sites, from Anuradhapura to the Temple
-                        of the Sacred Tooth Relic. These tours offer enlightenment and deeper connection to the island’s
-                        spiritual heritage.</p>
-                </div>
-
-                <div class="serve-card">
-                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/3-1.png"
-                        alt="Culture Lovers group in Sri Lanka">
-                    <h3>History Enthusiasts & Culture Lovers</h3>
-                    <p>Explore Sri Lanka’s rich history and culture, from ancient ruins to vibrant festivals. Perfect
-                        for curious travellers and scholars, our tours bring the island’s past to life with authenticity
-                        and depth. *Student & Education packages available!</p>
-                </div>
-
-                <div class="serve-card">
-                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/teams-new-1.png"
-                        alt="Corporate Teams group in Sri Lanka">
-                    <h3>Corporate Teams</h3>
-                    <p>Elevate your corporate retreats with immersive experiences in Sri Lanka. We design programs that
-                        blend strategic goals with dynamic tours, team-building activities, and wellness retreats to
-                        inspire and energize your team.</p>
-                </div>
-
-                <div class="serve-card">
-                    <img src="https://srilankajoytours.com/wp-content/uploads/2024/10/couples-1.png"
-                        alt="Couples and Honeymoons group in Sri Lanka">
-                    <h3>Couples: Romantic Getaways, Weddings, & Honeymoons</h3>
-                    <p>Celebrate love in Sri Lanka’s most romantic settings. From secluded beaches to luxurious resorts,
-                        we create unforgettable experiences for honeymoons, weddings, and romantic getaways.</p>
-                </div>
-
-            </div>
-
-            <!-- CENTER CONTACT BUTTON -->
-            <div class="contact-btn-wrap">
-                <a href="contact.html" class="btn-primary">Contact Us</a>
-            </div>
-        </div>
-    </section>
-
-        <!-- Footer Section -->
+    <!-- Footer Section -->
     <footer class="footer" aria-label="Footer">
         <div class="container footer-grid">
             <!-- Column 1: Logo + Social -->
             <div class="footer-column">
-                <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                    <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                    <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                     <div class="brand-title1">
                         <strong>JUCON TRAVELS</strong>
                         <span>Travel Agency • Sri Lanka</span>
@@ -1556,10 +1732,10 @@
             <div class="footer-column">
                 <h4>About</h4>
                 <div class="list">
-                    <a href="index.html">Home</a>
-                    <a href="about-us.html">About Us</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="../../index.html">Home</a>
+                    <a href="../../about-us.html">About Us</a>
+                    <a href="../../blog.html">Blog</a>
+                    <a href="../../contact.html">Contact</a>
                 </div>
             </div>
 
@@ -1567,11 +1743,11 @@
             <div class="footer-column">
                 <h4>Navigate</h4>
                 <div class="list">
-                    <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                    <a href="group-leader.html">Group Leader</a>
-                    <a href="packages.html">Packages</a>
-                    <a href="Interest.html">Interest</a>
-                    <a href="faq.html">FAQ</a>
+                    <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                    <a href="../../group-leader.html">Group Leader</a>
+                    <a href="../../packages.html">Packages</a>
+                    <a href="../../interest.html">Interest</a>
+                    <a href="../../faq.html">FAQ</a>
                 </div>
             </div>
 

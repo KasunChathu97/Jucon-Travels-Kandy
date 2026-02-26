@@ -920,6 +920,23 @@
             align-items: center;
         }
 
+                        .btn-primary.active{
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 14px 32px;
+            background: #000000;
+            color: #fff;
+            height: 16%;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+            /* smooth grow */
+            position: relative;
+            overflow: hidden;
+            align-items: center;
+        }
+
         /* Expanding white circle from center */
         .btn-primary::after {
             content: "";
@@ -1347,7 +1364,7 @@
 
     <!-- Discover More Button -->
     <div class="discover-more">
-        <a href="#day1" class="btn-primary">8 Nights / 9 Days</a>
+        <a href="#day1" class="btn-primary active">8 Nights / 9 Days</a>
     </div>
 
 
