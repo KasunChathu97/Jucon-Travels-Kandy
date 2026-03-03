@@ -17,7 +17,7 @@
 
     <style>
         :root {
-            --bg: #ffffff;
+            --bg: #fff;
             --surface: #f7f7f7;
             --surface2: #ededed;
             --text: #111;
@@ -50,7 +50,7 @@
             margin: 0;
             font-family: 'Playfair Display', serif;
             color: #111 !important;
-            background: #ffffff !important;
+            background: #fff !important;
             min-height: 100vh;
         }
 
@@ -815,161 +815,91 @@
         }
 
         /* About  */
-        .packages-hero {
+        .about-hero {
             text-align: center;
             padding: 80px 20px 40px;
         }
 
-        .packages-hero img {
+        .about-hero img {
             width: 1340px;
-            height: 300px;
+            height: 350px;
             margin-top: -55px;
             margin-bottom: 10px;
             border-radius: 20px;
         }
 
-        .packages-hero h1 {
+        .about-hero h1 {
             font-size: 48px;
             color: #ffffff;
-            margin-top: -200px;
+            margin-top: -220px;
         }
 
+        /* TEXT */
+        .about-text {
+            text-align: left;
+            margin-top: 130px;
+        }
 
-
-        /* WHY SECTION */
-        .why-section {
-            padding: 80px 8%;
+        .about-text h2 {
+            font-size: 32px;
+            color: #333;
             text-align: center;
-            margin-top: 10px;
+            margin-top: -40px;
         }
 
-        .why-title {
-            font-size: 34px;
-            margin-bottom: 50px;
+        .about-text p {
+            max-width: 1160px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+            font-size: 18px;
+            text-align: center;
+            color: #000000ba;
         }
 
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        /* CONTAINER */
+
+
+        /* INTRO */
+        .intro {
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
+            margin: 0 auto 50px;
+            /* center + bottom gap */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+
+            max-width: 900px;
+            /* box width control */
+            text-align: center;
+        }
+
+        .intro h2 {
+            margin-top: 0;
+            font-size: 28px;
+            color: #000000;
+            text-align: center;
+        }
+
+        .intro p {
+            color: #000000ba;
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* DISCOVER NOW button */
+        .discover-more {
+            display: flex;
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+            margin: 25px 0;
+            margin-top: -30px;
             gap: 35px;
         }
 
-        .why-card {
-            background: #ffffff;
-            padding: 38px 32px;
-            border-radius: 14px;
-            transition: 0.4s ease;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.333);
-        }
-
-        .why-card:hover {
-            transform: translateY(-8px);
-        }
-
-        /* PACKAGES */
-        .packages-section {
-            padding: 80px 8%;
-            margin-top: -100px;
-        }
-
-        .packages-title {
-            text-align: center;
-            font-size: 34px;
-            margin-bottom: 50px;
-        }
-
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-        }
-
-        .package-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-            transition: .4s;
-        }
-
-        .package-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .package-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-
-        .package-content {
-            padding: 20px;
-        }
-
-        .package-content h3 {
-            margin: 0 0 10px;
-        }
-
-        .package-content p span {
-            color: #000000;
-            line-height: 1.6;
-        }
-
-        .package-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 10px 18px;
-            background: #1c73e8;
-            color: white;
-            border-radius: 6px;
-            text-decoration: none;
-        }
-
-        /* CTA */
-        .cta {
-            margin: 100px 10%;
-            padding: 70px;
-            margin-top: -60px;
-            margin-bottom: -50px;
-            color: white;
-            border-radius: 20px;
-            text-align: center;
-        }
-
-        .cta h2 {
-            margin-top: 0;
-        }
-
-        .cta p {
-            margin: 0;
-            margin-top: 10px;
-            font-size: 18px;
-            color: #000000;
-        }
-
-
-        /* RESPONSIVE */
-        @media(max-width: 992px) {
-
-            .packages-grid,
-            .why-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media(max-width: 600px) {
-
-            .packages-grid,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .packages-hero h1 {
-                font-size: 34px;
-            }
-        }
-
-                .contact-btn-wrap {
+        .contact-btn-wrap {
             text-align: center;
             margin-top: 20px;
         }
@@ -980,6 +910,23 @@
             margin-bottom: 15px;
             padding: 14px 32px;
             background: #5ab4f4;
+            color: #fff;
+            height: 16%;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+            /* smooth grow */
+            position: relative;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        .btn-primary.active {
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 14px 32px;
+            background: #000000;
             color: #fff;
             height: 16%;
             border-radius: 10px;
@@ -1012,31 +959,223 @@
             /* slightly bigger */
         }
 
-        /* Circle animation on hover: blink & move down continuously */
-        .btn-primary:hover::after {
-            animation: blinkSpread 1.8s ease-out infinite;
+        .TravelOption {
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
+            margin: 0 auto 50px;
+            margin-top: -50px;
+            margin-bottom: -10px;
+            text-align: center;
         }
 
-        @keyframes blinkSpread {
+        .TravelOption p {
+            color: #000000ba;
+            font-size: 18px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
 
-            0% {
-                transform: translate(-50%, -50%) scale(0.2);
-                opacity: 0.7;
-                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+        .TravelOption span {
+            color: #000000;
+            font-weight: 800;
+            font-size: 20px;
+            ;
+        }
+
+        /* TIMELINE */
+        .timeline {
+            position: relative;
+            margin-left: 20px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: #1c73e8;
+        }
+
+        .day {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 40px;
+        }
+
+        .day::before {
+            content: "";
+            position: absolute;
+            left: -8px;
+            top: 5px;
+            width: 18px;
+            height: 18px;
+            background: #1c73e8;
+            border-radius: 50%;
+        }
+
+        .day-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .day-text {
+            flex: 2;
+            color: #000000b4;
+            line-height: 1.6;
+        }
+
+        .day-text span {
+            color: #000000;
+            font-weight: 800;
+            ;
+        }
+
+        .day-img {
+            flex: 1;
+        }
+
+        .day-img img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .day-img img:hover {
+            transform: scale(1.05);
+            transition: transform 0.3s ease;
+        }
+
+        .day-card {
+            background: #e8e4daca;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.164);
+            transition: .3s;
+        }
+
+        .day-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.432);
+            transform: translateY(-6px);
+        }
+
+        .day-card h3 {
+            margin-top: 0;
+            color: #000000;
+        }
+
+        .day-card h3:hover {
+            margin-top: 0;
+            color: #1c73e8;
+        }
+
+        /* CTA */
+        .cta {
+            margin: 100px 10%;
+            padding: 70px;
+            margin-top: -20px;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .cta h2 {
+            margin-top: 0;
+        }
+
+        .cta p {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #000000;
+        }
+
+
+        /* MOBILE */
+        @media(max-width:768px) {
+            .hero h1 {
+                font-size: 32px;
             }
 
-            50% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 0.9;
-                box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.6);
+            .container {
+                padding: 50px 6%;
             }
 
-            100% {
-                transform: translate(-50%, -50%) scale(1.8);
-                opacity: 0;
-                box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
+            .cta {
+                margin: 60px 6%;
+                padding: 50px;
             }
         }
+
+        /* BENEFITS */
+        .benefits-section {
+            padding: 60px -2%;
+            margin-left: -90px;
+            margin-top: -180px;
+
+        }
+
+        .benefits-section h2 {
+            font-size: 32px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 40px;
+            margin-left: 100px;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .benefit-card {
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            background: #ffffff;
+            width: 650px;
+        }
+
+        .benefit-card.gray {
+            background: #F3F3F3;
+        }
+
+        .benefit-card h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .benefit-card ul {
+            padding-left: 18px;
+            align-items: center;
+        }
+
+        .benefit-card li {
+            margin-bottom: 10px;
+            align-items: center;
+            font-size: 15px;
+            color: #000000bb;
+        }
+
+        .benefit-card:hover {
+            background: #5ab4f4ac;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media(max-width:768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
 
         /* ===== FOOTER ===== */
         .footer {
@@ -1193,11 +1332,12 @@
 </head>
 
 <body>
+
     <!-- Header -->
     <div class="container-header">
         <div class="header-inner">
-            <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+            <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                 <div class="brand-title">
                     <strong>JUCON TRAVELS</strong>
                     <span>Travel Agency • Sri Lanka</span>
@@ -1205,174 +1345,207 @@
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html">Tours & Retreats</a>
-                <a href="packages.html" class="active">Packages</a>
-                <a href="group-leader.html">Group Leader</a>
-                <a href="Interest.html">Interest</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours & Retreats</a>
+                <a href="../../packages.html">Packages</a>
+                <a href="../../group-leader.html">Group Leader</a>
+                <a href="../../Interest.html">Interest</a>
+                <!--<a href="../../faq.html">FAQ</a>-->
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
             <nav class="nav" aria-label="Mobile">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                <a href="packages.html" class="active">Packages</a>
-                <a href="group-leader.html">Group Leader</a>
-                <a href="Interest.html">Interest</a>
-                <a href="faq.html">FAQ</a>
-                <a href="contact.html">Contact</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                <a href="../../packages.html">Packages</a>
+                <a href="../../group-leader.html">Group Leader</a>
+                <a href="../../Interest.html">Interest</a>
+                <!--<a href="../../faq.html">FAQ</a>-->
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
     </div>
 
-    <!-- HERO -->
-    <section class="packages-hero">
-        <img src="images/SLbyRailBanner.jpg" alt="JOY Project">
-        <h1>Explore Our Tour Packages</h1>
+    <section class="about-hero">
+        <img src="../../images/Odyssey/banner.jpg" alt="JOY Project">
+        <h1>Adventure Tour</h1>
     </section>
 
-    <!-- WHY -->
-    <section class="why-section">
-        <h2 class="why-title">Why Travel With Us</h2>
+    <section class="about-text container">
+        <h2 id="intro">Introduction</h2>
+        <p>
+            About Adventure tour
+        </p>
 
-        <div class="why-grid">
-            <div class="why-card">
-                <h3>Local Expertise</h3>
-                <p>Authentic Sri Lankan experiences guided by local experts.</p>
-            </div>
 
-            <div class="why-card">
-                <h3>Best Price</h3>
-                <p>Affordable packages with premium experiences.</p>
-            </div>
-
-            <div class="why-card">
-                <h3>24/7 Support</h3>
-                <p>We are here for you anytime during your journey.</p>
-            </div>
-        </div>
     </section>
 
-    <!-- PACKAGES -->
-    <section class="packages-section">
-        <h2 class="packages-title">Popular Packages</h2>
+    <!-- Discover More Button -->
+    <div class="discover-more">
+        <a href="#intro" class="btn-primary active">Hiking Adams Peaks</a>
+        <a href="Hiking Knuckles.html" class="btn-primary">Hiking Knuckles</a>
+    </div>
 
-        <div class="packages-grid">
-            <div class="package-card">
-                <img src="images/sigiriya.jpg" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
-                    <h3>The Radiant Pearl Adventure</h3>
-                    <p><span>Duration:</span> 8 Nights / 9 Days </p>
-                    <p>A balanced journey through the heart of the island, focusing on the most iconic landmarks,
-                        wildlife encounters, and scenic mountain vistas.
-                    </p>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+    <div class="TravelOption">
+        <p><span class="highlight">Route:</span> Negambo - Hatton - Ratnapura – Colombo (From December to May)</p>
+    </div>
+
+    <div class="container">
+        <!-- TIMELINE -->
+        <div class="timeline">
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3 id="day1">Day 1: Negambo</h3>
+                            <ul>
+                                <li>Negambo Beach</li>
+                                <li>Negambo City Tour</li>
+                            </ul>
+                            <p><span>Stay overnight in Negambo</span></p>
+                        </div>
+
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/negombo.jpg" alt="Negombo">
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <img src="images/ODYSSEY.png" alt="Scenic Sri Lankan landscape">
-                <div class="package-content">
-                    <h3>The Grand Ceylon Odyssey</h3>
-                    <p><span>Duration:</span> 10 Nights - 11 Days / 12 Nights - 13 Days </p>
-                    <p>From Ancient Kingdoms to Azure Coasts</p>
-                    <a href="packages/Odyssey/The Grand Ceylon Odyssey.html" class="package-btn">View Package</a>
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Pinnawala & Minneriya.jpg" alt="Pinnawala">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 2: Negambo – Hatton</h3>
+                            <ul>
+                                <li>Visit Kithulagala</li>
+                                <li>Visit a Tea Factory</li>
+                                <li>Nallathanniya Via Hatton</li>
+                            </ul>
+                            <p><span>Stay overnight in Nallathanniya</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <img src="images/p16.jpeg" alt="Family Tour Packages">
-                <div class="package-content">
-                    <h3>Family Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Family/night 5.html" class="package-btn">View Package</a>
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3>Day 3: Nallathanniya - Adam's Peak - Palabadala</h3>
+                            <ul>
+                                <li>Hiking starts from Nallathaniya at 5.00 a.m. on 3rd day</li>
+                                <li>After reaching Adam’s Peak, journey will return to Parabadala</li>
+                                <li>Ratnapura</li>
+                            </ul>
+                            <p><span>Stay overnight in Ratnapura</span></p>
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Horton Plains & Ella.jpg" alt="Horton Plains & Ella">
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <img src="images/cultural.jpg" alt="Cultural and Heritage Tour Packages">
-                <div class="package-content">
-                    <h3>Cultural and Heritage Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Cultural/night 4.html" class="package-btn">View Package</a>
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/Tissamaharama.jpg" alt="Tissamaharama">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 4: Ratnapura - Colombo</h3>
+                            <ul>
+                                <li>Visit Ratnapura Gem Museum</li>
+                                <li>Back to Colombo for City Tour</li>
+                            </ul>
+                            <p><span>Stay overnight in Colombo</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="package-card">
-                <img src="images/Honeymoon.png" alt="Honeymoon Tour Packages">
-                <div class="package-content">
-                    <h3>Honeymoon Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Honeymoon/night 4.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Beach.png" alt="Beach Tour Packages">
-                <div class="package-content">
-                    <h3>Beach Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Beach/Southern.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/p8.jpeg" alt="Hill Country Tour Packages">
-                <div class="package-content">
-                    <h3>Hill Country Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Hill/night5-Ella.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Adventure.jpg" alt="Adventure Tour Packages">
-                <div class="package-content">
-                    <h3>Adventure Tour </h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Adventure/Adams Peaks.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Wildlife.png" alt="Nature and Wildlife Tour Packages">
-                <div class="package-content">
-                    <h3>Nature and Wildlife</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="#" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Ramayana.png" alt="Ramayana Tour Packages">
-                <div class="package-content">
-                    <h3>Ramayana Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="#" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Special-kandy.jpg" alt="Special Event Tour Packages">
-                <div class="package-content">
-                    <h3>Special Event</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="#" class="package-btn">View Package</a>
+                        <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-text">
+                            <h3>Day 5: Colombo - Airport</h3>
+                            <ul>
+                                <li>Back to the Air Port for Departure</li>
+                            </ul>
+                            <p><span>End of the Journey</span></p>
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Pearl/airport.jpg" alt="Colombo Airport">
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
-    </section>
+    </div>
 
     <!-- CTA -->
     <section class="cta">
-        <h2>Need a Custom Tour?</h2>
-        <p>We can create your dream Sri Lanka itinerary.</p>
+        <h2>Book Your Radiant Pearl Adventure</h2>
+        <p>Need to mention that we are ready to customize the package based on the client request such as days, places
+            to visit, hotel accommodations, mode of transport etc.</p>
         <div class="contact-btn-wrap">
-            <a href="contact.html" class="btn-primary">Contact Us</a>
+            <a href="../Book Now.html" class="btn-primary">Book Now</a>
+        </div>
+    </section>
+
+    <!-- BENEFITS SECTION -->
+    <section class="benefits-section">
+
+        <div class="container">
+            <h2>Inclusions & Exclusions</h2>
+            <div class="benefits-grid">
+
+                <!-- All Inclusive -->
+                <div class="benefit-card">
+                    <h2>The above cost includes:</h2>
+                    <ul>
+                        <li>Package Price Per Person with Minimum Two pax.</li>
+                        <li>Accommodation on bed and breakfast will be offered on the basis hotel's options.</li>
+                        <li>Private semi-luxury car/van (air-conditioned)</li>
+                        <li>Private English Speaking driver for the entire Journey</li>
+                        <li>Fuel & local insurance for the vehicle</li>
+                        <li>All government taxes</li>
+                    </ul>
+                </div>
+
+                <!-- Not Included -->
+                <div class="benefit-card gray">
+                    <h2>The above cost does not include:</h2>
+                    <ul>
+                        <li>This package excludes the sightseeing entrance charges (Unless Specified)</li>
+                        <li>Meals not mentioned in the itinerary</li>
+                        <li>Personal expenses are excluded.</li>
+                        <li>Early check-in & Late check-out.</li>
+                        <li>Camera & Video Permits</li>
+                        <li>Guide/Driver tips</li>
+                        <li>Travel insurance is excluded</li>
+                        <li>There are no Air-tickets included in the tour package</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1381,8 +1554,8 @@
         <div class="container footer-grid">
             <!-- Column 1: Logo + Social -->
             <div class="footer-column">
-                <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                    <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                    <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                     <div class="brand-title1">
                         <strong>JUCON TRAVELS</strong>
                         <span>Travel Agency • Sri Lanka</span>
@@ -1422,10 +1595,10 @@
             <div class="footer-column">
                 <h4>About</h4>
                 <div class="list">
-                    <a href="index.html">Home</a>
-                    <a href="about-us.html">About Us</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="../../index.html">Home</a>
+                    <a href="../../about-us.html">About Us</a>
+                    <a href="../../blog.html">Blog</a>
+                    <a href="../../contact.html">Contact</a>
                 </div>
             </div>
 
@@ -1433,11 +1606,11 @@
             <div class="footer-column">
                 <h4>Navigate</h4>
                 <div class="list">
-                    <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                    <a href="group-leader.html">Group Leader</a>
-                    <a href="packages.html">Packages</a>
-                    <a href="Interest.html">Interest</a>
-                    <a href="faq.html">FAQ</a>
+                    <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                    <a href="../../group-leader.html">Group Leader</a>
+                    <a href="../../packages.html">Packages</a>
+                    <a href="../../interest.html">Interest</a>
+                    <!--<a href="../../faq.html">FAQ</a>-->
                 </div>
             </div>
 
