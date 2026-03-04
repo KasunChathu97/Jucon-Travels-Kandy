@@ -1215,6 +1215,94 @@
             }
         }
 
+        /* Our Team */
+        .our-team {
+            background: #ffffff;
+            padding: 40px 20px;
+            margin-top: -90px;
+            align-items: center;
+        }
+
+        .our-team h2 {
+            text-align: center;
+            font-size: 44px;
+            margin-bottom: 40px;
+        }
+
+        .our-team p {
+            max-width: 1260px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+            font-size: 18px;
+            color: #000000ba;
+            text-align: center;
+        }
+
+        /* Member Grid */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            justify-items: center;
+            margin-top: 50px;
+        }
+
+        .team-structure {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-top: 30px;
+            margin-bottom: -80px;
+        }
+
+        /* Member Card */
+        .member-image {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 20px;
+            transition: .3s;
+            text-align: center;
+            width: 100%;
+            max-width: 280px;
+        }
+
+        .member-image:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.259);
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .member-image h2 {
+            font-size: 20px;
+            margin: 15px 0 5px;
+        }
+
+        .member-image h4 {
+            font-size: 16px;
+            color: #555;
+            margin: 0;
+        }
+
+        @media(max-width:992px) {
+            .team-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
         /* ===== FOOTER ===== */
         .footer {
             background-color: #F5F5F5;
@@ -1436,39 +1524,39 @@
         </div>
     </section>
 
-    <section class="founder-section container">
-        <div class="founder-image">
-            <h2>Mahesh Dharmasena</h2>
-            <h4>Managing Director</h4>
-            <img src="images/about.png" alt="Mahesh Dharmasena">
+    <section class="our-team">
+        <h2>Our Team</h2>
+        <P>
+            Jucon Travels is built on a dedicated and well-structured team committed to delivering exceptional
+            experiences for our customers, ensuring every journey in Sri Lanka is memorable. Our senior management team
+            leads with expertise and vision, supported by over 15 staff members who devote their time and effort to
+            achieving our corporate mission and vision.
+        </P>
+        <P>
+            Beyond our internal team, we maintain strong partnerships with key stakeholders, including banks, financial
+            institutes, freelancers, transport providers, tour guides, and material suppliers, all aligned with our
+            business goals to provide seamless and high-quality services.
+        </P>
+        <div class="team-grid">
+            <div class="member-image">
+                <img src="images/Disna Nalika Marasinghe.png" alt="Disna Nalika Marasinghe">
+                <h2>Disna Nalika Marasinghe</h2>
+                <h4>Chairman/Managing Director</h4>
+            </div>
+            <div class="member-image">
+                <img src="images/Desandi Yasanga.png" alt="Desandi Yasanga">
+                <h2>Desandi Yasanga</h2>
+                <h4>Brand/ Marketing Manager</h4>
+            </div>
+            <div class="member-image">
+                <img src="images/Mahesh Dharmasena.png" alt="Mahesh Dharmasena">
+                <h2>Mahesh Dharmasena</h2>
+                <h4>Operation Manager</h4>
+            </div>
         </div>
 
-        <div class="founder-content">
-
-            <p>
-                <span>Elina Papa</span> is a globally recognised holistic therapist, certified trainer, and speaker with
-                over 30 years of experience in wellness and hospitality. As the visionary behind the JOY Project, she
-                blends her expertise to create wellness-focused retreats and tailored travel experiences.
-            </p>
-
-            <h3>Trusted Expert in Wellness</h3>
-            <p>
-                Elina is highly regarded for her trustworthiness and dedication, offering personalised therapy and
-                counselling that lead to profound personal transformation. Her holistic practice integrates creative
-                psychology and intuitive healing, benefiting clients worldwide.
-            </p>
-
-            <h3>Certified & Experienced Leader</h3>
-            <p>
-                Elina is an internationally certified teacher in Laughter Yoga and Rebirthing Breathwork, trained by
-                their founders. She is also an HRDA-certified professional trainer from the Human Resources Development
-                Authority of Cyprus and a certified facilitator in various healing modalities. With a degree in Hotel
-                and Restaurant Management, Elina’s extensive background in hospitality and wellness enables her to lead
-                international retreats, corporate workshops, and wellness festivals, all designed to foster growth,
-                healing, and cultural exploration. Her journey began in Montreal, Canada, and has evolved into a
-                platform that combines wellness and travel, enriching lives through unique and transformative
-                experiences.
-            </p>
+        <div class="team-structure">
+            <img src="images/team-structure.png" alt="Team Structure">
         </div>
     </section>
 
