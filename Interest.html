@@ -494,6 +494,7 @@
             color: var(--muted);
             line-height: 1.65;
             font-size: 14px;
+            text-align: justify;
         }
 
         .pill {
@@ -880,6 +881,159 @@
             margin-top: 0;
             color: #1c73e8;
         }
+
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background-color: #F5F5F5;
+            padding: 40px 20px 20px;
+            font-family: sans-serif;
+            margin-bottom: 60px;
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: -40px;
+            border-radius: 30px;
+            height: 528px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            align-items: start;
+            margin-top: -60px;
+        }
+
+        .footer-column .site-logo {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 10px;
+            margin-left: -60px;
+            margin-top: -5px;
+        }
+
+        .brand-title1 {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            margin-left: -15px;
+            margin-top: 15px;
+        }
+
+        .brand-title1 strong {
+            font-size: 22px;
+            color: #333;
+        }
+
+        .brand-title1 span {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .footer-column h4 {
+            margin-bottom: 10px;
+            font-size: 26px;
+            font-weight: 500;
+            color: #00000B;
+        }
+
+        .footer-column .list {
+            margin-top: 35px;
+        }
+
+        .footer-column .list a,
+        .footer-column span {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .footer-column .list a:hover {
+            color: #1ea9f4;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            margin-left: -945px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .footer-bottom a {
+            color: #1ea9f4;
+        }
+
+        .footer-bottom a:hover {
+            color: #000000;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Social Icons Style */
+        .social-links {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 14px;
+            margin-top: 10px;
+        }
+
+        .social-links li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            /* default circle color */
+            color: #000000;
+            /* icon color */
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: 2px solid #8A8A8A;
+        }
+
+        .social-links li a:hover {
+            color: #1ea9f4;
+            /* icon color on hover */
+        }
+
+        /* Optional: add pointer cursor */
+        .social-links li a {
+            cursor: pointer;
+        }
+
+        /* Make icons centered if they have sr-only span */
+        .social-links li a .fab {
+            vertical-align: middle;
+        }
     </style>
 </head>
 
@@ -926,120 +1080,458 @@
         <h1>Places of Interest in Sri Lanka</h1>
     </section>
 
+    <!-- Interest Grid -->
     <div class="container">
         <div class="interest-grid">
 
             <!-- COLOMBO -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1596422846543-75c6fc197f07">
+                <img src="images/Interest/colombo.png" alt="Colombo">
                 <div class="card-content">
                     <h3>Colombo</h3>
-                    <p>The vibrant commercial capital blending colonial heritage, shopping, temples, and modern city
-                        life.</p>
+                    <p>Sri Lanka’s bustling commercial capital, offering a blend of colonial architecture, modern
+                        shopping districts, vibrant nightlife, and cultural landmarks. Ideal for city tours and cultural
+                        immersion.</p>
                 </div>
             </div>
 
             <!-- NEGOMBO -->
             <div class="card">
-                <img src="images/Pearl/negombo.jpg">
+                <img src="images/Interest/negombo.png" alt="Negombo">
                 <div class="card-content">
                     <h3>Negombo</h3>
-                    <p>Coastal fishing town famous for lagoons, beaches, and lively fish markets.</p>
+                    <p>A charming coastal town near the airport, famous for its sandy beaches, Dutch-era canals, and
+                        fresh seafood. Popular as a gateway to Sri Lanka.</p>
                 </div>
             </div>
 
             <!-- CHILAW -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff">
+                <img src="images/Interest/chilaw.png" alt="Chilaw">
                 <div class="card-content">
                     <h3>Chilaw</h3>
-                    <p>Peaceful seaside town known for Munneswaram Temple and coconut plantations.</p>
+                    <p>Known for its serene beaches, coconut plantations, and traditional fishing villages. A peaceful
+                        coastal destination.</p>
                 </div>
             </div>
 
             <!-- WILPATTU -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1552083375-1447ce886485">
+                <img src="images/Interest/Wilpattu National Park.png" alt="Wilpattu">
                 <div class="card-content">
-                    <h3>Wilpattu Safari</h3>
-                    <p>Sri Lanka’s largest national park known for leopards, lakes, and untouched wilderness.</p>
+                    <h3>Wilpattu National Park</h3>
+                    <p>Famous for its “Willus” (natural lakes), this park offers exciting wildlife safaris, home to
+                        leopards, elephants, and diverse birdlife.</p>
                 </div>
             </div>
 
             <!-- PINNAWALA -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1552410260-0fd9b577afa6">
+                <img src="images/Interest/Pinnawala.png" alt="Pinnawala">
                 <div class="card-content">
                     <h3>Pinnawala</h3>
-                    <p>Famous elephant orphanage where herds bathe in the Ma Oya river.</p>
+                    <p>Renowned for the Pinnawala Elephant Orphanage, where visitors can see elephants bathing, feeding,
+                        and interacting closely.</p>
+                </div>
+            </div>
+
+            <!-- DAMBULLA -->
+            <div class="card">
+                <img src="images/Interest/Dambulla.png" alt="Dambulla">
+                <div class="card-content">
+                    <h3>Dambulla</h3>
+                    <p>Known for the Dambulla Cave Temple, a UNESCO World Heritage Site featuring ancient Buddhist
+                        murals and statues.</p>
                 </div>
             </div>
 
             <!-- SIGIRIYA -->
             <div class="card">
-                <img src="images/sigiriya.jpg">
+                <img src="images/Interest/Sigiriya.jpg" alt="Sigiriya">
                 <div class="card-content">
                     <h3>Sigiriya</h3>
-                    <p>UNESCO rock fortress featuring frescoes, mirror wall, and panoramic views.</p>
+                    <p>The iconic “Lion Rock” fortress and UNESCO World Heritage Site, famous for its stunning frescoes
+                        and panoramic views.</p>
+                </div>
+            </div>
+
+            <!-- PIDURANGALA -->
+            <div class="card">
+                <img src="images/Interest/pidurangala.jpg" alt="Pidurangala">
+                <div class="card-content">
+                    <h3>Pidurangala</h3>
+                    <p>A tranquil alternative to Sigiriya, offering a hike with breathtaking views of Sigiriya Rock and
+                        the surrounding landscapes.</p>
+                </div>
+            </div>
+
+            <!-- MINNERIYA NATIONAL PARK -->
+            <div class="card">
+                <img src="images/Interest/Minneriya National Park.jpg" alt="Minneriya National Park">
+                <div class="card-content">
+                    <h3>Minneriya National Park</h3>
+                    <p>Famous for the annual “Elephant Gathering,” where hundreds of elephants congregate around
+                        Minneriya tank, perfect for wildlife safaris.</p>
+                </div>
+            </div>
+
+            <!-- ANURADHAPURA -->
+            <div class="card">
+                <img src="images/Interest/Anuradhapura.jpeg" alt="Anuradhapura">
+                <div class="card-content">
+                    <h3>Anuradhapura</h3>
+                    <p>One of Sri Lanka’s ancient capitals, rich in Buddhist heritage, stupas, and historical ruins. A
+                        UNESCO World Heritage Site.</p>
+                </div>
+            </div>
+
+            <!-- POLONNARUWA -->
+            <div class="card">
+                <img src="images/Interest/Polonnaruwa.jpg" alt="Polonnaruwa">
+                <div class="card-content">
+                    <h3>Polonnaruwa</h3>
+                    <p>Another UNESCO-listed ancient city, known for well-preserved ruins, ancient temples, and royal
+                        gardens.</p>
+                </div>
+            </div>
+
+            <!-- Jaffna -->
+            <div class="card">
+                <img src="images/Interest/Jaffna.png" alt="Jaffna">
+                <div class="card-content">
+                    <h3>Jaffna</h3>
+                    <p>Northern cultural hub with vibrant Tamil heritage, forts, temples, and pristine northern beaches.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Udawalawe -->
+            <div class="card">
+                <img src="images/Interest/Udawalawe.png" alt="Udawalawe">
+                <div class="card-content">
+                    <h3>Udawalawe</h3>
+                    <p>Home to the Udawalawe National Park, ideal for elephant spotting and safari adventures in lush
+                        surroundings.</p>
+                </div>
+            </div>
+
+            <!-- Trincomalee -->
+            <div class="card">
+                <img src="images/Interest/Trincomalee.png" alt="Trincomalee">
+                <div class="card-content">
+                    <h3>Trincomalee</h3>
+                    <p>Coastal city with golden beaches, historic forts, and natural wonders like Pigeon Island and
+                        Koneswaram Temple.</p>
+                </div>
+            </div>
+
+            <!-- Nilaveli -->
+            <div class="card">
+                <img src="images/Interest/Nilaveli.png" alt="Nilaveli">
+                <div class="card-content">
+                    <h3>Nilaveli</h3>
+                    <p>A serene beach destination near Trincomalee, perfect for swimming, snorkeling, and water sports.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Arugam Bay -->
+            <div class="card">
+                <img src="images/Interest/Arugam Bay.jpg" alt="Arugam Bay">
+                <div class="card-content">
+                    <h3>Arugam Bay</h3>
+                    <p>World-renowned surfing hotspot, also popular for lagoons, wildlife, and a relaxed beach
+                        atmosphere.</p>
+                </div>
+            </div>
+
+            <!-- Passikudah -->
+            <div class="card">
+                <img src="images/Interest/Passikudah.jpg" alt="Passikudah">
+                <div class="card-content">
+                    <h3>Passikudah</h3>
+                    <p>Famous for its calm, shallow waters and soft sandy beaches, ideal for family vacations and water
+                        activities.</p>
                 </div>
             </div>
 
             <!-- KANDY -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1605640840605-14ac1855827b">
+                <img src="images/Interest/kandy.png" alt="Kandy">
                 <div class="card-content">
                     <h3>Kandy</h3>
-                    <p>Hill capital home to the Temple of the Tooth Relic and scenic lake.</p>
+                    <p>Cultural capital set in scenic hills, home to the Temple of the Tooth Relic and vibrant
+                        traditional performances.</p>
                 </div>
             </div>
 
             <!-- NUWARA ELIYA -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1593696954577-ab3d39317b97">
+                <img src="images/Interest/Nuwara Eliya.png" alt="Nuwara Eliya">
                 <div class="card-content">
                     <h3>Nuwara Eliya</h3>
-                    <p>Tea country known as Little England with cool climate and waterfalls.</p>
+                    <p>“Little England” of Sri Lanka, surrounded by tea plantations, waterfalls, and a cool mountain
+                        climate.</p>
+                </div>
+            </div>
+
+            <!-- Horton Plains -->
+            <div class="card">
+                <img src="images/Interest/Horton Plains.png" alt="Horton Plains">
+                <div class="card-content">
+                    <h3>Horton Plains</h3>
+                    <p>High-altitude plateau with trekking trails, dramatic escarpments like World’s End, and cloud
+                        forest biodiversity.</p>
+                </div>
+            </div>
+
+            <!-- Adam’s Peak (Sri Pada) -->
+            <div class="card">
+                <img src="images/Interest/Adam’s Peak (Sri Pada).jpg" alt="Adam’s Peak">
+                <div class="card-content">
+                    <h3>Adam’s Peak</h3>
+                    <p>Sacred pilgrimage mountain with a footprint revered by multiple religions, offering spectacular
+                        sunrise treks.</p>
+                </div>
+            </div>
+
+            <!-- Ratnapura -->
+            <div class="card">
+                <img src="images/Interest/Ratnapura.jpg" alt="Ratnapura">
+                <div class="card-content">
+                    <h3>Ratnapura</h3>
+                    <p>Known as the “City of Gems,” famous for gem mines, rainforest treks, and gemstone shopping.</p>
+                </div>
+            </div>
+
+            <!-- Kitulgala -->
+            <div class="card">
+                <img src="images/Interest/Kitulgala.jpg" alt="Kitulgala">
+                <div class="card-content">
+                    <h3>Kitulgala</h3>
+                    <p>Adventure hub with white-water rafting on the Kelani River, jungle trekking, and eco-tourism
+                        activities.</p>
                 </div>
             </div>
 
             <!-- ELLA -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1586375300773-8384e3e4916f">
+                <img src="images/Interest/Ella.png" alt="Ella">
                 <div class="card-content">
                     <h3>Ella</h3>
-                    <p>Mountain village with Nine Arch Bridge, hikes, and breathtaking views.</p>
+                    <p>Picturesque hill town with scenic railway views, Rawana waterfall, tea plantations, and trekking
+                        opportunities.</p>
                 </div>
             </div>
 
-            <!-- YALA -->
+            <!-- Kataragama -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1549366021-9f761d450615">
+                <img src="images/Interest/Kataragama.jpg" alt="Kataragama">
                 <div class="card-content">
-                    <h3>Yala Safari</h3>
-                    <p>Wildlife hotspot with the highest leopard density in the world.</p>
+                    <h3>Kataragama</h3>
+                    <p>Spiritual town attracting Buddhist, Hindu, and Muslim pilgrims, known for Kataragama Temple and
+                        annual festivals.</p>
+                </div>
+            </div>
+
+            <!-- Yala National Park -->
+            <div class="card">
+                <img src="images/Interest/Yala National Park.jpg" alt="Yala National Park">
+                <div class="card-content">
+                    <h3>Yala National Park</h3>
+                    <p>Sri Lanka’s most famous wildlife reserve, home to leopards, elephants, sloth bears, and diverse
+                        bird species.</p>
                 </div>
             </div>
 
             <!-- MIRISSA -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+                <img src="images/Interest/Mirissa.png" alt="Mirissa">
                 <div class="card-content">
                     <h3>Mirissa</h3>
-                    <p>Golden beaches famous for whale watching and coastal relaxation.</p>
+                    <p>Stunning beach town famous for whale watching, surf beaches, and vibrant nightlife.</p>
+                </div>
+            </div>
+
+            <!-- Bentota -->
+            <div class="card">
+                <img src="images/Interest/Bentota.jpg" alt="Bentota">
+                <div class="card-content">
+                    <h3>Bentota</h3>
+                    <p>Coastal resort town known for water sports, luxury resorts, and the Bentota River ecosystem.</p>
+                </div>
+            </div>
+
+            <!-- Matara -->
+            <div class="card">
+                <img src="images/Interest/Matara.png" alt="Matara">
+                <div class="card-content">
+                    <h3>Matara</h3>
+                    <p>Southern city with colonial forts, historic temples, and nearby sandy beaches.</p>
+                </div>
+            </div>
+
+            <!-- Kosgoda Turtle Hatchery -->
+            <div class="card">
+                <img src="images/Interest/Kosgoda Turtle Hatchery.png" alt="Kosgoda Turtle Hatchery">
+                <div class="card-content">
+                    <h3>Kosgoda Turtle Hatchery</h3>
+                    <p>Conservation site where visitors can learn about and release endangered sea turtles.</p>
+                </div>
+            </div>
+
+            <!-- Maduganga Boat Safari -->
+            <div class="card">
+                <img src="images/Interest/Maduganga Boat Safari.jpg" alt="Maduganga Boat Safari">
+                <div class="card-content">
+                    <h3>Maduganga Boat Safari</h3>
+                    <p>Serene mangrove and river safari, ideal for bird watching and exploring traditional village life
+                        and experience cinnamon harvesting and testing cinnamon tea.</p>
+                </div>
+            </div>
+
+            <!-- Koggala -->
+            <div class="card">
+                <img src="images/Interest/Koggala.png" alt="Koggala">
+                <div class="card-content">
+                    <h3>Koggala</h3>
+                    <p>Coastal town with historical sites, turtle hatcheries, and nearby tranquil beaches.</p>
                 </div>
             </div>
 
             <!-- GALLE -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1586182987320-4f376d39d787">
+                <img src="images/Interest/Galle.jpg" alt="Galle">
                 <div class="card-content">
                     <h3>Galle</h3>
-                    <p>Historic Dutch fort city with charming streets and ocean views.</p>
+                    <p>Famous for the Galle Fort, UNESCO heritage, colonial architecture, boutique shops, and coastal
+                        charm.</p>
+                </div>
+            </div>
+
+            <!-- Beruwala -->
+            <div class="card">
+                <img src="images/Interest/Beruwala.jpg" alt="Beruwala">
+                <div class="card-content">
+                    <h3>Beruwala</h3>
+                    <p>Relaxed beach destination with luxury resorts and water activities along the southwest coast.</p>
+                </div>
+            </div>
+
+            <!-- Kalutara -->
+            <div class="card">
+                <img src="images/Interest/Kalutara.png" alt="Kalutara">
+                <div class="card-content">
+                    <h3>Kalutara</h3>
+                    <p>Coastal town known for Kalutara Bodhiya, luxury resorts, and scenic riverside beaches.</p>
+                </div>
+            </div>
+
+            <!-- Udawalawe National Park -->
+            <div class="card">
+                <img src="images/Interest/Udawalawe National Park.jpg" alt="Udawalawe National Park">
+                <div class="card-content">
+                    <h3>Udawalawe National Park</h3>
+                    <p>A repeat of Udawalawe Safari, highlighting its elephant population and lush landscapes.</p>
+                </div>
+            </div>
+
+            <!-- Sinharaja Forest Reserve -->
+            <div class="card">
+                <img src="images/Interest/Sinharaja Forest Reserve.jpg" alt="Sinharaja Forest Reserve">
+                <div class="card-content">
+                    <h3>Sinharaja Forest Reserve</h3>
+                    <p>UNESCO World Heritage tropical rainforest, rich in biodiversity, ideal for trekking and
+                        birdwatching.</p>
                 </div>
             </div>
 
         </div>
     </div>
+
+    <!-- Footer Section -->
+    <footer class="footer" aria-label="Footer">
+        <div class="container footer-grid">
+            <!-- Column 1: Logo + Social -->
+            <div class="footer-column">
+                <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
+                    <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                    <div class="brand-title1">
+                        <strong>JUCON TRAVELS</strong>
+                        <span>Travel Agency • Sri Lanka</span>
+                    </div>
+                </a>
+                <!-- Social Icons -->
+                <ul class="social-links">
+                    <li>
+                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram">
+                            <span class="sr-only">Instagram</span>
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                            <span class="sr-only">Facebook</span>
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="YouTube">
+                            <span class="sr-only">YouTube</span>
+                            <i class="fab fa-youtube" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Column 2: About -->
+            <div class="footer-column">
+                <h4>About</h4>
+                <div class="list">
+                    <a href="index.html">Home</a>
+                    <a href="about-us.html">About Us</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+
+            <!-- Column 3: Navigate -->
+            <div class="footer-column">
+                <h4>Navigate</h4>
+                <div class="list">
+                    <a href="tours-retreats.html">Tours &amp; Retreats</a>
+                    <a href="group-leader.html">Group Leader</a>
+                    <a href="packages.html">Packages</a>
+                    <a href="Interest.html">Interest</a>
+                    <!--<a href="faq.html">FAQ</a>-->
+                </div>
+            </div>
+
+            <!-- Column 4: Contact -->
+            <div class="footer-column">
+                <h4>Contact</h4>
+                <div class="list">
+                    <a href="#contact">68B, Wariyapola Sri Sumangala Mw, Asgiriya, Kandy</a>
+                    <a href="tel:+94703568306">+94 70 356 8306</a>
+                    <a href="mailto:nkdharmasena@gmail.com">nkdharmasena@gmail.com</a>
+                    <span class="footer-working-hours">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST
+                        (UTC+3)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
+        </div>
+    </footer>
 
 </body>
 
