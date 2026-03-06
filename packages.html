@@ -884,115 +884,120 @@
             gap: 30px;
         }
 
-        
-.package-card{
-    position: relative;
-    height: 380px;
-    border-radius: 15px;
-    overflow: hidden;
-    background-size: cover;
-    background-position: center;
-    transition:0.4s;
-}
 
-.package-card:hover{
-    transform:scale(1.05);
-}
+        .package-card {
+            position: relative;
+            height: 380px;
+            border-radius: 15px;
+            overflow: hidden;
+            background-size: cover;
+            background-position: center;
+            transition: 0.4s;
+        }
 
-/* Background Image */
-.round-tour-card{
-    background-image: url("images/Packages/Popular/Round Tour.jpg");
-}
+        .package-card:hover {
+            transform: scale(1.05);
+        }
 
-/* Gradient Overlay */
-.package-overlay{
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:100%;
-    padding:25px;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-end;
+        /* Background Image */
+        .round-tour-card {
+            background-image: url("images/Packages/Popular/Round Tour.jpg");
+        }
 
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.838),
-        rgba(0, 0, 0, 0.355),
-        rgba(0, 0, 0, 0)
-    );
+        .family-tour-card {
+            background-image: url("images/Packages/Popular/Family Tour.jpg");
+        }
 
-    color:white;
-}
+        .cultural-tour-card {
+            background-image: url("images/Packages/Popular/Cultural and Heritage Tour.jpg");
+        }
 
-/* Title */
-.package-overlay h3{
-    font-size:28px;
-    margin-bottom:10px;
-}
+        .honeymoon-tour-card {
+            background-image: url("images/Packages/Popular/Honeymoon Tour.png");
+        }
 
-/* Hidden details */
-.package-details{
-    max-height:0;
-    overflow:hidden;
-    transition:1.05s;
-}
+        .beach-tour-card {
+            background-image: url("images/Packages/Popular/Beach Tour.png");
+        }
 
-/* Hover show */
-.package-card:hover .package-details{
-    max-height:300px;
-}
+        .hill-country-tour-card {
+            background-image: url("images/Packages/Popular/Hill Country.jpg");
+        }
 
-/* List */
-.package-details ul{
-    padding-left:18px;
-    margin-bottom:15px;
-}
+        .adventure-tour-card {
+            background-image: url("images/Packages/Popular/Adventure Tour.jpg");
+        }
 
-/* Button */
-.package-btn{
-    display:inline-block;
-    padding:10px 20px;
-    background:#ff7a00;
-    color:white;
-    text-decoration:none;
-    border-radius:6px;
-    font-weight:600;
-}
+        .nature-wildlife-tour-card {
+            background-image: url("images/Packages/Popular/Nature and Wildlife.png");
+        }
 
-        .package-card img {
+        .ramayana-tour-card {
+            background-image: url("images/Packages/Popular/Ramayana Tour.png");
+        }
+
+        .special-event-tour-card {
+            background-image: url("images/Packages/Popular/Special Event.jpg");
+        }
+
+        /* Gradient Overlay */
+        .package-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
             width: 100%;
-            height: 220px;
-            object-fit: cover;
+            height: 100%;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.903),
+                    rgba(0, 0, 0, 0.355),
+                    rgba(0, 0, 0, 0));
+
+            color: white;
         }
 
-        .package-content {
-            padding: 20px;
+        /* Title */
+        .package-overlay h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
         }
 
-        .package-content h3 {
-            margin: 0 0 10px;
+        /* Hidden details */
+        .package-details {
+            max-height: 0;
+            overflow: hidden;
+            transition: 1.05s;
         }
 
-        .package-content li {
-            margin-bottom: 8px;
-            color: #3d3d3d;
+        /* Hover show */
+        .package-card:hover .package-details {
+            max-height: 300px;
         }
 
-        .package-content p span {
-            color: #000000;
+        /* List */
+        .package-details ul {
+            padding-left: 18px;
+            margin-bottom: 15px;
             line-height: 1.6;
         }
 
+        /* Button */
         .package-btn {
             display: inline-block;
-            margin-top: 10px;
-            padding: 10px 18px;
-            background: #1c73e8;
+            padding: 10px 20px;
+            background: #ff7a00;
             color: white;
-            border-radius: 6px;
             text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+
+        .packages-grid .package-card:nth-child(10) {
+            grid-column: 2 / 3;
         }
 
         /* CTA */
@@ -1333,246 +1338,137 @@
         <div class="packages-grid">
 
             <a href="packages/Round Tour/Round Tour.html" class="package-card round-tour-card">
-    <div class="package-overlay">
-        <h3>Round Tour</h3>
-
-        <div class="package-details">
-            <ul>
-                <li>The Radiant Pearl Adventure</li>
-                <li>The Grand Ceylon Odyssey</li>
-                <li>Grand Sri Lanka Cultural & Nature Journey</li>
-                <li>Sri Lanka Coastal & Cultural Odyssey</li>
-            </ul>
-        </div>
-    </div>
-</a>
-
-
-            <div class="package-card">
-                <img src="images/Packages/Popular/Round Tour.jpg" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                <div class="package-overlay">
                     <h3>Round Tour</h3>
-                            <ul>
-                                <li>The Radiant Pearl Adventure</li>
-                                <li>The Grand Ceylon Odyssey</li>
-                                <li>Grand Sri Lanka Cultural & Nature Journey</li>
-                                <li>Sri Lanka Coastal & Cultural Odyssey</li>
-                            </ul>
-                    <a href="packages/Round Tour/Round Tour.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-                                    <div class="package-card">
-                <img src="images/Packages/Popular/Family Tour.jpg" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>The Radiant Pearl Adventure</li>
+                            <li>The Grand Ceylon Odyssey</li>
+                            <li>Grand Sri Lanka Cultural & Nature Journey</li>
+                            <li>Sri Lanka Coastal & Cultural Odyssey</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card family-tour-card">
+                <div class="package-overlay">
                     <h3>Family Tour</h3>
-                            <ul>
-                                <li>Sri Lanka Cultural Escape</li>
-                                <li>Sri Lanka Highlights & Coastal Bliss</li>
-                                <li>Ultimate Sri Lanka Grand Explorer</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-                                                <div class="package-card">
-                <img src="images/Packages/Popular/Cultural and Heritage Tour.jpg" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>Sri Lanka Cultural Escape</li>
+                            <li>Sri Lanka Highlights & Coastal Bliss</li>
+                            <li>Ultimate Sri Lanka Grand Explorer</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card cultural-tour-card">
+                <div class="package-overlay">
                     <h3>Cultural and Heritage Tour</h3>
-                            <ul>
-                                <li>Sri Lanka Cultural Escape</li>
-                                <li>Sacred Kingdoms & Heritage Trail</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-                                                            <div class="package-card">
-                <img src="images/Packages/Popular/Honeymoon Tour.png" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>Sri Lanka Cultural Escape</li>
+                            <li>Sacred Kingdoms & Heritage Trail</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card honeymoon-tour-card">
+                <div class="package-overlay">
                     <h3>Honeymoon Tour</h3>
-                            <ul>
-                                <li>Sri Lanka Heritage, Highlands & Coastal Adventure</li>
-                                <li>Sri Lanka Hill Country & Cultural Escape</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-            <div class="package-card">
-                <img src="images/Packages/Popular/Beach Tour.png" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>Sri Lanka Heritage, Highlands & Coastal Adventure</li>
+                            <li>Sri Lanka Hill Country & Cultural Escape</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card beach-tour-card">
+                <div class="package-overlay">
                     <h3>Beach Tour</h3>
-                            <ul>
-                                <li>Sri Lanka Southern Coastal Escape</li>
-                                <li>Sri Lanka Coastal Adventure & Watersports</li>
-                                <li>Eastern Coast & Cultural Discovery</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-                        <div class="package-card">
-                <img src="images/Packages/Popular/Hill Country.jpg" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>Sri Lanka Southern Coastal Escape</li>
+                            <li>Sri Lanka Coastal Adventure & Watersports</li>
+                            <li>Eastern Coast & Cultural Discovery</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card hill-country-tour-card">
+                <div class="package-overlay">
                     <h3>Hill Country</h3>
-                            <ul>
-                                <li>Hill Country & Heritage Journey</li>
-                                <li>Highlands & Heritage Trail</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-                                    <div class="package-card">
-                <img src="images/Packages/Popular/Adventure Tour.jpg" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>Hill Country & Heritage Journey</li>
+                            <li>Highlands & Heritage Trail</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card adventure-tour-card">
+                <div class="package-overlay">
                     <h3>Adventure Tour</h3>
-                            <ul>
-                                <li>Sri Lanka Highlands Hiking & Cultural Adventure</li>
-                                <li>Adam’s Peak Pilgrimage & Highland Adventure</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-                                                <div class="package-card">
-                <img src="images/Packages/Popular/Nature and Wildlife.png" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>Sri Lanka Highlands Hiking & Cultural Adventure</li>
+                            <li>Adam’s Peak Pilgrimage & Highland Adventure</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card nature-wildlife-tour-card">
+                <div class="package-overlay">
                     <h3>Nature and Wildlife</h3>
-                            <ul>
-                                <li>Wildlife & Cultural Safari Adventure</li>
-                                <li>Wildlife, Highlands & Coastal Wonders</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-                                                            <div class="package-card">
-                <img src="images/Packages/Popular/Ramayana Tour.png" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>Wildlife & Cultural Safari Adventure</li>
+                            <li>Wildlife, Highlands & Coastal Wonders</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card ramayana-tour-card">
+                <div class="package-overlay">
                     <h3>Ramayana Tour</h3>
-                            <ul>
-                                <li>Ramayana Heritage & Coastal Expedition</li>
-                                <li>Ramayana Legends & Highland Wonders</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-                <div class="package-card">
-                <img src="images/Packages/Popular/Special Event.jpg" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
+                    <div class="package-details">
+                        <ul>
+                            <li>Ramayana Heritage & Coastal Expedition</li>
+                            <li>Ramayana Legends & Highland Wonders</li>
+                        </ul>
+                    </div>
+                </div>
+            </a>
+
+            <a href="packages/Round Tour/Round Tour.html" class="package-card special-event-tour-card">
+                <div class="package-overlay">
                     <h3>Special Event</h3>
-                            <ul>
-                                <li>Kandy Esala Perahera & Heritage Journey</li>
-                            </ul>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                </div>
-            </div>
 
-            <div class="package-card">
-                <img src="images/sigiriya.jpg" alt="Promoter of JUCON TRAVELS">
-                <div class="package-content">
-                    <h3>The Radiant Pearl Adventure</h3>
-                    <p><span>Duration:</span> 8 Nights / 9 Days </p>
-                    <p>A balanced journey through the heart of the island, focusing on the most iconic landmarks,
-                        wildlife encounters, and scenic mountain vistas.
-                    </p>
-                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                    <div class="package-details">
+                        <ul>
+                            <li>Kandy Esala Perahera & Heritage Journey</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/ODYSSEY.png" alt="Scenic Sri Lankan landscape">
-                <div class="package-content">
-                    <h3>The Grand Ceylon Odyssey</h3>
-                    <p><span>Duration:</span> 10 Nights - 11 Days / 12 Nights - 13 Days </p>
-                    <p>From Ancient Kingdoms to Azure Coasts</p>
-                    <a href="packages/Odyssey/The Grand Ceylon Odyssey.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/p16.jpeg" alt="Family Tour Packages">
-                <div class="package-content">
-                    <h3>Family Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Family/familymain.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/cultural.jpg" alt="Cultural and Heritage Tour Packages">
-                <div class="package-content">
-                    <h3>Cultural and Heritage Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Cultural/night 4.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Honeymoon.png" alt="Honeymoon Tour Packages">
-                <div class="package-content">
-                    <h3>Honeymoon Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Honeymoon/night 4.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Beach.png" alt="Beach Tour Packages">
-                <div class="package-content">
-                    <h3>Beach Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Beach/Southern.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/p8.jpeg" alt="Hill Country Tour Packages">
-                <div class="package-content">
-                    <h3>Hill Country Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Hill/night5-Ella.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Adventure.jpg" alt="Adventure Tour Packages">
-                <div class="package-content">
-                    <h3>Adventure Tour </h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Adventure/Adams Peaks.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Wildlife.png" alt="Nature and Wildlife Tour Packages">
-                <div class="package-content">
-                    <h3>Nature and Wildlife</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Wildlife/night 7.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Ramayana.png" alt="Ramayana Tour Packages">
-                <div class="package-content">
-                    <h3>Ramayana Tour</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Ramayana/night6-Jaffna.html" class="package-btn">View Package</a>
-                </div>
-            </div>
-
-            <div class="package-card">
-                <img src="images/Special-kandy.jpg" alt="Special Event Tour Packages">
-                <div class="package-content">
-                    <h3>Special Event</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <a href="packages/Special/Kandy.html" class="package-btn">View Package</a>
-                </div>
-            </div>
+            </a>
 
         </div>
     </section>
