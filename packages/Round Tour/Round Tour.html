@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -48,7 +49,7 @@
 
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Times New Roman', Times, serif;
             color: #111 !important;
             background: #ffffff !important;
             min-height: 100vh;
@@ -869,7 +870,7 @@
         /* PACKAGES */
         .packages-section {
             padding: 80px 8%;
-            margin-top: -100px;
+            margin-top: 80px;
         }
 
         .packages-title {
@@ -897,8 +898,8 @@
         }
 
         .packages-grid .package-card:nth-child(4) {
-    grid-column: 2 / 3;
-}
+            grid-column: 2 / 3;
+        }
 
         .package-card img {
             width: 100%;
@@ -929,7 +930,7 @@
             text-decoration: none;
         }
 
-                .package-btn1 {
+        .package-btn1 {
             display: inline-block;
             margin-top: 10px;
             margin-left: 85px;
@@ -945,23 +946,23 @@
             background: #000000;
         }
 
-         .package-btn1:hover {
+        .package-btn1:hover {
             background: #000000;
             color: #ffffff;
             border: #000000 solid 1px;
-        } 
-        
+        }
+
         @media (max-width: 768px) {
 
-    .packages-grid {
-        grid-template-columns: 1fr;
-    }
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
 
-    .packages-grid .package-card:nth-child(4) {
-        grid-column: auto;
-    }
+            .packages-grid .package-card:nth-child(4) {
+                grid-column: auto;
+            }
 
-}
+        }
 
         /* CTA */
         .cta {
@@ -1075,6 +1076,151 @@
                 box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
             }
         }
+
+        /* MODAL BACKGROUND */
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            animation: fadeIn .3s ease;
+        }
+
+        /* MODAL BOX */
+
+        .modal-box {
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
+            width: 520px;
+            max-width: 95%;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideUp .4s ease;
+        }
+
+        .modal-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        /* CLOSE BUTTON */
+
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* FORM */
+
+        .inquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        /* FLOATING LABEL */
+
+        .floating-group {
+            position: relative;
+        }
+
+        .floating-group input,
+        .floating-group textarea,
+        .floating-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+        }
+
+        .floating-group label {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            font-size: 13px;
+            color: #777;
+            background: white;
+            padding: 0 4px;
+            transition: .2s;
+            pointer-events: none;
+        }
+
+        /* FLOAT ANIMATION */
+
+        .floating-group input:focus+label,
+        .floating-group input:not(:placeholder-shown)+label,
+        .floating-group textarea:focus+label,
+        .floating-group textarea:not(:placeholder-shown)+label,
+        .floating-group select:focus+label {
+            top: -8px;
+            font-size: 13px;
+            color: #000000;
+        }
+
+        /* ROW */
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        /* BUTTON */
+
+        .send-btn {
+            background: #1c73e8;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 150px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .send-btn:hover {
+            background: #000000;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
 
         /* ===== FOOTER ===== */
         .footer {
@@ -1234,91 +1380,112 @@
     <!-- Header -->
     <div class="container-header">
         <div class="header-inner">
-            <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+            <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                 <div class="brand-title">
                     <strong>JUCON TRAVELS</strong>
-                    <span>Travel Agency â€¢ Sri Lanka</span>
+                    <span>Travel Agency & Sri Lanka</span>
                 </div>
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html">Tours & Retreats</a>
-                <a href="packages.html" class="active">Packages</a>
-                <a href="group-leader.html">Partner up</a>
-                <a href="Interest.html">Interest</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours & Retreats</a>
+                <a href="../../packages.html" class="active">Packages</a>
+                <a href="../../group-leader.html">Partner up</a>
+                <a href="../../Interest.html">Interest</a>
                 <!--<a href="faq.html">FAQ</a>-->
-                <a href="contact.html">Contact</a>
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
             <nav class="nav" aria-label="Mobile">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                <a href="packages.html" class="active">Packages</a>
-                <a href="group-leader.html">Partner up</a>
-                <a href="Interest.html">Interest</a>
-                <!--<a href="faq.html">FAQ</a>-->
-                <a href="contact.html">Contact</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                <a href="../../packages.html" class="active">Packages</a>
+                <a href="../../group-leader.html">Partner up</a>
+                <a href="../../Interest.html">Interest</a>
+                <!--<a href="../../faq.html">FAQ</a>-->
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
     </div>
 
     <!-- HERO -->
     <section class="packages-hero">
-        <img src="../../images/SLbyRailBanner.jpg" alt="JOY Project">
-        <h1>Explore Our Tour Packages</h1>
+        <img src="../../images/Packages/Banner/Round Tour Packages.png" alt="Round Tour Packages">
+        <h1>Round Tour Packages</h1>
     </section>
 
     <!-- PACKAGES -->
     <section class="packages-section">
-        <h2 class="packages-title">Popular Packages</h2>
 
         <div class="packages-grid">
             <div class="package-card">
-                <img src="../../images/map.jpeg" alt="Promoter of JUCON TRAVELS">
+                <img src="../../images/Packages/Sunset-menu.jpg" alt="Promoter of JUCON TRAVELS">
                 <div class="package-content">
                     <h3>The Radiant Pearl Adventure</h3>
                     <p><span>Duration:</span> 8 Nights / 9 Days </p>
-                    <p>Negambo- Dambulla -Kandy â€“ Nuwara Eliya  -Colombo
-                    </p>
+                    <p><span>Route:</span><i> Negambo - Dambulla - Kandy - Nuwara Eliya - Colombo
+                        </i></p>
+                    <p><span>Theme:</span> A balanced journey through the heart of the island, focusing on the most
+                        iconic landmarks, wildlife encounters, and scenic mountain vistas.</p>
                     <a href="night 5.html" class="package-btn">View Package</a>
-                                        <a href="night 8.html" class="package-btn1">Quick Inquiry</a>
+                    <a href="#" class="package-btn1" onclick="openInquiry('The Radiant Pearl Adventure')">
+                        Quick Inquiry
+                    </a>
                 </div>
             </div>
 
             <div class="package-card">
-                <img src="../../images/map.jpeg" alt="Scenic Sri Lankan landscape">
+                <img src="../../images/Packages/The Grand Ceylon Odyssey.png" alt="Scenic Sri Lankan landscape">
                 <div class="package-content">
                     <h3>The Grand Ceylon Odyssey</h3>
-                    <p><span>Duration:</span> 10 Nights - 11 Days / 12 Nights - 13 Days </p>
-                    <p>Negambo- Dambulla -Kandy â€“ Nuwara Eliya  -Colombo</p>
+                    <p><span>Duration:</span> 10 Nights / 11 Days</p>
+                    <p><span>Route:</span><i> Negambo - Dambulla – Anuradhapura - Sigiriya - Kandy – Nuwara Eliya – Ella
+                            – Thissamaharamaya – Mirissa – Galle – Colombo
+                        </i></p>
+                    <p><span>Theme:</span> From Ancient Kingdoms to Azure Coasts</p>
                     <a href="night 6.html" class="package-btn">View Package</a>
-                                        <a href="night 8.html" class="package-btn1">Quick Inquiry</a>
+                    <a href="#" class="package-btn1" onclick="openInquiry('The Grand Ceylon Odyssey')">
+                        Quick Inquiry
+                    </a>
                 </div>
             </div>
 
             <div class="package-card">
-                <img src="../../images/map.jpeg" alt="Family Tour Packages">
+                <img src="../../images/Packages/Grand Sri Lanka Cultural & Nature Journey.jpg"
+                    alt="Family Tour Packages">
                 <div class="package-content">
                     <h3>Grand Sri Lanka Cultural & Nature Journey</h3>
-                    <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <p>Negambo- Dambulla -Kandy â€“ Nuwara Eliya  -Colombo</p>
+                    <p><span>Duration:</span> 12 Nights / 13 Days </p>
+                    <p><span>Route:</span><i> Negambo - Dambulla – Polonnaruwa - Anuradhapura - Sigiriya - Kandy –
+                            Nuwara Eliya – Ella – Yala – Mirissa – Galle – Colombo
+                        </i></p>
+                    <p><span>Theme: A Journey Through Culture, Wildlife, and Scenic Landscapes</span> Experience the
+                        perfect blend of ancient heritage, lush hill country, pristine beaches, and unforgettable
+                        wildlife.</p>
                     <a href="night 8.html" class="package-btn">View Package</a>
-                    <a href="night 8.html" class="package-btn1">Quick Inquiry</a>
+                    <a href="#" class="package-btn1" onclick="openInquiry('Grand Sri Lanka Cultural & Nature Journey')">
+                        Quick Inquiry
+                    </a>
                 </div>
             </div>
 
-                        <div class="package-card">
-                <img src="../../images/map.jpeg" alt="Family Tour Packages">
+            <div class="package-card">
+                <img src="../../images/Packages/Sri Lanka Coastal & Cultural Odyssey.jpg" alt="Family Tour Packages">
                 <div class="package-content">
                     <h3>Sri Lanka Coastal & Cultural Odyssey</h3>
                     <p><span>Duration:</span> 5 Nights / 6 Days </p>
-                    <p>Negambo- Dambulla -Kandy â€“ Nuwara Eliya  -Colombo</p>
-                    <a href="night 8.html" class="package-btn">View Package</a>
-                    <a href="night 8.html" class="package-btn1">Quick Inquiry</a>
+                    <p><span>Route:</span><i> Negambo - Dambulla - Polonnaruwa - Trincomalee - Sigiriya - Kandy – Nuwara
+                            Eliya – Ella – Yala – Mirissa – Galle – Colombo
+                        </i></p>
+                    <p><span>Theme:</span> Ancient Kingdoms, Sacred Temples & Tropical Shores</p>
+                    <a href="../Beach/Eastern.html" class="package-btn">View Package</a>
+                    <a href="#" class="package-btn1" onclick="openInquiry('Sri Lanka Coastal & Cultural Odyssey')">
+                        Quick Inquiry
+                    </a>
                 </div>
             </div>
 
@@ -1339,7 +1506,7 @@
         <div class="container footer-grid">
             <!-- Column 1: Logo + Social -->
             <div class="footer-column">
-                <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
+                <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
                     <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                     <div class="brand-title1">
                         <strong>JUCON TRAVELS</strong>
@@ -1380,10 +1547,10 @@
             <div class="footer-column">
                 <h4>About</h4>
                 <div class="list">
-                    <a href="index.html">Home</a>
-                    <a href="about-us.html">About Us</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="../../index.html">Home</a>
+                    <a href="../../about-us.html">About Us</a>
+                    <a href="../../blog.html">Blog</a>
+                    <a href="../../contact.html">Contact</a>
                 </div>
             </div>
 
@@ -1391,11 +1558,11 @@
             <div class="footer-column">
                 <h4>Navigate</h4>
                 <div class="list">
-                    <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                    <a href="group-leader.html">Partner up</a>
-                    <a href="packages.html">Packages</a>
-                    <a href="Interest.html">Interest</a>
-                    <!--<a href="faq.html">FAQ</a>-->
+                    <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                    <a href="../../group-leader.html">Partner up</a>
+                    <a href="../../packages.html">Packages</a>
+                    <a href="../../Interest.html">Interest</a>
+                    <!--<a href="../../faq.html">FAQ</a>-->
                 </div>
             </div>
 
@@ -1417,6 +1584,151 @@
             <div>Copyright Â© 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
         </div>
     </footer>
+
+    <!-- QUICK INQUIRY MODAL -->
+    <div id="inquiryModal" class="modal">
+
+        <div class="modal-box">
+
+            <span class="close-btn" onclick="closeInquiry()">&times;</span>
+
+            <h2>Quick Inquiry</h2>
+
+            <form class="inquiry-form">
+
+                <div class="floating-group">
+                    <input type="text" id="packageName" readonly>
+                    <label>Selected Package</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="text" required>
+                    <label>Name</label>
+                </div>
+
+                <div class="floating-group">
+                    <select id="country" required>
+                        <option value=""> </option>
+                    </select>
+                    <label>Country</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="row">
+
+                    <div class="floating-group">
+                        <input type="date">
+                        <label>Arrival Date</label>
+                    </div>
+
+                    <div class="floating-group">
+                        <input type="date">
+                        <label>Departure Date</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="floating-group">
+                        <input type="number">
+                        <label>Adults</label>
+                    </div>
+
+                    <div class="floating-group">
+                        <input type="number">
+                        <label>Children</label>
+                    </div>
+
+                </div>
+
+                <div class="floating-group">
+                    <textarea rows="3"></textarea>
+                    <label>Queries</label>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Inquiry
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Country List Script -->
+    <script>
+
+        function openInquiry(packageName) {
+
+            document.getElementById("inquiryModal").style.display = "flex";
+
+            document.getElementById("packageName").value = packageName;
+
+        }
+
+        function closeInquiry() {
+
+            document.getElementById("inquiryModal").style.display = "none";
+
+        }
+
+        window.onclick = function (event) {
+
+            let modal = document.getElementById("inquiryModal");
+
+            if (event.target == modal) {
+
+                modal.style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            fetch("https://restcountries.com/v3.1/all?fields=name")
+
+                .then(response => response.json())
+
+                .then(data => {
+
+                    let countrySelect = document.getElementById("country");
+
+                    data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+                    data.forEach(country => {
+
+                        let option = document.createElement("option");
+
+                        option.value = country.name.common;
+
+                        option.textContent = country.name.common;
+
+                        countrySelect.appendChild(option);
+
+                    });
+
+                })
+
+                .catch(error => {
+
+                    console.log("Country load error:", error);
+
+                });
+
+        });
+
+    </script>
 
 </body>
 
