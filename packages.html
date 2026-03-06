@@ -884,17 +884,84 @@
             gap: 30px;
         }
 
-        .package-card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
-            transition: .4s;
-        }
+.package-card{
+    position: relative;
+    height: 380px;
+    border-radius: 15px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition:0.4s;
+}
 
-        .package-card:hover {
-            transform: translateY(-10px);
-        }
+.package-card:hover{
+    transform:scale(1.05);
+}
+
+/* Background Image */
+.round-tour-card{
+    background-image: url("images/Packages/Popular/Round Tour.jpg");
+}
+
+/* Gradient Overlay */
+.package-overlay{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100%;
+    padding:25px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+
+    background: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.838),
+        rgba(0, 0, 0, 0.355),
+        rgba(0, 0, 0, 0)
+    );
+
+    color:white;
+}
+
+/* Title */
+.package-overlay h3{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+/* Hidden details */
+.package-details{
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+/* Hover show */
+.package-card:hover .package-details{
+    max-height:300px;
+}
+
+/* List */
+.package-details ul{
+    padding-left:18px;
+    margin-bottom:15px;
+}
+
+/* Button */
+.package-btn{
+    display:inline-block;
+    padding:10px 20px;
+    background:#ff7a00;
+    color:white;
+    text-decoration:none;
+    border-radius:6px;
+    font-weight:600;
+}
+
+
+
 
         .package-card img {
             width: 100%;
@@ -908,6 +975,11 @@
 
         .package-content h3 {
             margin: 0 0 10px;
+        }
+
+        .package-content li {
+            margin-bottom: 8px;
+            color: #3d3d3d;
         }
 
         .package-content p span {
@@ -1262,8 +1334,24 @@
 
         <div class="packages-grid">
 
-                        <div class="package-card">
-                <img src="images/sigiriya.jpg" alt="Promoter of JUCON TRAVELS">
+            <div class="package-card round-tour-card">
+    <div class="package-overlay">
+        <h3>Round Tour</h3>
+
+        <div class="package-details">
+            <ul>
+                <li>The Radiant Pearl Adventure</li>
+                <li>The Grand Ceylon Odyssey</li>
+                <li>Grand Sri Lanka Cultural & Nature Journey</li>
+                <li>Sri Lanka Coastal & Cultural Odyssey</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+            <div class="package-card">
+                <img src="images/Packages/Popular/Round Tour.jpg" alt="Promoter of JUCON TRAVELS">
                 <div class="package-content">
                     <h3>Round Tour</h3>
                             <ul>
@@ -1271,6 +1359,115 @@
                                 <li>The Grand Ceylon Odyssey</li>
                                 <li>Grand Sri Lanka Cultural & Nature Journey</li>
                                 <li>Sri Lanka Coastal & Cultural Odyssey</li>
+                            </ul>
+                    <a href="packages/Round Tour/Round Tour.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+                                    <div class="package-card">
+                <img src="images/Packages/Popular/Family Tour.jpg" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Family Tour</h3>
+                            <ul>
+                                <li>Sri Lanka Cultural Escape</li>
+                                <li>Sri Lanka Highlights & Coastal Bliss</li>
+                                <li>Ultimate Sri Lanka Grand Explorer</li>
+                            </ul>
+                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+                                                <div class="package-card">
+                <img src="images/Packages/Popular/Cultural and Heritage Tour.jpg" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Cultural and Heritage Tour</h3>
+                            <ul>
+                                <li>Sri Lanka Cultural Escape</li>
+                                <li>Sacred Kingdoms & Heritage Trail</li>
+                            </ul>
+                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+                                                            <div class="package-card">
+                <img src="images/Packages/Popular/Honeymoon Tour.png" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Honeymoon Tour</h3>
+                            <ul>
+                                <li>Sri Lanka Heritage, Highlands & Coastal Adventure</li>
+                                <li>Sri Lanka Hill Country & Cultural Escape</li>
+                            </ul>
+                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <img src="images/Packages/Popular/Beach Tour.png" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Beach Tour</h3>
+                            <ul>
+                                <li>Sri Lanka Southern Coastal Escape</li>
+                                <li>Sri Lanka Coastal Adventure & Watersports</li>
+                                <li>Eastern Coast & Cultural Discovery</li>
+                            </ul>
+                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+                        <div class="package-card">
+                <img src="images/Packages/Popular/Hill Country.jpg" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Hill Country</h3>
+                            <ul>
+                                <li>Hill Country & Heritage Journey</li>
+                                <li>Highlands & Heritage Trail</li>
+                            </ul>
+                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+                                    <div class="package-card">
+                <img src="images/Packages/Popular/Adventure Tour.jpg" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Adventure Tour</h3>
+                            <ul>
+                                <li>Sri Lanka Highlands Hiking & Cultural Adventure</li>
+                                <li>Adam’s Peak Pilgrimage & Highland Adventure</li>
+                            </ul>
+                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+                                                <div class="package-card">
+                <img src="images/Packages/Popular/Nature and Wildlife.png" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Nature and Wildlife</h3>
+                            <ul>
+                                <li>Wildlife & Cultural Safari Adventure</li>
+                                <li>Wildlife, Highlands & Coastal Wonders</li>
+                            </ul>
+                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+                                                            <div class="package-card">
+                <img src="images/Packages/Popular/Ramayana Tour.png" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Ramayana Tour</h3>
+                            <ul>
+                                <li>Ramayana Heritage & Coastal Expedition</li>
+                                <li>Ramayana Legends & Highland Wonders</li>
+                            </ul>
+                    <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
+                </div>
+            </div>
+
+                <div class="package-card">
+                <img src="images/Packages/Popular/Special Event.jpg" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Special Event</h3>
+                            <ul>
+                                <li>Kandy Esala Perahera & Heritage Journey</li>
                             </ul>
                     <a href="packages/Pearl/The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
                 </div>
