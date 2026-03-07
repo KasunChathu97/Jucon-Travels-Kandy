@@ -14,9 +14,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <style>
         :root {
@@ -1153,107 +1153,119 @@
             }
         }
 
-.tour-card-section{
-padding:90px 8%;
-background:#ffffff;
-display:flex;
-justify-content:center;
-}
+        .tour-card-section {
+            padding: 90px 8%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            margin-top: -100px;
+            margin-bottom: -50px;
+        }
 
-.tour-card{
-background:white;
-max-width:700px;
-width:100%;
-padding:45px;
-border-radius:18px;
-box-shadow:0 15px 40px rgba(0,0,0,0.15);
-text-align:center;
-}
+        .tour-card {
+            background: linear-gradient(135deg, #acacacb5, #ececec);
+            max-width: 700px;
+            width: 100%;
+            padding: 45px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
 
-.tour-card h2{
-font-size:34px;
-margin-bottom:10px;
-}
+        .tour-card:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.375);
+            transform: translateY(-6px);
+            background: linear-gradient(135deg, #ececec, #acacacb5);
+        }
 
-.tour-sub{
-color:#666;
-margin-bottom:25px;
-}
+        .tour-card h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
 
-/* BUTTON */
+        .tour-sub {
+            color: #666;
+            margin-bottom: 25px;
+        }
 
-.view-map-btn{
-padding:14px 30px;
-background:#1c73e8;
-color:white;
-border:none;
-border-radius:8px;
-font-size:16px;
-cursor:pointer;
-transition:.3s;
-margin-bottom:30px;
-}
+        /* BUTTON */
 
-.view-map-btn:hover{
-background:black;
-}
+        .view-map-btn {
+            padding: 14px 30px;
+            background: #1c73e8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s;
+            margin-bottom: 30px;
+        }
 
-/* DETAILS */
+        .view-map-btn:hover {
+            background: black;
+        }
 
-.tour-details ul{
-list-style:none;
-padding:0;
-margin:0;
-text-align:left;
-max-width:420px;
-margin:auto;
-}
+        /* DETAILS */
 
-.tour-details li{
-margin-bottom:12px;
-font-size:17px;
-padding-left:28px;
-position:relative;
-}
+        .tour-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            max-width: 420px;
+            margin: auto;
+        }
 
-.tour-details li::before{
-content:"✔";
-position:absolute;
-left:0;
-color:#1c73e8;
-font-weight:bold;
-}
+        .tour-details li {
+            margin-bottom: 12px;
+            font-size: 17px;
+            padding-left: 28px;
+            position: relative;
+        }
 
-/* MAP MODAL */
+        .tour-details li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #1c73e8;
+            font-weight: bold;
+        }
 
-.tour-map-modal{
-display:none;
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.85);
-justify-content:center;
-align-items:center;
-z-index:999;
-}
+        /* MAP MODAL */
 
-#tourMap{
-width:80%;
-height:520px;
-border-radius:16px;
-box-shadow:0 20px 50px rgba(0,0,0,0.4);
-}
+        .tour-map-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
 
-.close-map{
-position:absolute;
-top:40px;
-right:60px;
-font-size:40px;
-color:white;
-cursor:pointer;
-}
+        #tourMap {
+            width: 80%;
+            height: 650px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .close-map {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .car-icon {
+            font-size: 28px;
+        }
 
         /* ===== FOOTER ===== */
         .footer {
@@ -1406,94 +1418,6 @@ cursor:pointer;
         .social-links li a .fab {
             vertical-align: middle;
         }
-
-        /* TOUR CARD */
-        .tour-section{
-padding:90px 8%;
-display:flex;
-justify-content:center;
-background:#f7f7f7;
-}
-
-/* CARD */
-
-.flip-card{
-width:420px;
-height:550px;
-perspective:1000px;
-}
-
-/* INNER */
-
-.flip-card-inner{
-position:relative;
-width:100%;
-height:100%;
-transition:transform 0.8s;
-transform-style:preserve-3d;
-}
-
-/* HOVER FLIP */
-
-.flip-card:hover .flip-card-inner{
-transform:rotateY(180deg);
-}
-
-/* FRONT + BACK */
-
-.flip-card-front,
-.flip-card-back{
-
-position:absolute;
-width:100%;
-height:100%;
-backface-visibility:hidden;
-
-border-radius:16px;
-box-shadow:0 15px 40px rgba(0,0,0,0.2);
-padding:40px;
-background:white;
-}
-
-/* FRONT */
-
-.flip-card-front h2{
-margin-bottom:20px;
-font-size:28px;
-}
-
-.flip-card-front ul{
-list-style:none;
-padding:0;
-}
-
-.flip-card-front li{
-margin-bottom:12px;
-font-size:16px;
-padding-left:26px;
-position:relative;
-}
-
-.flip-card-front li::before{
-content:"✔";
-position:absolute;
-left:0;
-color:#1c73e8;
-}
-
-/* BACK */
-
-.flip-card-back{
-transform:rotateY(180deg);
-display:flex;
-align-items:center;
-justify-content:center;
-}
-
-.flip-card-back img{
-width:100%;
-border-radius:12px;
-}
     </style>
 </head>
 
@@ -1506,7 +1430,7 @@ border-radius:12px;
                 <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                 <div class="brand-title">
                     <strong>JUCON TRAVELS</strong>
-                    <span>Travel Agency & Sri Lanka</span>
+                    <span>Travel Agency, Sri Lanka</span>
                 </div>
             </a>
 
@@ -1542,101 +1466,59 @@ border-radius:12px;
     <section class="about-text container">
         <h2 id="intro">✨ Tour Description</h2>
         <p>
-            Experience the quintessential charm of the island on this 9-day journey, starting from the sun-kissed shores of Negombo. Encounter majestic giants at Pinnawala and the wild herds of Minneriya before diving into history at the Sigiriya rock fortress and Dambulla Cave Temple. Discover the scents of a Spice Garden and the spiritual grace of Kandy’s Tooth Relic and traditional dancing. Your path leads through the Gem Museum and Peradeniya Gardens to the misty tea estates of Nuwara Eliya and Ramboda Falls. Hike the heights of Horton Plains, Hakkgala, and Ella’s iconic Nine Arch Bridge, Mini World’s End, and Ravana Falls. Finally, find soul in Kataragama, adventure in Yala’s wild jungles, and relaxation on Mirissa’s golden sands, concluding with the history of Galle Fort, Kosgoda’s turtles, and a vibrant Colombo finale.
+            Experience the quintessential charm of the island on this 9-day journey, starting from the sun-kissed shores
+            of Negombo. Encounter majestic giants at Pinnawala and the wild herds of Minneriya before diving into
+            history at the Sigiriya rock fortress and Dambulla Cave Temple. Discover the scents of a Spice Garden and
+            the spiritual grace of Kandy’s Tooth Relic and traditional dancing. Your path leads through the Gem Museum
+            and Peradeniya Gardens to the misty tea estates of Nuwara Eliya and Ramboda Falls. Hike the heights of
+            Horton Plains, Hakkgala, and Ella’s iconic Nine Arch Bridge, Mini World’s End, and Ravana Falls. Finally,
+            find soul in Kataragama, adventure in Yala’s wild jungles, and relaxation on Mirissa’s golden sands,
+            concluding with the history of Galle Fort, Kosgoda’s turtles, and a vibrant Colombo finale.
         </p>
 
 
     </section>
 
-    <!-- Discover More Button -->
-     <!--
-    <div class="discover-more">
-        <a href="#intro" class="btn-primary active">8 Nights / 9 Days</a>
-    </div> -->
+    <section class="tour-card-section">
 
-<section class="tour-card-section">
+        <div class="tour-card">
 
-<div class="tour-card">
+            <h2>Sri Lanka Tour Route with Jucon</h2>
 
-<h2>Sri Lanka Tour Route with Jucon</h2>
+            <p class="tour-sub">
+                Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
+            </p>
 
-<p class="tour-sub">
-Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
-</p>
-
-<button class="view-map-btn" onclick="openTourMap()">View Tour Map</button>
+            <button class="view-map-btn" onclick="openTourMap()">View Tour Map</button>
 
 
-<div class="tour-details">
+            <div class="tour-details">
 
-<ul>
+                <ul>
 
-<li>3 UNESCO World Heritage Sites</li>
-<li>2 National Park Safaris</li>
-<li>Scenic Hill Country & Waterfalls</li>
-<li>Ancient Kingdoms & Sacred Temples</li>
-<li>Tropical Beaches & River Safari</li>
-<li>Cultural Performances & Local Experiences</li>
+                    <li>3 UNESCO World Heritage Sites</li>
+                    <li>2 National Park Safaris</li>
+                    <li>Scenic Hill Country & Waterfalls</li>
+                    <li>Ancient Kingdoms & Sacred Temples</li>
+                    <li>Tropical Beaches & River Safari</li>
+                    <li>Cultural Performances & Local Experiences</li>
 
-</ul>
+                </ul>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-</section>
+    </section>
 
-<section class="tour-section">
+    <!-- MAP MODAL -->
+    <div id="tourMapModal" class="tour-map-modal">
 
-<div class="flip-card">
+        <span class="close-map" onclick="closeTourMap()">×</span>
 
-<div class="flip-card-inner">
+        <div id="tourMap"></div>
 
-<!-- FRONT SIDE -->
-
-<div class="flip-card-front">
-
-<h2>Sri Lanka Tour Highlights</h2>
-
-<ul>
-
-<li>3 UNESCO World Heritage Sites</li>
-<li>2 National Park Safaris</li>
-<li>Scenic Hill Country & Waterfalls</li>
-<li>Ancient Kingdoms & Sacred Temples</li>
-<li>Tropical Beaches & River Safari</li>
-<li>Cultural Performances & Local Experiences</li>
-
-</ul>
-
-</div>
-
-
-<!-- BACK SIDE -->
-
-<div class="flip-card-back">
-
-<img src="../../images/Packages/Map/The Radiant Pearl Adventure.png" alt="Sri Lanka Map">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-
-<!-- MAP MODAL -->
-
-<div id="tourMapModal" class="tour-map-modal">
-
-<span class="close-map" onclick="closeTourMap()">×</span>
-
-<div id="tourMap"></div>
-
-</div>
+    </div>
 
 
     <div class="container">
@@ -1647,12 +1529,12 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3 id="day1">Day 1: Negombo â€“ The Gateway to the Island</h3>
+                            <h3 id="day1">Day 1: Negombo – The Gateway to the Island</h3>
                             <ul>
                                 <li><span class="highlight">The Experience:</span> Spend the morning at <span>Negombo
                                         Beach</span>, watching the "Oruwa" (traditional outrigger canoes) return with
                                     their catch. Your <span>City Tour</span> will lead you through the <span>Dutch
-                                        Canal</span>, a relic of colonial engineering, and the <span>St. Maryâ€™s
+                                        Canal</span>, a relic of colonial engineering, and the <span>St. Mary’s
                                         Church</span>, famous for its ceiling paintings.</li>
                                 <li><span class="highlight">Culture & Heritage:</span> Visit the bustling <span>Negombo
                                         Fish Market (Lellama)</span> to see the 18th-century "Madu" drying process.</li>
@@ -1667,7 +1549,7 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
 
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/negombo.jpg" alt="Negombo">
+                            <img src="../../images/Packages/Destinations/Negambo.png" alt="Negombo">
                         </div>
                     </div>
                 </div>
@@ -1678,11 +1560,11 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/Pinnawala & Minneriya.jpg" alt="Pinnawala">
+                            <img src="../../images/Packages/Destinations/Dambulla.jpg" alt="Pinnawala">
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 2: Negombo to Dambulla â€“ The Elephant Trails</h3>
+                            <h3>Day 2: Negombo to Dambulla – The Elephant Trails</h3>
                             <ul>
                                 <li><span class="highlight">The Experience:</span> Visit the <span>Pinnawala Elephant
                                         Orphanage</span>. The highlight is the <span>River Bath at 10:00 AM</span>,
@@ -1707,7 +1589,7 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 3: Sigiriya & Kandy â€“ The Majestic Heartland</h3>
+                            <h3>Day 3: Sigiriya & Kandy – The Majestic Heartland</h3>
                             <ul>
                                 <li><span class="highlight">The Experience:</span> Conquer the <span>Sigiriya Rock
                                         Fortress</span>, an 8th-wonder architectural feat. Later, explore the
@@ -1715,8 +1597,8 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                                         Garden</span>. Arrive in Kandy for a <span>Traditional Dance Performance</span>
                                     and a visit to the <span>Temple of the Tooth</span>.
                                 </li>
-                                <li><span class="highlight">Culture & Heritage:</span> Sigiriyaâ€™s frescoes and
-                                    Dambullaâ€™s 150+ Buddha statues offer a deep dive into ancient Buddhist art. The
+                                <li><span class="highlight">Culture & Heritage:</span> Sigiriya’s frescoes and
+                                    Dambulla’s 150+ Buddha statues offer a deep dive into ancient Buddhist art. The
                                     Temple of the Tooth is the spiritual heart of the nation.</li>
                                 <li><span class="highlight">Value Addition:</span> We include a private 15-minute
                                     Ayurvedic head and shoulder massage at the Spice Garden to rejuvenate you after the
@@ -1726,7 +1608,7 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/Sigiriya & Kandy.jpg" alt="Sigiriya">
+                            <img src="../../images/Packages/Destinations/Kandy.jpg" alt="Sigiriya">
                         </div>
                     </div>
                 </div>
@@ -1737,11 +1619,11 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/Nuwara Eliya.png" alt="Nuwara Eliya">
+                            <img src="../../images/Packages/Destinations/Nuwara Eliya.png" alt="Nuwara Eliya">
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 4: Kandy to Nuwara Eliya â€“ Into the Clouds</h3>
+                            <h3>Day 4: Kandy to Nuwara Eliya – Into the Clouds</h3>
                             <ul>
                                 <li><span class="highlight">Morning Breakfast:</span> Enjoy a colonial-style breakfast
                                     in the hill capital.</li>
@@ -1753,7 +1635,7 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                                     journey through 150 years of tea-making history. The Botanical Gardens feature an
                                     iconic orchid house and a massive Javan fig tree.</li>
                                 <li><span class="highlight">Value Addition:</span> A guided tea-tasting session where
-                                    youâ€™ll learn to distinguish between the "Golden" and "Silver" tips of high-grown
+                                    you’ll learn to distinguish between the "Golden" and "Silver" tips of high-grown
                                     Ceylon tea.</li>
                             </ul>
                             <p><span>Stay overnight in Nuwara Eliya</span></p>
@@ -1767,17 +1649,17 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 5: Nuwara Eliya to Ella â€“ The Mini Worldâ€™s End</h3>
+                            <h3>Day 5: Nuwara Eliya to Ella – The Mini World’s End</h3>
                             <ul>
                                 <li><span class="highlight">Morning Breakfast:</span> An early packed breakfast to enjoy
                                     amidst the mist of the highlands.</li>
                                 <li><span class="highlight">The Experience:</span> Start with a trek at <span>Horton
-                                        Plains</span> to stand at <span>Worldâ€™s End</span>, a 4,000-foot precipice.
+                                        Plains</span> to stand at <span>World’s End</span>, a 4,000-foot precipice.
                                     Visit the lush <span>Hakgala Botanical Garden</span> before settling into the
                                     bohemian atmosphere of <span>Ella City</span>.</li>
                                 <li><span class="highlight">Nature:</span> Experience the unique "cloud forest"
                                     ecosystem of Horton Plains, home to endemic Sambar deer.</li>
-                                <li><span class="highlight">Value Addition:</span> Weâ€™ve timed your arrival in Ella so
+                                <li><span class="highlight">Value Addition:</span> We’ve timed your arrival in Ella so
                                     you can catch the sunset at a viewpoint overlooking the Ella Gap, often described as
                                     the most beautiful view in the country.</li>
                             </ul>
@@ -1785,7 +1667,7 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/Horton Plains & Ella.jpg" alt="Horton Plains & Ella">
+                            <img src="../../images/Packages/Destinations/Ella.png" alt="Horton Plains & Ella">
                         </div>
                     </div>
                 </div>
@@ -1796,18 +1678,18 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/Tissamaharama.jpg" alt="Tissamaharama">
+                            <img src="../../images/Packages/Destinations/Thissamaharamaya.jpg" alt="Tissamaharama">
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 6: Ella to Tissamaharama â€“ The Southern Transition</h3>
+                            <h3>Day 6: Ella to Tissamaharama – The Southern Transition</h3>
                             <ul>
                                 <li><span class="highlight">The Experience:</span> Visit the <span>Nine Arch
-                                        Bridge</span> (timed for a passing train) and hike <span>Mini Worldâ€™s
+                                        Bridge</span> (timed for a passing train) and hike <span>Mini World’s
                                         End</span>. Stop at <span>Ravana Falls</span>, steeped in Hindu mythology,
                                     before arriving at the <span>Kataragama Ancient City</span>.</li>
                                 <li><span class="highlight">Culture & Heritage:</span> Kataragama is a unique
-                                    multi-religious site where Buddhists, Hindus, and Muslims worship side-by-sideâ€”a
+                                    multi-religious site where Buddhists, Hindus, and Muslims worship side-by-side—a
                                     powerful symbol of Sri Lankan harmony.</li>
                                 <li><span class="highlight">Value Addition:</span> Experience the evening "Puja"
                                     ceremony in Kataragama, filled with the aroma of incense and the sound of ritual
@@ -1824,7 +1706,7 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 7: Tissamaharama to Mirissa â€“ Wild Safari to Blue Waters</h3>
+                            <h3>Day 7: Tissamaharama to Mirissa – Wild Safari to Blue Waters</h3>
                             <ul>
                                 <li><span class="highlight">Morning Breakfast:</span> A sunrise breakfast inside a 4x4
                                     Jeep during your <span>Yala Safari</span>.</li>
@@ -1834,14 +1716,14 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                                 <li><span class="highlight">Nature:</span> Yala has one of the highest leopard densities
                                     in the world. Mirissa offers a perfect contrast of tranquil coastal bliss.</li>
                                 <li><span class="highlight">Value Addition:</span> Your driver will stop at a secret
-                                    spot on the way to Mirissa to see the famous "Stilt Fishermen"â€”a traditional method
+                                    spot on the way to Mirissa to see the famous "Stilt Fishermen"—a traditional method
                                     of fishing unique to this coastline.</li>
                             </ul>
                             <p><span>Stay overnight in Mirissa</span></p>
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/Yala & Mirissa.png" alt="Yala & Mirissa">
+                            <img src="../../images/Packages/Destinations/Mirissa.jpg" alt="Yala & Mirissa">
                         </div>
                     </div>
                 </div>
@@ -1852,11 +1734,11 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/Galle & Colombo.jpg" alt="Galle & Colombo">
+                            <img src="../../images/Packages/Destinations/Colombo.png" alt="Galle & Colombo">
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 8: Mirissa to Colombo â€“ Colonial Charms & City Lights</h3>
+                            <h3>Day 8: Mirissa to Colombo – Colonial Charms & City Lights</h3>
                             <ul>
                                 <li><span class="highlight">Morning Breakfast:</span> Relaxed breakfast by the beach.
                                 </li>
@@ -1882,7 +1764,7 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 9: Colombo to Airport â€“ Departure</h3>
+                            <h3>Day 9: Colombo to Airport – Departure</h3>
                             <ul>
                                 <li><span class="highlight">Morning Breakfast:</span> A final lavish Sri Lankan buffet.
                                 </li>
@@ -1893,11 +1775,11 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                                     drop-off with a final traditional Sri Lankan "Goodbye" (Ayubowan), wishing you a
                                     long and healthy life.</li>
                             </ul>
-                            <p><span>End of the Journey</span></p>
+                            <p><span>Be careful and come back.</span></p>
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/airport.jpg" alt="Airport Departure">
+                            <img src="../../images/Packages/Destinations/airport.jpg" alt="Airport Departure">
                         </div>
                     </div>
                 </div>
@@ -1964,7 +1846,7 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
                     <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                     <div class="brand-title1">
                         <strong>JUCON TRAVELS</strong>
-                        <span>Travel Agency â€¢ Sri Lanka</span>
+                        <span>Travel Agency, Sri Lanka</span>
                     </div>
                 </a>
                 <!-- Social Icons -->
@@ -2035,75 +1917,153 @@ Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
 
         <!-- Copyright -->
         <div class="footer-bottom">
-            <div>Copyright Â© 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
+            <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
         </div>
     </footer>
 
 
     <script>
 
-function openTourMap(){
-document.getElementById("tourMapModal").style.display="flex";
-setTimeout(initMap,200);
-}
+        function openTourMap() {
+            document.getElementById("tourMapModal").style.display = "flex";
+            setTimeout(initMap, 200);
+        }
 
-function closeTourMap(){
-document.getElementById("tourMapModal").style.display="none";
-}
+        function closeTourMap() {
+            document.getElementById("tourMapModal").style.display = "none";
+        }
 
-</script>
+    </script>
 
-<script>
+    <script>
 
-function initMap(){
+        function initMap() {
 
-if(window.mapLoaded) return;
+            if (window.mapLoaded) return;
 
-window.mapLoaded = true;
+            window.mapLoaded = true;
 
-var map = L.map('tourMap').setView([7.5,80.7],7);
+            var map = L.map('tourMap').setView([7.5, 80.7], 7);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
-attribution:'© OpenStreetMap'
-}).addTo(map);
-
-
-var cities = [
-
-["Negombo",7.2083,79.8358],
-["Dambulla",7.8742,80.6525],
-["Kandy",7.2906,80.6337],
-["Nuwara Eliya",6.9497,80.7891],
-["Ella",6.8667,81.0460],
-["Tissamaharama",6.2792,81.2910],
-["Mirissa",5.9483,80.4561],
-["Colombo",6.9271,79.8612]
-
-];
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
 
 
-cities.forEach(function(city){
+            /* CITIES */
 
-L.marker([city[1],city[2]])
-.addTo(map)
-.bindPopup(city[0]);
+            var cities = [
 
-});
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Destinations/Negambo.png"],
+                ["Dambulla", 7.8742, 80.6525, "../../images/Packages/destinations/Dambulla.jpg"],
+                ["Kandy", 7.2906, 80.6337, "../../images/Packages/Destinations/Kandy.jpg"],
+                ["Nuwara Eliya", 6.9497, 80.7891, "../../images/Packages/Destinations/Nuwara Eliya.png"],
+                ["Ella", 6.8667, 81.0460, "../../images/Packages/Destinations/Ella.png"],
+                ["Tissamaharama", 6.2792, 81.2910, "../../images/Packages/Destinations/Thissamaharamaya.jpg"],
+                ["Mirissa", 5.9483, 80.4561, "../../images/Packages/Destinations/Mirissa.jpg"],
+                ["Colombo", 6.9271, 79.8612, "../../images/Packages/Destinations/Colombo.png"],
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Destinations/Negambo.png"]
 
-
-var routeCoords = cities.map(c=>[c[1],c[2]]);
-
-var route = L.polyline(routeCoords,{
-color:'#ff5a00',
-weight:4
-}).addTo(map);
-
-map.fitBounds(route.getBounds());
+            ];
 
 
-}
+            /* MARKERS WITH HOVER POPUP */
 
-</script>
+            /* MARKERS WITH HOVER POPUP - RED PIN */
+            var cityMarkers = [];
+
+            // Red pin icon
+            var redIcon = L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+                shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+
+            var greenIcon = L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+                shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+
+            cities.forEach(function (city) {
+                var marker = L.marker([city[1], city[2]], { icon: redIcon }).addTo(map);
+                marker.bindPopup(`<div style="text-align:center;width:180px;">
+        <img src="${city[3]}" style="width:100%;border-radius:8px;margin-bottom:6px;">
+        <b>${city[0]}</b>
+    </div>`);
+                marker.on('mouseover', function () { this.openPopup(); });
+                marker.on('mouseout', function () { this.closePopup(); });
+                cityMarkers.push(marker);
+            });
+
+
+            /* ROUTE */
+
+            var routeCoords = cities.map(c => [c[1], c[2]]);
+
+            var route = L.polyline(routeCoords, {
+                color: '#1E90FF', // Nilapatin blue
+                weight: 4
+            }).addTo(map);
+
+            map.fitBounds(route.getBounds());
+
+
+            /* SMOOTH CAR MOVEMENT USING L.latLng AND DISTANCE INTERPOLATION */
+            var carIcon = L.divIcon({
+                html: '<div id="car" style="font-size:22px; transition: transform 0.1s linear;">🛞</div>',
+                className: "",
+                iconSize: [30, 30]
+            });
+
+            var carMarker = L.marker(routeCoords[0], { icon: carIcon }).addTo(map);
+
+            var segment = 0;
+            var progress = 0;
+            var speed = 0.008; // adjust for slower/faster
+
+            function moveCarAccurate() {
+                if (segment >= routeCoords.length - 1) return;
+
+                var start = L.latLng(routeCoords[segment]);
+                var end = L.latLng(routeCoords[segment + 1]);
+
+                // Interpolate
+                var lat = start.lat + (end.lat - start.lat) * progress;
+                var lng = start.lng + (end.lng - start.lng) * progress;
+                carMarker.setLatLng([lat, lng]);
+
+                // Rotate car
+                var angle = Math.atan2(end.lng - start.lng, end.lat - start.lat) * 180 / Math.PI;
+                document.getElementById("car").style.transform = `rotate(${angle - 90}deg)`;
+
+                progress += speed;
+
+                // Change icon of current end city when car reaches it
+                if (progress >= 1) {
+                    progress = 0;
+
+                    if (segment + 1 < cityMarkers.length) {
+                        cityMarkers[segment + 1].setIcon(greenIcon); // current city pin green
+                    }
+
+                    segment++;
+                }
+
+                requestAnimationFrame(moveCarAccurate);
+            }
+
+            setTimeout(moveCarAccurate, 1000);
+
+        }
+
+    </script>
 
 </body>
 
