@@ -51,7 +51,8 @@
 
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             color: #111 !important;
             background: #fff !important;
             min-height: 100vh;
@@ -83,7 +84,8 @@
             margin-top: -45px;
             margin-bottom: 25px;
             color: #444;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
 
         .skip-link {
@@ -343,7 +345,8 @@
         }
 
         h1 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(34px, 4.2vw, 56px);
             line-height: 1.03;
             letter-spacing: .2px;
@@ -450,7 +453,8 @@
         }
 
         .section-head h2 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(24px, 2.6vw, 34px);
             margin: 0;
             line-height: 1.1;
@@ -711,7 +715,8 @@
         .video-content h1 {
             color: #fff;
             font-size: clamp(32px, 4vw, 56px);
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             margin: 0;
         }
 
@@ -1288,6 +1293,34 @@
             background: #000000;
         }
 
+        .page-navigation a {
+            position: relative;
+            text-decoration: none;
+        }
+
+        /* Tooltip */
+        .page-navigation a::after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #838383;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .page-navigation a:hover::after {
+            opacity: 1;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background-color: #F5F5F5;
@@ -1306,7 +1339,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             align-items: start;
-            margin-top: 60px;
+            margin-top: 10px;
         }
 
         .footer-column .site-logo {
@@ -1540,7 +1573,7 @@
 
     </div>
 
-
+    <!-- Itinerary Timeline -->
     <div class="container">
         <!-- TIMELINE -->
         <div class="timeline">
@@ -1889,9 +1922,14 @@
 
         <div class="page-navigation">
 
-            <a href="The Grand Ceylon Odyssey.html" class="nav-btn prev">← Previous</a>
+            <a href="The Grand Ceylon Odyssey.html" class="nav-btn prev" data-title="The Grand Ceylon Odyssey">
+                ← Previous
+            </a>
 
-            <a href="Sri Lanka Coastal & Cultural Odyssey.html" class="nav-btn next">Next →</a>
+            <a href="Sri Lanka Coastal & Cultural Odyssey.html" class="nav-btn next"
+                data-title="Sri Lanka Coastal & Cultural Odyssey">
+                Next →
+            </a>
 
         </div>
 
@@ -2063,19 +2101,19 @@
 
             var cities = [
 
-                ["Negombo", 7.2083, 79.8358, "../../images/Packages/map/Negombo.jpg"],
-                ["Dambulla", 7.8742, 80.6525, "../../images/Packages/map/Dambulla.png"],
-                ["Polonnaruwa", 7.9403, 81.0188, "../../images/Packages/map/Polonnaruwa.png"],
-                ["Anuradhapura", 8.3114, 80.4037, "../../images/Packages/map/Anuradhapura.jpg"],
-                ["Sigiriya", 7.9570, 80.7603, "../../images/Packages/map/Sigiriya.jpg"],
-                ["Kandy", 7.2906, 80.6337, "../../images/Packages/map/Kandy.jpg"],
-                ["Nuwara Eliya", 6.9497, 80.7891, "../../images/Packages/map/Nuwara Eliya.jpg"],
-                ["Ella", 6.8667, 81.0460, "../../images/Packages/map/Ella.jpg"],
-                ["Yala", 6.3725, 81.5185, "../../images/Packages/map/Yala.jpg"],
-                ["Mirissa", 5.9483, 80.4561, "../../images/Packages/map/Mirissa.png"],
-                ["Galle", 6.0535, 80.2210, "../../images/Packages/map/Galle Fort.png"],
-                ["Colombo", 6.9271, 79.8612, "../../images/Packages/map/Colombo.png"],
-                ["Negombo", 7.2083, 79.8358, "../../images/Packages/map/Negombo.jpg"]
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Map/Negombo.jpg"],
+                ["Dambulla", 7.8742, 80.6525, "../../images/Packages/Map/Dambulla.png"],
+                ["Polonnaruwa", 7.9403, 81.0188, "../../images/Packages/Map/Polonnaruwa.png"],
+                ["Anuradhapura", 8.3114, 80.4037, "../../images/Packages/Map/Anuradhapura.jpg"],
+                ["Sigiriya", 7.9570, 80.7603, "../../images/Packages/Map/Sigiriya.jpg"],
+                ["Kandy", 7.2906, 80.6337, "../../images/Packages/Map/Kandy.jpg"],
+                ["Nuwara Eliya", 6.9497, 80.7891, "../../images/Packages/Map/Nuwara Eliya.jpg"],
+                ["Ella", 6.8667, 81.0460, "../../images/Packages/Map/Ella.jpg"],
+                ["Yala", 6.3725, 81.5185, "../../images/Packages/Map/Yala.jpg"],
+                ["Mirissa", 5.9483, 80.4561, "../../images/Packages/Map/Mirissa.png"],
+                ["Galle", 6.0535, 80.2210, "../../images/Packages/Map/Galle Fort.png"],
+                ["Colombo", 6.9271, 79.8612, "../../images/Packages/Map/Colombo.png"],
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Map/Negombo.jpg"]
             ];
 
 

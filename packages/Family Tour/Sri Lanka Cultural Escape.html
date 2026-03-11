@@ -51,7 +51,8 @@
 
         body {
             margin: 0;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             color: #111 !important;
             background: #fff !important;
             min-height: 100vh;
@@ -83,7 +84,8 @@
             margin-top: -45px;
             margin-bottom: 25px;
             color: #444;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
 
         .skip-link {
@@ -343,7 +345,8 @@
         }
 
         h1 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(34px, 4.2vw, 56px);
             line-height: 1.03;
             letter-spacing: .2px;
@@ -450,7 +453,8 @@
         }
 
         .section-head h2 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(24px, 2.6vw, 34px);
             margin: 0;
             line-height: 1.1;
@@ -711,7 +715,8 @@
         .video-content h1 {
             color: #fff;
             font-size: clamp(32px, 4vw, 56px);
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             margin: 0;
         }
 
@@ -1288,6 +1293,34 @@
             background: #000000;
         }
 
+        .page-navigation a {
+            position: relative;
+            text-decoration: none;
+        }
+
+        /* Tooltip */
+        .page-navigation a::after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #838383;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .page-navigation a:hover::after {
+            opacity: 1;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background-color: #F5F5F5;
@@ -1306,7 +1339,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             align-items: start;
-            margin-top: 60px;
+            margin-top: 10px;
         }
 
         .footer-column .site-logo {
@@ -1487,7 +1520,10 @@
     <section class="about-text container">
         <h2 id="intro">✨ Tour Description</h2>
         <p>
-            Perfect for travelers with limited time, this 6-day journey offers a compact yet enriching experience of Sri Lanka’s cultural heart and scenic hill country. From golden beaches and ancient cave temples to sacred shrines, tea plantations, and colonial charm, this tour blends history, spirituality, and breathtaking landscapes into one unforgettable escape.
+            Perfect for travelers with limited time, this 6-day journey offers a compact yet enriching experience of Sri
+            Lanka’s cultural heart and scenic hill country. From golden beaches and ancient cave temples to sacred
+            shrines, tea plantations, and colonial charm, this tour blends history, spirituality, and breathtaking
+            landscapes into one unforgettable escape.
         </p>
 
 
@@ -1534,7 +1570,7 @@
 
     </div>
 
-
+    <!-- TIMELINE -->
     <div class="container">
         <!-- TIMELINE -->
         <div class="timeline">
@@ -1545,10 +1581,15 @@
                         <div class="day-text">
                             <h3 id="day1">Day 1: Arrival in Negombo – Coastal Relaxation</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Unwind on the golden sands of Negombo Beach and enjoy a short city tour through this lively coastal town.</li>
-                                <li><span class="highlight">Culture & Heritage:</span> Explore Dutch canals, colonial churches, and the traditional fish market reflecting centuries of maritime history.</li>
-                                <li><span class="highlight">Nature:</span> Palm-lined beaches and the calm waters of Negombo Lagoon.</li>
-                                <li><span class="highlight">Value Addition:</span> Optional sunset lagoon cruise followed by a fresh seafood welcome dinner.</li>
+                                <li><span class="highlight">The Experience:</span> Unwind on the golden sands of Negombo
+                                    Beach and enjoy a short city tour through this lively coastal town.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Explore Dutch canals, colonial
+                                    churches, and the traditional fish market reflecting centuries of maritime history.
+                                </li>
+                                <li><span class="highlight">Nature:</span> Palm-lined beaches and the calm waters of
+                                    Negombo Lagoon.</li>
+                                <li><span class="highlight">Value Addition:</span> Optional sunset lagoon cruise
+                                    followed by a fresh seafood welcome dinner.</li>
                             </ul>
                             <p><span>Stay overnight in Negombo</span></p>
                         </div>
@@ -1572,10 +1613,15 @@
                         <div class="day-text">
                             <h3>Day 2: Negombo to Dambulla – Heritage & Wildlife</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Visit the magnificent Dambulla Cave Temple and explore its sacred cave shrines filled with ancient murals and Buddha statues.</li>
-                                <li><span class="highlight">Culture & Heritage:</span> A UNESCO World Heritage Site showcasing over 2,000 years of Buddhist devotion and artistry.</li>
-                                <li><span class="highlight">Nature:</span> Scenic rock surroundings with panoramic countryside views.</li>
-                                <li><span class="highlight">Value Addition:</span> Optional safari at Minneriya National Park (seasonal elephant gathering).</li>
+                                <li><span class="highlight">The Experience:</span> Visit the magnificent Dambulla Cave
+                                    Temple and explore its sacred cave shrines filled with ancient murals and Buddha
+                                    statues.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> A UNESCO World Heritage Site
+                                    showcasing over 2,000 years of Buddhist devotion and artistry.</li>
+                                <li><span class="highlight">Nature:</span> Scenic rock surroundings with panoramic
+                                    countryside views.</li>
+                                <li><span class="highlight">Value Addition:</span> Optional safari at Minneriya National
+                                    Park (seasonal elephant gathering).</li>
                             </ul>
                             <p><span>Stay overnight in Dambulla</span></p>
                         </div>
@@ -1590,10 +1636,15 @@
                         <div class="day-text">
                             <h3>Day 3: Dambulla to Kandy – Sacred Traditions</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Travel to Kandy and visit the revered Temple of the Sacred Tooth Relic followed by a traditional Kandyan dance performance.</li>
-                                <li><span class="highlight">Culture & Heritage:</span> Discover Sri Lanka’s spiritual capital and its royal legacy.</li>
-                                <li><span class="highlight">Nature:</span> Walk around scenic Kandy Lake surrounded by misty hills.</li>
-                                <li><span class="highlight">Value Addition:</span> Spice garden visit en route with herbal demonstration.</li>
+                                <li><span class="highlight">The Experience:</span> Travel to Kandy and visit the revered
+                                    Temple of the Sacred Tooth Relic followed by a traditional Kandyan dance
+                                    performance.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Discover Sri Lanka’s spiritual
+                                    capital and its royal legacy.</li>
+                                <li><span class="highlight">Nature:</span> Walk around scenic Kandy Lake surrounded by
+                                    misty hills.</li>
+                                <li><span class="highlight">Value Addition:</span> Spice garden visit en route with
+                                    herbal demonstration.</li>
                             </ul>
                             <p><span>Stay overnight in Kandy</span></p>
                         </div>
@@ -1616,10 +1667,14 @@
                         <div class="day-text">
                             <h3>Day 4: Kandy to Nuwara Eliya – Into Tea Country</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Visit the beautiful Royal Botanic Gardens Peradeniya, admire Ramboda Waterfall, and tour a working tea factory.</li>
-                                <li><span class="highlight">Culture & Heritage:</span> Learn about Sri Lanka’s world-famous Ceylon Tea production process.</li>
-                                <li><span class="highlight">Nature:</span> Misty mountains, cascading waterfalls, and lush tea plantations.</li>
-                                <li><span class="highlight">Value Addition:</span> Tea tasting session and optional scenic train ride (subject to availability).</li>
+                                <li><span class="highlight">The Experience:</span> Visit the beautiful Royal Botanic
+                                    Gardens Peradeniya, admire Ramboda Waterfall, and tour a working tea factory.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Learn about Sri Lanka’s
+                                    world-famous Ceylon Tea production process.</li>
+                                <li><span class="highlight">Nature:</span> Misty mountains, cascading waterfalls, and
+                                    lush tea plantations.</li>
+                                <li><span class="highlight">Value Addition:</span> Tea tasting session and optional
+                                    scenic train ride (subject to availability).</li>
                             </ul>
                             <p><span>Stay overnight in Nuwara Eliya</span></p>
                         </div>
@@ -1634,10 +1689,14 @@
                         <div class="day-text">
                             <h3>Day 5: Nuwara Eliya to Colombo – Colonial & Modern Blend</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Enjoy a relaxed morning in “Little England” before transferring to Colombo for a guided city tour.</li>
-                                <li><span class="highlight">Culture & Heritage:</span> Discover colonial architecture, temples, and vibrant local markets in Sri Lanka’s commercial capital.</li>
-                                <li><span class="highlight">Nature:</span> Visit Galle Face Green overlooking the Indian Ocean.</li>
-                                <li><span class="highlight">Value Addition:</span> Shopping experience at modern malls and local handicraft stores.</li>
+                                <li><span class="highlight">The Experience:</span> Enjoy a relaxed morning in “Little
+                                    England” before transferring to Colombo for a guided city tour.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Discover colonial architecture,
+                                    temples, and vibrant local markets in Sri Lanka’s commercial capital.</li>
+                                <li><span class="highlight">Nature:</span> Visit Galle Face Green overlooking the Indian
+                                    Ocean.</li>
+                                <li><span class="highlight">Value Addition:</span> Shopping experience at modern malls
+                                    and local handicraft stores.</li>
                             </ul>
                             <p><span>Stay overnight in Colombo</span></p>
                         </div>
@@ -1658,10 +1717,12 @@
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 9: Colombo to Airport – Farewell Sri Lanka</h3>
+                            <h3>Day 6: Colombo to Airport – Farewell Sri Lanka</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Comfortable transfer to the airport for departure.</li>
-                                <li><span class="highlight">Value Addition:</span> Personalized souvenir as a memory of your Sri Lankan cultural escape.</li>
+                                <li><span class="highlight">The Experience:</span> Comfortable transfer to the airport
+                                    for departure.</li>
+                                <li><span class="highlight">Value Addition:</span> Personalized souvenir as a memory of
+                                    your Sri Lankan cultural escape.</li>
                             </ul>
                             <p><span>Be careful and come back.</span></p>
                         </div>
@@ -1673,9 +1734,15 @@
 
         <div class="page-navigation">
 
-            <a href="Ultimate Sri Lanka Grand Explorer.html" class="nav-btn prev">← Previous</a>
+            <a href="Ultimate Sri Lanka Grand Explorer.html" class="nav-btn prev"
+                data-title="Ultimate Sri Lanka Grand Explorer">
+                ← Previous
+            </a>
 
-            <a href="Sri Lanka Highlights & Coastal Bliss.html" class="nav-btn next">Next →</a>
+            <a href="Sri Lanka Highlights & Coastal Bliss.html" class="nav-btn next"
+                data-title="Sri Lanka Highlights & Coastal Bliss">
+                Next →
+            </a>
 
         </div>
 
@@ -1847,12 +1914,12 @@
 
             var cities = [
 
-                ["Negombo", 7.2083, 79.8358, "../../images/Packages/map/Negombo.jpg"],
-                ["Dambulla", 7.8742, 80.6525, "../../images/Packages/map/Dambulla.png"],
-                ["Kandy", 7.2906, 80.6337, "../../images/Packages/map/Kandy.jpg"],
-                ["Nuwara Eliya", 6.9497, 80.7891, "../../images/Packages/map/Nuwara Eliya.jpg"],
-                ["Colombo", 6.9271, 79.8612, "../../images/Packages/map/Colombo.png"],
-                ["Negombo", 7.2083, 79.8358, "../../images/Packages/map/Negombo.jpg"]
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Map/Negombo.jpg"],
+                ["Dambulla", 7.8742, 80.6525, "../../images/Packages/Map/Dambulla.png"],
+                ["Kandy", 7.2906, 80.6337, "../../images/Packages/Map/Kandy.jpg"],
+                ["Nuwara Eliya", 6.9497, 80.7891, "../../images/Packages/Map/Nuwara Eliya.jpg"],
+                ["Colombo", 6.9271, 79.8612, "../../images/Packages/Map/Colombo.png"],
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Map/Negombo.jpg"]
             ];
 
 

@@ -51,7 +51,8 @@
 
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             color: #111 !important;
             background: #fff !important;
             min-height: 100vh;
@@ -83,7 +84,8 @@
             margin-top: -45px;
             margin-bottom: 25px;
             color: #444;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
 
         .skip-link {
@@ -343,7 +345,8 @@
         }
 
         h1 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(34px, 4.2vw, 56px);
             line-height: 1.03;
             letter-spacing: .2px;
@@ -450,7 +453,8 @@
         }
 
         .section-head h2 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(24px, 2.6vw, 34px);
             margin: 0;
             line-height: 1.1;
@@ -711,7 +715,8 @@
         .video-content h1 {
             color: #fff;
             font-size: clamp(32px, 4vw, 56px);
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             margin: 0;
         }
 
@@ -1012,6 +1017,12 @@
             ;
         }
 
+        .day-text spana {
+            color: #363636db;
+            font-weight: 800;
+            ;
+        }
+
         .day-img {
             flex: 1;
         }
@@ -1288,6 +1299,34 @@
             background: #000000;
         }
 
+        .page-navigation a {
+            position: relative;
+            text-decoration: none;
+        }
+
+        /* Tooltip */
+        .page-navigation a::after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #838383;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .page-navigation a:hover::after {
+            opacity: 1;
+        }
+
         /* ===== FOOTER ===== */
         .footer {
             background-color: #F5F5F5;
@@ -1306,7 +1345,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             align-items: start;
-            margin-top: 60px;
+            margin-top: 10px;
         }
 
         .footer-column .site-logo {
@@ -1537,7 +1576,7 @@
 
     </div>
 
-
+    <!-- ITINERARY -->
     <div class="container">
         <!-- TIMELINE -->
         <div class="timeline">
@@ -1549,16 +1588,16 @@
                             <h3 id="day1">Day 1: Arrival in Negombo – The Coastal Gateway</h3>
                             <ul>
                                 <li><span class="highlight">The Experience:</span> Explore the vibrant "Little Rome"
-                                    through a <span>City Tour</span>. Visit the 17th-century <span>Dutch
-                                        Canal</span> and watch the iconic "Oruwa" sailing boats on the horizon.</li>
-                                <li><span class="highlight">Culture & Heritage:</span> Visit the <span>St. Mary’s
-                                        Church</span> to see its majestic ceiling paintings, a testament to the town's
+                                    through a <spana>City Tour</spana>. Visit the 17th-century <spana>Dutch
+                                        Canal</spana> and watch the iconic "Oruwa" sailing boats on the horizon.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Visit the <spana>St. Mary’s
+                                        Church</spana> to see its majestic ceiling paintings, a testament to the town's
                                     deep colonial roots.</li>
                                 <li><span class="highlight">Nature:</span> Spend your afternoon on the golden sands of
-                                    <span>Negombo Beach</span>, feeling the Indian Ocean breeze.
+                                    <spana>Negombo Beach</spana>, feeling the Indian Ocean breeze.
                                 </li>
-                                <li><span class="highlight">Value Addition:</span> A dawn visit to the <span>Lellama
-                                        Fish Market</span>—the largest in the country—to see the authentic, organized
+                                <li><span class="highlight">Value Addition:</span> A dawn visit to the <spana>Lellama
+                                        Fish Market</spana>—the largest in the country—to see the authentic, organized
                                     chaos of the local fishing trade.</li>
                             </ul>
                             <p><span>Stay overnight in Negombo</span></p>
@@ -1584,9 +1623,9 @@
                             <h3>Day 2: Negombo to Dambulla – The Gentle Giants</h3>
                             <ul>
                                 <li><span class="highlight">The Experience:</span> Meet the residents of the
-                                    <span>Pinnawala Elephant
-                                        Orphanage</span> during their 10:00 AM river bath. In the afternoon, switch to
-                                    4x4 mode for a <span>Minneriya Wild Safari</span>.
+                                    <spana>Pinnawala Elephant
+                                        Orphanage</spana> during their 10:00 AM river bath. In the afternoon, switch to
+                                    4x4 mode for a <spana>Minneriya Wild Safari</spana>.
                                 </li>
                                 <li><span class="highlight">Culture & Heritage:</span> Pinnawala represents one of the
                                     world's first conservation efforts for Asian elephants, bridging the gap between
@@ -1611,12 +1650,13 @@
                             <h3>Day 3: Dambulla to Anuradhapura – The Sacred Beginnings</h3>
                             <ul>
                                 <li><span class="highlight">The Experience:</span> A full immersion into the
-                                    <span>Anuradhapura Ancient City</span>, the island's first capital. Later, climb the
-                                    sacred peaks of <span>Mihintale</span>.
+                                    <spana>Anuradhapura Ancient City</spana>, the island's first capital. Later, climb
+                                    the
+                                    sacred peaks of <spana>Mihintale</spana>.
                                 </li>
-                                <li><span class="highlight">Culture & Heritage:</span> Visit the <span>Jaya Sri Maha
-                                        Bodhi</span>, the oldest human-planted tree in the world, and the massive
-                                    <span>Jetavanaramaya Stupa</span>, once the third-tallest structure on earth.
+                                <li><span class="highlight">Culture & Heritage:</span> Visit the <spana>Jaya Sri Maha
+                                        Bodhi</spana>, the oldest human-planted tree in the world, and the massive
+                                    <spana>Jetavanaramaya Stupa</spana>, once the third-tallest structure on earth.
                                 </li>
                                 <li><span class="highlight">Nature:</span> Explore the serene <span>Twin Ponds</span>
                                     and the ancient stone carvings of the <span>Isurumuniya Rock Temple</span>.</li>
@@ -1645,10 +1685,11 @@
                         <div class="day-text">
                             <h3>Day 4: Sigiriya to Kandy – The Grand Cultural Marathon</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Conquer the <span>Sigiriya Rock
-                                        Fortress</span>, explore the <span>Dambulla Cave Temple</span>, walk through a
-                                    <span>Spice Garden</span>, and end the day in Kandy with <span>Traditional
-                                        Dancing</span> and the <span>Temple of the Tooth</span>.
+                                <li><span class="highlight">The Experience:</span> Conquer the <spana>Sigiriya Rock
+                                        Fortress</spana>, explore the <spana>Dambulla Cave Temple</spana>, walk through
+                                    a
+                                    <spana>Spice Garden</spana>, and end the day in Kandy with <spana>Traditional
+                                        Dancing</spana> and the <spana>Temple of the Tooth</spana>.
                                 </li>
                                 <li><span class="highlight">Culture & Heritage:</span> From 5th-century frescoes at
                                     Sigiriya to the living rituals of the Tooth Relic temple, this day covers 2,000
@@ -1672,9 +1713,10 @@
                         <div class="day-text">
                             <h3>Day 5: Kandy to Nuwara Eliya – The Emerald Highlands</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Visit the <span>Peradeniya Botanical
-                                        Garden</span>, the <span>Gem Museum</span>, and the <span>Ramboda
-                                        Waterfall</span> before touring a <span>Tea Factory</span> in "Little England."
+                                <li><span class="highlight">The Experience:</span> Visit the <spana>Peradeniya Botanical
+                                        Garden</spana>, the <spana>Gem Museum</spana>, and the <spana>Ramboda
+                                        Waterfall</spana> before touring a <spana>Tea Factory</spana> in "Little
+                                    England."
                                 </li>
                                 <li><span class="highlight">Culture & Heritage:</span> Learn about the "Ratna-Dweepa"
                                     (Island of Gems) legacy and the 150-year-old orthodox tea-making process.</li>
@@ -1705,9 +1747,9 @@
                         <div class="day-text">
                             <h3>Day 6: Nuwara Eliya to Ella – Into the Clouds</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Trek through <span>Horton
-                                        Plains</span> to stand at <span>World’s End</span>. Visit the <span>Hakgala
-                                        Botanical Garden</span> and soak in the laid-back vibe of <span>Ella</span>.
+                                <li><span class="highlight">The Experience:</span> Trek through <spana>Horton
+                                        Plains</spana> to stand at <spana>World’s End</spana>. Visit the <spana>Hakgala
+                                        Botanical Garden</spana> and soak in the laid-back vibe of <spana>Ella</spana>.
                                 </li>
                                 <li><span class="highlight">Culture & Heritage:</span> Discover the legends of the
                                     Ramayana at Hakgala, believed to be the pleasure garden of King Ravana.</li>
@@ -1730,9 +1772,10 @@
                         <div class="day-text">
                             <h3>Day 7: Ella to Tissamaharama – Valleys & Veneration</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Visit the <span>Nine Arch
-                                        Bridge</span>, hike <span>Mini World’s End</span>, and see the <span>Ravana
-                                        Waterfall</span>. End the day at the <span>Kataragama Ancient City</span>.</li>
+                                <li><span class="highlight">The Experience:</span> Visit the <spana>Nine Arch
+                                        Bridge</spana>, hike <spana>Mini World’s End</spana>, and see the <spana>Ravana
+                                        Waterfall</spana>. End the day at the <spana>Kataragama Ancient City</spana>.
+                                </li>
                                 <li><span class="highlight">Culture & Heritage:</span> Experience the evening rituals at
                                     Kataragama, a sacred site where three religions converge in harmony.</li>
                                 <li><span class="highlight">Nature:</span> Spectacular views of the "Ella Gap" and the
@@ -1762,9 +1805,10 @@
                         <div class="day-text">
                             <h3>Day 8: Tissamaharama to Mirissa – Wild Safari to Waves</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> A thrilling <span>Yala Safari</span>
+                                <li><span class="highlight">The Experience:</span> A thrilling <spana>Yala Safari
+                                    </spana>
                                     in search of leopards and bears, followed by a scenic drive to the turquoise waters
-                                    of <span>Mirissa Beach</span>.</li>
+                                    of <spana>Mirissa Beach</spana>.</li>
                                 <li><span class="highlight">Culture & Heritage:</span> Observe the southern lifestyle
                                     and the unique architectural transition from the dry zone to the coastal belt.</li>
                                 <li><span class="highlight">Nature:</span> Yala offers the best chance in Asia to see
@@ -1786,8 +1830,8 @@
                             <h3>Day 9: Mirissa to Galle – Mangroves & Fortresses</h3>
                             <ul>
                                 <li><span class="highlight">The Experience:</span> Relax in Mirissa, then take a
-                                    <span>Maduganga Boat Tour</span> through mangrove tunnels before exploring the
-                                    historic <span>Galle Fort.</span>
+                                    <spana>Maduganga Boat Tour</spana> through mangrove tunnels before exploring the
+                                    historic <spana>Galle Fort</spana>.
                                 </li>
                                 <li><span class="highlight">Culture & Heritage:</span> Walk the ramparts of the
                                     16th-century Galle Fort, a UNESCO World Heritage site that feels like a piece of
@@ -1819,8 +1863,8 @@
                         <div class="day-text">
                             <h3>Day 10: Galle to Colombo – The Coastal Evolution</h3>
                             <ul>
-                                <li><span class="highlight">The Experience:</span> Visit the <span>Kosgoda Turtle
-                                        Hatchery</span> and end with a comprehensive <span>Colombo City Tour</span>
+                                <li><span class="highlight">The Experience:</span> Visit the <spana>Kosgoda Turtle
+                                        Hatchery</spana> and end with a comprehensive <spana>Colombo City Tour</spana>
                                     taking in Independence Square and the Lotus Tower.</li>
                                 <li><span class="highlight">Culture & Heritage:</span> Learn about marine conservation
                                     and see the evolution of Colombo from a colonial port to a modern metropolis.</li>
@@ -1861,11 +1905,18 @@
 
         </div>
 
+
+
         <div class="page-navigation">
 
-            <a href="The Radiant Pearl Adventure.html" class="nav-btn prev">← Previous</a>
+            <a href="The Radiant Pearl Adventure.html" class="nav-btn prev" data-title="The Radiant Pearl Adventure">
+                ← Previous
+            </a>
 
-            <a href="Grand Sri Lanka Cultural & Nature Journey.html" class="nav-btn next">Next →</a>
+            <a href="Grand Sri Lanka Cultural & Nature Journey.html" class="nav-btn next"
+                data-title="Grand Sri Lanka Cultural & Nature Journey">
+                Next →
+            </a>
 
         </div>
 
@@ -2037,18 +2088,18 @@
 
             var cities = [
 
-                ["Negombo", 7.2083, 79.8358, "../../images/Packages/map/Negombo.jpg"],
-                ["Dambulla", 7.8742, 80.6525, "../../images/Packages/map/Dambulla.png"],
-                ["Anuradhapura", 8.3114, 80.4037, "../../images/Packages/map/anuradhapura.jpg"],
-                ["Sigiriya", 7.9570, 80.7603, "../../images/Packages/map/Sigiriya.jpg"],
-                ["Kandy", 7.2906, 80.6337, "../../images/Packages/map/Kandy.jpg"],
-                ["Nuwara Eliya", 6.9497, 80.7891, "../../images/Packages/map/Nuwara Eliya.jpg"],
-                ["Ella", 6.8667, 81.0460, "../../images/Packages/map/Ella.jpg"],
-                ["Thissamaharamaya", 6.2792, 81.2870, "../../images/Packages/map/Thissamaharamaya.png"],
-                ["Mirissa", 5.9483, 80.4561, "../../images/Packages/map/Mirissa.png"],
-                ["Galle", 6.0535, 80.2210, "../../images/Packages/map/Galle Fort.png"],
-                ["Colombo", 6.9271, 79.8612, "../../images/Packages/map/Colombo.png"],
-                ["Negombo", 7.2083, 79.8358, "../../images/Packages/map/Negombo.jpg"]
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Map/Negombo.jpg"],
+                ["Dambulla", 7.8742, 80.6525, "../../images/Packages/Map/Dambulla.png"],
+                ["Anuradhapura", 8.3114, 80.4037, "../../images/Packages/Map/anuradhapura.jpg"],
+                ["Sigiriya", 7.9570, 80.7603, "../../images/Packages/Map/Sigiriya.jpg"],
+                ["Kandy", 7.2906, 80.6337, "../../images/Packages/Map/Kandy.jpg"],
+                ["Nuwara Eliya", 6.9497, 80.7891, "../../images/Packages/Map/Nuwara Eliya.jpg"],
+                ["Ella", 6.8667, 81.0460, "../../images/Packages/Map/Ella.jpg"],
+                ["Thissamaharamaya", 6.2792, 81.2870, "../../images/Packages/Map/Thissamaharamaya.png"],
+                ["Mirissa", 5.9483, 80.4561, "../../images/Packages/Map/Mirissa.png"],
+                ["Galle", 6.0535, 80.2210, "../../images/Packages/Map/Galle Fort.png"],
+                ["Colombo", 6.9271, 79.8612, "../../images/Packages/Map/Colombo.png"],
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Map/Negombo.jpg"]
 
             ];
 
