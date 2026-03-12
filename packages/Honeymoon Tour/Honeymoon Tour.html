@@ -11,8 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
@@ -48,7 +49,8 @@
 
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             color: #111 !important;
             background: #ffffff !important;
             min-height: 100vh;
@@ -80,7 +82,8 @@
             margin-top: -45px;
             margin-bottom: 25px;
             color: #444;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
 
         .skip-link {
@@ -340,7 +343,8 @@
         }
 
         h1 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(34px, 4.2vw, 56px);
             line-height: 1.03;
             letter-spacing: .2px;
@@ -447,7 +451,8 @@
         }
 
         .section-head h2 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(24px, 2.6vw, 34px);
             margin: 0;
             line-height: 1.1;
@@ -708,7 +713,8 @@
         .video-content h1 {
             color: #fff;
             font-size: clamp(32px, 4vw, 56px);
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             margin: 0;
         }
 
@@ -869,7 +875,7 @@
         /* PACKAGES */
         .packages-section {
             padding: 80px 8%;
-            margin-top: -100px;
+            margin-top: 80px;
         }
 
         .packages-title {
@@ -884,110 +890,83 @@
             gap: 30px;
         }
 
-
         .package-card {
-            position: relative;
-            height: 380px;
-            border-radius: 15px;
+            background: white;
+            border-radius: 16px;
             overflow: hidden;
-            background-size: cover;
-            background-position: center;
-            transition: 0.4s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            transition: .4s;
         }
 
         .package-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
         }
 
-        /* Background Image */
-        .round-tour-card {
-            background-image: url("images/Packages/Popular/Round Tour.jpg");
+        .packages-grid .package-card:nth-child(4) {
+            grid-column: 2 / 3;
         }
 
-        .family-tour-card {
-            background-image: url("images/Packages/Popular/Family Tour.jpg");
-        }
-
-        .cultural-tour-card {
-            background-image: url("images/Packages/Popular/Cultural and Heritage Tour.jpg");
-        }
-
-        .honeymoon-tour-card {
-            background-image: url("images/Packages/Popular/Honeymoon Tour.png");
-        }
-
-        .beach-tour-card {
-            background-image: url("images/Packages/Popular/Beach Tour.png");
-        }
-
-        .hill-country-tour-card {
-            background-image: url("images/Packages/Popular/Hill Country.jpg");
-        }
-
-        .adventure-tour-card {
-            background-image: url("images/Packages/Popular/Adventure Tour.jpg");
-        }
-
-        .nature-wildlife-tour-card {
-            background-image: url("images/Packages/Popular/Nature and Wildlife.png");
-        }
-
-        .ramayana-tour-card {
-            background-image: url("images/Packages/Popular/Ramayana Tour.png");
-        }
-
-        .special-event-tour-card {
-            background-image: url("images/Packages/Popular/Special Event.jpg");
-        }
-
-        /* Gradient Overlay */
-        .package-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+        .package-card img {
             width: 100%;
-            height: 100%;
-            padding: 25px;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-
-            background: linear-gradient(to top,
-                    rgba(0, 0, 0, 0.903),
-                    rgba(0, 0, 0, 0.355),
-                    rgba(0, 0, 0, 0));
-
-            color: white;
+            height: 220px;
+            object-fit: cover;
         }
 
-        /* Title */
-        .package-overlay h3 {
-            font-size: 28px;
-            margin-bottom: 10px;
+        .package-content {
+            padding: 20px;
         }
 
-        /* Hidden details */
-        .package-details {
-            max-height: 0;
-            overflow: hidden;
-            transition: 1.05s;
+        .package-content h3 {
+            margin: 0 0 10px;
         }
 
-        /* Hover show */
-        .package-card:hover .package-details {
-            max-height: 300px;
-        }
-
-        /* List */
-        .package-details ul {
-            padding-left: 18px;
-            margin-bottom: 15px;
+        .package-content p span {
+            color: #000000;
             line-height: 1.6;
         }
-        
 
-        .packages-grid .package-card:nth-child(10) {
-            grid-column: 2 / 3;
+        .package-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #1c73e8;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .package-btn1 {
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 80px;
+            padding: 10px 18px;
+            background: #ffffff;
+            color: #000000;
+            border: #000000 solid 1px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .package-btn:hover {
+            background: #000000;
+        }
+
+        .package-btn1:hover {
+            background: #000000;
+            color: #ffffff;
+            border: #000000 solid 1px;
+        }
+
+        @media (max-width: 768px) {
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-grid .package-card:nth-child(4) {
+                grid-column: auto;
+            }
+
         }
 
         /* CTA */
@@ -1103,6 +1082,151 @@
             }
         }
 
+        /* MODAL BACKGROUND */
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            animation: fadeIn .3s ease;
+        }
+
+        /* MODAL BOX */
+
+        .modal-box {
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
+            width: 520px;
+            max-width: 95%;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideUp .4s ease;
+        }
+
+        .modal-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        /* CLOSE BUTTON */
+
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* FORM */
+
+        .inquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        /* FLOATING LABEL */
+
+        .floating-group {
+            position: relative;
+        }
+
+        .floating-group input,
+        .floating-group textarea,
+        .floating-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+        }
+
+        .floating-group label {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            font-size: 13px;
+            color: #777;
+            background: white;
+            padding: 0 4px;
+            transition: .2s;
+            pointer-events: none;
+        }
+
+        /* FLOAT ANIMATION */
+
+        .floating-group input:focus+label,
+        .floating-group input:not(:placeholder-shown)+label,
+        .floating-group textarea:focus+label,
+        .floating-group textarea:not(:placeholder-shown)+label,
+        .floating-group select:focus+label {
+            top: -8px;
+            font-size: 13px;
+            color: #000000;
+        }
+
+        /* ROW */
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        /* BUTTON */
+
+        .send-btn {
+            background: #1c73e8;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 150px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .send-btn:hover {
+            background: #000000;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
         /* ===== FOOTER ===== */
         .footer {
             background-color: #F5F5F5;
@@ -1121,7 +1245,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             align-items: start;
-            margin-top: 60px;
+            margin-top: 10px;
         }
 
         .footer-column .site-logo {
@@ -1261,8 +1385,8 @@
     <!-- Header -->
     <div class="container-header">
         <div class="header-inner">
-            <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+            <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                 <div class="brand-title">
                     <strong>JUCON TRAVELS</strong>
                     <span>Travel Agency, Sri Lanka</span>
@@ -1270,195 +1394,67 @@
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html">Tours & Retreats</a>
-                <a href="packages.html" class="active">Packages</a>
-                <a href="group-leader.html">Partner up</a>
-                <a href="Interest.html">Interest</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours & Retreats</a>
+                <a href="../../packages.html" class="active">Packages</a>
+                <a href="../../group-leader.html">Partner up</a>
+                <a href="../../Interest.html">Interest</a>
                 <!--<a href="faq.html">FAQ</a>-->
-                <a href="contact.html">Contact</a>
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
             <nav class="nav" aria-label="Mobile">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                <a href="packages.html" class="active">Packages</a>
-                <a href="group-leader.html">Partner up</a>
-                <a href="Interest.html">Interest</a>
-                <!--<a href="faq.html">FAQ</a>-->
-                <a href="contact.html">Contact</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                <a href="../../packages.html" class="active">Packages</a>
+                <a href="../../group-leader.html">Partner up</a>
+                <a href="../../Interest.html">Interest</a>
+                <!--<a href="../../faq.html">FAQ</a>-->
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
     </div>
 
     <!-- HERO -->
     <section class="packages-hero">
-        <img src="images/SLbyRailBanner.jpg" alt="JOY Project">
-        <h1>Explore Our Tour Packages</h1>
-    </section>
-
-    <!-- WHY -->
-    <section class="why-section">
-        <h2 class="why-title">Why Travel With Us</h2>
-
-        <div class="why-grid">
-            <div class="why-card">
-                <h3>Local Expertise</h3>
-                <p>Authentic Sri Lankan experiences guided by local experts.</p>
-            </div>
-
-            <div class="why-card">
-                <h3>Best Value</h3>
-                <p>Best Value for the Price.</p>
-            </div>
-
-            <div class="why-card">
-                <h3>24/7 Support</h3>
-                <p>We are here for you anytime during your journey.</p>
-            </div>
-        </div>
+        <img src="../../images/Packages/Banner/Honeymoon.png" alt="Honeymoon Tour">
+        <h1>Honeymoon Tour packages</h1>
     </section>
 
     <!-- PACKAGES -->
     <section class="packages-section">
-        <h2 class="packages-title">Popular Packages</h2>
 
         <div class="packages-grid">
-
-            <a href="packages/Round Tour/Round Tour.html" class="package-card round-tour-card">
-                <div class="package-overlay">
-                    <h3>Round Tour</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>The Radiant Pearl Adventure</li>
-                            <li>The Grand Ceylon Odyssey</li>
-                            <li>Grand Sri Lanka Cultural & Nature Journey</li>
-                            <li>Sri Lanka Coastal & Cultural Odyssey</li>
-                        </ul>
-                    </div>
+            <div class="package-card">
+                <img src="../../images/Packages/Sri Lanka Heritage, Highlands & Coastal Adventure.jpg" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Sri Lanka Heritage, Highlands & Coastal Adventure</h3>
+                    <p><span>Duration:</span> 8 Nights / 9 Days </p>
+                    <p><span>Route:</span><i> Negambo – Dambulla – Kandy – Nuwara Eliya - Ella - Mirissa - Galle – Colombo</i></p>
+                    <p><span>Theme:</span> Cultural Treasures, Misty Mountains & Southern Beaches</p>
+                    <a href="Sri Lanka Heritage, Highlands & Coastal Adventure.html" class="package-btn">View Package</a>
+                    <a href="#" class="package-btn1" onclick="openInquiry('Sri Lanka Heritage, Highlands & Coastal Adventure')">
+                        Quick Inquiry
+                    </a>
                 </div>
-            </a>
+            </div>
 
-            <a href="packages/Family Tour/Family Tour.html" class="package-card family-tour-card">
-                <div class="package-overlay">
-                    <h3>Family Tour</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Sri Lanka Cultural Escape</li>
-                            <li>Sri Lanka Highlights & Coastal Bliss</li>
-                            <li>Ultimate Sri Lanka Grand Explorer</li>
-                        </ul>
-                    </div>
+            <div class="package-card">
+                <img src="../../images/Packages/Sri Lanka Hill Country & Cultural Escape.jpg"
+                    alt="Scenic Sri Lankan landscape">
+                <div class="package-content">
+                    <h3>Sri Lanka Hill Country & Cultural Escape</h3>
+                    <p><span>Duration:</span> 4 Nights / 5 Days</p>
+                    <p><span>Route:</span><i> Negambo  – Hunnasfalls  - Kandy – Colombo</i></p>
+                    <p><span>Theme:</span> Wildlife, Highlands & Sacred Traditions</p>
+                    <a href="Sri Lanka Hill Country & Cultural Escape.html" class="package-btn">View Package</a>
+                    <a href="#" class="package-btn1" onclick="openInquiry('Sri Lanka Hill Country & Cultural Escape')">
+                        Quick Inquiry
+                    </a>
                 </div>
-            </a>
-
-            <a href="packages/Cultural Tour/Cultural Tour.html" class="package-card cultural-tour-card">
-                <div class="package-overlay">
-                    <h3>Cultural and Heritage Tour</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Sri Lanka Cultural Escape</li>
-                            <li>Sacred Kingdoms & Heritage Trail</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="packages/Honeymoon Tour/Honeymoon Tour.html" class="package-card honeymoon-tour-card">
-                <div class="package-overlay">
-                    <h3>Honeymoon Tour</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Sri Lanka Heritage, Highlands & Coastal Adventure</li>
-                            <li>Sri Lanka Hill Country & Cultural Escape</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="packages/Round Tour/Round Tour.html" class="package-card beach-tour-card">
-                <div class="package-overlay">
-                    <h3>Beach Tour</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Sri Lanka Southern Coastal Escape</li>
-                            <li>Sri Lanka Coastal Adventure & Watersports</li>
-                            <li>Eastern Coast & Cultural Discovery</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="packages/Round Tour/Round Tour.html" class="package-card hill-country-tour-card">
-                <div class="package-overlay">
-                    <h3>Hill Country</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Hill Country & Heritage Journey</li>
-                            <li>Highlands & Heritage Trail</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="packages/Round Tour/Round Tour.html" class="package-card adventure-tour-card">
-                <div class="package-overlay">
-                    <h3>Adventure Tour</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Sri Lanka Highlands Hiking & Cultural Adventure</li>
-                            <li>Adam’s Peak Pilgrimage & Highland Adventure</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="packages/Round Tour/Round Tour.html" class="package-card nature-wildlife-tour-card">
-                <div class="package-overlay">
-                    <h3>Nature and Wildlife</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Wildlife & Cultural Safari Adventure</li>
-                            <li>Wildlife, Highlands & Coastal Wonders</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="packages/Round Tour/Round Tour.html" class="package-card ramayana-tour-card">
-                <div class="package-overlay">
-                    <h3>Ramayana Tour</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Ramayana Heritage & Coastal Expedition</li>
-                            <li>Ramayana Legends & Highland Wonders</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
-
-            <a href="packages/Round Tour/Round Tour.html" class="package-card special-event-tour-card">
-                <div class="package-overlay">
-                    <h3>Special Event</h3>
-
-                    <div class="package-details">
-                        <ul>
-                            <li>Kandy Esala Perahera & Heritage Journey</li>
-                        </ul>
-                    </div>
-                </div>
-            </a>
+            </div>
 
         </div>
     </section>
@@ -1477,8 +1473,8 @@
         <div class="container footer-grid">
             <!-- Column 1: Logo + Social -->
             <div class="footer-column">
-                <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                    <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                    <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                     <div class="brand-title1">
                         <strong>JUCON TRAVELS</strong>
                         <span>Travel Agency, Sri Lanka</span>
@@ -1518,10 +1514,10 @@
             <div class="footer-column">
                 <h4>About</h4>
                 <div class="list">
-                    <a href="index.html">Home</a>
-                    <a href="about-us.html">About Us</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="../../index.html">Home</a>
+                    <a href="../../about-us.html">About Us</a>
+                    <a href="../../blog.html">Blog</a>
+                    <a href="../../contact.html">Contact</a>
                 </div>
             </div>
 
@@ -1529,11 +1525,11 @@
             <div class="footer-column">
                 <h4>Navigate</h4>
                 <div class="list">
-                    <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                    <a href="group-leader.html">Partner up</a>
-                    <a href="packages.html">Packages</a>
-                    <a href="Interest.html">Interest</a>
-                    <!--<a href="faq.html">FAQ</a>-->
+                    <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                    <a href="../../group-leader.html">Partner up</a>
+                    <a href="../../packages.html">Packages</a>
+                    <a href="../../Interest.html">Interest</a>
+                    <!--<a href="../../faq.html">FAQ</a>-->
                 </div>
             </div>
 
@@ -1555,6 +1551,151 @@
             <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
         </div>
     </footer>
+
+    <!-- QUICK INQUIRY MODAL -->
+    <div id="inquiryModal" class="modal">
+
+        <div class="modal-box">
+
+            <span class="close-btn" onclick="closeInquiry()">&times;</span>
+
+            <h2>Quick Inquiry</h2>
+
+            <form class="inquiry-form">
+
+                <div class="floating-group">
+                    <input type="text" id="packageName" readonly>
+                    <label>Selected Package</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="text" required>
+                    <label>Name</label>
+                </div>
+
+                <div class="floating-group">
+                    <select id="country" required>
+                        <option value=""> </option>
+                    </select>
+                    <label>Country</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="row">
+
+                    <div class="floating-group">
+                        <input type="date">
+                        <label>Arrival Date</label>
+                    </div>
+
+                    <div class="floating-group">
+                        <input type="date">
+                        <label>Departure Date</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="floating-group">
+                        <input type="number">
+                        <label>Adults</label>
+                    </div>
+
+                    <div class="floating-group">
+                        <input type="number">
+                        <label>Children</label>
+                    </div>
+
+                </div>
+
+                <div class="floating-group">
+                    <textarea rows="3"></textarea>
+                    <label>Queries</label>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Inquiry
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Country List Script -->
+    <script>
+
+        function openInquiry(packageName) {
+
+            document.getElementById("inquiryModal").style.display = "flex";
+
+            document.getElementById("packageName").value = packageName;
+
+        }
+
+        function closeInquiry() {
+
+            document.getElementById("inquiryModal").style.display = "none";
+
+        }
+
+        window.onclick = function (event) {
+
+            let modal = document.getElementById("inquiryModal");
+
+            if (event.target == modal) {
+
+                modal.style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            fetch("https://restcountries.com/v3.1/all?fields=name")
+
+                .then(response => response.json())
+
+                .then(data => {
+
+                    let countrySelect = document.getElementById("country");
+
+                    data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+                    data.forEach(country => {
+
+                        let option = document.createElement("option");
+
+                        option.value = country.name.common;
+
+                        option.textContent = country.name.common;
+
+                        countrySelect.appendChild(option);
+
+                    });
+
+                })
+
+                .catch(error => {
+
+                    console.log("Country load error:", error);
+
+                });
+
+        });
+
+    </script>
 
 </body>
 
