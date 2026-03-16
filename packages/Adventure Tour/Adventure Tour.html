@@ -1226,6 +1226,166 @@
             }
         }
 
+        /* ADVENTURE PACKAGES */
+
+        .adventure-section {
+            padding: 90px 20px;
+            background: #ffffff;
+            margin-top: -120px;
+        }
+
+        .adventure-title {
+            text-align: center;
+            font-size: 27px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 25px;
+        }
+
+        /* Mahaweli Kayaking */
+        .Mahaweli-Kayaking::before {
+            background-image: url("../../images/Packages/Mahaweli Kayaking.jpg");
+        }
+
+        /* Rafting */
+        .rafting::before {
+            background-image: url("../../images/Packages/rafting.jpg");
+        }
+
+        /* Surfing */
+        .surfing::before {
+            background-image: url("../../images/Packages/surfing.jpg");
+        }
+
+        /* Kite surfing */
+        .kite::before {
+            background-image: url("../../images/Packages/kite surfing.png");
+        }
+
+        .adventure-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .adventure-card {
+            position: relative;
+            background: #fff;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: 0.4s;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* overlay image */
+        .adventure-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: 0.4s;
+            z-index: -1;
+        }
+
+        /* dark overlay */
+        .adventure-card::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            opacity: 0;
+            transition: 0.4s;
+            z-index: -1;
+        }
+
+        /* hover effect */
+        .adventure-card:hover::before,
+        .adventure-card:hover::after {
+            opacity: 1;
+        }
+
+        /* text color change */
+        .adventure-card:hover {
+            color: white;
+        }
+
+        .adventure-card:hover h3,
+        .adventure-card:hover p,
+        .adventure-card:hover li {
+            color: white;
+        }
+
+        .adventure-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.275);
+        }
+
+        .card-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .adventure-card h3 {
+            color: #000000;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .adventure-card p {
+            color: #555;
+            font-size: 15px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .adventure-card ul {
+            padding-left: 18px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .adventure-card li {
+            margin-bottom: 6px;
+        }
+
+        .adventure-btn {
+            display: inline-block;
+            padding: 10px 18px;
+            background: #0077b6;
+            color: #fff;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .adventure-btn:hover {
+            background: #005f8e;
+        }
+
+        /* mobile responsive */
+
+        @media (max-width:768px) {
+
+            .adventure-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
 
         /* ===== FOOTER ===== */
         .footer {
@@ -1419,8 +1579,8 @@
 
     <!-- HERO -->
     <section class="packages-hero">
-        <img src="../../images/Packages/Banner/Round Tour Packages.png" alt="Round Tour Packages">
-        <h1>Round Tour Packages</h1>
+        <img src="../../images/Packages/Banner/Adventure Tour.png" alt="Adventure Tour">
+        <h1>Adventure Tour Packages</h1>
     </section>
 
     <!-- PACKAGES -->
@@ -1428,73 +1588,133 @@
 
         <div class="packages-grid">
             <div class="package-card">
-                <img src="../../images/Packages/The Radiant Pearl Adventure.jpg" alt="Promoter of JUCON TRAVELS">
+                <img src="../../images/Packages/Sri Lanka Highlands Hiking & Cultural Adventure.jpg"
+                    alt="Promoter of JUCON TRAVELS">
                 <div class="package-content">
-                    <h3>The Radiant Pearl Adventure</h3>
-                    <p><span>Duration:</span> 8 Nights / 9 Days </p>
-                    <p><span>Route:</span><i> Negambo - Dambulla - Kandy – Nuwara Eliya – Ella – Thissamaharamaya –
-                            Mirissa – Colombo
-                        </i></p>
-                    <p><span>Theme:</span> A balanced journey through the heart of the island, focusing on the most
-                        iconic landmarks, wildlife encounters, and scenic mountain vistas.</p>
-                    <a href="The Radiant Pearl Adventure.html" class="package-btn">View Package</a>
-                    <a href="#" class="package-btn1" onclick="openInquiry('The Radiant Pearl Adventure')">
+                    <h3>Sri Lanka Highlands Hiking & Cultural Adventure</h3>
+                    <p><span>Duration:</span> 6 Nights / 7 Days </p>
+                    <p><span>Route:</span><i> Negambo – Matale (Reverston) – Walpolamulla – Duvili Ella Waterfall –
+                            Narangamuwa – Kandy – Colombo</i></p>
+                    <p><span>Theme:</span> Trekking, Nature Immersion & Heritage Experiences</p>
+                    <a href="Sri Lanka Highlands Hiking & Cultural Adventure.html" class="package-btn">View Package</a>
+                    <a href="#" class="package-btn1"
+                        onclick="openInquiry('Sri Lanka Highlands Hiking & Cultural Adventure')">
                         Quick Inquiry
                     </a>
                 </div>
             </div>
 
             <div class="package-card">
-                <img src="../../images/Packages/The Grand Ceylon Odyssey.png" alt="Scenic Sri Lankan landscape">
+                <img src="../../images/Packages/Adam’s Peak Pilgrimage & Highland Adventure.png"
+                    alt="Scenic Sri Lankan landscape">
                 <div class="package-content">
-                    <h3>The Grand Ceylon Odyssey</h3>
-                    <p><span>Duration:</span> 10 Nights / 11 Days</p>
-                    <p><span>Route:</span><i> Negambo - Dambulla – Anuradhapura - Sigiriya - Kandy – Nuwara Eliya – Ella
-                            – Thissamaharamaya – Mirissa – Galle – Colombo
-                        </i></p>
-                    <p><span>Theme:</span> From Ancient Kingdoms to Azure Coasts</p>
-                    <a href="The Grand Ceylon Odyssey.html" class="package-btn">View Package</a>
-                    <a href="#" class="package-btn1" onclick="openInquiry('The Grand Ceylon Odyssey')">
+                    <h3>Adam’s Peak Pilgrimage & Highland Adventure</h3>
+                    <p><span>Duration:</span> 4 Nights / 5 Days</p>
+                    <p><span>Route:</span><i> Negambo – Hatton – Ratnapura – Colombo (From December to May)</i></p>
+                    <p><span>Theme:</span> Sacred Trekking, Tea Country & Cultural Exploration</p>
+                    <a href="Adam’s Peak Pilgrimage & Highland Adventure.html" class="package-btn">View Package</a>
+                    <a href="#" class="package-btn1"
+                        onclick="openInquiry('Adam’s Peak Pilgrimage & Highland Adventure')">
                         Quick Inquiry
                     </a>
                 </div>
             </div>
 
-            <div class="package-card">
-                <img src="../../images/Packages/Grand Sri Lanka Cultural & Nature Journey.jpg"
-                    alt="Family Tour Packages">
-                <div class="package-content">
-                    <h3>Grand Sri Lanka Cultural & Nature Journey</h3>
-                    <p><span>Duration:</span> 12 Nights / 13 Days </p>
-                    <p><span>Route:</span><i> Negambo - Dambulla – Polonnaruwa - Anuradhapura - Sigiriya - Kandy –
-                            Nuwara Eliya – Ella – Yala – Mirissa – Galle – Colombo
-                        </i></p>
-                    <p><span>Theme: A Journey Through Culture, Wildlife, and Scenic Landscapes</span> Experience the
-                        perfect blend of ancient heritage, lush hill country, pristine beaches, and unforgettable
-                        wildlife.</p>
-                    <a href="Grand Sri Lanka Cultural & Nature Journey.html" class="package-btn">View Package</a>
-                    <a href="#" class="package-btn1" onclick="openInquiry('Grand Sri Lanka Cultural & Nature Journey')">
-                        Quick Inquiry
-                    </a>
-                </div>
-            </div>
+        </div>
+    </section>
 
-            <div class="package-card">
-                <img src="../../images/Packages/Sri Lanka Coastal & Cultural Odyssey.jpg" alt="Family Tour Packages">
-                <div class="package-content">
-                    <h3>Sri Lanka Coastal & Cultural Odyssey</h3>
-                    <p><span>Duration:</span> 12 Nights / 13 Days </p>
-                    <p><span>Route:</span><i> Negambo - Dambulla - Polonnaruwa - Trincomalee - Sigiriya - Kandy – Nuwara
-                            Eliya – Ella – Yala – Mirissa – Galle – Colombo
-                        </i></p>
-                    <p><span>Theme:</span> Ancient Kingdoms, Sacred Temples & Tropical Shores</p>
-                    <a href="Sri Lanka Coastal & Cultural Odyssey.html" class="package-btn">View Package</a>
-                    <a href="#" class="package-btn1" onclick="openInquiry('Sri Lanka Coastal & Cultural Odyssey')">
-                        Quick Inquiry
-                    </a>
-                </div>
-            </div>
+    <!-- Requirement Packages -->
+    <section class="adventure-section">
 
+        <div class="container">
+
+            <h2 class="adventure-title">Following adventure packages <br> can be arranged based on your requirement</h2>
+
+            <div class="adventure-grid">
+
+                <!-- Mahaweli Kayaking -->
+                <div class="adventure-card Mahaweli-Kayaking">
+                    <div class="card-icon">🛶</div>
+                    <h3>Mahaweli Kayaking</h3>
+
+                    <p>
+                        The Mahaweli River Expedition offers three days of white-water kayaking in Wasgamuwa National
+                        Park with stunning scenery, wildlife encounters and peaceful camping along the riverbanks.
+                    </p>
+
+                    <ul>
+                        <li><strong>Timing:</strong> 3 Days 2 Nights</li>
+                        <li><strong>Difficulty:</strong> Beginner (Training Provided)</li>
+                        <li><strong>Swimming:</strong> Not Required</li>
+                        <li><strong>Guests:</strong> Kids 6+, Families & Groups</li>
+                    </ul>
+
+                    <a href="#" class="adventure-btn" onclick="openInquiry('Mahaweli Kayaking')">Inquire Now</a>
+                </div>
+
+
+                <!-- White Water Rafting -->
+                <div class="adventure-card rafting">
+                    <div class="card-icon">🚣</div>
+                    <h3>Kithulgala White Water Rafting</h3>
+
+                    <p>
+                        Experience exciting rafting along the Kelani River with four minor rapids and five major rapids
+                        while enjoying beautiful rainforest surroundings.
+                    </p>
+
+                    <ul>
+                        <li><strong>Timing:</strong> 2 Hours</li>
+                        <li><strong>Difficulty:</strong> Beginner Friendly</li>
+                        <li><strong>Distance:</strong> 5km – 10km</li>
+                        <li><strong>Guests:</strong> Kids 6+, Families & Groups</li>
+                    </ul>
+
+                    <a href="#" class="adventure-btn" onclick="openInquiry('Kithulgala White Water Rafting')">Inquire
+                        Now</a>
+                </div>
+
+
+                <!-- Surfing -->
+                <div class="adventure-card surfing">
+                    <div class="card-icon">🏄</div>
+                    <h3>Surfing</h3>
+
+                    <p>
+                        Sri Lanka offers year-round surfing opportunities. From October to March the south coast is
+                        perfect while from April to September Arugam Bay becomes the surfing hotspot.
+                    </p>
+
+                    <ul>
+                        <li><strong>Best South Season:</strong> Oct – Mar</li>
+                        <li><strong>Best East Season:</strong> Apr – Sep</li>
+                        <li><strong>Popular Spots:</strong> Weligama, Hikkaduwa, Arugam Bay</li>
+                    </ul>
+
+                    <a href="#" class="adventure-btn" onclick="openInquiry('Surfing')">Inquire Now</a>
+                </div>
+
+
+                <!-- Kite Surfing -->
+                <div class="adventure-card kite">
+                    <div class="card-icon">🪁</div>
+                    <h3>Kite Surfing</h3>
+
+                    <p>
+                        Kalpitiya is one of the world's best kitesurfing destinations with shallow lagoons, flat water
+                        and strong steady winds ideal for beginners and professionals.
+                    </p>
+
+                    <ul>
+                        <li><strong>Best Season:</strong> May – Oct</li>
+                        <li><strong>Second Season:</strong> Dec – Mar</li>
+                        <li><strong>Wind Speed:</strong> 15 – 30 knots</li>
+                    </ul>
+
+                    <a href="#" class="adventure-btn" onclick="openInquiry('Kite Surfing')">Inquire Now</a>
+                </div>
+
+            </div>
         </div>
     </section>
 
@@ -1534,7 +1754,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.facebook.com/" target="_blank" rel="noopener" title="Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61582249807331" target="_blank" rel="noopener"
+                            title="Facebook">
                             <span class="sr-only">Facebook</span>
                             <i class="fab fa-facebook-f" aria-hidden="true"></i>
                         </a>
