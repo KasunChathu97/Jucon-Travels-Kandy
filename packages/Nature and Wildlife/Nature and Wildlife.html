@@ -11,13 +11,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <style>
         :root {
-            --bg: #fff;
+            --bg: #ffffff;
             --surface: #f7f7f7;
             --surface2: #ededed;
             --text: #111;
@@ -48,9 +49,10 @@
 
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             color: #111 !important;
-            background: #fff !important;
+            background: #ffffff !important;
             min-height: 100vh;
         }
 
@@ -69,13 +71,19 @@
             height: 78px;
         }
 
+        .container {
+            width: min(var(--max), calc(100% - 40px));
+            margin: 0 auto;
+        }
+
         .container h1 {
             font-size: 18px;
             text-align: center;
             margin-top: -45px;
             margin-bottom: 25px;
             color: #444;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
 
         .skip-link {
@@ -335,7 +343,8 @@
         }
 
         h1 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(34px, 4.2vw, 56px);
             line-height: 1.03;
             letter-spacing: .2px;
@@ -442,7 +451,8 @@
         }
 
         .section-head h2 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(24px, 2.6vw, 34px);
             margin: 0;
             line-height: 1.1;
@@ -494,7 +504,6 @@
             color: var(--muted);
             line-height: 1.65;
             font-size: 14px;
-            text-align: justify;
         }
 
         .pill {
@@ -704,7 +713,8 @@
         .video-content h1 {
             color: #fff;
             font-size: clamp(32px, 4vw, 56px);
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             margin: 0;
         }
 
@@ -811,75 +821,410 @@
         }
 
         /* About  */
-        .about-hero {
+        .packages-hero {
             text-align: center;
             padding: 80px 20px 40px;
         }
 
-        .about-hero img {
+        .packages-hero img {
             width: 1340px;
-            height: 350px;
+            height: 300px;
             margin-top: -55px;
             margin-bottom: 10px;
             border-radius: 20px;
         }
 
-        .about-hero h1 {
+        .packages-hero h1 {
             font-size: 48px;
-            color: #fff;
-            margin-top: -220px;
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+            margin-top: -200px;
         }
 
-        /* TEXT */
-        .about-text {
-            text-align: left;
-            margin-top: 130px;
+
+
+        /* WHY SECTION */
+        .why-section {
+            padding: 80px 8%;
+            text-align: center;
+            margin-top: 10px;
         }
 
-        .about-text p {
-            max-width: 1160px;
-            margin: 0 auto 20px;
-            line-height: 1.6;
-            font-size: 18px;
-            color: #000000ba;
+        .why-title {
+            font-size: 34px;
+            margin-bottom: 50px;
         }
 
-        /* GRID */
-        .container {
-            padding: 120px 8%;
-        }
-
-        .interest-grid {
+        .why-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 35px;
         }
 
-        .card {
-            background: white;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
-            transition: .3s;
+        .why-card {
+            background: #ffffff;
+            padding: 38px 32px;
+            border-radius: 14px;
+            transition: 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.333);
         }
 
-        .card:hover {
+        .why-card:hover {
             transform: translateY(-8px);
         }
 
-        .card img {
+        /* PACKAGES */
+        .packages-section {
+            padding: 80px 8%;
+            margin-top: 80px;
+        }
+
+        .packages-title {
+            text-align: center;
+            font-size: 34px;
+            margin-bottom: 50px;
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .package-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+            transition: .4s;
+        }
+
+        .package-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .packages-grid .package-card:nth-child(4) {
+            grid-column: 2 / 3;
+        }
+
+        .package-card img {
             width: 100%;
-            height: 200px;
+            height: 220px;
             object-fit: cover;
         }
 
-        .card-content {
+        .package-content {
             padding: 20px;
         }
 
-        .card-content h3 {
+        .package-content h3 {
+            margin: 0 0 10px;
+        }
+
+        .package-content p span {
+            color: #000000;
+            line-height: 1.6;
+        }
+
+        .package-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #1c73e8;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .package-btn1 {
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 80px;
+            padding: 10px 18px;
+            background: #ffffff;
+            color: #000000;
+            border: #000000 solid 1px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+
+        .package-btn:hover {
+            background: #000000;
+        }
+
+        .package-btn1:hover {
+            background: #000000;
+            color: #ffffff;
+            border: #000000 solid 1px;
+        }
+
+        @media (max-width: 768px) {
+
+            .packages-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-grid .package-card:nth-child(4) {
+                grid-column: auto;
+            }
+
+        }
+
+        /* CTA */
+        .cta {
+            margin: 100px 10%;
+            padding: 70px;
+            margin-top: -60px;
+            margin-bottom: -50px;
+            color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .cta h2 {
             margin-top: 0;
-            color: #1c73e8;
+        }
+
+        .cta p {
+            margin: 0;
+            margin-top: 10px;
+            font-size: 18px;
+            color: #000000;
+        }
+
+
+        /* RESPONSIVE */
+        @media(max-width: 992px) {
+
+            .packages-grid,
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .packages-grid,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .packages-hero h1 {
+                font-size: 34px;
+            }
+        }
+
+        .contact-btn-wrap {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            padding: 14px 32px;
+            background: #5ab4f4;
+            color: #fff;
+            height: 16%;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out, transform 0.5s ease-in-out;
+            /* smooth grow */
+            position: relative;
+            overflow: hidden;
+            align-items: center;
+        }
+
+        /* Expanding white circle from center */
+        .btn-primary::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+        }
+
+        /* Button hover: slightly bigger smoothly */
+        .btn-primary:hover {
+            background: #000000;
+            transform: scale(1.1);
+            /* slightly bigger */
+        }
+
+        /* Circle animation on hover: blink & move down continuously */
+        .btn-primary:hover::after {
+            animation: blinkSpread 1.8s ease-out infinite;
+        }
+
+        @keyframes blinkSpread {
+
+            0% {
+                transform: translate(-50%, -50%) scale(0.2);
+                opacity: 0.7;
+                box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.8);
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.9;
+                box-shadow: 0 0 25px 15px rgba(255, 255, 255, 0.6);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.8);
+                opacity: 0;
+                box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
+            }
+        }
+
+        /* MODAL BACKGROUND */
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+            animation: fadeIn .3s ease;
+        }
+
+        /* MODAL BOX */
+
+        .modal-box {
+            background: white;
+            padding: 40px;
+            border-radius: 14px;
+            width: 520px;
+            max-width: 95%;
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+            animation: slideUp .4s ease;
+        }
+
+        .modal-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+
+        /* CLOSE BUTTON */
+
+        .close-btn {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        /* FORM */
+
+        .inquiry-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        /* FLOATING LABEL */
+
+        .floating-group {
+            position: relative;
+        }
+
+        .floating-group input,
+        .floating-group textarea,
+        .floating-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+            background: white;
+        }
+
+        .floating-group label {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            font-size: 13px;
+            color: #777;
+            background: white;
+            padding: 0 4px;
+            transition: .2s;
+            pointer-events: none;
+        }
+
+        /* FLOAT ANIMATION */
+
+        .floating-group input:focus+label,
+        .floating-group input:not(:placeholder-shown)+label,
+        .floating-group textarea:focus+label,
+        .floating-group textarea:not(:placeholder-shown)+label,
+        .floating-group select:focus+label {
+            top: -8px;
+            font-size: 13px;
+            color: #000000;
+        }
+
+        /* ROW */
+
+        .row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+
+        /* BUTTON */
+
+        .send-btn {
+            background: #1c73e8;
+            color: white;
+            border: none;
+            padding: 14px;
+            width: 150px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .send-btn:hover {
+            background: #000000;
+        }
+
+        /* ANIMATIONS */
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(40px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
 
 
@@ -891,7 +1236,7 @@
             margin-bottom: 60px;
             margin-right: 60px;
             margin-left: 60px;
-            margin-top: -40px;
+            margin-top: 50px;
             border-radius: 30px;
             height: 528px;
         }
@@ -901,7 +1246,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             align-items: start;
-            margin-top: -60px;
+            margin-top: 10px;
         }
 
         .footer-column .site-logo {
@@ -921,7 +1266,7 @@
         }
 
         .brand-title1 strong {
-            font-size: 21px;
+            font-size: 22px;
             color: #333;
         }
 
@@ -955,7 +1300,7 @@
 
         .footer-bottom {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 150px;
             margin-left: -945px;
             font-size: 16px;
             color: #666;
@@ -1038,426 +1383,99 @@
 </head>
 
 <body>
-
     <!-- Header -->
     <div class="container-header">
         <div class="header-inner">
-            <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+            <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                 <div class="brand-title">
                     <strong>JUCON TRAVELS</strong>
-                    <span>Travel Agency â€¢ Sri Lanka</span>
+                    <span>Travel Agency, Sri Lanka</span>
                 </div>
             </a>
 
             <nav class="nav" aria-label="Primary">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html">Tours & Retreats</a>
-                <a href="packages.html">Packages</a>
-                <a href="group-leader.html">Partner up</a>
-                <a href="Interest.html" class="active">Interest</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours & Retreats</a>
+                <a href="../../packages.html" class="active">Packages</a>
+                <a href="../../group-leader.html">Partner up</a>
+                <a href="../../Interest.html">Interest</a>
                 <!--<a href="faq.html">FAQ</a>-->
-                <a href="contact.html">Contact</a>
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
             <nav class="nav" aria-label="Mobile">
-                <a href="about-us.html">About</a>
-                <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                <a href="packages.html">Packages</a>
-                <a href="group-leader.html">Partner up</a>
-                <a href="Interest.html" class="active">Interest</a>
-                <!--<a href="faq.html">FAQ</a>-->
-                <a href="contact.html">Contact</a>
+                <a href="../../about-us.html">About</a>
+                <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                <a href="../../packages.html" class="active">Packages</a>
+                <a href="../../group-leader.html">Partner up</a>
+                <a href="../../Interest.html">Interest</a>
+                <!--<a href="../../faq.html">FAQ</a>-->
+                <a href="../../contact.html">Contact</a>
             </nav>
         </div>
     </div>
 
-
-    <section class="about-hero">
-        <img src="images/Places of Interest in Sri Lanka.png" alt="JOY Project">
-        <h1>Places of Interest in Sri Lanka</h1>
+    <!-- HERO -->
+    <section class="packages-hero">
+        <img src="../../images/Packages/Banner/Nature and Wildlife.png" alt="Nature and Wildlife Tour">
+        <h1>Nature and Wildlife Tour packages</h1>
     </section>
 
-    <!-- Interest Grid -->
-    <div class="container">
-        <div class="interest-grid">
+    <!-- PACKAGES -->
+    <section class="packages-section">
 
-            <!-- COLOMBO -->
-            <div class="card">
-                <img src="images/Interest/colombo.png" alt="Colombo">
-                <div class="card-content">
-                    <h3>Colombo</h3>
-                    <p>Sri Lankaâ€™s bustling commercial capital, offering a blend of colonial architecture, modern
-                        shopping districts, vibrant nightlife, and cultural landmarks. Ideal for city tours and cultural
-                        immersion.</p>
+        <div class="packages-grid">
+            <div class="package-card">
+                <img src="../../images/Packages/Wildlife & Cultural Safari Adventure.jpg" alt="Promoter of JUCON TRAVELS">
+                <div class="package-content">
+                    <h3>Wildlife & Cultural Safari Adventure</h3>
+                    <p><span>Duration:</span> 7 Nights / 8 Days </p>
+                    <p><span>Route:</span><i> Negambo – Kalpitiya - Willpattu – Minneriya – Sigiriya – Kandy – Colombo</i></p>
+                    <p><span>Theme:</span> Nature, Wildlife Safaris & Cultural Heritage</p>
+                    <a href="Wildlife & Cultural Safari Adventure.html" class="package-btn">View Package</a>
+                    <a href="#" class="package-btn1" onclick="openInquiry('Wildlife & Cultural Safari Adventure')">
+                        Quick Inquiry
+                    </a>
                 </div>
             </div>
 
-            <!-- NEGOMBO -->
-            <div class="card">
-                <img src="images/Interest/negombo.jpg" alt="Negombo">
-                <div class="card-content">
-                    <h3>Negombo</h3>
-                    <p>A charming coastal town near the airport, famous for its sandy beaches, Dutch-era canals, and
-                        fresh seafood. Popular as a gateway to Sri Lanka.</p>
-                </div>
-            </div>
-
-            <!-- CHILAW -->
-            <div class="card">
-                <img src="images/Interest/Chilaw.png" alt="Chilaw">
-                <div class="card-content">
-                    <h3>Chilaw</h3>
-                    <p>Known for its serene beaches, coconut plantations, and traditional fishing villages. A peaceful
-                        coastal destination.</p>
-                </div>
-            </div>
-
-            <!-- WILPATTU -->
-            <div class="card">
-                <img src="images/Interest/Wilpattu National Park.png" alt="Wilpattu">
-                <div class="card-content">
-                    <h3>Wilpattu National Park</h3>
-                    <p>Famous for its â€œWillusâ€ (natural lakes), this park offers exciting wildlife safaris, home to
-                        leopards, elephants, and diverse birdlife.</p>
-                </div>
-            </div>
-
-            <!-- PINNAWALA -->
-            <div class="card">
-                <img src="images/Interest/Pinnawala.png" alt="Pinnawala">
-                <div class="card-content">
-                    <h3>Pinnawala</h3>
-                    <p>Renowned for the Pinnawala Elephant Orphanage, where visitors can see elephants bathing, feeding,
-                        and interacting closely.</p>
-                </div>
-            </div>
-
-            <!-- DAMBULLA -->
-            <div class="card">
-                <img src="images/Interest/Dambulla.png" alt="Dambulla">
-                <div class="card-content">
-                    <h3>Dambulla</h3>
-                    <p>Known for the Dambulla Cave Temple, a UNESCO World Heritage Site featuring ancient Buddhist
-                        murals and statues.</p>
-                </div>
-            </div>
-
-            <!-- SIGIRIYA -->
-            <div class="card">
-                <img src="images/Interest/Sigiriya.jpg" alt="Sigiriya">
-                <div class="card-content">
-                    <h3>Sigiriya</h3>
-                    <p>The iconic â€œLion Rockâ€ fortress and UNESCO World Heritage Site, famous for its stunning
-                        frescoes
-                        and panoramic views.</p>
-                </div>
-            </div>
-
-            <!-- PIDURANGALA -->
-            <div class="card">
-                <img src="images/Interest/pidurangala.jpg" alt="Pidurangala">
-                <div class="card-content">
-                    <h3>Pidurangala</h3>
-                    <p>A tranquil alternative to Sigiriya, offering a hike with breathtaking views of Sigiriya Rock and
-                        the surrounding landscapes.</p>
-                </div>
-            </div>
-
-            <!-- MINNERIYA NATIONAL PARK -->
-            <div class="card">
-                <img src="images/Interest/Minneriya National Park.jpg" alt="Minneriya National Park">
-                <div class="card-content">
-                    <h3>Minneriya National Park</h3>
-                    <p>Famous for the annual â€œElephant Gathering,â€ where hundreds of elephants congregate around
-                        Minneriya tank, perfect for wildlife safaris.</p>
-                </div>
-            </div>
-
-            <!-- ANURADHAPURA -->
-            <div class="card">
-                <img src="images/Interest/Anuradhapura.jpeg" alt="Anuradhapura">
-                <div class="card-content">
-                    <h3>Anuradhapura</h3>
-                    <p>One of Sri Lankaâ€™s ancient capitals, rich in Buddhist heritage, stupas, and historical ruins. A
-                        UNESCO World Heritage Site.</p>
-                </div>
-            </div>
-
-            <!-- POLONNARUWA -->
-            <div class="card">
-                <img src="images/Interest/Polonnaruwa.jpg" alt="Polonnaruwa">
-                <div class="card-content">
-                    <h3>Polonnaruwa</h3>
-                    <p>Another UNESCO-listed ancient city, known for well-preserved ruins, ancient temples, and royal
-                        gardens.</p>
-                </div>
-            </div>
-
-            <!-- Jaffna -->
-            <div class="card">
-                <img src="images/Interest/Jaffna.png" alt="Jaffna">
-                <div class="card-content">
-                    <h3>Jaffna</h3>
-                    <p>Northern cultural hub with vibrant Tamil heritage, forts, temples, and pristine northern beaches.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Udawalawe -->
-            <div class="card">
-                <img src="images/Interest/Udawalawe.png" alt="Udawalawe">
-                <div class="card-content">
-                    <h3>Udawalawe</h3>
-                    <p>Home to the Udawalawe National Park, ideal for elephant spotting and safari adventures in lush
-                        surroundings.</p>
-                </div>
-            </div>
-
-            <!-- Trincomalee -->
-            <div class="card">
-                <img src="images/Interest/Trincomalee.png" alt="Trincomalee">
-                <div class="card-content">
-                    <h3>Trincomalee</h3>
-                    <p>Coastal city with golden beaches, historic forts, and natural wonders like Pigeon Island and
-                        Koneswaram Temple.</p>
-                </div>
-            </div>
-
-            <!-- Nilaveli -->
-            <div class="card">
-                <img src="images/Interest/Nilaveli.png" alt="Nilaveli">
-                <div class="card-content">
-                    <h3>Nilaveli</h3>
-                    <p>A serene beach destination near Trincomalee, perfect for swimming, snorkeling, and water sports.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Arugam Bay -->
-            <div class="card">
-                <img src="images/Interest/Arugam Bay.jpg" alt="Arugam Bay">
-                <div class="card-content">
-                    <h3>Arugam Bay</h3>
-                    <p>World-renowned surfing hotspot, also popular for lagoons, wildlife, and a relaxed beach
-                        atmosphere.</p>
-                </div>
-            </div>
-
-            <!-- Passikudah -->
-            <div class="card">
-                <img src="images/Interest/Passikudah.jpg" alt="Passikudah">
-                <div class="card-content">
-                    <h3>Passikudah</h3>
-                    <p>Famous for its calm, shallow waters and soft sandy beaches, ideal for family vacations and water
-                        activities.</p>
-                </div>
-            </div>
-
-            <!-- KANDY -->
-            <div class="card">
-                <img src="images/Interest/kandy.png" alt="Kandy">
-                <div class="card-content">
-                    <h3>Kandy</h3>
-                    <p>Cultural capital set in scenic hills, home to the Temple of the Tooth Relic and vibrant
-                        traditional performances.</p>
-                </div>
-            </div>
-
-            <!-- NUWARA ELIYA -->
-            <div class="card">
-                <img src="images/Interest/Nuwara Eliya.png" alt="Nuwara Eliya">
-                <div class="card-content">
-                    <h3>Nuwara Eliya</h3>
-                    <p>â€œLittle Englandâ€ of Sri Lanka, surrounded by tea plantations, waterfalls, and a cool mountain
-                        climate.</p>
-                </div>
-            </div>
-
-            <!-- Horton Plains -->
-            <div class="card">
-                <img src="images/Interest/Horton Plains.png" alt="Horton Plains">
-                <div class="card-content">
-                    <h3>Horton Plains</h3>
-                    <p>High-altitude plateau with trekking trails, dramatic escarpments like Worldâ€™s End, and cloud
-                        forest biodiversity.</p>
-                </div>
-            </div>
-
-            <!-- Adamâ€™s Peak (Sri Pada) -->
-            <div class="card">
-                <img src="images/Interest/Adam’s Peak (Sri Pada).jpg" alt="Adam’s Peak">
-                <div class="card-content">
-                    <h3>Adam’s Peak</h3>
-                    <p>Sacred pilgrimage mountain with a footprint revered by multiple religions, offering spectacular
-                        sunrise treks.</p>
-                </div>
-            </div>
-
-            <!-- Ratnapura -->
-            <div class="card">
-                <img src="images/Interest/Ratnapura.jpg" alt="Ratnapura">
-                <div class="card-content">
-                    <h3>Ratnapura</h3>
-                    <p>Known as the â€œCity of Gems,â€ famous for gem mines, rainforest treks, and gemstone shopping.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Kitulgala -->
-            <div class="card">
-                <img src="images/Interest/Kitulgala.jpg" alt="Kitulgala">
-                <div class="card-content">
-                    <h3>Kitulgala</h3>
-                    <p>Adventure hub with white-water rafting on the Kelani River, jungle trekking, and eco-tourism
-                        activities.</p>
-                </div>
-            </div>
-
-            <!-- ELLA -->
-            <div class="card">
-                <img src="images/Interest/Ella.png" alt="Ella">
-                <div class="card-content">
-                    <h3>Ella</h3>
-                    <p>Picturesque hill town with scenic railway views, Rawana waterfall, tea plantations, and trekking
-                        opportunities.</p>
-                </div>
-            </div>
-
-            <!-- Kataragama -->
-            <div class="card">
-                <img src="images/Interest/Kataragama.jpg" alt="Kataragama">
-                <div class="card-content">
-                    <h3>Kataragama</h3>
-                    <p>Spiritual town attracting Buddhist, Hindu, and Muslim pilgrims, known for Kataragama Temple and
-                        annual festivals.</p>
-                </div>
-            </div>
-
-            <!-- Yala National Park -->
-            <div class="card">
-                <img src="images/Interest/Yala National Park.jpg" alt="Yala National Park">
-                <div class="card-content">
-                    <h3>Yala National Park</h3>
-                    <p>Sri Lankaâ€™s most famous wildlife reserve, home to leopards, elephants, sloth bears, and diverse
-                        bird species.</p>
-                </div>
-            </div>
-
-            <!-- MIRISSA -->
-            <div class="card">
-                <img src="images/Interest/Mirissa.png" alt="Mirissa">
-                <div class="card-content">
-                    <h3>Mirissa</h3>
-                    <p>Stunning beach town famous for whale watching, surf beaches, and vibrant nightlife.</p>
-                </div>
-            </div>
-
-            <!-- Bentota -->
-            <div class="card">
-                <img src="images/Interest/Bentota.jpg" alt="Bentota">
-                <div class="card-content">
-                    <h3>Bentota</h3>
-                    <p>Coastal resort town known for water sports, luxury resorts, and the Bentota River ecosystem.</p>
-                </div>
-            </div>
-
-            <!-- Matara -->
-            <div class="card">
-                <img src="images/Interest/Matara.png" alt="Matara">
-                <div class="card-content">
-                    <h3>Matara</h3>
-                    <p>Southern city with colonial forts, historic temples, and nearby sandy beaches.</p>
-                </div>
-            </div>
-
-            <!-- Kosgoda Turtle Hatchery -->
-            <div class="card">
-                <img src="images/Interest/Kosgoda Turtle Hatchery.png" alt="Kosgoda Turtle Hatchery">
-                <div class="card-content">
-                    <h3>Kosgoda Turtle Hatchery</h3>
-                    <p>Conservation site where visitors can learn about and release endangered sea turtles.</p>
-                </div>
-            </div>
-
-            <!-- Maduganga Boat Safari -->
-            <div class="card">
-                <img src="images/Interest/Maduganga Boat Safari.jpg" alt="Maduganga Boat Safari">
-                <div class="card-content">
-                    <h3>Maduganga Boat Safari</h3>
-                    <p>Serene mangrove and river safari, ideal for bird watching and exploring traditional village life
-                        and experience cinnamon harvesting and testing cinnamon tea.</p>
-                </div>
-            </div>
-
-            <!-- Koggala -->
-            <div class="card">
-                <img src="images/Interest/Koggala.png" alt="Koggala">
-                <div class="card-content">
-                    <h3>Koggala</h3>
-                    <p>Coastal town with historical sites, turtle hatcheries, and nearby tranquil beaches.</p>
-                </div>
-            </div>
-
-            <!-- GALLE -->
-            <div class="card">
-                <img src="images/Interest/Galle.jpg" alt="Galle">
-                <div class="card-content">
-                    <h3>Galle</h3>
-                    <p>Famous for the Galle Fort, UNESCO heritage, colonial architecture, boutique shops, and coastal
-                        charm.</p>
-                </div>
-            </div>
-
-            <!-- Beruwala -->
-            <div class="card">
-                <img src="images/Interest/Beruwala.jpg" alt="Beruwala">
-                <div class="card-content">
-                    <h3>Beruwala</h3>
-                    <p>Relaxed beach destination with luxury resorts and water activities along the southwest coast.</p>
-                </div>
-            </div>
-
-            <!-- Kalutara -->
-            <div class="card">
-                <img src="images/Interest/Kalutara.png" alt="Kalutara">
-                <div class="card-content">
-                    <h3>Kalutara</h3>
-                    <p>Coastal town known for Kalutara Bodhiya, luxury resorts, and scenic riverside beaches.</p>
-                </div>
-            </div>
-
-            <!-- Udawalawe National Park -->
-            <div class="card">
-                <img src="images/Interest/Udawalawe National Park.jpg" alt="Udawalawe National Park">
-                <div class="card-content">
-                    <h3>Udawalawe National Park</h3>
-                    <p>A repeat of Udawalawe Safari, highlighting its elephant population and lush landscapes.</p>
-                </div>
-            </div>
-
-            <!-- Sinharaja Forest Reserve -->
-            <div class="card">
-                <img src="images/Interest/Sinharaja Forest Reserve.jpg" alt="Sinharaja Forest Reserve">
-                <div class="card-content">
-                    <h3>Sinharaja Forest Reserve</h3>
-                    <p>UNESCO World Heritage tropical rainforest, rich in biodiversity, ideal for trekking and
-                        birdwatching.</p>
+            <div class="package-card">
+                <img src="../../images/Packages/Wildlife, Highlands & Coastal Wonders.png"
+                    alt="Scenic Sri Lankan landscape">
+                <div class="package-content">
+                    <h3>Wildlife, Highlands & Coastal Wonders</h3>
+                    <p><span>Duration:</span> 8 Nights / 9 Days</p>
+                    <p><span>Route:</span><i> Negambo – Kandy- Nuwara Eliya – Udawalawa - Yala – Thissamaharama – Koggala - Deniyaya – Colombo</i></p>
+                    <p><span>Theme:</span> Nature, Wildlife Safaris & Scenic Highlands</p>
+                    <a href="Wildlife, Highlands & Coastal Wonders.html" class="package-btn">View Package</a>
+                    <a href="#" class="package-btn1" onclick="openInquiry('Wildlife, Highlands & Coastal Wonders')">
+                        Quick Inquiry
+                    </a>
                 </div>
             </div>
 
         </div>
-    </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Need a Custom Tour?</h2>
+        <p>We can create your dream Sri Lanka itinerary.</p>
+        <div class="contact-btn-wrap">
+            <a href="contact.html" class="btn-primary">Contact Us</a>
+        </div>
+    </section>
 
     <!-- Footer Section -->
     <footer class="footer" aria-label="Footer">
         <div class="container footer-grid">
             <!-- Column 1: Logo + Social -->
             <div class="footer-column">
-                <a class="brand" href="index.html" aria-label="JUCON TRAVELS home">
-                    <img src="images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
+                <a class="brand" href="../../index.html" aria-label="JUCON TRAVELS home">
+                    <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                     <div class="brand-title1">
                         <strong>JUCON TRAVELS</strong>
                         <span>Travel Agency, Sri Lanka</span>
@@ -1497,10 +1515,10 @@
             <div class="footer-column">
                 <h4>About</h4>
                 <div class="list">
-                    <a href="index.html">Home</a>
-                    <a href="about-us.html">About Us</a>
-                    <a href="blog.html">Blog</a>
-                    <a href="contact.html">Contact</a>
+                    <a href="../../index.html">Home</a>
+                    <a href="../../about-us.html">About Us</a>
+                    <a href="../../blog.html">Blog</a>
+                    <a href="../../contact.html">Contact</a>
                 </div>
             </div>
 
@@ -1508,11 +1526,11 @@
             <div class="footer-column">
                 <h4>Navigate</h4>
                 <div class="list">
-                    <a href="tours-retreats.html">Tours &amp; Retreats</a>
-                    <a href="group-leader.html">Partner up</a>
-                    <a href="packages.html">Packages</a>
-                    <a href="Interest.html">Interest</a>
-                    <!--<a href="faq.html">FAQ</a>-->
+                    <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
+                    <a href="../../group-leader.html">Partner up</a>
+                    <a href="../../packages.html">Packages</a>
+                    <a href="../../Interest.html">Interest</a>
+                    <!--<a href="../../faq.html">FAQ</a>-->
                 </div>
             </div>
 
@@ -1531,9 +1549,154 @@
 
         <!-- Copyright -->
         <div class="footer-bottom">
-            <div>Copyright Â© 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
+            <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
         </div>
     </footer>
+
+    <!-- QUICK INQUIRY MODAL -->
+    <div id="inquiryModal" class="modal">
+
+        <div class="modal-box">
+
+            <span class="close-btn" onclick="closeInquiry()">&times;</span>
+
+            <h2>Quick Inquiry</h2>
+
+            <form class="inquiry-form">
+
+                <div class="floating-group">
+                    <input type="text" id="packageName" readonly>
+                    <label>Selected Package</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="text" required>
+                    <label>Name</label>
+                </div>
+
+                <div class="floating-group">
+                    <select id="country" required>
+                        <option value=""> </option>
+                    </select>
+                    <label>Country</label>
+                </div>
+
+                <div class="floating-group">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+
+                <div class="row">
+
+                    <div class="floating-group">
+                        <input type="date">
+                        <label>Arrival Date</label>
+                    </div>
+
+                    <div class="floating-group">
+                        <input type="date">
+                        <label>Departure Date</label>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="floating-group">
+                        <input type="number">
+                        <label>Adults</label>
+                    </div>
+
+                    <div class="floating-group">
+                        <input type="number">
+                        <label>Children</label>
+                    </div>
+
+                </div>
+
+                <div class="floating-group">
+                    <textarea rows="3"></textarea>
+                    <label>Queries</label>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Inquiry
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <!-- Country List Script -->
+    <script>
+
+        function openInquiry(packageName) {
+
+            document.getElementById("inquiryModal").style.display = "flex";
+
+            document.getElementById("packageName").value = packageName;
+
+        }
+
+        function closeInquiry() {
+
+            document.getElementById("inquiryModal").style.display = "none";
+
+        }
+
+        window.onclick = function (event) {
+
+            let modal = document.getElementById("inquiryModal");
+
+            if (event.target == modal) {
+
+                modal.style.display = "none";
+
+            }
+
+        }
+
+    </script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            fetch("https://restcountries.com/v3.1/all?fields=name")
+
+                .then(response => response.json())
+
+                .then(data => {
+
+                    let countrySelect = document.getElementById("country");
+
+                    data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+                    data.forEach(country => {
+
+                        let option = document.createElement("option");
+
+                        option.value = country.name.common;
+
+                        option.textContent = country.name.common;
+
+                        countrySelect.appendChild(option);
+
+                    });
+
+                })
+
+                .catch(error => {
+
+                    console.log("Country load error:", error);
+
+                });
+
+        });
+
+    </script>
 
 </body>
 
