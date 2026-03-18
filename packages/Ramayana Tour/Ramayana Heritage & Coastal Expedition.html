@@ -14,6 +14,9 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
     <style>
         :root {
@@ -48,7 +51,8 @@
 
         body {
             margin: 0;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
             color: #111 !important;
             background: #fff !important;
             min-height: 100vh;
@@ -80,7 +84,8 @@
             margin-top: -45px;
             margin-bottom: 25px;
             color: #444;
-            font-family: 'Times New Roman', Times, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
         }
 
         .skip-link {
@@ -340,7 +345,8 @@
         }
 
         h1 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(34px, 4.2vw, 56px);
             line-height: 1.03;
             letter-spacing: .2px;
@@ -447,7 +453,8 @@
         }
 
         .section-head h2 {
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             font-size: clamp(24px, 2.6vw, 34px);
             margin: 0;
             line-height: 1.1;
@@ -708,7 +715,8 @@
         .video-content h1 {
             color: #fff;
             font-size: clamp(32px, 4vw, 56px);
-            font-family: "Playfair Display", Georgia, serif;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
             margin: 0;
         }
 
@@ -830,14 +838,16 @@
 
         .about-hero h1 {
             font-size: 48px;
+            font-family: 'Inter', sans-serif;
             color: #ffffff;
             margin-top: -220px;
         }
 
         /* TEXT */
         .about-text {
-            text-align: left;
+            text-align: center;
             margin-top: 130px;
+            width: 1300px;
         }
 
         .about-text h2 {
@@ -852,7 +862,6 @@
             margin: 0 auto 20px;
             line-height: 1.6;
             font-size: 18px;
-            text-align: center;
             color: #000000ba;
         }
 
@@ -896,7 +905,6 @@
             align-items: center;
             margin: 25px 0;
             margin-top: -30px;
-            gap: 35px;
         }
 
         .contact-btn-wrap {
@@ -959,31 +967,6 @@
             /* slightly bigger */
         }
 
-        .TravelOption {
-            background: white;
-            padding: 40px;
-            border-radius: 14px;
-            margin: 0 auto 50px;
-            margin-top: -50px;
-            margin-bottom: -10px;
-            text-align: center;
-        }
-
-        .TravelOption p {
-            color: #000000ba;
-            font-size: 18px;
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .TravelOption span {
-            color: #000000;
-            font-weight: 800;
-            font-size: 20px;
-            ;
-        }
-
         /* TIMELINE */
         .timeline {
             position: relative;
@@ -1031,6 +1014,12 @@
 
         .day-text span {
             color: #000000;
+            font-weight: 800;
+            ;
+        }
+
+        .day-text spana {
+            color: #363636db;
             font-weight: 800;
             ;
         }
@@ -1176,6 +1165,168 @@
             }
         }
 
+        .tour-card-section {
+            padding: 90px 8%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            margin-top: -100px;
+            margin-bottom: -50px;
+        }
+
+        .tour-card {
+            background: linear-gradient(135deg, #acacacb5, #ececec);
+            max-width: 700px;
+            width: 100%;
+            padding: 45px;
+            border-radius: 18px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .tour-card:hover {
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.375);
+            transform: translateY(-6px);
+            background: linear-gradient(135deg, #ececec, #acacacb5);
+        }
+
+        .tour-card h2 {
+            font-size: 34px;
+            margin-bottom: 10px;
+        }
+
+        .tour-sub {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* BUTTON */
+
+        .view-map-btn {
+            padding: 14px 30px;
+            background: #1c73e8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .3s;
+            margin-bottom: 30px;
+        }
+
+        .view-map-btn:hover {
+            background: black;
+        }
+
+        /* DETAILS */
+
+        .tour-details ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+            max-width: 420px;
+            margin: auto;
+        }
+
+        .tour-details li {
+            margin-bottom: 12px;
+            font-size: 17px;
+            padding-left: 28px;
+            position: relative;
+        }
+
+        .tour-details li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #1c73e8;
+            font-weight: bold;
+        }
+
+        /* MAP MODAL */
+
+        .tour-map-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 999;
+        }
+
+        #tourMap {
+            width: 80%;
+            height: 650px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .close-map {
+            position: absolute;
+            top: 40px;
+            right: 60px;
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .car-icon {
+            font-size: 28px;
+        }
+
+        /* PAGINATION */
+        .page-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            background: #000000a1;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover {
+            background: #000000;
+        }
+
+        .page-navigation a {
+            position: relative;
+            text-decoration: none;
+        }
+
+        /* Tooltip */
+        .page-navigation a::after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #838383;
+            color: #fff;
+            padding: 6px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        /* Hover effect */
+        .page-navigation a:hover::after {
+            opacity: 1;
+        }
 
         /* ===== FOOTER ===== */
         .footer {
@@ -1195,7 +1346,7 @@
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
             align-items: start;
-            margin-top: 60px;
+            margin-top: 10px;
         }
 
         .footer-column .site-logo {
@@ -1340,7 +1491,7 @@
                 <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                 <div class="brand-title">
                     <strong>JUCON TRAVELS</strong>
-                    <span>Travel Agency â€¢ Sri Lanka</span>
+                    <span>Travel Agency, Sri Lanka</span>
                 </div>
             </a>
 
@@ -1350,57 +1501,83 @@
                 <a href="../../packages.html">Packages</a>
                 <a href="../../group-leader.html">Partner up</a>
                 <a href="../../Interest.html">Interest</a>
-                <!--<a href="../../faq.html">FAQ</a>-->
+                <!--<a href="faq.html">FAQ</a>-->
                 <a href="../../contact.html">Contact</a>
             </nav>
         </div>
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
             <nav class="nav" aria-label="Mobile">
-                <a href="../../about-us.html">About</a>
+                <a href="../../about-us.html" class="active">About</a>
                 <a href="../../tours-retreats.html">Tours &amp; Retreats</a>
                 <a href="../../packages.html">Packages</a>
                 <a href="../../group-leader.html">Partner up</a>
                 <a href="../../Interest.html">Interest</a>
-                <!--<a href="../../faq.html">FAQ</a>-->
+                <!--<a href="faq.html">FAQ</a>-->
                 <a href="../../contact.html">Contact</a>
             </nav>
         </div>
     </div>
 
     <section class="about-hero">
-        <img src="../../images/Packages/Special Event.png" alt="JOY Project">
-        <h1>Special Event Tour</h1>
+        <img src="../../images/Packages/Banner/Sri Lanka Highlights & Coastal Bliss.png"
+            alt="Sri Lanka Highlights & Coastal Bliss">
+        <h1>Sri Lanka Highlights & Coastal Bliss</h1>
     </section>
 
     <section class="about-text container">
-        <h2 id="intro">Introduction</h2>
+        <h2 id="intro">✨ Tour Description</h2>
         <p>
-            This tour package offers a unique opportunity to witness the grandeur and cultural richness of the Esala
-            Perahera Festival, one of Sri Lanka's most celebrated events. The tour includes a procession through the
-            streets of Kandy, showcasing traditional dances, music, and beautifully decorated elephants. Participants
-            will have the chance to immerse themselves in the vibrant atmosphere of the festival while exploring the
-            historical and cultural significance of Kandy. This special event tour promises an unforgettable experience
-            for those seeking to connect with Sri Lanka's rich heritage and vibrant traditions.
+            This 7-day journey is a perfect blend of Sri Lanka’s cultural treasures, scenic hill country, wildlife
+            encounters, and tropical beach relaxation. From the majestic rock fortress of Sigiriya and the sacred Temple
+            of the Tooth in Kandy to misty tea plantations and the golden beaches of Mirissa, this tour offers a
+            well-balanced experience of heritage, nature, and coastal charm — ideal for travelers seeking diversity
+            within a short stay.
         </p>
+    </section>
 
+    <section class="tour-card-section">
+
+        <div class="tour-card">
+
+            <h2>Sri Lanka Tour Route with Jucon</h2>
+
+            <p class="tour-sub">
+                Explore Sri Lanka’s most beautiful destinations on this unforgettable journey.
+            </p>
+
+            <button class="view-map-btn" onclick="openTourMap()">View Tour Map</button>
+
+
+            <div class="tour-details">
+
+                <ul>
+
+                    <li>3 UNESCO World Heritage Sites</li>
+                    <li>Wildlife Safari Experience</li>
+                    <li>Scenic Hill Country & Waterfalls</li>
+                    <li>Ancient Kingdoms & Sacred Traditions</li>
+                    <li>Tea Plantation & Cultural Experiences</li>
+                    <li>Southern Beach Relaxation</li>
+
+                </ul>
+
+            </div>
+
+        </div>
 
     </section>
 
-    <!-- Discover More Button -->
-    <div class="discover-more">
-        <a href="#intro" class="btn-primary active">Kandy Procession</a>
+    <!-- MAP MODAL -->
+    <div id="tourMapModal" class="tour-map-modal">
+
+        <span class="close-map" onclick="closeTourMap()">×</span>
+
+        <div id="tourMap"></div>
+
     </div>
 
-    <div class="TravelOption">
-        <p>With First Two Week in August</p>
-    </div>
-
-    <div class="TravelOption">
-        <p><span class="highlight">Route:</span> Negambo - Kandy â€“
-            Sigiriya - Kandy - Colombo</p>
-    </div>
-
+    <!-- TIMELINE -->
     <div class="container">
         <!-- TIMELINE -->
         <div class="timeline">
@@ -1409,17 +1586,23 @@
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3 id="day1">Day 1: Negambo</h3>
+                            <h3 id="day1">Day 1: Arrival in Negombo – Coastal Welcome</h3>
                             <ul>
-                                <li>Negambo Beach</li>
-                                <li>Negambo City Tour</li>
+                                <li><span class="highlight">The Experience:</span> Relax on the golden sands of Negombo
+                                    Beach and enjoy a guided city tour through this vibrant fishing town.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Explore Dutch canals, colonial
+                                    churches, and traditional seafood markets.</li>
+                                <li><span class="highlight">Nature:</span> Palm-fringed coastline and tranquil lagoon
+                                    scenery.</li>
+                                <li><span class="highlight">Value Addition:</span> Optional sunset lagoon cruise and
+                                    fresh seafood dining experience.</li>
                             </ul>
-                            <p><span>Stay overnight in Negambo</span></p>
+                            <p><span>Stay overnight in Negombo</span></p>
                         </div>
 
                         <!-- RIGHT IMAGE -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/negombo.jpg" alt="Negombo">
+                            <img src="../../images/Packages/Destinations/Negombo.png" alt="Negombo">
                         </div>
                     </div>
                 </div>
@@ -1430,17 +1613,22 @@
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-img">
-                            <img src="../../images/Pearl/Pinnawala & Minneriya.jpg" alt="Pinnawala">
+                            <img src="../../images/Packages/Destinations/Dambulla.jpg" alt="Pinnawala">
                         </div>
                         <!-- RIGHT IMAGE -->
                         <div class="day-text">
-                            <h3>Day 2: Negambo â€“ Kandy</h3>
+                            <h3>Day 2: Negombo to Dambulla – Elephants & Wildlife</h3>
                             <ul>
-                                <li>Pinnawala Elephant Orphanage</li>
-                                <li>Tooth Relic</li>
-                                <li>Enjoy Kandy Ritual Procession</li>
+                                <li><span class="highlight">The Experience:</span> Visit the renowned Pinnawala Elephant
+                                    Orphanage and enjoy an exciting safari at Minneriya National Park.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Learn about Sri Lanka’s
+                                    long-standing relationship with elephants and rural traditions.</li>
+                                <li><span class="highlight">Nature:</span> Witness herds of wild elephants, deer, and
+                                    exotic birdlife in their natural habitat.</li>
+                                <li><span class="highlight">Value Addition:</span> Guided jeep safari with experienced
+                                    wildlife tracker.</li>
                             </ul>
-                            <p><span>Stay overnight in Kandy</span></p>
+                            <p><span>Stay overnight in Dambulla</span></p>
                         </div>
                     </div>
                 </div>
@@ -1451,42 +1639,51 @@
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 3: Kandy - Dambulla</h3>
+                            <h3>Day 3: Dambulla to Kandy – Royal Heritage & Sacred Traditions</h3>
                             <ul>
-                                <li>Visit Sigiriya</li>
-                                <li>Visit Dambulla Cave Temple</li>
-                                <li>Visit Spice garden</li>
-                                <li>Enjoy Kandy Ritual Procession</li>
-                            </ul>
-                            <p><span>Stay overnight in Kandy</span></p>
-                        </div>
-                        <!-- RIGHT IMAGE -->
-                        <div class="day-img">
-                            <img src="../../images/Pearl/Horton Plains & Ella.jpg" alt="Horton Plains & Ella">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="day">
-                <div class="day-card">
-                    <div class="day-content">
-                        <!-- LEFT TEXT -->
-                        <div class="day-img">
-                            <img src="../../images/Pearl/Tissamaharama.jpg" alt="Tissamaharama">
-                        </div>
-                        <!-- RIGHT IMAGE -->
-                        <div class="day-text">
-                            <h3>Day 4: Kandy</h3>
-                            <ul>
-                                <li>Visit Gem Museum</li>
-                                <li>Visit Peradiniya Botanical Garden</li>
-                                <li>Visit Three Temple Loop (Lanka Thilaka Temple, Gadoladeniya Temple and Ambakke Wood
-                                    Caving)</li>
-                                <li>Enjoy Kandy Ritual Procession</li>
+                                <li><span class="highlight">The Experience:</span> Climb the iconic Sigiriya and visit
+                                    the sacred Dambulla Cave Temple before heading to Kandy.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Explore ancient frescoes, royal
+                                    gardens, and cave shrines followed by a visit to the revered Temple of the Sacred
+                                    Tooth Relic and enjoy a traditional Kandyan dance performance.</li>
+                                <li><span class="highlight">Nature:</span> Sweeping jungle landscapes and scenic hill
+                                    country views.</li>
+                                <li><span class="highlight">Value Addition:</span> Spice garden visit with herbal
+                                    demonstration en route.</li>
                             </ul>
                             <p><span>Stay overnight in Kandy</span></p>
                         </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Packages/Destinations/Kandy.jpg" alt="Kandy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Packages/Destinations/Nuwara Eliya.png" alt="Nuwara Eliya">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 4: Kandy to Nuwara Eliya – Tea Country Escape</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Visit a gem museum, stroll through
+                                    Royal Botanic Gardens Peradeniya, admire Ramboda Waterfall, and tour a working tea
+                                    factory.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Discover Sri Lanka’s gemstone
+                                    industry and the legacy of world-famous Ceylon Tea.</li>
+                                <li><span class="highlight">Nature:</span> Misty mountains, lush plantations, and
+                                    cascading waterfalls.</li>
+                                <li><span class="highlight">Value Addition:</span> Tea tasting session and optional
+                                    scenic train ride (subject to availability).</li>
+                            </ul>
+                            <p><span>Stay overnight in Nuwara Eliya</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1496,17 +1693,51 @@
                     <div class="day-content">
                         <!-- LEFT TEXT -->
                         <div class="day-text">
-                            <h3>Day 5: Kandy - Colombo</h3>
+                            <h3>Day 5: Nuwara Eliya to Mirissa – Highlands to Coast</h3>
                             <ul>
-                                <li>Visit Colombo Museum</li>
-                                <li>Colombo City Tour</li>
+                                <li><span class="highlight">The Experience:</span> Trek through Horton Plains National
+                                    Park to stand at World’s End, visit Hakgala Garden, and continue to the southern
+                                    coast.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Explore colonial influences in
+                                    Nuwara Eliya and Ramayana legends linked to Hakgala.</li>
+                                <li><span class="highlight">Nature:</span> High-altitude cloud forests, Sambar deer, and
+                                    scenic waterfalls including Ravana Falls.</li>
+                                <li><span class="highlight">Value Addition:</span> Panoramic photography stops along the
+                                    journey to the coast.</li>
+                            </ul>
+                            <p><span>Stay overnight in Mirissa</span></p>
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-img">
+                            <img src="../../images/Packages/Destinations/Mirissa.jpg" alt="Mirissa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day">
+                <div class="day-card">
+                    <div class="day-content">
+                        <!-- LEFT TEXT -->
+                        <div class="day-img">
+                            <img src="../../images/Packages/Destinations/Colombo.png" alt="Galle & Colombo">
+                        </div>
+                        <!-- RIGHT IMAGE -->
+                        <div class="day-text">
+                            <h3>Day 6: Mirissa to Colombo – Coastal Charm & Colonial Elegance</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Relax on Mirissa Beach before
+                                    exploring the historic Galle Fort and continuing to Colombo for a city tour.</li>
+                                <li><span class="highlight">Culture & Heritage:</span> Walk the 16th-century fort
+                                    ramparts blending European and South Asian architecture and discover colonial
+                                    landmarks in Colombo.</li>
+                                <li><span class="highlight">Nature:</span> Golden beaches and oceanfront views at Galle
+                                    Face Green.</li>
+                                <li><span class="highlight">Value Addition:</span> Shopping experience and optional
+                                    sunset seaside dining.</li>
                             </ul>
                             <p><span>Stay overnight in Colombo</span></p>
                         </div>
-                        <!-- RIGHT IMAGE -->
-                        <div class="day-img">
-                            <img src="../../images/Pearl/Yala & Mirissa.png" alt="Yala & Mirissa">
-                        </div>
                     </div>
                 </div>
             </div>
@@ -1515,22 +1746,39 @@
                 <div class="day-card">
                     <div class="day-content">
                         <!-- LEFT TEXT -->
-                        <div class="day-img">
-                            <img src="../../images/Pearl/airport.jpg" alt="Galle & Colombo">
+                        <div class="day-text">
+                            <h3>Day 7: Colombo to Airport – Farewell Sri Lanka</h3>
+                            <ul>
+                                <li><span class="highlight">The Experience:</span> Comfortable transfer to the airport
+                                    for departure.</li>
+                                <li><span class="highlight">Value Addition:</span> Personalized souvenir as a memory of
+                                    your Sri Lankan journey.</li>
+                            </ul>
+                            <p><span>Be careful and come back.</span></p>
                         </div>
                         <!-- RIGHT IMAGE -->
-                        <div class="day-text">
-                            <h3>Day 6: Colombo - Airport</h3>
-                            <ul>
-                                <li>Back to the Air Port for Departure</li>
-                            </ul>
-                            <p><span>End of the Journey</span></p>
+                        <div class="day-img">
+                            <img src="../../images/Packages/Destinations/airport.jpg" alt="Airport Departure">
                         </div>
                     </div>
                 </div>
             </div>
 
         </div>
+
+        <div class="page-navigation">
+
+            <a href="Sri Lanka Cultural Escape.html" class="nav-btn prev" data-title="sri lanka cultural escape">
+                ← Previous
+            </a>
+
+            <a href="Ultimate Sri Lanka Grand Explorer.html" class="nav-btn next"
+                data-title="Ultimate Sri Lanka Grand Explorer">
+                Next →
+            </a>
+
+        </div>
+
     </div>
 
     <!-- CTA -->
@@ -1591,7 +1839,7 @@
                     <img src="../../images/logo.png" alt="JUCON TRAVELS" class="site-logo" />
                     <div class="brand-title1">
                         <strong>JUCON TRAVELS</strong>
-                        <span>Travel Agency â€¢ Sri Lanka</span>
+                        <span>Travel Agency, Sri Lanka</span>
                     </div>
                 </a>
                 <!-- Social Icons -->
@@ -1643,7 +1891,7 @@
                     <a href="../../group-leader.html">Partner up</a>
                     <a href="../../packages.html">Packages</a>
                     <a href="../../interest.html">Interest</a>
-                    <!--<a href="../../faq.html">FAQ</a>-->
+                    <!--<a href="faq.html">FAQ</a>-->
                 </div>
             </div>
 
@@ -1662,9 +1910,150 @@
 
         <!-- Copyright -->
         <div class="footer-bottom">
-            <div>Copyright Â© 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
+            <div>Copyright © 2026 <a href="https://nmdskandy.lk/">nmdskandy</a>. All Rights Reserved</div>
         </div>
     </footer>
+
+
+    <script>
+
+        function openTourMap() {
+            document.getElementById("tourMapModal").style.display = "flex";
+            setTimeout(initMap, 200);
+        }
+
+        function closeTourMap() {
+            document.getElementById("tourMapModal").style.display = "none";
+        }
+
+    </script>
+
+    <script>
+
+        function initMap() {
+
+            if (window.mapLoaded) return;
+
+            window.mapLoaded = true;
+
+            var map = L.map('tourMap').setView([7.5, 80.7], 7);
+
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap'
+            }).addTo(map);
+
+
+            /* CITIES */
+
+            var cities = [
+                ["Katunayake Airport", 7.1808, 79.8841, "../../images/Packages/Map/KatunayakeAirport.jpg"],
+                ["Negombo", 7.2083, 79.8358, "../../images/Packages/Map/Negombo.jpg"],
+                ["Dambulla", 7.8742, 80.6525, "../../images/Packages/Map/Dambulla.png"],
+                ["Kandy", 7.2906, 80.6337, "../../images/Packages/Map/Kandy.jpg"],
+                ["Nuwara Eliya", 6.9497, 80.7891, "../../images/Packages/Map/Nuwara Eliya.jpg"],
+                ["Mirissa", 5.9483, 80.4561, "../../images/Packages/Map/Mirissa.png"],
+                ["Colombo", 6.9271, 79.8612, "../../images/Packages/Map/Colombo.png"],
+                ["Katunayake Airport", 7.1808, 79.8841, "../../images/Packages/Map/KatunayakeAirport.jpg"]
+            ];
+
+
+            /* MARKERS WITH HOVER POPUP */
+
+            /* MARKERS WITH HOVER POPUP - RED PIN */
+            var cityMarkers = [];
+
+            // Red pin icon
+            var redIcon = L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+                shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+
+            var greenIcon = L.icon({
+                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png',
+                shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+                iconSize: [25, 41],
+                iconAnchor: [12, 41],
+                popupAnchor: [1, -34],
+                shadowSize: [41, 41]
+            });
+
+            cities.forEach(function (city) {
+                var marker = L.marker([city[1], city[2]], { icon: redIcon }).addTo(map);
+                marker.bindPopup(`<div style="text-align:center;width:180px;">
+        <img src="${city[3]}" style="width:100%;border-radius:8px;margin-bottom:6px;">
+        <b>${city[0]}</b>
+    </div>`);
+                marker.on('mouseover', function () { this.openPopup(); });
+                marker.on('mouseout', function () { this.closePopup(); });
+                cityMarkers.push(marker);
+            });
+
+
+            /* ROUTE */
+
+            var routeCoords = cities.map(c => [c[1], c[2]]);
+
+            var route = L.polyline(routeCoords, {
+                color: '#1E90FF', // Nilapatin blue
+                weight: 4
+            }).addTo(map);
+
+            map.fitBounds(route.getBounds());
+
+
+            /* SMOOTH CAR MOVEMENT USING L.latLng AND DISTANCE INTERPOLATION */
+            var carIcon = L.divIcon({
+                html: '<div id="car" style="font-size:22px; transition: transform 0.1s linear;">⚫</div>',
+                className: "",
+                iconSize: [30, 30]
+            });
+
+            var carMarker = L.marker(routeCoords[0], { icon: carIcon }).addTo(map);
+
+            var segment = 0;
+            var progress = 0;
+            var speed = 0.008; // adjust for slower/faster
+
+            function moveCarAccurate() {
+                if (segment >= routeCoords.length - 1) return;
+
+                var start = L.latLng(routeCoords[segment]);
+                var end = L.latLng(routeCoords[segment + 1]);
+
+                // Interpolate
+                var lat = start.lat + (end.lat - start.lat) * progress;
+                var lng = start.lng + (end.lng - start.lng) * progress;
+                carMarker.setLatLng([lat, lng]);
+
+                // Rotate car
+                var angle = Math.atan2(end.lng - start.lng, end.lat - start.lat) * 180 / Math.PI;
+                document.getElementById("car").style.transform = `rotate(${angle - 90}deg)`;
+
+                progress += speed;
+
+                // Change icon of current end city when car reaches it
+                if (progress >= 1) {
+                    progress = 0;
+
+                    if (segment + 1 < cityMarkers.length) {
+                        cityMarkers[segment + 1].setIcon(greenIcon); // current city pin green
+                    }
+
+                    segment++;
+                }
+
+                requestAnimationFrame(moveCarAccurate);
+            }
+
+            setTimeout(moveCarAccurate, 1000);
+
+        }
+
+    </script>
 
 </body>
 
