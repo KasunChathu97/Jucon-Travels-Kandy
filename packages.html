@@ -48,7 +48,7 @@
 
         body {
             margin: 0;
-            font-family:'Inter',sans-serif;
+            font-family: 'Inter', sans-serif;
             color: #111 !important;
             background: #ffffff !important;
             min-height: 100vh;
@@ -75,12 +75,12 @@
         }
 
         .container h1 {
-            font-size: 18px;
+            font-size: 34px;
             text-align: center;
             margin-top: -45px;
             margin-bottom: 25px;
             color: #444;
-            font-family:'Playfair Display',serif;
+            font-family: 'Playfair Display', serif;
         }
 
         .skip-link {
@@ -340,7 +340,7 @@
         }
 
         h1 {
-            font-family:'Playfair Display',serif;
+            font-family: 'Playfair Display', serif;
             font-size: clamp(34px, 4.2vw, 56px);
             line-height: 1.03;
             letter-spacing: .2px;
@@ -447,7 +447,7 @@
         }
 
         .section-head h2 {
-            font-family:'Playfair Display',serif;
+            font-family: 'Playfair Display', serif;
             font-size: clamp(24px, 2.6vw, 34px);
             margin: 0;
             line-height: 1.1;
@@ -708,7 +708,7 @@
         .video-content h1 {
             color: #fff;
             font-size: clamp(32px, 4vw, 56px);
-            font-family:'Playfair Display',serif;
+            font-family: 'Playfair Display', serif;
             margin: 0;
         }
 
@@ -985,7 +985,7 @@
             margin-bottom: 15px;
             line-height: 1.6;
         }
-        
+
 
         .packages-grid .package-card:nth-child(10) {
             grid-column: 2 / 3;
@@ -1101,6 +1101,62 @@
                 transform: translate(-50%, -50%) scale(1.8);
                 opacity: 0;
                 box-shadow: 0 0 45px 30px rgba(255, 255, 255, 0);
+            }
+        }
+
+        /* Inclusions */
+        .benefits-section {
+            padding: 60px -2%;
+            margin-left: -90px;
+            align-items: center;
+        }
+
+        .benefits-grid {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .benefit-card {
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+            background: #ffffff;
+            width: 750px;
+        }
+
+        .benefit-card.gray {
+            background: #F3F3F3;
+        }
+
+        .benefit-card h2 {
+            font-size: 23px;
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .benefit-card ul {
+            padding-left: 18px;
+            align-items: center;
+        }
+
+        .benefit-card li {
+            margin-bottom: 10px;
+            align-items: center;
+            font-size: 18px;
+            color: #000000bb;
+        }
+
+        .benefit-card:hover {
+            background: #96f44e94;
+            color: #fff;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        @media(max-width:768px) {
+            .benefits-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -1221,8 +1277,9 @@
             list-style: none;
             padding: 0;
             display: flex;
-            gap: 14px;
+            gap: 20px;
             margin-top: 10px;
+            margin-left: 35px;
         }
 
         .social-links li a {
@@ -1423,7 +1480,8 @@
                 </div>
             </a>
 
-            <a href="packages/Nature and Wildlife/Nature and Wildlife.html" class="package-card nature-wildlife-tour-card">
+            <a href="packages/Nature and Wildlife/Nature and Wildlife.html"
+                class="package-card nature-wildlife-tour-card">
                 <div class="package-overlay">
                     <h3>Nature and Wildlife Tour</h3>
 
@@ -1464,6 +1522,33 @@
         </div>
     </section>
 
+    <!-- Inclusions -->
+    <section class="benefits-section">
+
+        <div class="container">
+            <h1>Inclusions</h1>
+            <div class="benefits-grid">
+
+                <!-- All Inclusive -->
+                <div class="benefit-card">
+                    <h2>Above package includes:</h2>
+                    <ul>
+                        <li>Package Price Per Person with Minimum Two pax.</li>
+                        <li>Accommodation on half board will be offered on the basis hotel's options.</li>
+                        <li>Private semi-luxury car/van (air-conditioned)</li>
+                        <li>Private English-Speaking driver for the entire Journey</li>
+                        <li>Fuel & local insurance for the vehicle</li>
+                        <li>All government taxes</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
     <!-- CTA -->
     <section class="cta">
         <h2>Need a Custom Tour?</h2>
@@ -1488,29 +1573,31 @@
                 <!-- Social Icons -->
                 <ul class="social-links">
                     <li>
-                        <a href="https://www.instagram.com/" target="_blank" rel="noopener" title="Instagram">
+                        <a href="https://www.instagram.com/jucontravels/#" target="_blank" rel="noopener"
+                            title="Instagram">
                             <span class="sr-only">Instagram</span>
                             <i class="fab fa-instagram" aria-hidden="true"></i>
                         </a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="https://www.linkedin.com/" target="_blank" rel="noopener" title="LinkedIn">
                             <span class="sr-only">LinkedIn</span>
                             <i class="fab fa-linkedin-in" aria-hidden="true"></i>
                         </a>
-                    </li>
+                    </li>-->
                     <li>
-                        <a href="https://www.facebook.com/profile.php?id=61582249807331" target="_blank" rel="noopener" title="Facebook">
+                        <a href="https://www.facebook.com/profile.php?id=61582249807331" target="_blank" rel="noopener"
+                            title="Facebook">
                             <span class="sr-only">Facebook</span>
                             <i class="fab fa-facebook-f" aria-hidden="true"></i>
                         </a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="https://www.youtube.com/" target="_blank" rel="noopener" title="YouTube">
                             <span class="sr-only">YouTube</span>
                             <i class="fab fa-youtube" aria-hidden="true"></i>
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
 
             </div>
@@ -1544,7 +1631,7 @@
                 <div class="list">
                     <a href="#contact">68B, Wariyapola Sri Sumangala Mw, Asgiriya, Kandy</a>
                     <a href="tel:+94703568306">+94 70 356 8306</a>
-                    <a href="mailto:nkdharmasena@gmail.com">nkdharmasena@gmail.com</a>
+                    <a href="mailto:info@jucontravels.com">info@jucontravels.com</a>
                     <span class="footer-working-hours">Working Hours: Monday to Friday 9:00 AM - 5:00 PM EEST
                         (UTC+3)</span>
                 </div>
