@@ -1149,12 +1149,12 @@
                     </select>
                 </div>
 
-                <!-- <div id="packageDiv" style="display:none;">
+                 <div id="packageDiv" style="display:none;">
     <label>Select Your Package</label>
     <select id="packageSelect">
         <option value="">-- Select Package --</option>
     </select>
-</div> -->
+</div> 
 
                 <input type="hidden" id="selectedPackage">
 
@@ -1347,19 +1347,7 @@
         </div>
     </footer>
 
-    <script>
-        const packageSelect = document.getElementById("packageSelect");
-        const hiddenInput = document.getElementById("selectedPackage");
-
-        packageSelect.addEventListener("change", function () {
-            hiddenInput.value = this.value;
-
-            const textarea = document.querySelector("textarea");
-            if (this.value !== "") {
-                textarea.value = "I am interested in the package: " + this.value;
-            }
-        });
-    </script>
+ 
 
     <script>
         const countrySelect = document.getElementById("countrySelect");
@@ -1393,8 +1381,9 @@
         });
     </script>
 
-    <!-- <script>
+ <script>
 // packages data
+(function () {
 const packages = {
     round: [
         "The Radiant Pearl Adventure",
@@ -1443,24 +1432,37 @@ const packages = {
 
 // elements
 const tourSelect = document.getElementById("tourSelect");
-const packageSelect = document.getElementById("packageSelect");
+const packageSelectEl = document.getElementById("packageSelect");
 const packageDiv = document.getElementById("packageDiv");
+const hiddenInput = document.getElementById("selectedPackage");
+const textarea = document.querySelector("textarea");
 
 // event
+if (!tourSelect || !packageSelectEl || !packageDiv) {
+    return;
+}
+
+function resetPackages() {
+    packageSelectEl.innerHTML = '<option value="">-- Select Package --</option>';
+}
+
 tourSelect.addEventListener("change", function(){
     const selectedTour = this.value;
 
     // hide or show package dropdown
     if(selectedTour === "") {
         packageDiv.style.display = "none";
-        packageSelect.innerHTML = '<option value="">-- Select Package --</option>';
+        resetPackages();
+        if (hiddenInput) hiddenInput.value = "";
+        if (textarea) textarea.value = "";
         return;
     } else {
         packageDiv.style.display = "block";
     }
 
     // clear previous packages
-    packageSelect.innerHTML = '<option value="">-- Select Package --</option>';
+    resetPackages();
+    if (hiddenInput) hiddenInput.value = "";
 
     // add relevant packages
     if(packages[selectedTour]){
@@ -1468,11 +1470,22 @@ tourSelect.addEventListener("change", function(){
             const option = document.createElement("option");
             option.value = pkg;
             option.textContent = pkg;
-            packageSelect.appendChild(option);
+            packageSelectEl.appendChild(option);
         });
     }
 });
-</script> -->
+
+packageSelectEl.addEventListener("change", function () {
+    const selected = this.value;
+    if (hiddenInput) hiddenInput.value = selected;
+
+    if (textarea) {
+        textarea.value = selected ? ("I am interested in the package: " + selected) : "";
+    }
+});
+
+})();
+</script> 
 
 </body>
 
