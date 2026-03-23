@@ -1,258 +1,511 @@
-/* Responsive styles for mobile, tablet, and large screens */
-@media (max-width: 1200px) {
+/*
+  Mobile responsiveness overrides.
 
-    .container-header,
-    .container {
-        width: 98vw;
-        padding-left: 8px;
-        padding-right: 8px;
-    }
+  This file is intended to be linked AFTER each page's inline <style> block so
+  it can safely fix mobile issues without changing desktop design.
+*/
 
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
+img,
+video,
+canvas,
+svg {
+    max-width: 100%;
+    height: auto;
 }
 
-@media (max-width: 980px) {
+iframe {
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    /* Clamp overly-wide blocks caused by per-page fixed widths */
+    * {
+        max-width: 100%;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    /* Common layout containers */
+    .container,
+    .container-header {
+        width: calc(100% - 24px);
+        height: auto;
+    }
+
+    /* Header: keep brand + hamburger aligned and prevent overflow */
     .header-inner {
-        flex-direction: column;
-        gap: 18px;
-        margin-top: 8px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 0;
+    }
+
+    /* Ensure header + hamburger stay clickable above overlapping sections */
+    .container-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: var(--bg, #fff);
+    }
+
+    #menuBtn,
+    .menu-btn {
+        position: relative;
+        z-index: 1001;
+        pointer-events: auto;
+    }
+
+    #mobilePanel,
+    .mobile-panel {
+        position: relative;
+        z-index: 1000;
     }
 
     .brand {
+        min-width: 0;
         margin-right: 0;
-        gap: 18px;
-    }
-
-    .nav {
-        flex-direction: column;
-        gap: 8px;
-        width: 100%;
-        justify-content: flex-start;
-    }
-
-    .hero-grid {
-        grid-template-columns: 1fr;
         gap: 12px;
     }
 
-    .stat-grid {
+    .brand-title strong {
+        font-size: 16px;
+    }
+
+    /* If a page forgets to hide/show nav correctly, force a safe mobile state */
+    .header-inner > .nav {
+        display: none;
+    }
+
+    #menuBtn,
+    .menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Mobile menu: avoid 2-column overflow on narrow phones */
+    .mobile-panel .nav {
         grid-template-columns: 1fr;
+    }
+
+    .mobile-panel .nav a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Common grids used across pages */
+    .hero-grid,
+    .grid-2,
+    .grid-3,
+    .two-col,
+    .form-grid,
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Forms: prevent input overflow on narrow screens */
+    input,
+    select,
+    textarea,
+    button {
+        max-width: 100%;
+    }
+
+    /* Long content should scroll instead of forcing page overflow */
+    pre,
+    code {
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Video embeds (YouTube) */
+    .video-container {
+        height: auto;
+        padding: 0;
+    }
+
+    .video-wrapper-full {
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    .video-wrapper-full iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    iframe[src*="youtube"],
+    iframe[src*="youtu.be"] {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+
+    /* Footers: many pages use fixed margins/heights that break mobile */
+    .footer {
+        margin-left: 12px;
+        margin-right: 12px;
+        height: auto;
+    }
+
+    .footer-bottom {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .footer-column .site-logo,
+    .brand-title1,
+    .social-links {
+        margin-left: 0;
+    }
+
+    .social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* About page: center the CTA and prevent horizontal scrolling */
+    .discover-more {
+        margin: 20px auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Why sections (multiple pages): remove wide widths/negative margins on mobile */
+    .why-section,
+    .why-sl,
+    .contact-map {
+        margin-top: 0 !important;
+    }
+
+    .tours-text {
+        margin-top: 24px !important;
+    }
+
+    .why-grid,
+    .why-grid1 {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .why-text,
+    .why-text p {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .why-image,
+    .why-image img {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .why-image img {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    .why-grid1 {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .why-image img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    /* Home page inspirational cards: prevent overflow from 110% images */
+    .inspirational-image {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .inspirational-container {
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 24px;
+    }
+
+    .inspirational-content {
+        margin-right: 0;
+        max-width: 100%;
+    }
+
+    .inspirational-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Benefits cards (packages/tours pages): avoid fixed-width cards on mobile */
+    .benefits-section {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .benefit-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Hero banners on many pages: fixed widths + negative margins break mobile */
+    .about-hero img,
+    .packages-hero img,
+    .tours-hero img {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin-top: 0 !important;
+    }
+
+    .about-hero h1,
+    .packages-hero h1,
+    .tours-hero h1 {
+        margin-top: 0 !important;
+        font-size: 28px;
+        line-height: 1.2;
+    }
+
+    .about-hero img {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .about-hero h1 {
+        margin-top: 0;
+    }
+
+    .about-text {
+        margin-top: 24px;
+    }
+
+    .founder-section {
+        margin-top: 0;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .founder-content {
+        margin-left: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .founder-image img {
+        width: 100% !important;
+    }
+
+    /* Contact page map */
+    .contact-map-iframe {
+        height: 280px;
+    }
+
+    /* Contact page: content section + promoter box */
+    .contact-section {
+        padding: 28px 16px !important;
+    }
+
+    .contact-container {
+        gap: 18px !important;
+        align-items: stretch;
+    }
+
+    .contact-info {
+        min-width: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    .contact-info h2 {
+        font-size: 28px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .contact-info p {
+        font-size: 16px !important;
+        line-height: 1.65;
+    }
+
+    .contact-info h3 {
+        margin-left: 0 !important;
+        font-size: 20px !important;
+    }
+
+    .check-list div {
+        margin-left: 0 !important;
+        font-size: 16px !important;
+    }
+
+    .contact-details {
+        gap: 12px !important;
+    }
+
+    .contact-details div {
+        font-size: 15px !important;
+        line-height: 1.5;
+        display: flex;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .contact-details i {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        margin-top: 2px;
+        flex: 0 0 auto;
+    }
+
+    .promoter-box {
+        width: 100% !important;
+        max-width: 580px;
+        height: auto !important;
+        padding: 24px !important;
+        margin-top: 8px !important;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 22px;
+    }
+
+    .promoter-box h2 {
+        font-size: 24px !important;
+    }
+
+    .promoter-box h3 {
+        font-size: 16px !important;
+    }
+
+    .promoter-box p {
+        font-size: 16px !important;
+        line-height: 1.55;
+    }
+
+    .apply-btn {
+        width: 100%;
+        padding: 14px 16px;
+    }
+
+    .contact-map {
+        padding: 32px 12px !important;
+    }
+
+    .contact-map h2 {
+        font-size: 22px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .map-container {
+        border-radius: 14px;
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+    }
+
+    /* Tour pages Leaflet map modal */
+    #tourMap {
+        width: 92%;
+        height: 70vh;
+    }
+
+    .close-map {
+        top: 18px;
+        right: 18px;
     }
 }
 
-@media (max-width: 700px) {
+/* Header stickiness for wider mobile/tablet widths */
+@media (max-width: 980px) {
+    .container-header {
+        width: calc(100% - 24px);
+        height: auto;
+    }
 
-    .container-header,
-    .container {
-        width: 100vw;
-        padding-left: 2px;
-        padding-right: 2px;
+    .container-header {
+        position: sticky;
+        top: 0;
+        z-index: 20000;
+        background: var(--bg, #fff);
     }
 
     .header-inner {
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 4px;
+        margin-top: 0;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
     }
 
     .brand {
-        gap: 10px;
+        min-width: 0;
+        margin-right: 0;
+        gap: 12px;
     }
 
-    .nav {
-        flex-direction: column;
-        gap: 6px;
-        width: 100%;
-        justify-content: flex-start;
+    .brand-title strong {
+        font-size: 16px;
     }
 
-    .hero-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
+    .header-inner > .nav {
+        display: none;
     }
 
-    .stat-grid {
-        grid-template-columns: 1fr;
+    #menuBtn,
+    .menu-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 20001;
+        pointer-events: auto;
     }
 
-    h1 {
-        font-size: 28px !important;
-    }
-}
-
-@media (min-width: 1600px) {
-
-    .container-header,
-    .container {
-        max-width: 1400px;
+    #mobilePanel,
+    .mobile-panel {
+        position: relative;
+        z-index: 20000;
     }
 
-    .hero-grid {
-        grid-template-columns: 1.2fr .8fr;
-        gap: 32px;
+    /* If the opened mobile menu is taller than the screen, allow scrolling */
+    #mobilePanel.open,
+    .mobile-panel.open {
+        max-height: calc(100vh - 96px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
-}
-
-/* External styles moved from index.html inline styles */
-.hero-card-actions {
-    margin-top: 14px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.cta-banner {
-    margin-top: 18px;
-}
-
-.grid-3.audience-types {
-    margin-top: 18px;
-}
-
-.card.special {
-    padding: 22px;
-}
-
-.card .pill {
-    margin-bottom: 10px;
-}
-
-.card .btn-group {
-    margin-top: 14px;
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-}
-
-.section-head .btn {
-    margin-left: 10px;
-}
-
-.post .btn {
-    margin-top: 8px;
-}
-
-.card .fine {
-    margin-top: 14px;
-}
-
-.card .address {
-    margin-top: 10px;
-}
-
-.card .contact {
-    margin-top: 14px;
-}
-
-.card .enquiry {
-    margin-bottom: 12px;
-}
-
-.card .call {
-    height: 10px;
-}
-
-.card .note {
-    margin-top: 14px;
-    color: var(--muted2);
-    font-size: 12.5px;
-}
-
-.card .title {
-    margin: 0 0 10px;
-    font-size: 18px;
-}
-
-.card .meta {
-    color: var(--muted2);
-    font-size: 12.5px;
-}
-
-.card .blog-title {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 1.35;
-}
-
-.card .address span {
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.65;
-}
-
-.brand[style] {
-    padding: 0 !important;
-}
-
-.footer-grid {
-    gap: 18px;
-}
-
-.section-head {
-    gap: 10px;
-}
-
-.header-inner {
-    gap: 10px;
-}
-
-.header-cta {
-    width: 100%;
-    justify-content: flex-end;
-}
-
-.video-hero {
-    width: 100%;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-    min-height: unset;
-}
-
-.video-embed {
-    width: 100%;
-    max-width: 700px;
-    aspect-ratio: 16/9;
-    margin: 32px auto 32px auto;
-    position: relative;
-    background: #000;
-    overflow: hidden;
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (max-width: 800px) {
-    .video-embed {
-        max-width: 98vw;
-        margin: 18px auto 18px auto;
-        border-radius: 10px;
-    }
-}
-
-.video-embed iframe {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-    background: #000;
-}
-
-body,
-body * {
-    color: #111 !important;
-}
-
-:root {
-    --text: #111;
-    --muted: #222;
-    --muted2: #444;
 }

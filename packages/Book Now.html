@@ -1086,6 +1086,7 @@
             vertical-align: middle;
         }
     </style>
+  <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -1110,6 +1111,10 @@
                 <!--<a href="../faq.html">FAQ</a>-->
                 <a href="../contact.html">Contact</a>
             </nav>
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="mobilePanel" aria-expanded="false">
+                <span class="sr-only">Menu</span>
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
         </div>
 
         <div class="mobile-panel" id="mobilePanel" aria-label="Mobile menu">
@@ -1128,13 +1133,13 @@
     <div class="container">
         <h2>🌍 Tour Inquiry Form</h2>
 
-        <form class="form">
+        <form class="form" id="tourInquiryForm" data-inquiry-type="tour" data-endpoint="../send-inquiry.php">
 
             <div class="form-grid">
 
                 <div>
                     <label>Select Your Tour</label>
-                    <select id="tourSelect">
+                    <select id="tourSelect" name="tour">
                         <option value="">-- Select Tour --</option>
                         <option value="round">Round Tour Packages</option>
                         <option value="family">Family Tour Packages</option>
@@ -1151,95 +1156,95 @@
 
                  <div id="packageDiv" style="display:none;">
     <label>Select Your Package</label>
-    <select id="packageSelect">
+    <select id="packageSelect" name="package">
         <option value="">-- Select Package --</option>
     </select>
 </div> 
 
-                <input type="hidden" id="selectedPackage">
+                <input type="hidden" id="selectedPackage" name="selected_package">
 
                 <div>
                     <label>Name</label>
-                    <input type="text" required>
+                    <input type="text" name="name" required>
                 </div>
 
                 <div>
                     <label>Country</label>
-                    <select id="countrySelect">
+                    <select id="countrySelect" name="country">
                         <option value="">Loading countries...</option>
                     </select>
                 </div>
 
                 <div>
                     <label>WhatsApp Number</label>
-                    <input type="tel">
+                    <input type="tel" name="whatsapp">
                 </div>
 
                 <div>
                     <label>Email</label>
-                    <input type="email">
+                    <input type="email" name="email" required>
                 </div>
 
                 <div>
                     <label>Adults</label>
-                    <input type="number">
+                    <input type="number" name="adults">
                 </div>
 
                 <div>
                     <label>Children</label>
-                    <input type="number">
+                    <input type="number" name="children">
                 </div>
 
                 <div>
                     <label>No of Rooms</label>
-                    <input type="number">
+                    <input type="number" name="rooms">
                 </div>
 
                 <div>
                     <label>Arrival Date</label>
-                    <input type="date">
+                    <input type="date" name="arrival_date">
                 </div>
 
                 <div>
                     <label>Departure Date</label>
-                    <input type="date">
+                    <input type="date" name="departure_date">
                 </div>
 
                 <div class="full">
                     <label>Hotel Category</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox">Boutiques</label>
-                        <label><input type="checkbox">5 Star</label>
-                        <label><input type="checkbox">4 Star</label>
-                        <label><input type="checkbox">3 Star</label>
-                        <label><input type="checkbox">Budget</label>
+                        <label><input type="checkbox" name="hotel_category[]" value="Boutiques">Boutiques</label>
+                        <label><input type="checkbox" name="hotel_category[]" value="5 Star">5 Star</label>
+                        <label><input type="checkbox" name="hotel_category[]" value="4 Star">4 Star</label>
+                        <label><input type="checkbox" name="hotel_category[]" value="3 Star">3 Star</label>
+                        <label><input type="checkbox" name="hotel_category[]" value="Budget">Budget</label>
                     </div>
                 </div>
 
                 <div class="full">
                     <label>Meal Plan</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox">BB</label>
-                        <label><input type="checkbox">HB</label>
-                        <label><input type="checkbox">FB</label>
+                        <label><input type="checkbox" name="meal_plan[]" value="BB">BB</label>
+                        <label><input type="checkbox" name="meal_plan[]" value="HB">HB</label>
+                        <label><input type="checkbox" name="meal_plan[]" value="FB">FB</label>
                     </div>
                 </div>
 
                 <div class="full">
                     <label>Places of Interest</label>
                     <div class="checkbox-group">
-                        <label><input type="checkbox">Heritage</label>
-                        <label><input type="checkbox">Wild Life</label>
-                        <label><input type="checkbox">Beach</label>
-                        <label><input type="checkbox">Nature</label>
-                        <label><input type="checkbox">Shopping</label>
-                        <label><input type="checkbox">Adventure</label>
+                        <label><input type="checkbox" name="interest[]" value="Heritage">Heritage</label>
+                        <label><input type="checkbox" name="interest[]" value="Wild Life">Wild Life</label>
+                        <label><input type="checkbox" name="interest[]" value="Beach">Beach</label>
+                        <label><input type="checkbox" name="interest[]" value="Nature">Nature</label>
+                        <label><input type="checkbox" name="interest[]" value="Shopping">Shopping</label>
+                        <label><input type="checkbox" name="interest[]" value="Adventure">Adventure</label>
                     </div>
                 </div>
 
                 <div class="full">
                     <label>Budget Range</label>
-                    <select>
+                    <select name="budget">
                         <option>$1-300</option>
                         <option>$300-800</option>
                         <option>$800-1500</option>
@@ -1249,7 +1254,7 @@
 
                 <div class="full">
                     <label>Other Requirements</label>
-                    <textarea rows="4"></textarea>
+                    <textarea rows="4" name="message"></textarea>
                 </div>
 
                 <div class="full">
@@ -1487,6 +1492,9 @@ packageSelectEl.addEventListener("change", function () {
 })();
 </script> 
 
+    <script src="../inquiry.js"></script>
+
+  <script src="../mobile-menu.js" defer></script>
 </body>
 
 
