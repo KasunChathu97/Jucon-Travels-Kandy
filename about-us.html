@@ -834,6 +834,28 @@
             margin-top: -220px;
         }
 
+/* MOBILE FIX */
+@media (max-width: 768px) {
+
+    .about-hero {
+        padding: 40px 15px 20px;
+    }
+
+    .about-hero img {
+        width: 100%;
+        max-width: 100%;
+        margin-top: 0;          /* remove negative spacing */
+        border-radius: 12px;
+    }
+
+    .about-hero h1 {
+        font-size: 26px;        /* smaller heading */
+        margin-top: 15px;       /* normal spacing */
+        color: #000;            /* better visibility on mobile */
+    }
+
+}
+
         /* TEXT */
         .about-text {
             text-align: left;
@@ -847,6 +869,23 @@
             font-size: 18px;
             color: #000000ba;
         }
+
+        /* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+
+    .about-text {
+        margin-top: 40px; /* reduce big top space */
+        padding: 0 15px;  /* side spacing */
+        text-align: center; /* better for mobile */
+    }
+
+    .about-text p {
+        font-size: 15px; /* smaller readable text */
+        line-height: 1.7;
+        margin-bottom: 15px;
+    }
+
+}
 
         /* FOUNDER */
         .founder-section {
@@ -924,17 +963,34 @@
         }
 
         /* RESPONSIVE */
-        @media (max-width: 768px) {
+/* MOBILE FIX */
+@media (max-width: 768px) {
 
-            .founder-section,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
+    .why-sl h2 {
+        text-align: center;   /* center for mobile */
+        font-size: 26px;      /* smaller heading */
+        margin-top: -35px;
+    }
 
-            .about-hero h1 {
-                font-size: 28px;
-            }
-        }
+    .why-text p {
+        font-size: 15px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .why-grid1 {
+        grid-template-columns: 1fr; /* 2 → 1 column */
+        width: 100%;                /* remove overflow */
+        gap: 20px;
+    }
+
+    .why-image img {
+        width: 100%;       /* full responsive */
+        margin-left: 0;    /* remove shift */
+        border-radius: 12px;
+    }
+
+}
 
         /* DISCOVER NOW button */
         .discover-more {
@@ -1071,6 +1127,44 @@
             color: #555;
         }
 
+        /* MOBILE FIX */
+@media (max-width: 768px) {
+
+    .vision-section {
+        margin-top: -80px;      /* remove negative space */
+        padding: 40px 15px;
+    }
+
+    .section-header h5 {
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+
+    .section-header h2 {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .vision-mission {
+        flex-direction: column;   /* stack cards */
+        gap: 20px;
+    }
+
+    .vision-card {
+        width: 100%;             /* full width */
+        padding: 25px 20px;
+    }
+
+    .vision-card h3 {
+        font-size: 18px;
+    }
+
+    .vision-card p {
+        font-size: 14px;
+    }
+
+}
+
 
         /* Strengths */
         .strengths-section {
@@ -1084,6 +1178,16 @@
             font-size: 32px;
             margin-bottom: 50px;
         }
+
+        .section-subtitle {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -100px;
+    line-height: 1.6;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    color: #1f1e1e;
+}
 
         .strengths-grid {
             display: grid;
@@ -1119,6 +1223,33 @@
         .strength-card:hover i {
             color: #ffffff;
         }
+
+        /* MOBILE FIX */
+@media (max-width: 768px) {
+
+    .strengths-section {
+        padding: 40px 15px;   /* reduce big padding */
+        margin-top:-50px;     /* remove negative margin */
+    }
+
+    .section-title {
+        font-size: 24px;      /* smaller title */
+        margin-bottom: 30px;
+    }
+
+    .strengths-grid {
+        gap: 20px;            /* reduce spacing */
+    }
+
+    .strength-card {
+        padding: 25px 15px;   /* smaller card padding */
+    }
+
+    .strength-card h4 {
+        font-size: 14px;
+    }
+
+}
 
 
         /* Why Sri Lanka */
@@ -1204,17 +1335,46 @@
             background: #000;
         }
 
+        /* MOBILE FIX */
+@media (max-width: 576px) {
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .vision-mission {
-                grid-template-columns: 1fr;
-            }
+    .why-section {
+        margin-top: 20px;      /* remove negative margin */
+        margin-bottom: 20px;
+        padding: 0 15px;       /* side spacing */
+    }
 
-            .strengths ul {
-                grid-template-columns: 1fr;
-            }
-        }
+    .section-title {
+        font-size: 24px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .why-grid {
+        gap: 20px;             /* reduce spacing */
+    }
+
+    .why-card {
+        padding: 25px 20px;    /* smaller padding */
+    }
+
+    .why-card h3 {
+        font-size: 16px;
+    }
+
+    .why-card p {
+        font-size: 14px;
+    }
+
+    .why-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 18px;
+        
+    }
+
+}
+
 
         /* Our Team */
         .our-team {
@@ -1239,6 +1399,27 @@
             text-align: center;
         }
 
+        /* MOBILE FIX */
+@media (max-width: 768px) {
+
+    .our-team {
+        margin-top: -20px;   /* remove negative space */
+        padding: 30px 15px;
+    }
+
+    .our-team h2 {
+        font-size: 26px;   /* smaller heading */
+        margin-bottom: 20px;
+    }
+
+    .our-team p {
+        font-size: 15px;
+        line-height: 1.7;
+        padding: 0 5px;   /* small side spacing */
+    }
+
+}
+
         /* Member Grid */
         .team-grid {
             display: grid;
@@ -1258,6 +1439,24 @@
             margin-left: 450px;
             width: 600px;
         }
+
+        /* MOBILE FIX */
+@media (max-width: 768px) {
+
+    .team-grid {
+        grid-template-columns: 1fr; /* 3 → 1 column */
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .team-structure {
+        margin-left: 0;        /* remove big left shift */
+        width: 100%;           /* full width */
+        padding: 0 15px;       /* side spacing */
+        margin-bottom: 20px;   /* remove negative space */
+    }
+
+}
 
         /* Member Card */
         .member-image {
@@ -1392,20 +1591,61 @@
             color: #000000;
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
+/* MOBILE FIX for Footer */
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 15px;
+        margin: 20px 10px;
+        border-radius: 20px;
+        height: auto; /* height flexible for content */
+    }
 
-        @media (max-width: 600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* single column for mobile */
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .footer-column .site-logo {
+        width: 80px;
+        height: 80px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .brand-title1 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .brand-title1 strong {
+        font-size: 18px;
+    }
+
+    .brand-title1 span {
+        font-size: 14px;
+    }
+
+    .footer-column h4 {
+        font-size: 20px;
+    }
+
+    .footer-column .list {
+        margin-top: 20px;
+    }
+
+    .footer-column .list a,
+    .footer-column span {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        margin-left: 0;
+        font-size: 14px;
+    }
+}
 
         .sr-only {
             position: absolute;
@@ -1691,8 +1931,10 @@
                     <h2 class="section-title">
                         Why you need select Sri Lanka for your travel destination
                     </h2>
-                    <h1>Selecting Sri Lanka as a tourist destination offers a unique combination of natural beauty,
-                        cultural heritage, and diverse experiences within a compact geographical area.</h1>
+<p class="section-subtitle">
+    Selecting Sri Lanka as a tourist destination offers a unique combination of natural beauty,
+    cultural heritage, and diverse experiences within a compact geographical area.
+</p>
 
                     <div class="why-grid">
 

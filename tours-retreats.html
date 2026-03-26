@@ -821,10 +821,47 @@
 
         .tours-hero h1 {
             font-size: 48px;
-            font-family:'Playfair Display',serif;
+            font-family: 'Inter', sans-serif;
             color: #000000;
             margin-top: -220px;
         }
+
+                /* TOURS HERO MOBILE FIX */
+@media (max-width: 768px) {
+    .tours-hero {
+        padding: 60px 15px 30px;
+    }
+
+    .tours-hero img {
+        width: 100%;       /* responsive width */
+        height: auto;      /* maintain aspect ratio */
+        margin-top: 0;     /* remove negative margin */
+        margin-bottom: 10px;
+        border-radius: 15px;
+    }
+
+    .tours-hero h1 {
+        font-size: 32px;   /* smaller font */
+        margin-top: 20px;  /* adjust spacing */
+        color: black;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 576px) {
+    .tours-hero h1 {
+        font-size: 24px;
+        margin-top: 15px;
+    }
+
+    .tours-hero {
+        padding: 40px 10px 20px;
+    }
+
+    .tours-hero img {
+        border-radius: 10px;
+    }
+}
 
         /* TEXT */
         .tours-text {
@@ -839,6 +876,32 @@
             font-size: 20px;
             color: #000000;
         }
+
+                /* TOURS TEXT MOBILE FIX */
+@media (max-width: 768px) {
+    .tours-text {
+        margin-top: 60px;   /* reduce top margin */
+        padding: 0 20px;    /* side padding */
+    }
+
+    .tours-text p {
+        max-width: 100%;    /* full width for small screens */
+        font-size: 16px;    /* slightly smaller text */
+        line-height: 1.5;   /* adjust spacing */
+    }
+}
+
+@media (max-width: 576px) {
+    .tours-text {
+        margin-top: 40px;   /* further reduce margin */
+        padding: 0 15px;
+    }
+
+    .tours-text p {
+        font-size: 15px;    /* smaller text for very small screens */
+        line-height: 1.4;
+    }
+}
 
         /* Why Sri Lanka */
         .why-sl {
@@ -893,31 +956,52 @@
             margin-left: 390px;
         }
 
-        /* RESPONSIVE */
-        @media (max-width: 768px) {
+/* WHY SL MOBILE FIX */
+@media (max-width: 768px) {
+    .why-section {
+        padding: 60px 5%;
+        margin-top: 20px; /* remove negative margin */
+    }
 
-            .founder-section,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
+    .why-sl h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
 
-            .about-hero h1 {
-                font-size: 28px;
-            }
-        }
+    .why-text p {
+        font-size: 16px;
+        margin-left: 0; /* remove negative margin */
+    }
 
+    .why-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        width: 100%;
+    }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .vision-mission {
-                grid-template-columns: 1fr;
-            }
+    .why-image img {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+    }
+}
 
-            .strengths ul {
-                grid-template-columns: 1fr;
-            }
-        }
+@media (max-width: 576px) {
+    .why-sl h2 {
+        font-size: 24px;
+    }
 
+    .why-text p {
+        font-size: 15px;
+    }
+
+    .why-image img {
+        height: auto;
+        border-radius: 15px;
+    }
+}
+
+/* Benefits */
         .benefits-section {
             padding: 60px -2%;
             margin-left: -90px;
@@ -972,11 +1056,51 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
         }
 
-        @media(max-width:768px) {
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+/* BENEFITS SECTION MOBILE FIX */
+@media (max-width: 768px) {
+    .benefits-section {
+        padding: 40px 5%;
+        margin-left: 0; /* remove negative margin */
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr; /* stack cards vertically */
+        gap: 25px;
+    }
+
+    .benefit-card {
+        width: 100%; /* responsive full width */
+        padding: 25px;
+    }
+
+    .benefit-card h2 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .benefit-card p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .benefit-card li {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .benefit-card h2 {
+        font-size: 24px;
+    }
+
+    .benefit-card p {
+        font-size: 15px;
+    }
+
+    .benefit-card li {
+        font-size: 16px;
+    }
+}
 
         /* DISCOVER NOW button */
         .contact-btn-wrap {
@@ -1116,19 +1240,63 @@
             font-size: 14px;
         }
 
-        /* Tablet */
-        @media(max-width:992px) {
-            .serve-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+/* SERVE SECTION MOBILE FIX */
+@media (max-width: 992px) {
+    .serve-grid {
+        grid-template-columns: repeat(2, 1fr); /* tablet: 2 columns */
+        gap: 40px;
+    }
 
-        /* Mobile */
-        @media(max-width:576px) {
-            .serve-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    .serve-card {
+        width: 100%; /* responsive full width */
+        margin-left: 0; /* remove negative margin */
+        padding: 25px 20px;
+    }
+
+    .serve-card h3 {
+        font-size: 18px;
+    }
+
+    .serve-card p {
+        font-size: 14px;
+    }
+
+    .serve-card p span {
+        font-size: 15px;
+    }
+
+    .serve-card img {
+        width: 90px;
+    }
+}
+
+@media (max-width: 576px) {
+    .serve-grid {
+        grid-template-columns: 1fr; /* stack vertically */
+        gap: 30px;
+    }
+
+    .serve-title {
+        font-size: 28px;
+    }
+
+    .serve-sub {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .serve-card h3 {
+        font-size: 16px;
+    }
+
+    .serve-card p {
+        font-size: 13px;
+    }
+
+    .serve-card img {
+        width: 80px;
+    }
+}
 
         /* ===== FOOTER ===== */
         .footer {
@@ -1216,20 +1384,61 @@
             color: #000000;
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
+/* MOBILE FIX for Footer */
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 15px;
+        margin: 20px 10px;
+        border-radius: 20px;
+        height: auto; /* height flexible for content */
+    }
 
-        @media (max-width: 600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* single column for mobile */
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .footer-column .site-logo {
+        width: 80px;
+        height: 80px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .brand-title1 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .brand-title1 strong {
+        font-size: 18px;
+    }
+
+    .brand-title1 span {
+        font-size: 14px;
+    }
+
+    .footer-column h4 {
+        font-size: 20px;
+    }
+
+    .footer-column .list {
+        margin-top: 20px;
+    }
+
+    .footer-column .list a,
+    .footer-column span {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        margin-left: 0;
+        font-size: 14px;
+    }
+}
 
         .sr-only {
             position: absolute;
