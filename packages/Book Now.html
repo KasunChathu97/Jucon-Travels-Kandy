@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>JUCON TRAVELS | About Us</title>
+    <title>JUCON TRAVELS | Book Now</title>
     <meta name="description"
         content="Tailor-made tours and wellness retreats in Sri Lanka. Authentic experiences crafted with trusted local experts." />
     <!-- Removed theme-color meta tag for full cross-browser compatibility; this feature is not supported in Firefox or Opera. -->
@@ -1396,7 +1396,18 @@
         </div>
     </footer>
 
+<script>
+    const arrival = document.getElementById("arrivalDate");
+    const departure = document.getElementById("departureDate");
 
+    const today = new Date().toISOString().split("T")[0];
+    arrival.min = today;
+    departure.min = today;
+
+    arrival.addEventListener("change", function () {
+        departure.min = this.value; // departure >= arrival
+    });
+</script>
 
     <script>
         const countrySelect = document.getElementById("countrySelect");
