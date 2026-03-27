@@ -1019,18 +1019,61 @@
             color: #000000;
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
+        /* MOBILE FIX for Footer */
+        @media (max-width: 576px) {
+            .footer {
+                padding: 30px 15px;
+                margin: 20px 10px;
+                border-radius: 20px;
+                height: auto;
+                /* height flexible for content */
             }
-        }
 
-        @media (max-width: 600px) {
             .footer-grid {
+                display: grid;
                 grid-template-columns: 1fr;
+                /* single column for mobile */
                 gap: 20px;
+                margin-top: 30px;
+            }
+
+            .footer-column .site-logo {
+                width: 80px;
+                height: 80px;
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            .brand-title1 {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .brand-title1 strong {
+                font-size: 18px;
+            }
+
+            .brand-title1 span {
+                font-size: 14px;
+            }
+
+            .footer-column h4 {
+                font-size: 20px;
+            }
+
+            .footer-column .list {
+                margin-top: 20px;
+            }
+
+            .footer-column .list a,
+            .footer-column span {
+                font-size: 14px;
+            }
+
+            .footer-bottom {
+                margin-top: 40px;
+                margin-left: 0;
+                font-size: 14px;
             }
         }
 
@@ -1086,7 +1129,7 @@
             vertical-align: middle;
         }
     </style>
-  <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css">
 </head>
 
 <body>
@@ -1111,7 +1154,8 @@
                 <!--<a href="../faq.html">FAQ</a>-->
                 <a href="../contact.html">Contact</a>
             </nav>
-            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="mobilePanel" aria-expanded="false">
+            <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="mobilePanel"
+                aria-expanded="false">
                 <span class="sr-only">Menu</span>
                 <i class="fa-solid fa-bars" aria-hidden="true"></i>
             </button>
@@ -1138,7 +1182,7 @@
             <div class="form-grid">
 
                 <div>
-                    <label>Select Your Tour</label>
+                    <label for="tourSelect">Select Your Tour</label>
                     <select id="tourSelect" name="tour">
                         <option value="">-- Select Tour --</option>
                         <option value="round">Round Tour Packages</option>
@@ -1154,60 +1198,60 @@
                     </select>
                 </div>
 
-                 <div id="packageDiv" style="display:none;">
-    <label>Select Your Package</label>
-    <select id="packageSelect" name="package">
-        <option value="">-- Select Package --</option>
-    </select>
-</div> 
+                <div id="packageDiv" style="display:none;">
+                    <label for="packageSelect">Select Your Package</label>
+                    <select id="packageSelect" name="package">
+                        <option value="">-- Select Package --</option>
+                    </select>
+                </div>
 
                 <input type="hidden" id="selectedPackage" name="selected_package">
 
                 <div>
-                    <label>Name</label>
-                    <input type="text" name="name" required>
+                    <label for="inquiryName">Name</label>
+                    <input id="inquiryName" type="text" name="name" required>
                 </div>
 
                 <div>
-                    <label>Country</label>
+                    <label for="countrySelect">Country</label>
                     <select id="countrySelect" name="country">
                         <option value="">Loading countries...</option>
                     </select>
                 </div>
 
                 <div>
-                    <label>WhatsApp Number</label>
-                    <input type="tel" name="whatsapp">
+                    <label for="whatsappNumber">WhatsApp Number</label>
+                    <input id="whatsappNumber" type="tel" name="whatsapp">
                 </div>
 
                 <div>
-                    <label>Email</label>
-                    <input type="email" name="email" required>
+                    <label for="inquiryEmail">Email</label>
+                    <input id="inquiryEmail" type="email" name="email" required>
                 </div>
 
                 <div>
-                    <label>Adults</label>
-                    <input type="number" name="adults">
+                    <label for="adultsCount">Adults</label>
+                    <input id="adultsCount" type="number" name="adults">
                 </div>
 
                 <div>
-                    <label>Children</label>
-                    <input type="number" name="children">
+                    <label for="childrenCount">Children</label>
+                    <input id="childrenCount" type="number" name="children">
                 </div>
 
                 <div>
-                    <label>No of Rooms</label>
-                    <input type="number" name="rooms">
+                    <label for="roomCount">No of Rooms</label>
+                    <input id="roomCount" type="number" name="rooms">
                 </div>
 
                 <div>
-                    <label>Arrival Date</label>
-                    <input type="date" name="arrival_date">
+                    <label for="arrivalDate">Arrival Date</label>
+                    <input id="arrivalDate" type="date" name="arrival_date">
                 </div>
 
                 <div>
-                    <label>Departure Date</label>
-                    <input type="date" name="departure_date">
+                    <label for="departureDate">Departure Date</label>
+                    <input id="departureDate" type="date" name="departure_date">
                 </div>
 
                 <div class="full">
@@ -1243,8 +1287,8 @@
                 </div>
 
                 <div class="full">
-                    <label>Budget Range</label>
-                    <select name="budget">
+                    <label for="budgetRange">Budget Range</label>
+                    <select id="budgetRange" name="budget">
                         <option>$1-300</option>
                         <option>$300-800</option>
                         <option>$800-1500</option>
@@ -1253,8 +1297,8 @@
                 </div>
 
                 <div class="full">
-                    <label>Other Requirements</label>
-                    <textarea rows="4" name="message"></textarea>
+                    <label for="otherRequirements">Other Requirements</label>
+                    <textarea id="otherRequirements" rows="4" name="message"></textarea>
                 </div>
 
                 <div class="full">
@@ -1352,7 +1396,7 @@
         </div>
     </footer>
 
- 
+
 
     <script>
         const countrySelect = document.getElementById("countrySelect");
@@ -1386,115 +1430,115 @@
         });
     </script>
 
- <script>
-// packages data
-(function () {
-const packages = {
-    round: [
-        "The Radiant Pearl Adventure",
-        "The Grand Ceylon Odyssey",
-        "Grand Sri Lanka Cultural & Nature Journey",
-        "Sri Lanka Coastal & Cultural Odyssey"
-    ],
-    family: [
-        "Sri Lanka Cultural Escape",
-        "Sri Lanka Highlights & Coastal Bliss",
-        "Ultimate Sri Lanka Grand Explorer"
-    ],
-    cultural: [
-        "Sri Lanka Cultural Escape",
-        "Sacred Kingdoms & Heritage Trail"
-    ],
-    honeymoon: [
-        "Sri Lanka Heritage, Highlands & Coastal Adventure",
-        "Sri Lanka Hill Country & Cultural Escape"
-    ],
-    beach: [
-        "Sri Lanka Southern Coastal Escape",
-        "Sri Lanka Coastal Adventure & Watersports",
-        "Eastern Coast & Cultural Discovery"
-    ],
-    hill: [
-        "Hill Country & Heritage Journey",
-        "Highlands & Heritage Trail"
-    ],
-    adventure: [
-        "Sri Lanka Highlands Hiking & Cultural Adventure",
-        "Adam’s Peak Pilgrimage & Highland Adventure"
-    ],
-    wildlife: [
-        "Wildlife & Cultural Safari Adventure",
-        "Wildlife, Highlands & Coastal Wonders"
-    ],
-    ramayana: [
-        "Ramayana Heritage & Coastal Expedition",
-        "Ramayana Legends & Highland Wonders"
-    ],
-    event: [
-        "Kandy Esala Perahera & Heritage Journey"
-    ]
-};
+    <script>
+        // packages data
+        (function () {
+            const packages = {
+                round: [
+                    "The Radiant Pearl Adventure",
+                    "The Grand Ceylon Odyssey",
+                    "Grand Sri Lanka Cultural & Nature Journey",
+                    "Sri Lanka Coastal & Cultural Odyssey"
+                ],
+                family: [
+                    "Sri Lanka Cultural Escape",
+                    "Sri Lanka Highlights & Coastal Bliss",
+                    "Ultimate Sri Lanka Grand Explorer"
+                ],
+                cultural: [
+                    "Sri Lanka Cultural Escape",
+                    "Sacred Kingdoms & Heritage Trail"
+                ],
+                honeymoon: [
+                    "Sri Lanka Heritage, Highlands & Coastal Adventure",
+                    "Sri Lanka Hill Country & Cultural Escape"
+                ],
+                beach: [
+                    "Sri Lanka Southern Coastal Escape",
+                    "Sri Lanka Coastal Adventure & Watersports",
+                    "Eastern Coast & Cultural Discovery"
+                ],
+                hill: [
+                    "Hill Country & Heritage Journey",
+                    "Highlands & Heritage Trail"
+                ],
+                adventure: [
+                    "Sri Lanka Highlands Hiking & Cultural Adventure",
+                    "Adam’s Peak Pilgrimage & Highland Adventure"
+                ],
+                wildlife: [
+                    "Wildlife & Cultural Safari Adventure",
+                    "Wildlife, Highlands & Coastal Wonders"
+                ],
+                ramayana: [
+                    "Ramayana Heritage & Coastal Expedition",
+                    "Ramayana Legends & Highland Wonders"
+                ],
+                event: [
+                    "Kandy Esala Perahera & Heritage Journey"
+                ]
+            };
 
-// elements
-const tourSelect = document.getElementById("tourSelect");
-const packageSelectEl = document.getElementById("packageSelect");
-const packageDiv = document.getElementById("packageDiv");
-const hiddenInput = document.getElementById("selectedPackage");
-const textarea = document.querySelector("textarea");
+            // elements
+            const tourSelect = document.getElementById("tourSelect");
+            const packageSelectEl = document.getElementById("packageSelect");
+            const packageDiv = document.getElementById("packageDiv");
+            const hiddenInput = document.getElementById("selectedPackage");
+            const textarea = document.querySelector("textarea");
 
-// event
-if (!tourSelect || !packageSelectEl || !packageDiv) {
-    return;
-}
+            // event
+            if (!tourSelect || !packageSelectEl || !packageDiv) {
+                return;
+            }
 
-function resetPackages() {
-    packageSelectEl.innerHTML = '<option value="">-- Select Package --</option>';
-}
+            function resetPackages() {
+                packageSelectEl.innerHTML = '<option value="">-- Select Package --</option>';
+            }
 
-tourSelect.addEventListener("change", function(){
-    const selectedTour = this.value;
+            tourSelect.addEventListener("change", function () {
+                const selectedTour = this.value;
 
-    // hide or show package dropdown
-    if(selectedTour === "") {
-        packageDiv.style.display = "none";
-        resetPackages();
-        if (hiddenInput) hiddenInput.value = "";
-        if (textarea) textarea.value = "";
-        return;
-    } else {
-        packageDiv.style.display = "block";
-    }
+                // hide or show package dropdown
+                if (selectedTour === "") {
+                    packageDiv.style.display = "none";
+                    resetPackages();
+                    if (hiddenInput) hiddenInput.value = "";
+                    if (textarea) textarea.value = "";
+                    return;
+                } else {
+                    packageDiv.style.display = "block";
+                }
 
-    // clear previous packages
-    resetPackages();
-    if (hiddenInput) hiddenInput.value = "";
+                // clear previous packages
+                resetPackages();
+                if (hiddenInput) hiddenInput.value = "";
 
-    // add relevant packages
-    if(packages[selectedTour]){
-        packages[selectedTour].forEach(pkg => {
-            const option = document.createElement("option");
-            option.value = pkg;
-            option.textContent = pkg;
-            packageSelectEl.appendChild(option);
-        });
-    }
-});
+                // add relevant packages
+                if (packages[selectedTour]) {
+                    packages[selectedTour].forEach(pkg => {
+                        const option = document.createElement("option");
+                        option.value = pkg;
+                        option.textContent = pkg;
+                        packageSelectEl.appendChild(option);
+                    });
+                }
+            });
 
-packageSelectEl.addEventListener("change", function () {
-    const selected = this.value;
-    if (hiddenInput) hiddenInput.value = selected;
+            packageSelectEl.addEventListener("change", function () {
+                const selected = this.value;
+                if (hiddenInput) hiddenInput.value = selected;
 
-    if (textarea) {
-        textarea.value = selected ? ("I am interested in the package: " + selected) : "";
-    }
-});
+                if (textarea) {
+                    textarea.value = selected ? ("I am interested in the package: " + selected) : "";
+                }
+            });
 
-})();
-</script> 
+        })();
+    </script>
 
     <script src="../inquiry.js"></script>
 
-  <script src="../mobile-menu.js" defer></script>
+    <script src="../mobile-menu.js" defer></script>
 </body>
 
 

@@ -840,6 +840,26 @@
             margin-top: -200px;
         }
 
+        /* MOBILE FIX for Packages Hero */
+@media (max-width: 576px) {
+    .packages-hero img {
+        width: 100%;       /* full width of screen */
+        height: auto;      /* preserve aspect ratio */
+        margin-top: 0;     /* remove negative margin */
+        margin-bottom: 10px;
+    }
+
+    .packages-hero h1 {
+        font-size: 28px;   /* smaller font size */
+        margin-top: 10px;  /* adjust spacing */
+        padding: 0 10px;   /* optional padding for text */
+        color: #000000;
+    }
+
+    .packages-hero {
+        padding: 40px 10px 20px; /* reduce section padding */
+    }
+}
 
 
         /* WHY SECTION */
@@ -957,18 +977,49 @@
             border: #000000 solid 1px;
         }
 
-        @media (max-width: 768px) {
+@media (max-width: 576px) {
 
-            .packages-grid {
-                grid-template-columns: 1fr;
-            }
+    .packages-section {
+        padding: 40px 10px;
+        margin-top: -40px;
+    }
 
-            .packages-grid .package-card:nth-child(4) {
-                grid-column: auto;
-            }
+    .packages-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
 
-        }
+    .packages-grid {
+        grid-template-columns: 1fr;
+        gap: 15px; /* 5px too tight, better spacing */
+    }
 
+    /* IMPORTANT FIX */
+    .packages-grid .package-card:nth-child(4) {
+        grid-column: auto;
+    }
+
+    .package-card img {
+        height: 180px;
+    }
+
+    .package-content h3 {
+        font-size: 18px;
+    }
+
+    .package-content p span {
+        font-size: 14px;
+    }
+
+    .package-btn, 
+    .package-btn1 {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
         /* CTA */
         .cta {
             margin: 100px 10%;
@@ -992,26 +1043,28 @@
         }
 
 
-        /* RESPONSIVE */
-        @media(max-width: 992px) {
+/* MOBILE FIX for CTA section */
+@media (max-width: 576px) {
+    .cta {
+        margin: 40px 10px;       /* reduce margins for small screens */
+        padding: 30px 20px;      /* smaller padding */
+        margin-top: 20px;        /* adjust top margin */
+        margin-bottom: 20px;     /* adjust bottom margin */
+        border-radius: 15px;     /* slightly smaller border-radius */
+        text-align: center;
+    }
 
-            .packages-grid,
-            .why-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
+    .cta h2 {
+        font-size: 24px;         /* smaller heading */
+        margin-top: 0;
+    }
 
-        @media(max-width: 600px) {
-
-            .packages-grid,
-            .why-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .packages-hero h1 {
-                font-size: 34px;
-            }
-        }
+    .cta p {
+        font-size: 16px;         /* smaller paragraph text */
+        margin-top: 8px;
+        color: #000000;
+    }
+}
 
         .contact-btn-wrap {
             text-align: center;
@@ -1313,20 +1366,61 @@
             color: #000000;
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 20px;
-            }
-        }
+/* MOBILE FIX for Footer */
+@media (max-width: 576px) {
+    .footer {
+        padding: 30px 15px;
+        margin: 20px 10px;
+        border-radius: 20px;
+        height: auto; /* height flexible for content */
+    }
 
-        @media (max-width: 600px) {
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-        }
+    .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr; /* single column for mobile */
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .footer-column .site-logo {
+        width: 80px;
+        height: 80px;
+        margin-left: 0;
+        margin-top: 0;
+    }
+
+    .brand-title1 {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .brand-title1 strong {
+        font-size: 18px;
+    }
+
+    .brand-title1 span {
+        font-size: 14px;
+    }
+
+    .footer-column h4 {
+        font-size: 20px;
+    }
+
+    .footer-column .list {
+        margin-top: 20px;
+    }
+
+    .footer-column .list a,
+    .footer-column span {
+        font-size: 14px;
+    }
+
+    .footer-bottom {
+        margin-top: 40px;
+        margin-left: 0;
+        font-size: 14px;
+    }
+}
 
         .sr-only {
             position: absolute;
