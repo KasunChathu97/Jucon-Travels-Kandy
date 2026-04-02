@@ -5,6 +5,139 @@
   it can safely fix mobile issues without changing desktop design.
 */
 
+/* ----------------------------
+   Google Translate (Home only UI)
+   - Does NOT change navbar layout (absolute positioned)
+   - Shows a Google "G" icon button; clicking opens a language list panel
+   ---------------------------- */
+
+.container-header {
+    position: relative;
+}
+
+.gt-wrap {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1002;
+}
+
+/* Home page header inline CSS sets overflow:hidden; allow dropdown to escape */
+.container-header.gt-openable {
+    overflow: visible !important;
+}
+
+.gt-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 1px solid var(--border, #e0e0e0);
+    background: var(--bg, #fff);
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.gt-btn:focus {
+    outline: none;
+}
+
+.gt-btn:focus-visible {
+    outline: 2px solid var(--brand-blue, #0077b6);
+    outline-offset: 2px;
+    border-radius: 10px;
+}
+
+.gt-g {
+    width: 22px;
+    height: 22px;
+    display: block;
+}
+
+.gt-panel {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 10px);
+    width: min(280px, calc(100vw - 24px));
+    background: var(--bg, #fff);
+    border: 1px solid var(--border, #e0e0e0);
+    border-radius: 14px;
+    box-shadow: var(--shadow, 0 2px 8px rgba(0, 0, 0, .06));
+    overflow: hidden;
+}
+
+.gt-panel[hidden] {
+    display: none;
+}
+
+.gt-lang-list {
+    max-height: min(60vh, 420px);
+    overflow: auto;
+}
+
+.gt-lang-status {
+    padding: 12px 14px;
+    color: #555;
+    font: inherit;
+    font-weight: 600;
+}
+
+.gt-lang-item {
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+    border: 0;
+    background: transparent;
+    color: #555;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.gt-lang-item:hover,
+.gt-lang-item:focus-visible {
+    color: var(--brand-blue, #0077b6);
+    outline: none;
+}
+
+/* Keep Google's widget present but visually hidden (we use it as the engine) */
+.gt-google {
+    position: fixed;
+    left: -10000px;
+    top: 0;
+    width: 220px;
+    height: 60px;
+    overflow: hidden;
+}
+
+/* Hide Google Translate banner bar + tooltip */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+#goog-gt-tt,
+.goog-te-balloon-frame {
+    display: none !important;
+}
+
+.goog-text-highlight {
+    background: inherit !important;
+    box-shadow: none !important;
+}
+
+/* Hide Google widget branding text inside the hidden gadget */
+.goog-te-gadget,
+.goog-logo-link {
+    display: none !important;
+}
+
 img,
 video,
 canvas,
@@ -45,6 +178,11 @@ iframe {
     .container-header {
         width: calc(100% - 24px);
         height: auto;
+    }
+
+    /* Keep the G button from overlapping the hamburger */
+    .gt-wrap {
+        right: 56px;
     }
 
     /* Header: keep brand + hamburger aligned and prevent overflow */
