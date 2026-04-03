@@ -158,10 +158,15 @@ iframe {
 /* MOBILE FIX - Language Switch */
 @media (max-width: 576px) {
 
+    /* Keep the button in the same spot, but avoid `transform` on the wrapper.
+       Some mobile browsers treat fixed-position children incorrectly when an
+       ancestor is transformed, causing the panel to not appear. */
     .gt-wrap {
-        right: 10px;        /* screen edge ekata fit */
-        top: 50%;
-        transform: translateY(-50%);
+        top: 0;
+        bottom: 0;
+        transform: none;
+        display: flex;
+        align-items: center;
     }
 
     .gt-btn {
@@ -176,17 +181,21 @@ iframe {
     }
 
     .gt-panel {
+        position: fixed;
+        top: 56px;
+        top: calc(56px + env(safe-area-inset-top));
         right: 0;
         left: auto;
-        width: calc(100vw - 20px); /* full width panel */
-        max-width: 360px;
-        top: calc(100% + 8px);
-        border-radius: 10px;
-        max-height: calc(100vh - 110px);
+        bottom: 0;
+        width: min(360px, 86vw);
+        border-radius: 14px 0 0 0;
+        max-height: none;
+        z-index: 1100;
     }
 
     .gt-lang-list {
-        max-height: calc(100vh - 170px);
+        height: 100%;
+        max-height: none;
         -webkit-overflow-scrolling: touch;
     }
 
