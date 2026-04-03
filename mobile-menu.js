@@ -167,7 +167,7 @@
       var img = document.createElement('img');
       img.className = 'gt-g';
       img.alt = 'Google';
-      img.src = 'https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png';
+      img.src = 'https://www.gstatic.com/marketing-cms/df/f8/bb8f34744545a14b8a800ad7845a/translate-logo.webp';
       btn.appendChild(img);
 
       var panel = document.createElement('div');
