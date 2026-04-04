@@ -271,7 +271,11 @@ iframe {
         pointer-events: auto;
     }
 
-
+    #mobilePanel,
+    .mobile-panel {
+        position: relative;
+        z-index: 1000;
+    }
 
     .brand {
         min-width: 0;
