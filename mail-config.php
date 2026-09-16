@@ -11,7 +11,7 @@ return [
     'to_name' => 'JUCON TRAVELS Admin',
 
     // Sender identity shown in the email.
-    // Put the email address of your SMTP account here.
+    // For Gmail this should usually match the authenticated SMTP account.
     'from_email' => 'jucontravels@gmail.com',
     'from_name' => 'JUCON TRAVELS',
 
@@ -21,5 +21,5 @@ return [
     'smtp_secure' => 'tls', // 'tls' or 'ssl'
     // For Gmail: use your full Gmail address and a Google App Password.
     'smtp_username' => 'jucontravels@gmail.com',
-    'smtp_password' => 'jwupeyicisxunhdf',
+    'smtp_password' => 'znksullpfhtbvzsb',
 ];

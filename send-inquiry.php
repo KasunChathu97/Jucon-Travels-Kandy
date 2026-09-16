@@ -206,7 +206,7 @@ try {
     // Option 3 (requested): make the email appear "from" the customer.
     // NOTE: Many SMTP providers (including Gmail) may reject this unless the account is allowed
     // to send-as that address/alias. If it fails, revert to using $fromEmail as From.
-    $mail->setFrom($email, $name, false);
+    $mail->setFrom($fromEmail, $fromName);
     // Keep the envelope sender aligned with the authenticated account (bounces/Return-Path).
     $mail->Sender = $fromEmail;
     $mail->addAddress($toEmail, $toName);
