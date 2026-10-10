@@ -142,6 +142,8 @@ use PHPMailer\PHPMailer\Exception;
 
 try {
     $mail = new PHPMailer(true);
+    $mail->SMTPDebug = 3;
+$mail->Debugoutput = 'echo';
 
     $mail->isSMTP();
     $mail->Host = (string)($config['smtp_host'] ?? '');
